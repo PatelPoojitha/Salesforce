@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_OPEN_MQL_s</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>NAME</columns>
+    <columns>Campaign__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Status__c</columns>
+    <columns>CallRevu_Lead_Owner__c</columns>
+    <columns>CallRevu_Lead_Channel__c</columns>
+    <columns>CallRevu_Lead_Source__c</columns>
+    <columns>CallRevu_Lead_Sub_Source__c</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <columns>HS_Recent_Conversion__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MQL_Date_Time__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>IsClosed__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>LAST_ACTIVITY</field>
+        <operation>equals</operation>
+    </filters>
+    <label>All OPEN MQL&apos;s</label>
+</ListView>

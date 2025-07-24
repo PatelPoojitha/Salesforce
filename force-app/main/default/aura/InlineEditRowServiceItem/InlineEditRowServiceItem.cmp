@@ -1,0 +1,36 @@
+<aura:component >
+  
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:attribute name="singleRec" type="CreateOpportunityProductsController.Product" default=""/>
+    
+    <aura:registerEvent name="deleteEvent" type="c:DeleteEvent" />
+    
+    <tr>
+        <td style="width: 5%;" >
+            <button onclick="{!c.selectProduct}" class="slds-button slds-button_brand" >Select</button>
+        </td>
+        <td style="width: 40%;" >
+            <div class="slds-truncate">{!v.singleRec.description}</div>
+        </td>
+        <td style="width: 10%;" >
+            <div class="slds-truncate">{!v.singleRec.minutes}</div>
+        </td>
+        <td style="width: 20%;">
+            <div class="slds-truncate">{!v.singleRec.dniLicensedUrl}</div>
+        </td>
+        <td style="width: 8%;" >   
+            <div style="width: 80%;" >
+                <ui:inputNumber aura:id="quantityId" value="{!v.singleRec.quantity}" />
+            </div>
+        </td>
+        <td style="width: 8%;" >
+            <div >${!v.singleRec.pricePerUnit}</div>
+        </td>
+        <td style="width: 8%;" >
+            <div >
+                <ui:outputDate value="{!v.singleRec.startDate}"/>
+            </div>
+        </td>
+    </tr>
+</aura:component>

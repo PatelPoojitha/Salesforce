@@ -1,0 +1,528 @@
+<apex:page controller="AccountInformationUpdateController" showHeader="false" cache="false" >
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+ 
+    <head >
+    
+        <apex:includeScript value="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" />
+        <apex:includeScript value="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.17.8/js/jquery.tablesorter.min.js" />
+        <apex:stylesheet value="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.17.8/css/theme.dark.css" />
+        
+        <script type="text/javascript"> 
+
+            $j = jQuery.noConflict();
+
+        </script> 
+    
+        <style >
+        
+            .blueArrow {
+                font-size: 0;
+                margin-left: 10px;
+                color: white;
+            }
+            .inner-blueArrow {
+                width:175px;
+                height:40px;
+                display: inline-block;
+                background-color: black;
+                text-align:center;
+                font-size:15px;
+                font-weight:bold;
+                line-height:40px;
+                vertical-align: middle;
+            }
+            .blueArrow:before,
+            .blueArrow:after {
+                content:'';
+                display: inline-block;
+                width:0;
+                height:0;
+                border:20px solid transparent;
+                vertical-align: middle;
+            }
+            .blueArrow:before {
+                border-top-color: black;
+                border-bottom-color: black;
+                border-right-color: black;
+            }
+            .blueArrow:after {
+                border-left-color: black;
+            }
+        
+            .ct {
+                text-align:center;
+            }
+            
+            .customPopup2 {            
+                background-color: white; 
+                border-style: solid; 
+                border-width: 1px;
+                left: 20%;           
+                padding: 10px;           
+                position: absolute;           
+                z-index: 9;           
+                width: 40%;          
+                top: 20%;      
+            }
+        
+            .greenArrow {
+                font-size: 0;
+                margin-left: 10px;
+            }
+            .inner-greenArrow {
+                width:175px;
+                height:40px;
+                display: inline-block;
+                background-color:green;
+                text-align:center;
+                font-size:15px;
+                font-weight:bold;
+                line-height:40px;
+                vertical-align: middle;
+            }
+            .greenArrow:before,
+            .greenArrow:after {
+                content:'';
+                display: inline-block;
+                width:0;
+                height:0;
+                border:20px solid transparent;
+                vertical-align: middle;
+            }
+            .greenArrow:before {
+                border-top-color: green;
+                border-bottom-color: green;
+                border-right-color: green;
+            }
+            .greenArrow:after {
+                border-left-color: green;
+            }
+        
+            div.hideCurrDate span.dateInput span.dateFormat {
+                display:none;
+            }
+            
+            
+            body .bPageBlock .pbBody .pbSubsection .pbSubheader h3 { 
+                background-color: black;
+                color: white; 
+            } 
+           
+        </style>
+        
+    </head>
+ 
+    <script type="text/javascript">
+ 
+        function disableOnSubmit(input, display) {
+            var btn = input;
+            setTimeout(function(){ 
+                btn.disabled = 'disabled';
+                // Use the Salesforce CSS style to make the button appear disabled
+                btn.className = 'btnDisabled';
+                btn.value = display; 
+            }, 50);
+        }
+        
+    </script>
+    
+ <!--    <apex:form id="theForm" >
+        
+        <apex:pageMessages id="msgs"/>
+        
+        <br/>
+        
+        <div style="text-align:left; background-color:black;" >
+            <br/>
+            <apex:image url="{!$Resource.CallRevu360Logo}" width="20%" height="10%" style="margin-left:5%;" />
+            <br/>
+            <br/>
+        </div>
+        
+        <div style="text-align:center; background-color:black; color:white;">
+            <apex:outputText value="Account Information Update" style="font-size:30px; text-align:center;" />
+        </div>
+        <br/>
+        <br/>
+        
+        <apex:outputPanel rendered="{!authenticated}" >
+            <div style="float: left;" id="leftArrow" >
+                <div id="leftInner" >Company Information</div>
+            </div>
+            <div >
+                <div style="float: left;" id="middleArrow" >
+                    <div id="middleInner" >Employee Information</div>
+                </div>
+                <div id="rightArrow" >
+                    <div id="rightInner" >Ad Source Information</div>
+                </div>
+            </div>
+        </apex:outputPanel>
+        
+        <apex:pageBlock id="block" >
+        
+            <script type="text/javascript" >
+        
+                $j(document).ready(function() { 
+                    $j("[id$='empTable']").tablesorter({theme: 'dark', dateFormat : "dd/mm/yyyy"}); 
+                    $j("[id$='adTable']").tablesorter({theme: 'dark', dateFormat : "dd/mm/yyyy"});
+                    var leftArrowCheck = '{!company.billingStreet != null && company.billingState != null}';
+                    document.getElementById('leftArrow').className = leftArrowCheck ? 'greenArrow' : 'blueArrow';
+                    document.getElementById('leftInner').className = leftArrowCheck ? 'inner-greenArrow' : 'inner-blueArrow';
+                    var middleArrowCheck = '{!employeeSize}' > 0;
+                    document.getElementById('middleArrow').className = middleArrowCheck ? 'greenArrow' : 'blueArrow';
+                    document.getElementById('middleInner').className = middleArrowCheck ? 'inner-greenArrow' : 'inner-blueArrow';
+                    var rightArrowCheck = '{!adSize}' > 0;
+                    document.getElementById('rightArrow').className = rightArrowCheck ? 'greenArrow' : 'blueArrow';
+                    document.getElementById('rightInner').className = rightArrowCheck ? 'inner-greenArrow' : 'inner-blueArrow'; 
+                });  
+
+            </script>
+            
+            <apex:actionStatus id="status">
+                <apex:facet name="start">
+                <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.75; z-index: 1000;" >
+                    &nbsp;
+                </div>
+                <div style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 1001; margin: 30% 50%" >
+                    <img src="http://upload.wikimedia.org/wikipedia/commons/e/ed/Cursor_Windows_Vista.gif" />
+                </div>
+                </apex:facet>
+            </apex:actionStatus>
+            
+            <apex:pageBlockButtons location="top" >
+                <apex:commandButton value="Update Company Information" action="{!updateCompany}" status="status" 
+                    onclick="disableOnSubmit(this, 'Please wait');" rendered="{!authenticated}" rerender="block" />
+                <apex:commandButton value="Update Employee Information" action="{!updateEmployee}" status="status" 
+                    onclick="disableOnSubmit(this, 'Please wait');" rendered="{!authenticated}" rerender="block" />
+                <apex:commandButton value="Update Ad Source Information" action="{!updateAd}" status="status" 
+                    onclick="disableOnSubmit(this, 'Please wait');" rendered="{!authenticated}" rerender="block" />
+                <apex:commandButton value="Update All" action="{!updateAll}" status="status" 
+                    onclick="disableOnSubmit(this, 'Please wait');" rendered="{!authenticated}" rerender="block" />
+                <apex:commandButton value="Export Information" action="{!exportCSV}" status="status" 
+                    onclick="disableOnSubmit(this, 'Please wait');" rendered="{!authenticated}" rerender="block" />
+                <apex:commandButton value="{!scheduleButton}" action="{!scheduleCall}" status="status" 
+                    onclick="disableOnSubmit(this, 'Please wait');" rendered="{!AND(authenticated, scheduleButton != 'Confirm Scheduled Call')}" 
+                    rerender="block" />
+                <apex:commandButton value="{!scheduleButton}" action="{!scheduleCall}" 
+                    rendered="{!AND(authenticated, scheduleButton = 'Confirm Scheduled Call')}"
+                    status="status" style="background:lightgreen" onclick="disableOnSubmit(this, 'Please wait');" rerender="block" />
+                <apex:commandButton value="{!endButton}" action="{!endSession}" status="status" rendered="{!!confirmEnd}"
+                    onclick="disableOnSubmit(this, 'Please wait');" rerender="block" />
+                <apex:commandButton value="{!endButton}" action="{!endSession}" rendered="{!confirmEnd}"
+                    status="status" style="background:lightgreen" onclick="disableOnSubmit(this, 'Please wait');" rerender="block" />
+            </apex:pageBlockButtons>
+            
+            <apex:outputPanel id="errs1" rendered="{!errorMsg != null}" >
+                <div style="text-align:center;" >
+                    <apex:repeat value="{!errorMsg}" var="err" >
+                        <apex:outputText style="font-weight:800; text-align=center; color:red;" value="{!err}" />
+                        <br/>
+                    </apex:repeat>
+                </div>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!showPopup}" >
+                <apex:outputPanel styleClass="customPopup2" layout="block" >
+                    <apex:pageBlockSection columns="2" >
+                        <apex:repeat value="{!choices}" var="ch" >
+                            <apex:outputPanel >
+                                <apex:inputCheckBox value="{!ch.selected}" />
+                                <apex:outputText value="{!ch.choice}" />
+                            </apex:outputPanel>
+                        </apex:repeat>
+                    </apex:pageBlockSection>
+                    <apex:outputPanel >
+                        <apex:commandButton value="Ok" action="{!saveSelect}" onclick="disableOnSubmit(this, 'Please wait');" 
+                            rerender="styleBlock, block"  />
+                        <apex:commandButton value="Cancel" action="{!cancelSelect}" onclick="disableOnSubmit(this, 'Please wait');"
+                            rerender="styleBlock, block"  />
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            
+            <apex:pageBlockSection title="Please Enter Authorization Contact Information" columns="1" rendered="{!noContactYet}" >
+                <apex:inputField value="{!contact.firstName}" />
+                <apex:inputText value="{!lastName}" label="Last Name" />
+                <apex:inputField value="{!contact.mobilePhone}" label="Mobile Phone" />
+                <apex:inputField value="{!contact.email}" />
+                <apex:inputField value="{!contact.phone}" label="Work Phone" />
+                <apex:commandButton value="Setup Authorization Contact" action="{!setUpAuthorizationContact}" 
+                    onclick="disableOnSubmit(this, 'Please wait');" />
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Please Enter Identification Information" columns="1" rendered="{!initialAuthentication}" >
+                <apex:inputField value="{!contact.firstname}" />
+                <apex:inputText value="{!lastName}" label="Last Name" />
+                <apex:inputField value="{!contact.email}" />
+                <apex:commandButton value="Verify Identity" action="{!finalAuthentication}" onclick="disableOnSubmit(this, 'Please wait');" />
+            </apex:pageBlockSection>
+   
+            <apex:pageBlockSection columns="2" rendered="{!AND(authenticated, displayCompany)}" >
+                
+                <apex:pageBlockSection title="Company Info" columns="3" >
+                    <apex:inputField label="Company Name" value="{!company.name}" />
+                    <apex:inputField label="Company Address" value="{!company.BillingStreet}" />
+                    <apex:inputField label="Dealer Group" value="{!company.Dealer_Group__c}" />
+                    <apex:inputField label="City" value="{!company.billingcity}" />
+                    <apex:inputField label="State / Province" value="{!company.BillingState}" />
+                    <apex:inputField label="Zip Code" value="{!company.billingpostalcode}" />
+                    <apex:inputField label="Country" value="{!company.billingcountry}" />
+                    <apex:inputField label="Timezone" value="{!company.Time_Zone__c}" />
+                    <apex:inputField label="Phone #" value="{!company.phone}" />
+                    <apex:inputField label="Main Contact" value="{!company.Authorization_Contact__c}" />
+                    <apex:inputField label="Main Contact Email" value="{!company.Authorization_Contact__r.email}" />
+                    <apex:inputField label="PW Reset" value="{!company.Authorization_Contact_PW_Reset__c}" />
+                    <apex:inputField label="Secondary Contact" value="{!company.Secondary_Contact__c}" />
+                    <apex:inputField label="Secondary Contact Email" value="{!company.Secondary_Contact__r.email}" />
+                    <apex:inputField label="PW Reset" value="{!company.Secondary_Contact_PW_Reset__c}" />
+                    <apex:inputField label="Company Website" value="{!company.Website}" />
+                    <apex:inputField label="Website Provider" value="{!company.Website_Provider__c}" />
+                    <apex:outputText value="" />
+                    <apex:inputField label="Website Provider Login" value="{!company.Website_Provider_Login__c}" />
+                    <apex:inputField label="Website Provider Password" value="{!company.Website_Provider_Password__c}" />
+                </apex:pageBlockSection>
+                    
+                <apex:pageBlockSection title="Hours of Operation" columns="1" >
+                    <apex:pageBlockTable value="{!hours}" var="hour" >
+                        <apex:column >
+                            <apex:outputText value="{!hour.openClose}" style="font-weight:800" />
+                        </apex:column>
+                        <apex:column headerValue="Mon" headerClass="ct" >
+                            <apex:inputField value="{!hour.theAccount.Mon_Open__c}" rendered="{!hour.openClose = 'Open'}" style="width:60px;" />
+                            <apex:inputField value="{!hour.theAccount.Mon_Close__c}" rendered="{!hour.openClose = 'Close'}" style="width:60px;" />
+                        </apex:column>
+                        <apex:column headerValue="Tue" headerClass="ct" >
+                            <apex:inputField value="{!hour.theAccount.Tue_Open__c}" rendered="{!hour.openClose = 'Open'}"  style="width:60px;" />
+                            <apex:inputField value="{!hour.theAccount.Tue_Close__c}" rendered="{!hour.openClose = 'Close'}"  style="width:60px;" />
+                        </apex:column>
+                        <apex:column headerValue="Wed" headerClass="ct" >
+                            <apex:inputField value="{!hour.theAccount.Wed_Open__c}" rendered="{!hour.openClose = 'Open'}"  style="width:60px;" />
+                            <apex:inputField value="{!hour.theAccount.Wed_Close__c}" rendered="{!hour.openClose = 'Close'}"  style="width:60px;" />
+                        </apex:column>
+                        <apex:column headerValue="Thu" headerClass="ct" >
+                            <apex:inputField value="{!hour.theAccount.Thu_Open__c}" rendered="{!hour.openClose = 'Open'}"  style="width:60px;" />
+                            <apex:inputField value="{!hour.theAccount.Thu_Close__c}" rendered="{!hour.openClose = 'Close'}"  style="width:60px;" />
+                        </apex:column>
+                        <apex:column headerValue="Fri" headerClass="ct" >
+                            <apex:inputField value="{!hour.theAccount.Fri_Open__c}" rendered="{!hour.openClose = 'Open'}"  style="width:60px;" />
+                            <apex:inputField value="{!hour.theAccount.Fri_Close__c}" rendered="{!hour.openClose = 'Close'}"  style="width:60px;" />
+                        </apex:column>
+                        <apex:column headerValue="Sat" headerClass="ct" >
+                            <apex:inputField value="{!hour.theAccount.Sat_Open__c}" rendered="{!hour.openClose = 'Open'}"  style="width:60px;" />
+                            <apex:inputField value="{!hour.theAccount.Sat_Close__c}" rendered="{!hour.openClose = 'Close'}"  style="width:60px;" />
+                        </apex:column>
+                        <apex:column headerValue="Sun" headerClass="ct" >
+                            <apex:inputField value="{!hour.theAccount.Sun_Open__c}" rendered="{!hour.openClose = 'Open'}"  style="width:60px;" />
+                            <apex:inputField value="{!hour.theAccount.Sun_Close__c}" rendered="{!hour.openClose = 'Close'}"  style="width:60px;" />
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    <apex:inputField label="Current Call Tracking Setup Name" value="{!company.Current_Call_Tracking_Setup_Name__c}" 
+                        style="width:75%;" />
+                    <br/>
+                    <apex:outputText value="Please provide a login and password (with Admin Access) to your current call tracking service." />
+                    <apex:inputField label="Login" value="{!company.Call_Tracking_Login__c}" />
+                    <apex:inputField label="Password" value="{!company.Call_Tracking_Password__c}" />
+                    
+                </apex:pageBlockSection>
+                
+                <apex:pageBlockSection columns="1" >
+                    <apex:pageBlockSectionItem >
+                        <apex:outputText value="Makes Sold" />
+                        <apex:inputTextArea value="{!company.Main_Car_Makes_Sold__c}" style="width:50%;" rows="4" >
+                            <apex:actionSupport event="onclick" action="{!showPopupMakes}" rerender="block" />
+                        </apex:inputTextArea>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                    
+                <apex:pageBlockSection columns="1" >
+                        <br/>
+                        <apex:outputText value="Sold By" style="font-weight:800;" />
+                        <apex:inputField label="Sales Person" value="{!company.Sold_By_Salesperson__c}" />
+                        <apex:inputField label="Sales Person Email" value="{!company.Sold_By_Salesperson_Email__c}" />
+                </apex:pageBlockSection>
+                    
+                <apex:pageBlockSection title="CRM Settings"  columns="4" >
+                    <apex:inputField label="Current CRM" value="{!company.CRM__c}" />
+                    <apex:inputField label="CRM User Name" value="{!company.CRM_User_Name__c}" />
+                    <apex:inputField label="CRM Password" value="{!company.CRM_Password__c}" />
+                    <apex:inputField label="Inbound Call Address" value="{!company.Inbound_Call_Address__c}" />
+                    <apex:commandButton value="Save Company Info" action="{!saveCompany}" onclick="disableOnSubmit(this, 'Please wait');" />
+                </apex:pageBlockSection> 
+               
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="1" title="Select the Time of the Implementation Call" rendered="{!showSchedule}" >
+                <apex:outputText value="RE: FastCall / CallRevu360" />
+                <apex:commandLink value="Exit Schedule" action="{!exitSchedule}" styleClass="btn" />
+                <apex:repeat value="{!callTimes}" var="tm" >
+                    <apex:outputPanel >
+                        <apex:outputText value="{!tm.dayOfWeek}, " />
+                        <apex:outputText value="{0,date,M/d}"> 
+                            <apex:param value="{!tm.event.startDateTime}" /> 
+                        </apex:outputText>
+                    </apex:outputPanel>
+                    <apex:commandLink value="[ {!tm.event.startDateTime} - {!tm.event.endDateTime} ]" action="{!tm.updateEvent}" 
+                        style="color:blue;" />
+                </apex:repeat>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="1" title="Employee Roster Setup" rendered="{!displayEmployee}" >
+                <apex:dataTable id="empTable" value="{!employees}" var="emp" styleClass="tablesorter" >
+                    <apex:column headerValue="First Name" headerClass="ct" >
+                        <apex:inputField value="{!emp.First_Name__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Last Name" headerClass="ct" >
+                        <apex:inputField value="{!emp.Last_Name__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Title" headerClass="ct" >
+                        <apex:inputField value="{!emp.Title__c}" />
+                    </apex:column>  
+                    <apex:column headerValue="Email" headerClass="ct" >
+                        <apex:inputField value="{!emp.Email__c}" style="width:100px;" />
+                    </apex:column>
+                    <apex:column headerValue="Cell Number" headerClass="ct" >
+                        <apex:inputField value="{!emp.Cell_Phone__c}" style="width:85px;" />
+                    </apex:column>
+                    <apex:column headerValue="Tel. PIN" headerClass="ct" >
+                        <apex:inputField value="{!emp.Telephone_PIN__c}" style="width:40px;" />
+                    </apex:column>
+                    <apex:column headerClass="ct" >
+                        <apex:facet name="header" >
+                            Preferred<br/>Login
+                        </apex:facet>
+                        <apex:inputField value="{!emp.Preferred_Login__c}" style="width:100px;" />
+                    </apex:column>
+                    <apex:column headerClass="ct" >
+                        <apex:facet name="header" >
+                            Title<br/>Match?
+                        </apex:facet>
+                        <div style="text-align:center;" >
+                            <apex:inputField value="{!emp.Title_Match__c}" />
+                        </div>
+                    </apex:column>
+                    <apex:column headerClass="ct" >
+                        <apex:facet name="header" >
+                            Alert<br/>Details
+                        </apex:facet>
+                        <apex:inputField value="{!emp.Alert_Details__c}" style="width:60px;" />
+                    </apex:column>
+                    <apex:column headerClass="ct" >
+                        <apex:facet name="header" >
+                            Text<br/>Alerts
+                        </apex:facet>
+                        <div style="text-align:center;" >
+                            <apex:inputField value="{!emp.Text_Alerts__c}" />
+                        </div>
+                    </apex:column>
+                    <apex:column headerClass="ct" >
+                        <apex:facet name="header" >
+                            Email<br/>Alerts
+                        </apex:facet>
+                        <div style="text-align:center;" >
+                            <apex:inputField value="{!emp.Email_Alerts__c}" />
+                        </div>
+                    </apex:column>
+                    <apex:column headerValue="Trans?" headerClass="ct" >
+                        <div style="text-align:center;" >
+                            <apex:inputField value="{!emp.Trans__c}" />
+                        </div>
+                    </apex:column>
+                    <apex:column headerValue="Login Type" headerClass="ct" >
+                        <div style="text-align:center;" >
+                            <apex:selectRadio value="{!emp.Login_Type__c}" layout="lineDirection" >
+                                <apex:selectOption itemValue="E" itemLabel="E"/>
+                                <apex:selectOption itemValue="M" itemLabel="M"/>
+                            </apex:selectRadio>
+                        </div>
+                    </apex:column>
+                </apex:dataTable>
+                <apex:outputPanel >
+                    <apex:commandButton value="{!employeeButton}" action="{!saveEmployees}" onclick="disableOnSubmit(this, 'Please wait');"
+                        rerender="block" />
+                    <apex:commandButton value="Cancel New Employee" action="{!cancelEmployee}" rendered="{!employeeButton = 'Save New Employee'}"
+                        style="margin-left:20px;" onclick="disableOnSubmit(this, 'Please wait');" rerender="block" />
+                </apex:outputPanel>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="1" title="Ad Source Setup" rendered="{!displayAd}" >
+                <apex:dataTable value="{!ads}" var="ad" id="adTable" styleClass="tablesorter" >
+                    <apex:column headerValue="Method" headerClass="ct" >
+                        <apex:inputField value="{!ad.Method__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Ad Source Name" headerClass="ct" >
+                        <apex:inputField value="{!ad.name}" />
+                    </apex:column>
+                    <apex:column headerClass="ct"  >
+                        <apex:facet name="header" >
+                            Area<br/>Code
+                        </apex:facet>
+                        <apex:inputField value="{!ad.Area_Code__c}" style="width:25px;" />
+                    </apex:column>
+                    <apex:column headerClass="ct" >
+                        <apex:facet name="header" >
+                            Currently<br/>Posted<br/>Number
+                        </apex:facet>
+                        <apex:inputField value="{!ad.Currently_Posted_Number__c}" style="width:80px;" />
+                    </apex:column>
+                    <apex:column headerClass="ct" >
+                        <apex:facet name="header" >
+                            CallRevu<br/>Tracking<br/>Number
+                        </apex:facet>
+                        <apex:inputField value="{!ad.CallRevu_Tracking_Number__c}" style="width:80px;" />
+                    </apex:column>
+                    <apex:column headerValue="Rings-to" headerClass="ct" >
+                        <apex:inputField value="{!ad.Rings_to__c}" style="width:80px;" />
+                    </apex:column>
+                    <apex:column headerClass="ct" >
+                        <apex:facet name="header" >
+                            Posted<br/>Number<br/>Provided By
+                        </apex:facet>
+                        <apex:inputField value="{!ad.Posted_Number_Provided_By__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Rep Name" headerClass="ct" >
+                        <apex:inputField value="{!ad.Rep_Name__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Rep Email" headerClass="ct" >
+                        <apex:inputField value="{!ad.Rep_Email__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Comments" headerClass="ct" >
+                        <apex:inputField value="{!ad.Comments__c}" />
+                    </apex:column>
+                    <apex:column headerClass="ct" >
+                        <apex:facet name="header" >
+                            First<br/>Test<br/>Completed
+                        </apex:facet>
+                        <div class="hideCurrDate" >
+                            <apex:inputField value="{!ad.First_Test_Completed__c}" style="width:50px;" />
+                        </div>
+                    </apex:column>
+                    <apex:column headerClass="ct" >
+                        <apex:facet name="header" >
+                            Reroute<br/>RespOrg<br/>Request
+                        </apex:facet>
+                        <div class="hideCurrDate" >
+                            <apex:inputField value="{!ad.Reroute_RespOrg_Request__c}" style="width:50px;" />
+                        </div>
+                    </apex:column>
+                    <apex:column headerClass="ct" >
+                        <apex:facet name="header" >
+                            Reroute<br/>RespOrg<br/>Completed
+                        </apex:facet>
+                        <div class="hideCurrDate" >
+                            <apex:inputField value="{!ad.Reroute_RespOrg_Completed__c}" style="width:50px;" />
+                        </div>
+                    </apex:column>
+                </apex:dataTable>
+                <apex:outputPanel >
+                    <apex:commandButton value="{!adButton}" action="{!saveAd}" onclick="disableOnSubmit(this, 'Please wait');" rerender="block" />
+                    <apex:commandButton value="Cancel New Ad Source" action="{!cancelAd}" rendered="{!AdButton = 'Save New Ad Source'}"
+                        style="margin-left:20px;" onclick="disableOnSubmit(this, 'Please wait');" rerender="block" />
+                </apex:outputPanel>
+            </apex:pageBlockSection>
+            
+            </apex:pageBlock>
+    
+    </apex:form>  -->
+</apex:page>

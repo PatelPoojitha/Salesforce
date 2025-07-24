@@ -1,0 +1,70 @@
+<aura:component controller="CreateOrderFromAgreementController" 
+    implements="force:lightningQuickActionWithoutHeader,force:hasRecordId,flexipage:availableForRecordHome" access="global" > 
+   
+   <aura:attribute name="confirmButton" type="String" default="Create Invoices" />
+    <aura:attribute name="orderCreated" type="Boolean" default="false"/>
+    <aura:attribute name="pageMessage" type="String" default="" />
+    <aura:attribute name="spinner" type="Boolean" default=""/>
+   
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <ltng:require styles="{!$Resource.PopupCss}" />
+    
+    <aura:if isTrue="{!v.spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="status">
+                <span class="slds-assistive-text">Please Wait ...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <div style="margin-left: 100px;" >
+        <lightning:layout >
+            <lightning:layoutItem >
+                <div class="slds-text-heading_medium" > 
+                    Create Invoices
+                </div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    <br/>
+    <br/>
+    
+    <div style="margin-left: 300px;" >
+    
+        <div >
+            <br/>
+            <br/>
+            <button onclick="{!c.cancel}" styleClass="slds-button" style="background: lightblue; height: 30px;
+                border-radius: 6px 6px 6px 6px;" >Return</button>
+            <aura:renderIf isTrue="{!!v.orderCreated}" >
+                <button onclick="{!c.createInvoices}" styleClass="slds-button" style="background: lightblue; height: 30px; 
+                    border-radius: 6px 6px 6px 6px; margin-left: 30px;" >{!v.confirmButton}</button>
+            </aura:renderIf>
+        </div>
+    
+        <br/>
+        <br/>
+        <br/>
+    
+        <aura:renderIf isTrue="{!and(v.pageMessage != null, v.pageMessage != '')}" >
+            <br/>
+            <br/>
+            <div style="text-align-center; font-size: 16px;" >
+                {!v.pageMessage}
+            </div>
+            <br/>
+            <br/>
+        </aura:renderIf>
+    
+        <aura:renderIf isTrue="{!v.orderCreated}" >
+            <div style="text-align-center; font-size: 16px;" >
+                Your Billing Batch has been submitted.  You will receive an email when it has completed.
+            </div>
+        </aura:renderIf>
+        
+    </div>
+   
+</aura:component>

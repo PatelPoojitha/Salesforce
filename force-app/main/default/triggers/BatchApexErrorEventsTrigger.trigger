@@ -1,0 +1,1 @@
+trigger BatchApexErrorEventsTrigger on BatchApexErrorEvent (after insert) {  }

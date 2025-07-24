@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Launch_Date_Quick_Look</fullName>
+    <columns>NAME</columns>
+    <columns>Launch_Date__c</columns>
+    <columns>Performance_Manager__c</columns>
+    <columns>Strategic_Account_M__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Account_Dealer_Group__c</field>
+        <operation>equals</operation>
+        <value>Canada One Auto Group</value>
+    </filters>
+    <filters>
+        <field>CallRevu_Account_Status__c</field>
+        <operation>equals</operation>
+        <value>Active,Pending Cancellation</value>
+    </filters>
+    <label>Launch Date Quick Look</label>
+    <sharedTo>
+        <role>Performance_Manager</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Implementation_Call_Not_Scheduled</fullName>
+    <columns>NAME</columns>
+    <columns>Bill_to_Account__c</columns>
+    <columns>Status__c</columns>
+    <columns>Authorization_Contact__c</columns>
+    <columns>Date_Agreement_Signed__c</columns>
+    <columns>Launch_Call_Scheduled__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Launch_Call_Scheduled__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Launched</value>
+    </filters>
+    <label>Implementation Call Not Scheduled</label>
+</ListView>

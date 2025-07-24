@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>CallRevu_Contract__c</columns>
+    <columns>NAME</columns>
+    <columns>MRR__c</columns>
+    <columns>Effective_Date__c</columns>
+    <columns>Product__c</columns>
+    <columns>Price_Per_Unit__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>Bill_to_Account__c</columns>
+    <columns>Frequency__c</columns>
+    <columns>Sync_With_CallRevu_360__c</columns>
+    <columns>Billing_Agreement__c</columns>
+    <columns>Billing_Agreement_And_Prod_Agreement_Key__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CallRevu_Contract__c</field>
+        <operation>contains</operation>
+        <value>Garber Buick GMC Of Ft. Pierce</value>
+    </filters>
+    <label>All</label>
+</ListView>

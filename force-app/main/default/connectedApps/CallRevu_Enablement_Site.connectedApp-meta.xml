@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>kristiejaecklein@callrevu.com</contactEmail>
+    <contactPhone>4439000768</contactPhone>
+    <iconUrl>https://login.salesforce.com/logos/Standard/performance/icon.png</iconUrl>
+    <label>CallRevu Enablement Site</label>
+    <logoUrl>https://login.salesforce.com/logos/Standard/performance/logo.svg</logoUrl>
+    <oauthConfig>
+        <callbackUrl>https://callrevu.my.trailhead.com/auth/mytrailhead/callback</callbackUrl>
+        <consumerKey>3MVG9WCdh6PFin0jN5Df21kRJKmKdfb_z2bZkXdvJC63MrKwxod.G9jB8p_4_M8ooamoMEo4kGK81azn6E7Ke</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isNamedUserJwtEnabled>false</isNamedUserJwtEnabled>
+        <isPkceRequired>false</isPkceRequired>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Basic</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>OpenID</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <permissionSetName>myTrailhead access</permissionSetName>
+    <profileName>Callrevu Supervisor</profileName>
+    <profileName>CallRevu Standard User</profileName>
+    <profileName>System Administrator</profileName>
+</ConnectedApp>

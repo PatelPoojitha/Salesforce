@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>20 Group</fullName>
+        <default>false</default>
+        <label>20 Group</label>
+    </customValue>
+    <customValue>
+        <fullName>Digital Marketing</fullName>
+        <default>false</default>
+        <label>Digital Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>DNI</fullName>
+        <default>false</default>
+        <label>DNI</label>
+    </customValue>
+    <customValue>
+        <fullName>FCA</fullName>
+        <default>false</default>
+        <label>FCA</label>
+    </customValue>
+    <customValue>
+        <fullName>Ford</fullName>
+        <default>false</default>
+        <label>Ford</label>
+    </customValue>
+    <customValue>
+        <fullName>GM</fullName>
+        <default>false</default>
+        <label>GM</label>
+    </customValue>
+    <customValue>
+        <fullName>Group Expansion</fullName>
+        <default>false</default>
+        <label>Group Expansion</label>
+    </customValue>
+    <customValue>
+        <fullName>Hyundai</fullName>
+        <default>false</default>
+        <label>Hyundai</label>
+    </customValue>
+    <customValue>
+        <fullName>IPC</fullName>
+        <default>false</default>
+        <label>IPC</label>
+    </customValue>
+    <customValue>
+        <fullName>Kia</fullName>
+        <default>false</default>
+        <label>Kia</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Campaign</fullName>
+        <default>false</default>
+        <label>Marketing Campaign</label>
+    </customValue>
+    <customValue>
+        <fullName>Material Download</fullName>
+        <default>false</default>
+        <label>Material Download</label>
+    </customValue>
+    <customValue>
+        <fullName>Mitz</fullName>
+        <default>false</default>
+        <label>Mitz</label>
+    </customValue>
+    <customValue>
+        <fullName>More Information</fullName>
+        <default>false</default>
+        <label>More Information</label>
+    </customValue>
+    <customValue>
+        <fullName>NADA at Show</fullName>
+        <default>false</default>
+        <label>NADA at Show</label>
+    </customValue>
+    <customValue>
+        <fullName>NADA Post Show</fullName>
+        <default>false</default>
+        <label>NADA Post Show</label>
+    </customValue>
+    <customValue>
+        <fullName>NADA Pre Show</fullName>
+        <default>false</default>
+        <label>NADA Pre Show</label>
+    </customValue>
+    <customValue>
+        <fullName>New Dealership</fullName>
+        <default>false</default>
+        <label>New Dealership</label>
+    </customValue>
+    <customValue>
+        <fullName>New Prospect</fullName>
+        <default>false</default>
+        <label>New Prospect</label>
+    </customValue>
+    <customValue>
+        <fullName>NIssan</fullName>
+        <default>false</default>
+        <label>NIssan</label>
+    </customValue>
+    <customValue>
+        <fullName>NYSADA</fullName>
+        <default>false</default>
+        <label>NYSADA</label>
+    </customValue>
+    <customValue>
+        <fullName>OEM</fullName>
+        <default>false</default>
+        <label>OEM</label>
+    </customValue>
+    <customValue>
+        <fullName>OEM Landing Page</fullName>
+        <default>false</default>
+        <label>OEM Landing Page</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Pricing</fullName>
+        <default>false</default>
+        <label>Pricing</label>
+    </customValue>
+    <customValue>
+        <fullName>Print Marketing</fullName>
+        <default>false</default>
+        <label>Print Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Repackaging - At Risk</fullName>
+        <default>false</default>
+        <label>Repackaging - At Risk</label>
+    </customValue>
+    <customValue>
+        <fullName>Schedule Demo</fullName>
+        <default>false</default>
+        <label>Schedule Demo</label>
+    </customValue>
+    <customValue>
+        <fullName>SOA</fullName>
+        <default>false</default>
+        <label>SOA</label>
+    </customValue>
+    <customValue>
+        <fullName>Toyota</fullName>
+        <default>false</default>
+        <label>Toyota</label>
+    </customValue>
+    <customValue>
+        <fullName>Win Back</fullName>
+        <default>false</default>
+        <label>Win Back</label>
+    </customValue>
+    <customValue>
+        <fullName>Honda</fullName>
+        <default>false</default>
+        <label>Honda</label>
+    </customValue>
+    <customValue>
+        <fullName>Repacking - Sales</fullName>
+        <default>false</default>
+        <label>Repacking - Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>AAAS Summit</fullName>
+        <default>false</default>
+        <label>AAAS Summit</label>
+    </customValue>
+    <customValue>
+        <fullName>Facebook Ad</fullName>
+        <default>false</default>
+        <label>Facebook Ad</label>
+    </customValue>
+    <customValue>
+        <fullName>LinkedIn Ad</fullName>
+        <default>false</default>
+        <label>LinkedIn Ad</label>
+    </customValue>
+    <customValue>
+        <fullName>Display</fullName>
+        <default>false</default>
+        <label>Display</label>
+    </customValue>
+    <customValue>
+        <fullName>Geotargeting</fullName>
+        <default>false</default>
+        <label>Geotargeting</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Geo</fullName>
+        <default>false</default>
+        <label>Sales Geo</label>
+    </customValue>
+    <customValue>
+        <fullName>PPC</fullName>
+        <default>false</default>
+        <label>PPC</label>
+    </customValue>
+    <customValue>
+        <fullName>IMAC Webs</fullName>
+        <default>false</default>
+        <label>IMAC Webs</label>
+    </customValue>
+    <customValue>
+        <fullName>Ad Agency</fullName>
+        <default>false</default>
+        <label>Ad Agency</label>
+    </customValue>
+    <customValue>
+        <fullName>Automotive Software - CRM</fullName>
+        <default>false</default>
+        <label>Automotive Software - CRM</label>
+    </customValue>
+    <customValue>
+        <fullName>Automotive Software Vendor</fullName>
+        <default>false</default>
+        <label>Automotive Software Vendor</label>
+    </customValue>
+    <customValue>
+        <fullName>Other Referral Partner</fullName>
+        <default>false</default>
+        <label>Other Referral Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Training Company</fullName>
+        <default>false</default>
+        <label>Training Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Lead Score Out</fullName>
+        <default>false</default>
+        <label>Lead Score Out</label>
+    </customValue>
+    <customValue>
+        <fullName>Contact Us</fullName>
+        <default>false</default>
+        <label>Contact Us</label>
+    </customValue>
+    <customValue>
+        <fullName>Driving Sales</fullName>
+        <default>false</default>
+        <label>Driving Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>DMSC</fullName>
+        <default>false</default>
+        <label>DMSC</label>
+    </customValue>
+    <customValue>
+        <fullName>Auto Success Magazine</fullName>
+        <default>false</default>
+        <label>Auto Success Magazine</label>
+    </customValue>
+    <customValue>
+        <fullName>Automotive News </fullName>
+        <default>false</default>
+        <label>Automotive News </label>
+    </customValue>
+    <customValue>
+        <fullName>CallRevu Webinar</fullName>
+        <default>false</default>
+        <label>CallRevu Webinar</label>
+    </customValue>
+    <customValue>
+        <fullName>NIADA 2021</fullName>
+        <default>false</default>
+        <label>NIADA 2021</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Campaign</fullName>
+        <default>false</default>
+        <label>Sales Campaign</label>
+    </customValue>
+    <customValue>
+        <fullName>CallSource</fullName>
+        <default>false</default>
+        <label>CallSource</label>
+    </customValue>
+    <customValue>
+        <fullName>Intent</fullName>
+        <default>false</default>
+        <label>Intent</label>
+    </customValue>
+    <customValue>
+        <fullName>Visitor Intelligence</fullName>
+        <default>false</default>
+        <label>Visitor Intelligence</label>
+    </customValue>
+    <customValue>
+        <fullName>ZoomInfo</fullName>
+        <default>false</default>
+        <label>ZoomInfo</label>
+    </customValue>
+    <customValue>
+        <fullName>ASOTU</fullName>
+        <default>false</default>
+        <label>ASOTU</label>
+    </customValue>
+    <customValue>
+        <fullName>NYDA - eDealer</fullName>
+        <default>false</default>
+        <label>NYDA - eDealer</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Sponsor Event</fullName>
+        <default>false</default>
+        <label>Marketing Sponsor Event</label>
+    </customValue>
+    <customValue>
+        <fullName>Digital Dealer</fullName>
+        <default>false</default>
+        <label>Digital Dealer</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Dealer Upgrade</fullName>
+        <default>false</default>
+        <label>Existing Dealer Upgrade</label>
+    </customValue>
+    <customValue>
+        <fullName>CRM</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CRM</label>
+    </customValue>
+    <customValue>
+        <fullName>CMS</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>CMS</label>
+    </customValue>
+    <customValue>
+        <fullName>eLeads</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>eLeads</label>
+    </customValue>
+    <customValue>
+        <fullName>Hnda</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Hnda</label>
+    </customValue>
+    <customValue>
+        <fullName>Marcom</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Marcom</label>
+    </customValue>
+    <customValue>
+        <fullName>Phone Ninjas</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Phone Ninjas</label>
+    </customValue>
+    <customValue>
+        <fullName>Repackaging - Sales</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Repackaging - Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Shawn Kerin</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Shawn Kerin</label>
+    </customValue>
+    <customValue>
+        <fullName>Tier 1</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tier 1</label>
+    </customValue>
+    <customValue>
+        <fullName>Tier 2</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Tier 2</label>
+    </customValue>
+    <customValue>
+        <fullName>VinSolution</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>VinSolution</label>
+    </customValue>
+    <masterLabel>Lead Sub Source</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

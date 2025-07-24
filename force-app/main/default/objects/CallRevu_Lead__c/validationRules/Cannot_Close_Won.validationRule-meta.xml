@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Close_Won</fullName>
+    <active>true</active>
+    <description>You cannot mark a CallRevu Lead as Closed Won. This must be set from the Opportunity</description>
+    <errorConditionFormula>AND($Profile.Name = &apos;CallRevu Sales&apos;,
+AND(TEXT(Status__c)= &quot;Closed Won&quot;,
+(AND(OR(Current_Opportunity_Stage__c != &quot;Closed Won&quot;),(Current_Opportunity_Stage__c != &quot;Closed Completed&quot;)))))</errorConditionFormula>
+    <errorMessage>ERROR #03-CL: CallRevu lead is tied to an Opportunity, you cannot close this as Closed Lost</errorMessage>
+</ValidationRule>

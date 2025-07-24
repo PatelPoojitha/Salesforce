@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alert_Billing_All_Actions_are_Completed</fullName>
+        <ccEmails>SOP@callrevu.com, resourcemanagement@callrevu.com</ccEmails>
+        <description>Alert Billing All Actions are Completed</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ericafleck@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Operations/Alert_Billing_Agreement_Sent</template>
+    </alerts>
+    <alerts>
+        <fullName>Alert_Channel_Director</fullName>
+        <description>Alert Channel Director</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>apiuser@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>sfhelpdesk@callrevu.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Operations/New_Tier_2_Opportunity</template>
+    </alerts>
+    <alerts>
+        <fullName>Alert_SOP</fullName>
+        <ccEmails>billing@callrevu.com,rebeccahughes@callrevu.com</ccEmails>
+        <description>Alert SOP</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ericafleck@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Operations/Alert_SOP</template>
+    </alerts>
+    <alerts>
+        <fullName>Alert_SOP_to_Void_DS</fullName>
+        <ccEmails>billing@callrevu.com,rebeccahughes@callrevu.com</ccEmails>
+        <description>Alert SOP to Void DS</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ericafleck@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>sfhelpdesk@callrevu.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Operations/Alert_SOP_of_Closed_Lost</template>
+    </alerts>
+    <alerts>
+        <fullName>CallRevu_Demonstration_Reminder_Email</fullName>
+        <description>CallRevu Demonstration Reminder Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Demo_Contact_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Operations/CallRevu_Demonstration_Reminder_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Closed_Lost_Opportunity_Email</fullName>
+        <description>Closed Lost Opportunity Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Operations/Closed_Lost_Opportunity</template>
+    </alerts>
+    <alerts>
+        <fullName>Closed_Won_Opportunity</fullName>
+        <ccEmails>agreements@callrevu.com</ccEmails>
+        <description>Closed Won Opportunity</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>andreamartin@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>davidmalone@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jimmenard@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Operations/Closed_Won_Opportunity</template>
+    </alerts>
+    <alerts>
+        <fullName>Delete_a_Opportunity_Record</fullName>
+        <description>Delete a Opportunity Record</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kristiejaecklein@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Support_Templates/Delete_a_Opportunity_Record</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Matt_Boyle_of_New_Opportunity_Owner_Change</fullName>
+        <description>Email Matt Boyle of New Opportunity Owner Change</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kristiejaecklein@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>sfhelpdesk@callrevu.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Operations/Opportunity_Owner_Change</template>
+    </alerts>
+    <alerts>
+        <fullName>Request_Denied_to_Delete_Opportunity</fullName>
+        <description>Request Denied to Delete Opportunity</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Operations/Request_Denied_to_Delete_Opportunity</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Billing_Alert_that_SOP_has_actions_pending</fullName>
+        <ccEmails>SOP@callrevu.com</ccEmails>
+        <description>Send Billing Alert that SOP has actions pending</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ericafleck@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Operations/Alert_Billing_Agreement_Needed</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Dealer_Launched_Email</fullName>
+        <description>Send Dealer Launched Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Operations/Dealer_Launched</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_Alert_for_Campaign_Change_Order</fullName>
+        <ccEmails>SOP@callrevu.com</ccEmails>
+        <description>Send Email Alert for Campaign Change Order</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ericafleck@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Operations/Alert_Accounting_of_Campaign_Change_Order</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Check_Launched</fullName>
+        <field>Launched__c</field>
+        <literalValue>1</literalValue>
+        <name>Check Launched</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Convert_MM_DD_YYYY</fullName>
+        <field>Close_Month__c</field>
+        <formula>CASE( MONTH(CloseDate) , 
+1, &quot;January&quot;, 
+2, &quot;February&quot;, 
+3, &quot;March&quot;, 
+4, &quot;April&quot;, 
+5, &quot;May&quot;, 
+6, &quot;June&quot;, 
+7, &quot;July&quot;, 
+8, &quot;August&quot;, 
+9, &quot;September&quot;, 
+10, &quot;October&quot;, 
+11, &quot;November&quot;, 
+&quot;December&quot;) +&apos;&apos;+ Text(YEAR(CloseDate))</formula>
+        <name>Convert MM/DD/YYYY</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Date_of_Failure_to_Launch</fullName>
+        <field>Failure_to_Launch_Date__c</field>
+        <formula>NOW()
+/*
+if(ischanged(Loss_Reason__c)&amp;&amp;( ISPICKVAL(Loss_Reason__c, &quot;Failure to Launch&quot;)),NOW(),Failure_to_Launch_Date__c)*/</formula>
+        <name>Date of Failure to Launch</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Closing_Probability</fullName>
+        <field>Closing_Probability__c</field>
+        <literalValue>Sold</literalValue>
+        <name>Update Closing Probability</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Demo_Confirmation_Date</fullName>
+        <field>Demo_Confirmed_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Update Demo Confirmation Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Demo_Contact_Email</fullName>
+        <field>Demo_Contact_Email__c</field>
+        <formula>Demo_Contact_s_Email_Formula__c</formula>
+        <name>Update Demo Contact Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Opportunity_Name</fullName>
+        <field>Name</field>
+        <formula>Left( Account.Name + &quot; - &quot; + if(RecordType.Name = &quot;Dealer Opportunity&quot;,&quot;&quot;,RecordType.Name + &quot; - &quot;) +text(MONTH(CloseDate)) + &quot;/&quot; + text(DAY(CloseDate)) + &quot;/&quot; + text(YEAR(CloseDate)),80)</formula>
+        <name>Update Opportunity Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>X45_Day_Trial</fullName>
+        <field>Trial_Pilot_Type__c</field>
+        <literalValue>45 Day Trial</literalValue>
+        <name>45 Day Trial</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>X90_Day_Pilot</fullName>
+        <field>Trial_Pilot_Type__c</field>
+        <literalValue>90 Day Pilot</literalValue>
+        <name>90 Day Pilot</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>beynd__Check_Create_beynd_Project_on_ClosedWon</fullName>
+        <field>beynd__CreateBeyndProjectOnClosedWon__c</field>
+        <literalValue>1</literalValue>
+        <name>Check Create beynd Project on ClosedWon</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>45 Day Trial Update</fullName>
+        <actions>
+            <name>X45_Day_Trial</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>4a - 45 Day Trial Agreement</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>90 Day Pilot Update</fullName>
+        <actions>
+            <name>X90_Day_Pilot</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>4b - 90 Day Pilot Agreement</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Alert SOP</fullName>
+        <actions>
+            <name>Alert_SOP</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>5. SES REVIEW</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.SES_Reviewed__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Create Agreement Follow up Task - %3C 8 Rooftops</fullName>
+        <active>false</active>
+        <formula>AND(!ISBLANK(Agreement_Pending_Date__c),
+OR(Account_of_Rooftops__c &lt; 8,ISBLANK(Account_of_Rooftops__c)),
+text(StageName) &lt;&gt; &quot;Closed Won&quot;,text(StageName) &lt;&gt; &quot;Closed Lost&quot;,
+text(StageName) &lt;&gt; &quot;Converted&quot;)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Agreement_Follow_Up_8_Rooftops</name>
+                <type>Task</type>
+            </actions>
+            <offsetFromField>Opportunity.Agreement_Pending_Date__c</offsetFromField>
+            <timeLength>3</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>Failure to Launch Date</fullName>
+        <actions>
+            <name>Date_of_Failure_to_Launch</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Loss_Reason__c</field>
+            <operation>equals</operation>
+            <value>Failure to Launch</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opportunity Edit</fullName>
+        <actions>
+            <name>Update_Demo_Contact_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Opportunity_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Opportunity Edit Updates</description>
+        <formula>1 = 1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reformat Date to Month Year</fullName>
+        <actions>
+            <name>Convert_MM_DD_YYYY</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.CloseDate</field>
+            <operation>greaterOrEqual</operation>
+            <value>1/1/2021</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Closed Complete Probability</fullName>
+        <actions>
+            <name>Update_Closing_Probability</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Closing_Probability__c</field>
+            <operation>notEqual</operation>
+            <value>Sold</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed-Completed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Change Order/Cancellation,Tier2 Change Order/Cancellation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.Change_Order_Cancellation_Type__c</field>
+            <operation>notEqual</operation>
+            <value>Dealership Name Change,Downgrade,Full-Cancellation,Partial-Cancellation,Saved,Credit Given,Temporary Downgrade,Downgrade - Right-size Campaign,One-time fee,Exercised 30 Day Out Clause</value>
+        </criteriaItems>
+        <description>Automatically update Close Complete Opportunities with Sold Probability</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Closed Won Probability</fullName>
+        <actions>
+            <name>Update_Closing_Probability</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Closing_Probability__c</field>
+            <operation>notEqual</operation>
+            <value>Sold</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Change Order/Cancellation,OEM Enterprise,OEM Region/Zone,Campaign Change Order,Dealership Credit</value>
+        </criteriaItems>
+        <description>Automatically update Close Won Opportunities with Sold Probability</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Updates when Launched</fullName>
+        <actions>
+            <name>Send_Dealer_Launched_Email</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Check_Launched</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.Launch_Date__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>beynd__Create beynd Project on Closed Won</fullName>
+        <actions>
+            <name>beynd__Check_Create_beynd_Project_on_ClosedWon</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.IsWon</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Marks a flag on the Opportunity which will trigger the creation of a GuideCX Project when the Opportunity Stage is changed to Closed Won.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Add_Launch_Date_to_Trial_Pilot</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>6</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Trial_Stage_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Add Launch Date to Trial/Pilot</subject>
+    </tasks>
+    <tasks>
+        <fullName>Agreement_Follow_Up_8_19_Rooftops</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Agreement_Pending_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Agreement Follow Up - 8-19 Rooftops</subject>
+    </tasks>
+    <tasks>
+        <fullName>Agreement_Follow_Up_8_Rooftops</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>3</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Agreement_Pending_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Agreement Follow Up - &lt;8 Rooftops</subject>
+    </tasks>
+    <tasks>
+        <fullName>Confirm_Demo_Call_or_Text</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>-1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Date_Demo_Scheduled__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Confirm Demo by Call or Text</subject>
+    </tasks>
+    <tasks>
+        <fullName>Demo_Confirmation_Email_Sent_to_Opp_Owner_and_Demo_Contact_if_filled_in</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>-1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Date_Demo_Scheduled__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Demo Confirmation Email Sent to Opp Owner and Demo Contact if filled in</subject>
+    </tasks>
+    <tasks>
+        <fullName>Enrollment_Team_Day_15_Follow_Up</fullName>
+        <assignedTo>nicoleday@callrevu.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Enrollment team follow up</description>
+        <dueDateOffset>15</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Launch_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Completed</status>
+        <subject>Enrollment Team Day 15 Follow Up</subject>
+    </tasks>
+    <tasks>
+        <fullName>Proposal_Executive_Sponsorship_Needed_for_20_Rooftops</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Proposal_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Proposal Executive Sponsorship Needed for &gt;20 Rooftops</subject>
+    </tasks>
+    <tasks>
+        <fullName>Proposal_Follow_Up_8_19_Rooftops</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>7</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Proposal_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Proposal Follow Up - 8-19 Rooftops</subject>
+    </tasks>
+    <tasks>
+        <fullName>Proposal_Follow_Up_8_Rooftops</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>3</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Proposal_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Proposal Follow Up- &lt; 8 Rooftops</subject>
+    </tasks>
+    <tasks>
+        <fullName>Reminder_to_Send_Proposal</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Demo_Completed_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Reminder to Send Proposal</subject>
+    </tasks>
+    <tasks>
+        <fullName>Send_Handwritten_Thank_You_Note_for_Trial_Pilot</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Trial_Stage_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Send Handwritten Thank You Note for Trial/Pilot</subject>
+    </tasks>
+    <tasks>
+        <fullName>Update_Close_Date</fullName>
+        <assignedToType>owner</assignedToType>
+        <dueDateOffset>6</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Trial_Stage_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>Update Close Date</subject>
+    </tasks>
+    <tasks>
+        <fullName>X15_Day_Program_Manager_Day_10_Follow_Up</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Goal of this touch: Program welcome and Q &amp; A</description>
+        <dueDateOffset>10</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>15 Day: Program Manager Day 10 Follow Up</subject>
+    </tasks>
+    <tasks>
+        <fullName>X15_Day_Program_Manager_Day_15_Follow_Up</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Goal of this touch: Program welcome and Q &amp; A</description>
+        <dueDateOffset>15</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>15 Day: Program Manager Day 15 Follow Up</subject>
+    </tasks>
+    <tasks>
+        <fullName>X15_Day_Program_Manager_Day_5_Follow_Up</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Goal of this touch: Program welcome and Q &amp; A</description>
+        <dueDateOffset>5</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>15 Day: Program Manager Day 5 Follow Up</subject>
+    </tasks>
+    <tasks>
+        <fullName>X45_Day_Program_Manager_Day_1_Follow_Up</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Goal of this touch: Program welcome and Q &amp; A</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>45 Day: Program Manager Day 1 Follow Up</subject>
+    </tasks>
+    <tasks>
+        <fullName>X45_Day_Program_Manager_Day_30_Follow_Up</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Goal of this touch: Reinforce the above from Day 15 and broaden to include management engagement reporting for “if I could get my managers to use it” with alert closure reporting</description>
+        <dueDateOffset>30</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>45 Day: Program Manager Day 30 Follow Up</subject>
+    </tasks>
+    <tasks>
+        <fullName>X45_Day_Program_Manager_Day_45_Follow_Up</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Goal of this touch: Convert to a retail deal… MRR</description>
+        <dueDateOffset>45</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.CreatedDate</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>45 Day: Program Manager Day 45 Follow Up</subject>
+    </tasks>
+    <tasks>
+        <fullName>X90_Day_Program_Manager_Day_1_Follow_Up</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Goal of this touch: Program welcome and Q &amp; A</description>
+        <dueDateOffset>0</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Launch_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>90 Day: Program Manager Day 1 Follow Up</subject>
+    </tasks>
+    <tasks>
+        <fullName>X90_Day_Program_Manager_Day_30_Follow_Up</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Goal of this touch: Benchmark Review which is a high-level look at those areas on which they’ll be focusing on over the next 60 days and this sets the tone for the areas you’ll cover at the remaining touchpoints.</description>
+        <dueDateOffset>30</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Launch_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>90 Day: Program Manager Day 30 Follow Up</subject>
+    </tasks>
+    <tasks>
+        <fullName>X90_Day_Program_Manager_Day_60_Follow_Up</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Goal of this touch: Formal Recap to reflect on what they’ve done differently having seen the benchmark results and now being alerted to when something goes wrong</description>
+        <dueDateOffset>60</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Launch_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>90 Day: Program Manager Day 60 Follow Up</subject>
+    </tasks>
+    <tasks>
+        <fullName>X90_Day_Program_Manager_Day_90_Follow_Up</fullName>
+        <assignedToType>owner</assignedToType>
+        <description>Goal of this touch: Convert to a retail deal… MRR</description>
+        <dueDateOffset>90</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Opportunity.Launch_Date__c</offsetFromField>
+        <priority>Normal</priority>
+        <protected>false</protected>
+        <status>Open</status>
+        <subject>90 Day: Program Manager Day 90 Follow Up</subject>
+    </tasks>
+</Workflow>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DMS__c</fullName>
+    <externalId>false</externalId>
+    <label>DMS</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ADP/CDK</fullName>
+                <default>false</default>
+                <label>ADP/CDK</label>
+            </value>
+            <value>
+                <fullName>Advent DMS</fullName>
+                <default>false</default>
+                <label>Advent DMS</label>
+            </value>
+            <value>
+                <fullName>Auto Dealer Systems</fullName>
+                <default>false</default>
+                <label>Auto Dealer Systems</label>
+            </value>
+            <value>
+                <fullName>Automate</fullName>
+                <default>false</default>
+                <label>Automate</label>
+            </value>
+            <value>
+                <fullName>AutoSoft</fullName>
+                <default>false</default>
+                <label>AutoSoft</label>
+            </value>
+            <value>
+                <fullName>DealerBuilt</fullName>
+                <default>false</default>
+                <label>DealerBuilt</label>
+            </value>
+            <value>
+                <fullName>DealerSocket</fullName>
+                <default>false</default>
+                <label>DealerSocket</label>
+            </value>
+            <value>
+                <fullName>Dealertrack DMS</fullName>
+                <default>false</default>
+                <label>Dealertrack DMS</label>
+            </value>
+            <value>
+                <fullName>Dominion</fullName>
+                <default>false</default>
+                <label>Dominion</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Reynolds &amp; Reynolds/Era-ignite</fullName>
+                <default>false</default>
+                <label>Reynolds &amp; Reynolds/Era-ignite</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

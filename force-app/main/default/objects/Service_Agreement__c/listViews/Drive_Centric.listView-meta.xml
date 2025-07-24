@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Drive_Centric</fullName>
+    <columns>NAME</columns>
+    <columns>Active__c</columns>
+    <columns>Bill_to_Account__c</columns>
+    <columns>CallRevu_Account_Name__c</columns>
+    <columns>CallRevu_Account_ID__c</columns>
+    <columns>CallRevu_Account_Type__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CRM__c</field>
+        <operation>equals</operation>
+        <value>DriveCentric</value>
+    </filters>
+    <label>Drive Centric</label>
+</ListView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Sources_Required</fullName>
+    <active>true</active>
+    <description>Lead sources required</description>
+    <errorConditionFormula>AND($Profile.Name = &apos;CallRevu Sales&apos;,
+AND(TEXT(Status__c)!= &quot;Sales Lead (CQL)&quot;,
+AND(TEXT(Status__c)!= &quot;Marketing Lead (MQL)&quot;,
+AND(OR(ISBLANK(text(CallRevu_Lead_Source__c)),
+ISBLANK(text(CallRevu_Lead_Channel__c)),
+ISBLANK(text(CallRevu_Lead_Sub_Source__c)))))))</errorConditionFormula>
+    <errorMessage>ERROR #05-CL: CallRevu Lead Channel, CallRevu Lead Lead Source and CallRevu Lead Lead Sub Source are required to move forward.</errorMessage>
+</ValidationRule>

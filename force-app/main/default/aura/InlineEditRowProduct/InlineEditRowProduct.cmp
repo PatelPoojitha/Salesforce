@@ -1,0 +1,53 @@
+<aura:component >
+  
+    <aura:attribute name="isClosed" type="Boolean" default=""/>
+    <aura:attribute name="singleRec" type="CreateOpportunityProductsController.Product" default=""/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:registerEvent name="changeEvent" type="c:ProductChanged" />
+    <aura:registerEvent name="deleteEvent" type="c:DeleteEvent" />
+    
+    <tr>
+         <aura:renderIf isTrue="{!!v.singleRec.displayChilds}" >
+            <td style="width: 5%;" >
+                <aura:renderIf isTrue="{!and(!v.singleRec.isChildProduct, !v.isClosed)}" >
+                <!--<aura:renderIf isTrue="{!and(!v.singleRec.parentId != null, !v.isClosed)}" >               
+                <aura:renderIf isTrue="{!!v.isClosed}" >-->
+                    <button onclick="{!c.deleteProduct}" class="slds-button slds-button_destructive">Delete</button>
+                </aura:renderIf>
+            </td>
+            <td style="width: 40%;" >
+                <aura:renderIf isTrue="{!v.singleRec.parentId == null}" >
+                    <div class="slds-truncate">{!v.singleRec.description}</div>
+                    <aura:set attribute="else" >
+                        <div class="slds-truncate" style="margin-left: 20px;">{!v.singleRec.description}</div>
+                    </aura:set>
+                </aura:renderIf>
+            </td>
+            <td style="width: 10%;" >
+                <div class="slds-truncate">{!v.singleRec.minutes}</div>
+            </td>
+            <td style="width: 20%;">
+                <ui:inputURL aura:id="url" label="" class="field" value="{!v.singleRec.dniLicensedUrl}"/>
+            </td>
+            <td style="width: 10%;" >
+                <div >${!v.singleRec.listPrice}</div>
+            </td>
+            <td style="width: 8%;" >   
+                <div style="width: 80%;" >
+                    <ui:inputNumber aura:id="quantityId" value="{!v.singleRec.quantity}" change="{!c.change}" />
+                </div>
+            </td>
+            <td style="width: 8%;" >
+               <div style="width: 80%;" >
+                    $<ui:inputNumber aura:id="priceId" value="{!v.singleRec.unitPrice}" change="{!c.change}" disabled="{!v.singleRec.isDiscountRestricted}"/>
+                    <aura:if isTrue="{!v.singleRec.isDiscountRestricted}">
+                        <lightning:helptext content="You do not have rights to edit the price of this product. Please reach out to your Supervisor for further information."/>
+                    </aura:if>
+                </div>
+            </td>
+       </aura:renderIf>
+    </tr>
+    
+</aura:component>

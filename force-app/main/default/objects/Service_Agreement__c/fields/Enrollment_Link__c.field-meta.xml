@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Enrollment_Link__c</fullName>
+    <externalId>false</externalId>
+    <formula>Hyperlink(&quot;https://fixthephone.secure.force.com/datacollection?contactid=&quot;&amp;Authorization_Contact__c &amp;&quot;&amp;contractid=&quot;&amp;Id&amp;&quot;&amp;authcode=&quot;&amp;Authorization_Code__c,&quot;View Enrollment for &quot;&amp; Name )
+
+
+
+
+/*https://fixthephone.secure.force.com/datacollection/*/</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Enrollment Link</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MethodCheck__c</fullName>
+    <description>Rolls up the minimum value of HasMethod field on Ad Source</description>
+    <externalId>false</externalId>
+    <label>MethodCheck</label>
+    <summarizedField>Ad_Source__c.HasMethod__c</summarizedField>
+    <summaryForeignKey>Ad_Source__c.Service_Agreement__c</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

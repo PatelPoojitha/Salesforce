@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>DNI_Status__c</fieldName>
+    <masterLabel>DNI Setup</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>X30_Day_Review_Completed__c</fieldNames>
+        <picklistValueName>30/60 Day Review</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>CR_AutoID_Setup_Completed__c</fieldNames>
+        <picklistValueName>CR Build Out</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>GA_Access_Obtained__c</fieldNames>
+        <fieldNames>Script_Verified__c</fieldNames>
+        <picklistValueName>GA Access/Script</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>GA_Alerts_Goals_Built__c</fieldNames>
+        <picklistValueName>GA Alert/Goal Creation</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>GDS_Report_Built__c</fieldNames>
+        <picklistValueName>GDS Report</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>DNI_Setup</recordTypeName>
+</PathAssistant>

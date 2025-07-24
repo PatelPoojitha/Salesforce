@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dealer_Advantage</fullName>
+    <columns>Bill_to_Account__c</columns>
+    <columns>Service_Location__c</columns>
+    <columns>Service_Location_Billing_Address__c</columns>
+    <columns>Service_Location_Billing_State__c</columns>
+    <columns>Service_Location_Billing_Zip__c</columns>
+    <columns>Service_Location_City__c</columns>
+    <columns>Time_Zone__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bill_to_Account__c</field>
+        <operation>equals</operation>
+        <value>Dealer Advantage Bdc Llc</value>
+    </filters>
+    <label>Dealer Advantage</label>
+    <sharedTo>
+        <role>Accounting</role>
+        <role>Salesforce_Administrator</role>
+    </sharedTo>
+</ListView>

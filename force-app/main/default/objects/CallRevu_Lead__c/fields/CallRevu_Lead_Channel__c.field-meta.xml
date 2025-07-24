@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CallRevu_Lead_Channel__c</fullName>
+    <externalId>false</externalId>
+    <label>CallRevu Lead Channel</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>In Person</fullName>
+                <default>false</default>
+                <label>In Person</label>
+            </value>
+            <value>
+                <fullName>Text</fullName>
+                <default>false</default>
+                <label>Text</label>
+            </value>
+            <value>
+                <fullName>Web Form/HubSpot</fullName>
+                <default>false</default>
+                <label>Web Form/HubSpot</label>
+            </value>
+            <value>
+                <fullName>Outbound Call - RSM</fullName>
+                <default>false</default>
+                <label>Outbound Call - RSM</label>
+            </value>
+            <value>
+                <fullName>CR Employee</fullName>
+                <default>false</default>
+                <label>CR Employee</label>
+            </value>
+            <value>
+                <fullName>Phone Up</fullName>
+                <default>false</default>
+                <label>Phone Up</label>
+            </value>
+            <value>
+                <fullName>Inbound Call - Direct to RSM</fullName>
+                <default>false</default>
+                <label>Inbound Call - Direct to RSM</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>D&amp;B</fullName>
+                <default>false</default>
+                <label>D&amp;B</label>
+            </value>
+            <value>
+                <fullName>Outbound Call – BDR</fullName>
+                <default>false</default>
+                <label>Outbound Call – BDR</label>
+            </value>
+            <value>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Outbound Call</label>
+            </value>
+            <value>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Reseller</label>
+            </value>
+            <value>
+                <fullName>Revenue Share</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Revenue Share</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

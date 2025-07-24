@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Set_Partner_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Partner</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Set Partner Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Approved_field</fullName>
+        <field>Approved_to_change_owner__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Approved field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_City_State_Phone_Key</fullName>
+        <description>Used for Duplicate Rules</description>
+        <field>City_State_Phone_Key__c</field>
+        <formula>BillingCity + BillingState + Clean_Phone__c</formula>
+        <name>Update City State Phone Key</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Clean_Phone</fullName>
+        <description>Used for Duplicate Check</description>
+        <field>Clean_Phone_TXT__c</field>
+        <formula>Clean_Phone__c</formula>
+        <name>Update Clean Phone</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Implementation_Contact_Email</fullName>
+        <description>Update Implementation Contact Email</description>
+        <field>Implementation_Contact_Email__c</field>
+        <formula>Implementation_Contact__r.Email</formula>
+        <name>Update Implementation Contact Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Implementation_Contact_Phone</fullName>
+        <field>Implementation_Contact_Phone__c</field>
+        <formula>Implementation_Contact__r.Phone</formula>
+        <name>Update Implementation Contact Phone</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Street_Phone_Key</fullName>
+        <description>Update Street Phone Key - used in duplicate rules</description>
+        <field>Street_Address_Phone_Key__c</field>
+        <formula>left(BillingStreet,10)+Clean_Phone__c</formula>
+        <name>Update Street Phone Key</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Team_Workflow</fullName>
+        <field>Team_Workflow__c</field>
+        <formula>Team__c</formula>
+        <name>Update Team (Workflow)</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>ConnectAccountTrigger</fullName>
+        <apiVersion>37.0</apiVersion>
+        <endpointUrl>https://30c68010-4e0c-46ab-8002-34a4edb5b97a.trayapp.io</endpointUrl>
+        <fields>BillingCity</fields>
+        <fields>BillingCountry</fields>
+        <fields>BillingPostalCode</fields>
+        <fields>BillingState</fields>
+        <fields>BillingStreet</fields>
+        <fields>DNBConnect__D_B_Match_Confidence_Code__c</fields>
+        <fields>DNBConnect__D_B_Match_Data_Profile__c</fields>
+        <fields>DNBConnect__D_B_Match_Grade__c</fields>
+        <fields>DNBConnect__D_B_Match_Type__c</fields>
+        <fields>DNBConnect__D_B_Name_Match_Score__c</fields>
+        <fields>D_B_Account_Name__c</fields>
+        <fields>D_B_Website__c</fields>
+        <fields>Duns_Number__c</fields>
+        <fields>Id</fields>
+        <fields>Name</fields>
+        <fields>Phone</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>rebeccahughes@callrevu.com</integrationUser>
+        <name>ConnectAccountTrigger</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Account Create and Edit</fullName>
+        <actions>
+            <name>Update_City_State_Phone_Key</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Clean_Phone</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Implementation_Contact_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Implementation_Contact_Phone</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Street_Phone_Key</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Account Create and Edit Updates</description>
+        <formula>1=1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Account on Edit</fullName>
+        <actions>
+            <name>Update_Team_Workflow</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>1 = 1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

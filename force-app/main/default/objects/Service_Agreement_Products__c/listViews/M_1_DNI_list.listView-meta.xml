@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>M_1_DNI_list</fullName>
+    <columns>CallRevu_Contract__c</columns>
+    <columns>NAME</columns>
+    <columns>Billing_Agreement__c</columns>
+    <columns>Billing_Code__c</columns>
+    <columns>Effective_Date__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>Sync_With_CallRevu_360__c</columns>
+    <columns>Update_In_360__c</columns>
+    <columns>Billing_Line_Item_ID__c</columns>
+    <columns>Price_Per_Unit__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Billing_Code__c</field>
+        <operation>equals</operation>
+        <value>CallVision DNI</value>
+    </filters>
+    <label>M-1 DNI list</label>
+</ListView>

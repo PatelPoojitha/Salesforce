@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NADA_2022</fullName>
+    <columns>NAME</columns>
+    <columns>CallRevu_Lead_Owner__c</columns>
+    <columns>CallRevu_Lead_Channel__c</columns>
+    <columns>CallRevu_Lead_Source__c</columns>
+    <columns>CallRevu_Lead_Sub_Source__c</columns>
+    <columns>Campaign__c</columns>
+    <columns>MQL_Date_Time__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Campaign__c</field>
+        <operation>contains</operation>
+        <value>NADA - March 2022</value>
+    </filters>
+    <label>NADA 2022</label>
+</ListView>

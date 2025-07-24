@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tier_Status_is_Blank</fullName>
+    <columns>NAME</columns>
+    <columns>Performance_Manager__c</columns>
+    <columns>CallRevu_Account_Number__c</columns>
+    <columns>CallRevu_Account_Status__c</columns>
+    <columns>Tier_Status__c</columns>
+    <columns>Bill_to_Account__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CallRevu_Account_Status__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Tier Status is Blank</label>
+    <sharedTo>
+        <role>Accounting</role>
+        <role>CFO</role>
+        <role>System_Administrator</role>
+    </sharedTo>
+</ListView>

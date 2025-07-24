@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Launch</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <fieldNames>Date_of_Launch__c</fieldNames>
+        <info>&lt;ul&gt;&lt;li&gt;Update Account Name&lt;/li&gt;&lt;li&gt;Schedule Launch date&lt;/li&gt;&lt;li&gt;Complete Launch Date&lt;/li&gt;&lt;li&gt;Add Contact Information&lt;/li&gt;&lt;li&gt;Verify Level of Service&lt;/li&gt;&lt;li&gt;Verify Timezone&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>1 -Coordinator Assigned</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Comments</fieldNames>
+        <picklistValueName>5.2 Failure to Launch</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Launch</recordTypeName>
+</PathAssistant>

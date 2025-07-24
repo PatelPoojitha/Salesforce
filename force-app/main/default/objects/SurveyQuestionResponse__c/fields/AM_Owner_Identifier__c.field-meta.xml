@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AM_Owner_Identifier__c</fullName>
+    <externalId>false</externalId>
+    <formula>SurveyTaker__r.Case__r.Service_Agreement__r.Performance_Manager__c = $User.Id</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>AM Owner Identifier</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

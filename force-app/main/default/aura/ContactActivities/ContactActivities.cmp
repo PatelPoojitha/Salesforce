@@ -1,0 +1,74 @@
+<aura:component controller="ContactActivitiesController" implements="force:hasRecordId,flexipage:availableForRecordHome" >
+
+    <!-- 
+    This code is the property of Shipp Consulting LLC and is for the use of the authorized client only.  
+    Any reuse or copy of this code without permission from ShippConsulting LLC is the violation of the service contract with Shipp Consulitng LLC.
+     -->
+
+    <aura:attribute name="openTasksData" type="Object" />
+    <aura:attribute name="openTasksDataSmall" type="Object" />
+    <aura:attribute name="openTasksColumns" type="List" />
+    <aura:attribute name="completedTasksData" type="Object" />
+    <aura:attribute name="completedTasksDataSmall" type="Object" />
+    <aura:attribute name="eventData" type="Object" />
+    <aura:attribute name="eventDataSmall" type="Object" />
+    <aura:attribute name="eventColumns" type="List" />
+    <aura:attribute name="button1" type="String" default="More" />
+    <aura:attribute name="button2" type="String" default="More" />
+    <aura:attribute name="button3" type="String" default="More" />
+ 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div >
+        
+        <lightning:layout horizontalAlign="center" >
+            <lightning:layoutItem size="6">
+                <h2>Open Tasks</h2>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="6">
+                <button onclick="{!c.toggleMore1}">{!v.button1}</button>
+            </lightning:layoutItem>
+        </lightning:layout>
+        <aura:if isTrue="{!v.button1 == 'Less'}" >
+            <lightning:datatable data="{!v.openTasksData}" columns="{!v.openTasksColumns }" keyField="Id" hideCheckboxColumn="true" />
+        </aura:if>
+        <aura:if isTrue="{!v.button1 == 'More'}" >
+            <lightning:datatable data="{!v.openTasksDataSmall}" columns="{!v.openTasksColumns }" keyField="Id" hideCheckboxColumn="true" />
+        </aura:if>
+        
+        <div class="slds-p-top_large" >
+            <lightning:layout horizontalAlign="center" >
+                <lightning:layoutItem size="6">
+                    <h2>Closed Tasks</h2>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="6">
+                    <button onclick="{!c.toggleMore2}">{!v.button2}</button>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <aura:if isTrue="{!v.button2 == 'Less'}" >
+                <lightning:datatable data="{!v.completedTasksData}" columns="{!v.openTasksColumns }" keyField="Id" hideCheckboxColumn="true" />
+            </aura:if>
+            <aura:if isTrue="{!v.button2 == 'More'}" >
+                <lightning:datatable data="{!v.completedTasksDataSmall}" columns="{!v.openTasksColumns }" keyField="Id" hideCheckboxColumn="true" />
+            </aura:if>
+        </div>
+        
+        <div class="slds-p-top_large" >
+            <lightning:layout horizontalAlign="center" >
+                <lightning:layoutItem size="6">
+                    <h2>Events</h2>
+                </lightning:layoutItem>
+                <lightning:layoutItem size="6">
+                    <button onclick="{!c.toggleMore3}">{!v.button3}</button>
+                </lightning:layoutItem>
+            </lightning:layout>
+            <aura:if isTrue="{!v.button3 == 'Less'}" >
+                <lightning:datatable data="{!v.eventData}" columns="{!v.eventColumns }" keyField="Id" hideCheckboxColumn="true" />
+            </aura:if>
+            <aura:if isTrue="{!v.button3 == 'More'}" >
+                <lightning:datatable data="{!v.eventDataSmall}" columns="{!v.eventColumns }" keyField="Id" hideCheckboxColumn="true" />
+            </aura:if>
+        </div>
+    </div>
+    
+</aura:component>

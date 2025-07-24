@@ -1,0 +1,367 @@
+@charset "UTF-8";
+/* Body */
+body {
+	font-family: source-sans-pro;
+	background-color: #f2f2f2;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-style: normal;
+	font-weight: 200;
+}
+
+.alert {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.alert_text {
+	font-family: source-sans-pro !important;
+	font-style: normal !important;
+	font-size: 20px !important;
+	font-weight: 200 !important;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	padding-left:30px;
+	color: #df1d1d;
+}
+
+/* Container */
+.container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2%;
+	background-color: #FFFFFF;
+}
+
+/* Navigation */
+
+header {
+	width: 100%;
+	height: 7%;
+	background-color: #0079c1;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+	padding-top: 40px;
+}
+
+.enrollment_heading {
+	color: #535353;
+	text-align: left;
+	font-weight: bold;
+	margin-left: 100px;	
+}
+
+.enrollment_setup_header {
+	color: #0079c1;
+	text-align: left;
+	font-weight: bold;
+	margin-left: 40px;
+	letter-spacing: 3px;	
+}
+
+.enrollment_setup_header_bkg {
+	background-color: #EAEAEA;
+	margin-left: 6%;
+	margin-right: 11%;
+	padding-top: 1%;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+}
+
+.enrollment_copy {
+	font-family: source-sans-pro;
+	background-color: #eaeaea;
+	margin-right: 11%;
+	margin-bottom: 1%;
+	margin-left: 6%;
+	padding-left: 10px;
+	font-style: normal;
+	font-weight: 200;
+	font-size: 20px;
+}
+
+/* Hero Section */
+.hero {
+	background-color: #eaeaea;
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+.light {
+	font-weight: bold;
+	color: #717070;
+}
+.tagline {
+	text-align: center;
+	color: #FFFFFF;
+	margin-top: 4px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+/* About Section */
+
+.about {
+	font-family: source-sans-pro;
+	font-style: normal;
+	font-weight: 200;
+	font-size: 20px;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-top: 1%;
+	display: inline-block;
+	background-color: #FFFFFF;
+	margin-top: 0px;
+}
+
+
+/* More info */
+
+footer {
+	background-color: #FFFFFF;
+	padding-bottom: 0px;
+}
+
+.copyright {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #717070;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-weight: lighter;
+	letter-spacing: 2px;
+	border-top-width: 2px;
+	margin-top: 40px;
+}
+
+
+.hidden {
+	display: none;
+}
+
+/* Mobile */
+@media (max-width: 320px) {
+.logo {
+	width: 100%;
+	text-align: center;
+	margin-top: 13px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.container header nav {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	width: 100%;
+	float: none;
+	display: none;
+}
+header nav ul {
+}
+nav ul li {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	width: 100%;
+	text-align: center;
+}
+.text_column {
+	width: 100%;
+	text-align: justify;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.thumbnail {
+	width: 100%;
+}
+.footer_column {
+	width: 100%;
+	margin-top: 0px;
+}
+.parallax {
+	text-align: center;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 40%;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	width: 100%;
+	font-size: 18px;
+}
+.parallax_description {
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	width: 90%;
+	margin-top: 25px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 12px;
+	float: none;
+	text-align: center;
+}
+.banner {
+	background-color: #2D9AB7;
+	background-image: none;
+}
+.tagline {
+	margin-top: 20px;
+	line-height: 22px;
+}
+.hero_header {
+	padding-left: 10px;
+	padding-right: 10px;
+	line-height: 22px;
+	text-align: center;
+}
+}
+
+/* Small Tablets */
+@media (min-width: 321px)and (max-width: 767px) {
+.logo {
+	width: 100%;
+	text-align: center;
+	margin-top: 13px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	color: #043745;
+}
+.container header nav {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	width: 100%;
+	float: none;
+	overflow: auto;
+	display: inline-block;
+	background: #52bad5;
+}
+header nav ul {
+	padding: 0px;
+	float: none;
+}
+nav ul li {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	width: 100%;
+	text-align: center;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.text_column {
+	width: 100%;
+	text-align: left;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.thumbnail {
+	width: 100%;
+}
+.footer_column {
+	width: 100%;
+	margin-top: 0px;
+}
+.parallax {
+	text-align: center;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 40%;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	width: 100%;
+	font-size: 18px;
+}
+.parallax_description {
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-top: 30%;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	float: none;
+	width: 100%;
+	text-align: center;
+}
+.thumbnail {
+	width: 50%;
+}
+.parallax {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-top: 20%;
+}
+.parallax_description {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	width: 100%;
+	padding-top: 30px;
+}
+.banner {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.footer_column {
+	width: 100%;
+}
+}
+
+/* Small Desktops */
+@media (min-width: 768px) and (max-width: 1096px) {
+.text_column {
+	width: 100%;
+}
+.thumbnail {
+	width: 50%;
+}
+.text_column {
+	width: 100%;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.banner {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+}

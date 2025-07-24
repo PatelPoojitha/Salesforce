@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Email_To_Enrollment_Users</name>
+        <label>Send Email To Enrollment Users</label>
+        <locationX>50</locationX>
+        <locationY>539</locationY>
+        <actionName>Event.Send_Enrollment_Notification_to_users</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Event.Send_Enrollment_Notification_to_users</nameSegment>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <name>Is_New_Event_has_Subject_Implementation_Kickoff</name>
+        <label>Is New Event has Subject Implementation Kickoff?</label>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Event_is_New_Implementation_Kickoff</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Implementation Kickoff</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>IsNewRecord</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_To_Enrollment_Users</targetReference>
+            </connector>
+            <label>Event is New Implementation Kickoff</label>
+        </rules>
+    </decisions>
+    <description>This flow updates Task records with associated Account, Contact, and Opportunity IDs. If the Task subject contains &apos;Implementation Kickoff&apos;, the flow triggers an email notification to Enrollment users</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Returns the WhoId only if it belongs to a Contact (prefix &apos;003&apos;); otherwise, returns null.</description>
+        <name>ContactIdFromWhoId</name>
+        <dataType>String</dataType>
+        <expression>IF(LEFT({!$Record.WhoId},3) = &apos;003&apos;, {!$Record.WhoId}, NULL)</expression>
+    </formulas>
+    <formulas>
+        <description>Checks if the record is being created (new).</description>
+        <name>IsNewRecord</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <description>Returns the WhatId only if it belongs to an Opportunity (prefix &apos;006&apos;); otherwise, returns null.</description>
+        <name>OpportunityIdFromWhatId</name>
+        <dataType>String</dataType>
+        <expression>IF(LEFT({!$Record.WhatId},3) = &apos;006&apos;, {!$Record.WhatId}, NULL)</expression>
+    </formulas>
+    <interviewLabel>Flow Event Object {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Event _Task NotifyEnrollment</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Updates the Event with Acccount Id, Contact Id and Opportunity Id</description>
+        <name>Update_Event_with_Account_Contact_Opportunity_Ids</name>
+        <label>Update Event with Account,Contact,Opportunity Ids</label>
+        <locationX>182</locationX>
+        <locationY>323</locationY>
+        <connector>
+            <targetReference>Is_New_Event_has_Subject_Implementation_Kickoff</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Email</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Account__c</field>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Contact__c</field>
+            <value>
+                <elementReference>ContactIdFromWhoId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Opportunity__c</field>
+            <value>
+                <elementReference>OpportunityIdFromWhatId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Event_with_Account_Contact_Opportunity_Ids</targetReference>
+        </connector>
+        <filterFormula>{!$CustomMetadata.Flow_Control__mdt.Event_Task_NotifyEnrollment.Turn_Off__c}=false</filterFormula>
+        <object>Event</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Draft</status>
+    <subflows>
+        <name>Error_Email</name>
+        <label>Error Email</label>
+        <locationX>578</locationX>
+        <locationY>431</locationY>
+        <flowName>Fault_Path_Flow</flowName>
+        <inputAssignments>
+            <name>varElementName</name>
+            <value>
+                <stringValue>Update_Event_with_Account_Contact_Opportunity_Ids</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFaultMessage</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFlowname</name>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+</Flow>

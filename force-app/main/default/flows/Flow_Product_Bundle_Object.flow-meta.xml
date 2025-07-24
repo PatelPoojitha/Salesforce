@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <environments>Default</environments>
+    <formulas>
+        <name>varActiveDate</name>
+        <dataType>Date</dataType>
+        <expression>if(isnew()&amp;&amp;isblank({!$Record.Active_Date__c}),Today(),{!$Record.Active_Date__c})</expression>
+    </formulas>
+    <formulas>
+        <name>varInactiveDate</name>
+        <dataType>Date</dataType>
+        <expression>if(ischanged({!$Record.IsActive__c})&amp;&amp;NOT({!$Record.IsActive__c}),Today(),{!$Record.Inactive_Date__c})</expression>
+    </formulas>
+    <formulas>
+        <name>varName</name>
+        <dataType>String</dataType>
+        <expression>left({!$Record.Bundle_Product__r.Description} +&quot; &quot;+if( {!$Record.IsActive__c},&quot;Active&quot;,&quot;InActive&quot;),80)</expression>
+    </formulas>
+    <interviewLabel>Flow Product Bundle Object {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Flow Product Bundle Object</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Records_without_conditions</name>
+        <label>Update Records without conditions</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <inputAssignments>
+            <field>Active_Date__c</field>
+            <value>
+                <elementReference>varActiveDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Inactive_Date__c</field>
+            <value>
+                <elementReference>varInactiveDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>varName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Records_without_conditions</targetReference>
+        </connector>
+        <object>Product_Bundle__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

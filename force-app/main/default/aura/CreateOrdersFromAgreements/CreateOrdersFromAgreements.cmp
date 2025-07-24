@@ -1,0 +1,22 @@
+<aura:component controller="CreateOrderFromAgreementController" 
+    implements="force:lightningQuickActionWithoutHeader,flexipage:availableForRecordHome,force:appHostable" access="global" > 
+   
+    <aura:attribute name="spinner" type="Boolean" default=""/>
+   
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:if isTrue="{!v.spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="status">
+                <span class="slds-assistive-text">Please Wait ...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <div >
+        <c:CreateOrderFromAgreement fromCreateOrders="true" />
+    </div>
+    
+</aura:component>

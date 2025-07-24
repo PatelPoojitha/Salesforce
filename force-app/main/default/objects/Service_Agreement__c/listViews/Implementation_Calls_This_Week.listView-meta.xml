@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Implementation_Calls_This_Week</fullName>
+    <columns>NAME</columns>
+    <columns>Bill_to_Account__c</columns>
+    <columns>Status__c</columns>
+    <columns>Authorization_Contact__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>Enrollment_Call_Scheduled__c</columns>
+    <columns>Enrollment_Phone_Number__c</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>Last_Saved_Page__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Enrollment_Call_Scheduled__c</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>notContain</operation>
+        <value>test</value>
+    </filters>
+    <label>Implementation Calls This Week</label>
+</ListView>

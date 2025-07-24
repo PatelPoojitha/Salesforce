@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Combined_Sources__c</fullName>
+    <description>This is a combination of the Lead Source + Lead Sub Source and if Referral Partner is supplied/entered that is added at the end as well.</description>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(Referral_Partner__c),TEXT(CallRevu_Lead_Source__c) &amp;&quot;; &quot;&amp; TEXT(CallRevu_Lead_Sub_Source__c),TEXT(CallRevu_Lead_Source__c) &amp;&quot;; &quot;&amp; TEXT(CallRevu_Lead_Sub_Source__c) &amp;&quot;; &quot;&amp; Referral_Partner__r.Name)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Combined Sources</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

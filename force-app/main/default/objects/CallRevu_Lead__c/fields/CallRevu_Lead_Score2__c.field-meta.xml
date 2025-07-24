@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CallRevu_Lead_Score2__c</fullName>
+    <externalId>false</externalId>
+    <formula>(CASE(Status__c,
+          &quot;Sales Lead (CQL)&quot;,0,
+          &quot;In Progress&quot;,10,
+          &quot;Warm Lead&quot;,10,
+          &quot;Marketing Lead (MQL)&quot;,10,
+	  &quot;New Opportunity&quot;,10,
+          0))
+		  +
+IF(NOT(ISBLANK(MQL_Date_Time__c)),55,0)
++
+IF(CONTAINS(HS_Recent_Conversion__c,&quot;Demo&quot;),100,0)
++
+IF(CONTAINS(TEXT(CallRevu_Lead_Source__c),&quot;Referral&quot;),45,0)
++
+IF(NOT(ISBLANK(Referral_Partner__c)),40,0)
++
+IF(NOT(ISBLANK(Campaign__c )),10,0)
++
+IF(CreatedDate &lt; (NOW()-60),-30,0)
++
+IF(Dealer_Group_Penetration__c &gt; 90,100,0)
++
+IF(AND(Dealer_Group_Penetration__c &gt;= 70,
+Dealer_Group_Penetration__c &lt; 50),60,0)
++
+IF(Dealer_Group_Penetration__c &lt;= 49,20,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CallRevu Lead Score (%)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

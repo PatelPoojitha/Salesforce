@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Category__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Product Category</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sales Vision Packages</fullName>
+                <default>true</default>
+                <label>Sales Vision Packages</label>
+            </value>
+            <value>
+                <fullName>Bundled Product</fullName>
+                <default>false</default>
+                <label>Bundled Product</label>
+            </value>
+            <value>
+                <fullName>Bundled Product - Without Outbound</fullName>
+                <default>false</default>
+                <label>Bundled Product - Without Outbound</label>
+            </value>
+            <value>
+                <fullName>Bundled Service Vision</fullName>
+                <default>false</default>
+                <label>Bundled Service Vision</label>
+            </value>
+            <value>
+                <fullName>CI</fullName>
+                <default>false</default>
+                <label>CI</label>
+            </value>
+            <value>
+                <fullName>CI Inbound and Outbound</fullName>
+                <default>false</default>
+                <label>CI Inbound and Outbound</label>
+            </value>
+            <value>
+                <fullName>CI Inbound</fullName>
+                <default>false</default>
+                <label>CI Inbound</label>
+            </value>
+            <value>
+                <fullName>DNI</fullName>
+                <default>false</default>
+                <label>DNI</label>
+            </value>
+            <value>
+                <fullName>Caller&apos;s Journey Packages</fullName>
+                <default>false</default>
+                <label>Caller&apos;s Journey Packages</label>
+            </value>
+            <value>
+                <fullName>Caller&apos;s Journey Service Add On Packages</fullName>
+                <default>false</default>
+                <label>Caller&apos;s Journey Service Add On Packages</label>
+            </value>
+            <value>
+                <fullName>Caller&apos;s Service Journey Packages</fullName>
+                <default>false</default>
+                <label>Caller&apos;s Service Journey Packages</label>
+            </value>
+            <value>
+                <fullName>Call Tracking Packages</fullName>
+                <default>false</default>
+                <label>Call Tracking Packages</label>
+            </value>
+            <value>
+                <fullName>OEM &amp; Trials w/Add On</fullName>
+                <default>false</default>
+                <label>OEM &amp; Trials w/Add On</label>
+            </value>
+            <value>
+                <fullName>Outbound Call Monitoring Packages</fullName>
+                <default>false</default>
+                <label>Outbound Call Monitoring Packages</label>
+            </value>
+            <value>
+                <fullName>Outbound Call Tracking Packages</fullName>
+                <default>false</default>
+                <label>Outbound Call Tracking Packages</label>
+            </value>
+            <value>
+                <fullName>Real-Mystery Shops</fullName>
+                <default>false</default>
+                <label>Real-Mystery Shops</label>
+            </value>
+            <value>
+                <fullName>Setup &amp; Technology Fees</fullName>
+                <default>false</default>
+                <label>Setup &amp; Technology Fees</label>
+            </value>
+            <value>
+                <fullName>Supplemental Minute Packages</fullName>
+                <default>false</default>
+                <label>Supplemental Minute Packages</label>
+            </value>
+            <value>
+                <fullName>Variable Transcription Services</fullName>
+                <default>false</default>
+                <label>Variable Transcription Services</label>
+            </value>
+            <value>
+                <fullName>Additional Products &amp; Services</fullName>
+                <default>false</default>
+                <label>Additional Products &amp; Services</label>
+            </value>
+            <value>
+                <fullName>CallSource Retirement</fullName>
+                <default>false</default>
+                <label>CallSource Retirement</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Honda</fullName>
+                <default>false</default>
+                <label>Honda</label>
+            </value>
+            <value>
+                <fullName>Call Summarization</fullName>
+                <default>false</default>
+                <label>Call Summarization</label>
+            </value>
+            <value>
+                <fullName>Telephony</fullName>
+                <default>false</default>
+                <label>Telephony</label>
+            </value>
+            <value>
+                <fullName>TotalTrack</fullName>
+                <default>false</default>
+                <label>TotalTrack</label>
+            </value>
+            <value>
+                <fullName>Sensei</fullName>
+                <default>false</default>
+                <label>Sensei</label>
+            </value>
+            <value>
+                <fullName>New - Bundled Products</fullName>
+                <default>false</default>
+                <label>New - Bundled Products</label>
+            </value>
+            <value>
+                <fullName>New - Spanish Bundled Products</fullName>
+                <default>false</default>
+                <label>New - Spanish Bundled Products</label>
+            </value>
+            <value>
+                <fullName>CarResearch</fullName>
+                <default>false</default>
+                <label>CarResearch</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

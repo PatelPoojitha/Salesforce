@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_My_Open_CallRevu_Leads</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Contact_Email__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Lifecycle_Stage__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Sales Lead (CQL),Marketing Lead (MQL),In Progress,Warm Lead,New Opportunity (SQL)</value>
+    </filters>
+    <label>Manger View – All Open CallRevu leads</label>
+</ListView>

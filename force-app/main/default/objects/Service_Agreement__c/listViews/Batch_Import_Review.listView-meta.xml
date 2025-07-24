@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Batch_Import_Review</fullName>
+    <columns>CallRevu_Account_Number__c</columns>
+    <columns>NAME</columns>
+    <columns>Bill_to_Account__c</columns>
+    <columns>Service_Location__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bill_to_Account__c</field>
+        <operation>contains</operation>
+        <value>Team Velocity</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <label>Batch Import Review</label>
+</ListView>

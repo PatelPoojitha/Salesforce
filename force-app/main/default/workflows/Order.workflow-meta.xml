@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_Order_Billing_Country</fullName>
+        <description>Update Billing Country</description>
+        <field>BillingCountry</field>
+        <formula>Bill_To_Account__r.BillingCountry</formula>
+        <name>Update Order Billing Country</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Order_Billing_Postal_Code</fullName>
+        <description>Update Order Billing Postal Code</description>
+        <field>BillingPostalCode</field>
+        <formula>Bill_To_Account__r.BillingPostalCode</formula>
+        <name>Update Order Billing Postal Code</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Order_Billing_State</fullName>
+        <field>BillingState</field>
+        <formula>Bill_To_Account__r.BillingState</formula>
+        <name>Update Order Billing State</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Order_Billing_Street</fullName>
+        <description>Update Order Billing Street</description>
+        <field>BillingStreet</field>
+        <formula>Bill_To_Account__r.BillingStreet</formula>
+        <name>Update Order Billing Street</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Order_Billto_City</fullName>
+        <description>Update Order Bill to City</description>
+        <field>BillingCity</field>
+        <formula>Bill_To_Account__r.BillingCity</formula>
+        <name>Update OrderBill-to City</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Order_Shipping_City</fullName>
+        <description>Update Order Shipping City</description>
+        <field>ShippingCity</field>
+        <formula>Account.ShippingCity</formula>
+        <name>Update Order Shipping City</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Order_Shipping_Country</fullName>
+        <description>Update Order Shipping Country</description>
+        <field>ShippingCountry</field>
+        <formula>Account.ShippingCountry</formula>
+        <name>Update Order Shipping Country</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Order_Shipping_Postal_Code</fullName>
+        <description>Update Order Shipping Postal Code</description>
+        <field>ShippingPostalCode</field>
+        <formula>Account.ShippingPostalCode</formula>
+        <name>Update Order Shipping Postal Code</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Order_Shipping_State</fullName>
+        <description>Update Order Shipping State</description>
+        <field>ShippingState</field>
+        <formula>Account.ShippingState</formula>
+        <name>Update Order Shipping State</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Order_Shipping_Street</fullName>
+        <description>Update Order Shipping Street</description>
+        <field>ShippingStreet</field>
+        <formula>Account.ShippingStreet</formula>
+        <name>Update Order Shipping Street</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Create Billing And Shipping Address On Order</fullName>
+        <actions>
+            <name>Update_Order_Billing_Country</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Order_Billing_Postal_Code</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Order_Billing_State</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Order_Billing_Street</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Order_Billto_City</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Order_Shipping_City</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Order_Shipping_Country</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Order_Shipping_Postal_Code</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Order_Shipping_State</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Order_Shipping_Street</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Create Billing and Shipping Address On Order</description>
+        <formula>1=1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

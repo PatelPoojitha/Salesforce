@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Team_Velocity</fullName>
+    <columns>NAME</columns>
+    <columns>Tier_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bill_to_Account__c</field>
+        <operation>equals</operation>
+        <value>Team Velocity</value>
+    </filters>
+    <filters>
+        <field>Tier_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Team Velocity</value>
+    </filters>
+    <label>Team Velocity</label>
+    <sharedTo>
+        <role>Salesforce_Administrator</role>
+    </sharedTo>
+</ListView>

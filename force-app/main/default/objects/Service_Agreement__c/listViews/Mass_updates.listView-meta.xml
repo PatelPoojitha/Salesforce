@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mass_updates</fullName>
+    <columns>NAME</columns>
+    <columns>CallRevu_Account_Status__c</columns>
+    <columns>CallRevu_Account_Number__c</columns>
+    <columns>Billing_Agreement_ID__c</columns>
+    <columns>Tier_Status__c</columns>
+    <columns>Bill_to_Account__c</columns>
+    <columns>Last_Opportunity__c</columns>
+    <columns>Enrollment_Case__c</columns>
+    <columns>Performance_Manager__c</columns>
+    <columns>Strategic_Account_M__c</columns>
+    <columns>CallRevu_Account_GUID__c</columns>
+    <columns>CallRevu_Platform__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Last_Opportunity__c</field>
+        <operation>contains</operation>
+        <value>Tier2</value>
+    </filters>
+    <filters>
+        <field>Originating_Opportunity__c</field>
+        <operation>contains</operation>
+        <value>Tier2</value>
+    </filters>
+    <filters>
+        <field>Tier_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Tier 2</value>
+    </filters>
+    <filters>
+        <field>CallRevu_Account_Status__c</field>
+        <operation>notEqual</operation>
+        <value>Pending Cancellation,Cancelled</value>
+    </filters>
+    <label>Mass updates</label>
+    <sharedTo>
+        <role>Salesforce_Administrator</role>
+    </sharedTo>
+</ListView>

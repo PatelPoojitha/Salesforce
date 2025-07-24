@@ -1,0 +1,4373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Opportunity</baseObject>
+    <category>opportunities</category>
+    <deployed>true</deployed>
+    <description>Opportunities w or w/o Service Agreements</description>
+    <join>
+        <outerJoin>true</outerJoin>
+        <relationship>Service_Agreements__r</relationship>
+    </join>
+    <label>Opportunities w or w/o Service Agreements</label>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity ID</displayNameOverride>
+            <field>Id</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Name</displayNameOverride>
+            <field>Account</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Record Type</displayNameOverride>
+            <field>RecordType</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Private</displayNameOverride>
+            <field>IsPrivate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Opportunity Name</displayNameOverride>
+            <field>Name</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Description</displayNameOverride>
+            <field>Description</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Stage</displayNameOverride>
+            <field>StageName</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Stage Sort Order</displayNameOverride>
+            <field>StageSortOrder</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Amount</displayNameOverride>
+            <field>Amount</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Probability (%)</displayNameOverride>
+            <field>Probability</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Expected Revenue</displayNameOverride>
+            <field>ExpectedRevenue</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quantity</displayNameOverride>
+            <field>TotalOpportunityQuantity</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Close Date</displayNameOverride>
+            <field>CloseDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Type</displayNameOverride>
+            <field>Type</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Next Step</displayNameOverride>
+            <field>NextStep</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lead Source</displayNameOverride>
+            <field>LeadSource</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Closed</displayNameOverride>
+            <field>IsClosed</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Won</displayNameOverride>
+            <field>IsWon</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecast Category</displayNameOverride>
+            <field>ForecastCategoryName</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Primary Campaign Source</displayNameOverride>
+            <field>Campaign</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Has Line Item</displayNameOverride>
+            <field>HasOpportunityLineItem</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Split</displayNameOverride>
+            <field>IsSplit</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Price Book</displayNameOverride>
+            <field>Pricebook2</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Owner</displayNameOverride>
+            <field>Owner</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Activity</displayNameOverride>
+            <field>LastActivityDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Push Count</displayNameOverride>
+            <field>PushCount</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Stage Change Date</displayNameOverride>
+            <field>LastStageChangeDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contact</displayNameOverride>
+            <field>Contact</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Primary Partner Account</displayNameOverride>
+            <field>PrimaryPartnerAccount</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Synced Quote</displayNameOverride>
+            <field>SyncedQuote</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract</displayNameOverride>
+            <field>Contract</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Budget Confirmed</displayNameOverride>
+            <field>Budget_Confirmed__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Discovery Completed</displayNameOverride>
+            <field>Discovery_Completed__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ROI Analysis Completed</displayNameOverride>
+            <field>ROI_Analysis_Completed__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Performance Manager</displayNameOverride>
+            <field>Performance_Manager__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Loss Reason</displayNameOverride>
+            <field>Loss_Reason__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Related Opportunity</displayNameOverride>
+            <field>Related_Opportunity__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Reporting</displayNameOverride>
+            <field>Sales_Reporting__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Touch Source</displayNameOverride>
+            <field>Last_Touch_Resource__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Demo Scheduled</displayNameOverride>
+            <field>Date_Demo_Scheduled__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OLD Demo Date</displayNameOverride>
+            <field>Demo_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OLD Demo Completed Date</displayNameOverride>
+            <field>Demo_Completed_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quote Date</displayNameOverride>
+            <field>Quote_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pilot Start Date</displayNameOverride>
+            <field>Pilot_Start_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pilot Phase</displayNameOverride>
+            <field>Pilot_Phase__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Duration Basis</displayNameOverride>
+            <field>Duration_Basis__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Conversion</displayNameOverride>
+            <field>Conversion__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OLD Demo Confirmed Date</displayNameOverride>
+            <field>Demo_Confirmed_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OLD Sales Qualified Date</displayNameOverride>
+            <field>Sales_Qualified_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Cycle (Days)</displayNameOverride>
+            <field>Sales_Cycle_Days__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Confirmation Text Sent</displayNameOverride>
+            <field>Demo_Confirmation_Text_Sent__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Confirmation Email Sent</displayNameOverride>
+            <field>Demo_Confirmation_Email_Sent__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Confirmation Phone Call Made</displayNameOverride>
+            <field>Demo_Confirmation_Phone_Call_Made__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Follow-up Email Sent</displayNameOverride>
+            <field>Demo_Follow_up_Email_Sent__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Launch Date</displayNameOverride>
+            <field>Launch_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ARR</displayNameOverride>
+            <field>ARR__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Setup Fees</displayNameOverride>
+            <field>Setup_Fees__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Term (Months)</displayNameOverride>
+            <field>Term_Months__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Duration</displayNameOverride>
+            <field>Duration__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OEM Share</displayNameOverride>
+            <field>OEM_Share__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Owner</displayNameOverride>
+            <field>Account_Owner__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Owner ID</displayNameOverride>
+            <field>Account_Owner_ID__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Owner = Opportunity Owner</displayNameOverride>
+            <field>Account_Owner_Opportunity_Owner__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opp Owner ID</displayNameOverride>
+            <field>Opp_Owner_ID__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Payment Arrangements</displayNameOverride>
+            <field>Payment_Arrangements__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OLD Proposal Expiration Date</displayNameOverride>
+            <field>Proposal_Expiration_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Total Minutes</displayNameOverride>
+            <field>Total_Minutes__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Monthly Investment</displayNameOverride>
+            <field>Monthly_Investment__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Age of Opportunity</displayNameOverride>
+            <field>Age_of_Opportunity__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>First Bill Date</displayNameOverride>
+            <field>First_Bill_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Notes</displayNameOverride>
+            <field>Notes__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Lead</displayNameOverride>
+            <field>CallRevu_Lead__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Value Per Duration</displayNameOverride>
+            <field>Value_Per_Duration__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Bill Date</displayNameOverride>
+            <field>Last_Bill_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tracking Products</displayNameOverride>
+            <field>Tracking_Products__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Import2 Id</displayNameOverride>
+            <field>Import2_Id__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Line Item Count</displayNameOverride>
+            <field>Line_Item_Count__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Days Since Last Activity</displayNameOverride>
+            <field>Days_Since_Last_Activity__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>18 Digit Opportunity ID</displayNameOverride>
+            <field>X18_Digit_Opportunity_ID__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>18 Digit Account ID</displayNameOverride>
+            <field>X18_Digit_Account_ID__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Test</displayNameOverride>
+            <field>Is_Test__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account # of Rooftops</displayNameOverride>
+            <field>Account_of_Rooftops__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride># of Rooftops for Opportunity</displayNameOverride>
+            <field>of_Rooftops_for_Opportunity__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Launched</displayNameOverride>
+            <field>Launched__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Proposal Date</displayNameOverride>
+            <field>Proposal_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OLD Agreement Pending Date</displayNameOverride>
+            <field>Agreement_Pending_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride># of Opportunity Products</displayNameOverride>
+            <field>of_Opportunity_Products__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lost to Competitor - C/O</displayNameOverride>
+            <field>Lost_to_Competitor_C_O__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SQO to Demo Days</displayNameOverride>
+            <field>SQO_to_Demo_Days__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo to Proposal Days</displayNameOverride>
+            <field>Demo_to_Proposal_Days__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Proposal to Agreement Pending Days</displayNameOverride>
+            <field>Proposal_to_Agreement_Pending_Days__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Lead Source</displayNameOverride>
+            <field>Account_Lead_Source__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Lead Sub-source</displayNameOverride>
+            <field>Account_Lead_Sub_source__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>MRR</displayNameOverride>
+            <field>MRR__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>ACV</displayNameOverride>
+            <field>ACV__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>One Time Fees</displayNameOverride>
+            <field>One_Time_Fees__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OLD Trial Stage Date</displayNameOverride>
+            <field>Trial_Stage_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Proposal to Trial Stage Days</displayNameOverride>
+            <field>Proposal_to_Trial_Stage_Days__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Trial Stage to Agreement Pending Days</displayNameOverride>
+            <field>Trial_Stage_to_Agreement_Pending_Days__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pilot End Date</displayNameOverride>
+            <field>Pilot_End_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Weighted MRR</displayNameOverride>
+            <field>Expected_MRR__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Agreement</displayNameOverride>
+            <field>Service_Agreement__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Change Order/Cancellation Reason</displayNameOverride>
+            <field>Change_Order_Cancellation_Reason__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Upsell</displayNameOverride>
+            <field>Upsell__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Contact</displayNameOverride>
+            <field>Demo_Contact__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Contact&apos;s Email (Formula)</displayNameOverride>
+            <field>Demo_Contact_s_Email_Formula__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Time (Prospect&apos;s Local Time)</displayNameOverride>
+            <field>Demo_Time_Prospects_Local_Time__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demo Contact Email</displayNameOverride>
+            <field>Demo_Contact_Email__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Trial/Pilot Type</displayNameOverride>
+            <field>Trial_Pilot_Type__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Workflow Test</displayNameOverride>
+            <field>Workflow_Test__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Group</displayNameOverride>
+            <field>Group__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Change Order/Cancellation Type</displayNameOverride>
+            <field>Change_Order_Cancellation_Type__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Team</displayNameOverride>
+            <field>Account_Team__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Failure to Launch Date</displayNameOverride>
+            <field>Failure_to_Launch_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Close Month</displayNameOverride>
+            <field>Close_Month__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Billing Address</displayNameOverride>
+            <field>Account_Billing_Address__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bundled Product</displayNameOverride>
+            <field>Bundled_Product__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Group Opportunity</displayNameOverride>
+            <field>Group_Opportunity__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Journey Inbound Level Fee Text</displayNameOverride>
+            <field>Journey_Inbound_Level_Fee_Text__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Journey Inbound Level Overage Fee</displayNameOverride>
+            <field>Journey_Inbound_Level_Overage_Fee__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Outbound Call Monitoring Fee Text</displayNameOverride>
+            <field>Outbound_Call_Monitoring_Fee_Text__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Outbound Call Monitoring Overage Fee</displayNameOverride>
+            <field>Outbound_Call_Monitoring_Overage_Fee__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Outbound Calling Solution Fee Text</displayNameOverride>
+            <field>Outbound_Calling_Solution_Fee_Text__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Outbound Calling Solution Overage Fee</displayNameOverride>
+            <field>Outbound_Calling_Solution_Overage_Fee__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Supplemental Minute Fee Text</displayNameOverride>
+            <field>Supplemental_Minute_Fee_Text__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Supplemental Minute Overage Fee</displayNameOverride>
+            <field>Supplemental_Minute_Overage_Fee__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tracking Plus Package Fee Text</displayNameOverride>
+            <field>Tracking_Plus_Package_Fee_Text__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tracking Plus Package Overage Fee</displayNameOverride>
+            <field>Tracking_Plus_Package_Overage_Fee__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Owner Email</displayNameOverride>
+            <field>Opportunity_Owner_Email__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Owner Mobile</displayNameOverride>
+            <field>Opportunity_Owner_Mobile__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Proposal Additional Notes</displayNameOverride>
+            <field>Proposal_Additional_Notes__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Proposal Units Per Month</displayNameOverride>
+            <field>Proposal_Units_Per_Month__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CRM for Proposal</displayNameOverride>
+            <field>CRM_for_Proposal__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Owner Name</displayNameOverride>
+            <field>Opportunity_Owner_Name__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Related Case</displayNameOverride>
+            <field>Related_Case__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Processed</displayNameOverride>
+            <field>Date_Processed__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill To Account</displayNameOverride>
+            <field>Bill_To_Account__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill To Share Account</displayNameOverride>
+            <field>Bill_To_Share_Account__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill-to Share Fixed Amount</displayNameOverride>
+            <field>Bill_to_Share_Fixed_Amount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill-to Share Fixed Frequency</displayNameOverride>
+            <field>Bill_to_Share_Fixed_Frequency__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill-to Share Percentage</displayNameOverride>
+            <field>Bill_to_Share_Percentage__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Frequency</displayNameOverride>
+            <field>Billing_Frequency__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Order Type</displayNameOverride>
+            <field>Order_Type__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Agreement ID</displayNameOverride>
+            <field>Service_Agreement_ID__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>XCancellation Reason</displayNameOverride>
+            <field>Cancellation_Reason__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>XCancellation Sub-Reason</displayNameOverride>
+            <field>Cancellation_Sub_Reason__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Deal Lost to Competitor</displayNameOverride>
+            <field>Lost_to_Competitor__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Deal Competitor</displayNameOverride>
+            <field>Competitor__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Deal Other Competitor</displayNameOverride>
+            <field>Other_Competitor__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cancellation Reason</displayNameOverride>
+            <field>Cancellation_Reason2__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cancellation Sub-Reason</displayNameOverride>
+            <field>Cancellation_Sub_Reason2__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cancellation Request Date</displayNameOverride>
+            <field>Cancellation_Request_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Estimated Cancellation Effective Date</displayNameOverride>
+            <field>Estimated_Cancellation_Effective_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>No Workflow</displayNameOverride>
+            <field>No_Workflow__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Send to Support</displayNameOverride>
+            <field>Send_to_Support__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Send to Enrollment</displayNameOverride>
+            <field>Send_to_Enrollment__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Agreement Workflow</displayNameOverride>
+            <field>Agreement_Workflow__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Saved Account Changes</displayNameOverride>
+            <field>Saved_Account_Changes__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Phone</displayNameOverride>
+            <field>Account_Phone__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tier 2 Account ID</displayNameOverride>
+            <field>Tier_2_Account_ID__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PM Name</displayNameOverride>
+            <field>PM_Name__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Conversion/Trial/Pilot Type</displayNameOverride>
+            <field>Conversion_Trial_Pilot_Type__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>PM Summary</displayNameOverride>
+            <field>PM_Summary__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opp Owner</displayNameOverride>
+            <field>Opp_Owner__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Main Motivation</displayNameOverride>
+            <field>Main_Motivation__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Stage Request</displayNameOverride>
+            <field>Sales_Stage_Request__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Updated from Case</displayNameOverride>
+            <field>Updated_from_Case__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Lead Channel</displayNameOverride>
+            <field>Opportunity_Lead_Channel__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Support Request</displayNameOverride>
+            <field>Support_Request__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Lead Source</displayNameOverride>
+            <field>Opportunity_Lead_Source__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Lead Sub Source</displayNameOverride>
+            <field>Opportunity_Lead_Sub_Source__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Addendum Type</displayNameOverride>
+            <field>Addendum_Type__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Units Sold</displayNameOverride>
+            <field>Units_Sold__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>At Risk Case</displayNameOverride>
+            <field>At_Risk_Case__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Close Date Text</displayNameOverride>
+            <field>Close_Date_Text__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>New Products Total</displayNameOverride>
+            <field>New_Products_Total__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Discontinued Products Total</displayNameOverride>
+            <field>Discontinued_Products_Total__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Terms Text</displayNameOverride>
+            <field>Terms_Text__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>What are the Customer Challenges</displayNameOverride>
+            <field>What_are_the_Customer_Challenges__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>What are the Client Objectives</displayNameOverride>
+            <field>What_are_the_Client_Objectives__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Previous Solution</displayNameOverride>
+            <field>Previous_Solution__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Previous Solution Sub Source</displayNameOverride>
+            <field>Previous_Solution_Sub_Source__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Features of Interest</displayNameOverride>
+            <field>Features_of_Interest__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Implementation Expectations</displayNameOverride>
+            <field>Implementation_Expectations__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Discovery Notes</displayNameOverride>
+            <field>Discovery_Notes__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity for Expansion</displayNameOverride>
+            <field>Opportunity_for_Expansion__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Agreement Signed</displayNameOverride>
+            <field>Date_Agreement_Signed__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Client Acquisition Date</displayNameOverride>
+            <field>Client_Acquisition_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TermSUBacq</displayNameOverride>
+            <field>TermSUBacq__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date/Time SOP Alerted</displayNameOverride>
+            <field>Date_Time_SOP_Alerted__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date/Time SOP Sent</displayNameOverride>
+            <field>Date_Time_SOP_Sent__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SOP Response Time</displayNameOverride>
+            <field>SOP_Response_Time__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CRM</displayNameOverride>
+            <field>CRM__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>At Risk Case Count</displayNameOverride>
+            <field>At_Risk_Case_Count__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>DocGen Created Date</displayNameOverride>
+            <field>DocGen_Created_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>DocGen Created Date Text</displayNameOverride>
+            <field>DocGen_Created_Date_Text__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Client Term</displayNameOverride>
+            <field>Client_Term__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>cancellation request text</displayNameOverride>
+            <field>cancellation_request_text__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Start Date</displayNameOverride>
+            <field>Contract_Start_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tier2 Sales Rep</displayNameOverride>
+            <field>eLead_Sales_Rep__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dealer Contact</displayNameOverride>
+            <field>Dealer_Contact__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dealer Contact Title</displayNameOverride>
+            <field>Dealer_Contact_Title__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dealer Contact Phone</displayNameOverride>
+            <field>Dealer_Contact_Phone__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Closing Probability</displayNameOverride>
+            <field>Closing_Probability__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Easy Sort Order</displayNameOverride>
+            <field>aies__SortOrder__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Term Renewal</displayNameOverride>
+            <field>Term_Renewal__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Renewal Override</displayNameOverride>
+            <field>Renewal_Override__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Information Required For Processing</displayNameOverride>
+            <field>Information_Required_For_Processing__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Length of Error Field</displayNameOverride>
+            <field>Length_of_Error_Field__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Actionable Items</displayNameOverride>
+            <field>Actionable_Items__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Competitor-C/O</displayNameOverride>
+            <field>Competitor_C_O__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Other Competitor - C/O</displayNameOverride>
+            <field>Other_Competitor_C_O__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SES Reviewed</displayNameOverride>
+            <field>SES_Reviewed__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Non-Standard Contract</displayNameOverride>
+            <field>Non_Standard_Contract__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Non-Standard Reason</displayNameOverride>
+            <field>Non_Standard_Reason__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cancellation Save Attempt Stage</displayNameOverride>
+            <field>Cancellation_Save_Attempt_Stage__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cancellation Case Status</displayNameOverride>
+            <field>Cancellation_Case_Status__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cancellation Case Closing Outcome</displayNameOverride>
+            <field>Cancellation_Case_Closing_Outcome__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Issued Date</displayNameOverride>
+            <field>Credit_Issued_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit End Date</displayNameOverride>
+            <field>Credit_End_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Update Tier Status</displayNameOverride>
+            <field>Update_Tier_Status__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cancellation Finalization Date</displayNameOverride>
+            <field>Cancellation_Finalization_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cancellation Close Date</displayNameOverride>
+            <field>Cancellation_Close_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cancellation Open Date</displayNameOverride>
+            <field>Cancellation_Open_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Credit Offer Accepted</displayNameOverride>
+            <field>Credit_Offer_Accepted__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tier Status</displayNameOverride>
+            <field>Tier_Status__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Current Tier Status</displayNameOverride>
+            <field>Current_Tier_Status__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>MRROverride</displayNameOverride>
+            <field>MRROverride__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Net New MRR Added</displayNameOverride>
+            <field>Net_New_MRR_Added__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Net New MRR Added (Manual)</displayNameOverride>
+            <field>Net_New_MRR_AddedOV__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quoted Product</displayNameOverride>
+            <field>Quoted_Product__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dealer Contact Email</displayNameOverride>
+            <field>Dealer_Contact_Email__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Trigger Campaign Alert</displayNameOverride>
+            <field>Trigger_Campaign_Alert__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Closing Probability %</displayNameOverride>
+            <field>Closing_Probability_Custom__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Weighted MRR $</displayNameOverride>
+            <field>Weighted_MRR__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Referral Partner</displayNameOverride>
+            <field>Referral_Partner__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Partner Type</displayNameOverride>
+            <field>Partner_Type__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>DB Competitor</displayNameOverride>
+            <field>DB_Competitor__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tier 2 Type</displayNameOverride>
+            <field>Tier_2_Type__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Create Contact Role</displayNameOverride>
+            <field>Create_Contact_Role__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pooling Minutes</displayNameOverride>
+            <field>Pooling_Minutes__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Booking Date</displayNameOverride>
+            <field>Booking_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Maintain Agreements</displayNameOverride>
+            <field>Maintain_Agreements__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>DocGen Promo Text</displayNameOverride>
+            <field>DocGen_Promo_Text__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>DNI Products</displayNameOverride>
+            <field>DNI_Products__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Promo Offered</displayNameOverride>
+            <field>Promo_Offered__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Combined Sources</displayNameOverride>
+            <field>Combined_Sources__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Completed Quip Document</displayNameOverride>
+            <field>Completed_Quip_Document__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SOP Completed Checklist</displayNameOverride>
+            <field>SOP_Completed_Checklist__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Referred by Customer</displayNameOverride>
+            <field>Referred_by_Customer__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>OLD Discovery Date</displayNameOverride>
+            <field>Discovery_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>SQO to Discovery Days</displayNameOverride>
+            <field>SQO_to_Discovery_Days__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Discovery to Demo Days</displayNameOverride>
+            <field>Discovery_to_Demo_Days__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>NS Account Complete</displayNameOverride>
+            <field>NS_Account_Complete__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Price Book Override</displayNameOverride>
+            <field>Price_Book_Override__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Approved to Delete</displayNameOverride>
+            <field>Approved_to_Delete__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Account Number</displayNameOverride>
+            <field>CallRevu_Account_Number__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill To Tier (IO)</displayNameOverride>
+            <field>celigo_sfnsio__Bill_To_Tier__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Opportunity (IO)</displayNameOverride>
+            <field>celigo_sfnsio__Contract_Opportunity__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Term (IO)</displayNameOverride>
+            <field>celigo_sfnsio__Contract_Term__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Distributor (IO)</displayNameOverride>
+            <field>celigo_sfnsio__Distributor__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>End Date (IO)</displayNameOverride>
+            <field>celigo_sfnsio__End_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>End User (IO)</displayNameOverride>
+            <field>celigo_sfnsio__End_User__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>From Contract (IO)</displayNameOverride>
+            <field>celigo_sfnsio__From_Contract__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>NetSuite Originated Order (IO)</displayNameOverride>
+            <field>celigo_sfnsio__NS_Originated_Order__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>NetSuite Id (IO)</displayNameOverride>
+            <field>celigo_sfnsio__NetSuite_Id__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>NetSuite Opportunity Id (IO)</displayNameOverride>
+            <field>celigo_sfnsio__NetSuite_Opportunity_Id__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>NetSuite Opportunity Record (IO)</displayNameOverride>
+            <field>celigo_sfnsio__NetSuite_Opportunity_Record_Url__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>NetSuite Order Number (IO)</displayNameOverride>
+            <field>celigo_sfnsio__NetSuite_Order_Number__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>NetSuite Record (IO)</displayNameOverride>
+            <field>celigo_sfnsio__NetSuite_Record__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>NetSuite Sync Error (IO)</displayNameOverride>
+            <field>celigo_sfnsio__NetSuite_Sync_Error__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Renewal Term (IO)</displayNameOverride>
+            <field>celigo_sfnsio__Renewal_Term__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Reseller (IO)</displayNameOverride>
+            <field>celigo_sfnsio__Reseller__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ship To Tier (IO)</displayNameOverride>
+            <field>celigo_sfnsio__Ship_To_Tier__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Skip Export To NetSuite (IO)</displayNameOverride>
+            <field>celigo_sfnsio__Skip_Export_To_NetSuite__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Start Date (IO)</displayNameOverride>
+            <field>celigo_sfnsio__Start_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Send as test record to IO</displayNameOverride>
+            <field>celigo_sfnsio__Test_Mode_Record__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>NetSuite Opp Type</displayNameOverride>
+            <field>NetSuite_Opp_Type__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Forecasted MRR</displayNameOverride>
+            <field>Forecasted_MRR__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contact Roles Count</displayNameOverride>
+            <field>ContactRolesCount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contact Signed Roles Count</displayNameOverride>
+            <field>Contact_Signed_Roles_Count__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Promo Offered</displayNameOverride>
+            <field>Promos_Offered__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Data Quality Score</displayNameOverride>
+            <field>Data_Quality_Score__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Data Quality Description</displayNameOverride>
+            <field>Data_Quality_Description__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Email sent</displayNameOverride>
+            <field>Email_sent__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Migration ID</displayNameOverride>
+            <field>Migration_ID__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Product</displayNameOverride>
+            <field>Opportunity_Product__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Create GuideCX Project on Closed Won</displayNameOverride>
+            <field>beynd__CreateBeyndProjectOnClosedWon__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>GuideCX Project</displayNameOverride>
+            <field>beynd__beyndProject__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Anticipated Implementation Lead</displayNameOverride>
+            <field>Anticipated_Implementation_Lead__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Products</displayNameOverride>
+            <field>Products__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Porting</displayNameOverride>
+            <field>Porting__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Secondary Contact Information</displayNameOverride>
+            <field>Secondary_Contact_Information__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Estimated Go Live Date if Delayed</displayNameOverride>
+            <field>Estimated_Go_Live_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Test User Lookup</displayNameOverride>
+            <field>Test_User_Lookup__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Date</displayNameOverride>
+            <field>Contract_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Demonstrate Value Date</displayNameOverride>
+            <field>Demonstrate_Value_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Discover Date</displayNameOverride>
+            <field>Discover_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Negotiate Date</displayNameOverride>
+            <field>Negotiate_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Qualify Date</displayNameOverride>
+            <field>Qualify_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Submit for Review Date</displayNameOverride>
+            <field>Submit_for_Review_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Custom Forecast Category</displayNameOverride>
+            <field>Custom_Forecast_Category__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Original Account Owner</displayNameOverride>
+            <field>Original_Account_Owner__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>MRR</displayNameOverride>
+            <field>MRR2__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Loss Reason Notes</displayNameOverride>
+            <field>Loss_Reason_Notes__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pre-sales/Delayed Implementation</displayNameOverride>
+            <field>Delayed_Implementation__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Type</displayNameOverride>
+            <field>Sales_Type__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity Name Logic</displayNameOverride>
+            <field>Opportunity_Name_Logic__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Projected MRR</displayNameOverride>
+            <field>Projected_MRR__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Business Development Team Member</displayNameOverride>
+            <field>Business_Development_Team_Member__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Calculate Group MRR</displayNameOverride>
+            <field>Calculate_Group_MRR__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Group MRR</displayNameOverride>
+            <field>Group_MRR__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Service_Agreement__c.Performance_Manager__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Billing_Case_Bypass__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Automation_Running__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Accounting_Case_Manual_Create__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>X30_Day_Bill_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>X30_Day_Bill_Month__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Sync_to_GM_API__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>GM_API_Sync_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Signer_Name__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Territory_Assignment_Hold_Flag__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Recent_Opportunity__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <masterLabel>Opportunities</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Agreement ID</displayNameOverride>
+            <field>Id</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <displayNameOverride>Service Agreement Name</displayNameOverride>
+            <field>Name</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created Date</displayNameOverride>
+            <field>CreatedDate</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Created By</displayNameOverride>
+            <field>CreatedBy</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified Date</displayNameOverride>
+            <field>LastModifiedDate</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Modified By</displayNameOverride>
+            <field>LastModifiedBy</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Activity Date</displayNameOverride>
+            <field>LastActivityDate</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Location</displayNameOverride>
+            <field>Service_Location__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill-to Account</displayNameOverride>
+            <field>Bill_to_Account__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Start Date</displayNameOverride>
+            <field>Start_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>End Date</displayNameOverride>
+            <field>End_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Account Type</displayNameOverride>
+            <field>CallRevu_Account_Type__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Originating Opportunity</displayNameOverride>
+            <field>Originating_Opportunity__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Authorization Contact</displayNameOverride>
+            <field>Authorization_Contact__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Internal Update Link</displayNameOverride>
+            <field>Internal_Update_Link__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Authorization Contact PW Reset</displayNameOverride>
+            <field>Authorization_Contact_PW_Reset__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mon Open</displayNameOverride>
+            <field>Mon_Open__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mon Close</displayNameOverride>
+            <field>Mon_Close__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tue Open</displayNameOverride>
+            <field>Tue_Open__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tue Close</displayNameOverride>
+            <field>Tue_Close__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Wed Open</displayNameOverride>
+            <field>Wed_Open__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Wed Close</displayNameOverride>
+            <field>Wed_Close__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Thu Open</displayNameOverride>
+            <field>Thu_Open__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Thu Close</displayNameOverride>
+            <field>Thu_Close__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Fri Open</displayNameOverride>
+            <field>Fri_Open__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Fri Close</displayNameOverride>
+            <field>Fri_Close__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sat Open</displayNameOverride>
+            <field>Sat_Open__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sat Close</displayNameOverride>
+            <field>Sat_Close__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sun Open</displayNameOverride>
+            <field>Sun_Open__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sun Close</displayNameOverride>
+            <field>Sun_Close__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Time Zone</displayNameOverride>
+            <field>Time_Zone__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Secondary Contact</displayNameOverride>
+            <field>Secondary_Contact__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Has A Current Call Tracking Vendor</displayNameOverride>
+            <field>Has_A_Current_Call_Tracking_Vendor__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Current Call Tracker Vendor</displayNameOverride>
+            <field>Current__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Call Tracking Login</displayNameOverride>
+            <field>Call_Tracking_Login__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Account Name</displayNameOverride>
+            <field>CallRevu_Account_Name__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Create Account</displayNameOverride>
+            <field>Create_Account__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Website Provider Login</displayNameOverride>
+            <field>Website_Provider_Login__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Account ID</displayNameOverride>
+            <field>CallRevu_Account_ID__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Website Provider Password</displayNameOverride>
+            <field>Website_Provider_Password__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Call Tracking Password</displayNameOverride>
+            <field>Call_Tracking_Password__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Preferred Contact For Billing</displayNameOverride>
+            <field>Preferred_Contact_For_Billing__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CRM</displayNameOverride>
+            <field>CRM__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CRM User Name</displayNameOverride>
+            <field>CRM_User_Name__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CRM Password</displayNameOverride>
+            <field>CRM_Password__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Send Account Update Link</displayNameOverride>
+            <field>Send_Account_Update_Link__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Inbound Call Address</displayNameOverride>
+            <field>Inbound_Call_Address__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>eLead</displayNameOverride>
+            <field>eLead__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dealer Socket</displayNameOverride>
+            <field>Dealer_Socket__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Subaru NE LIS</displayNameOverride>
+            <field>Subaru_NE_LIS__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Car Research</displayNameOverride>
+            <field>Car_Research__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dealer Code</displayNameOverride>
+            <field>Dealer_Code__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Vendor Login</displayNameOverride>
+            <field>Vendor_Login__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Vendor Password</displayNameOverride>
+            <field>Vendor_Password__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Type</displayNameOverride>
+            <field>Contract_Type__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Account GUID</displayNameOverride>
+            <field>CallRevu_Account_GUID__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Partner Implementation</displayNameOverride>
+            <field>Partner_Implementation__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Account Parent Number</displayNameOverride>
+            <field>CallRevu_Account_Parent_Number__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Active</displayNameOverride>
+            <field>Active__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Active End Date</displayNameOverride>
+            <field>CallRevu_Active_End_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Manager (Text)</displayNameOverride>
+            <field>Account_Manager_Text__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Account Update</displayNameOverride>
+            <field>CallRevu_Account_Update__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tier 1 Active</displayNameOverride>
+            <field>Tier_1_Active__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Transcribe Start Date</displayNameOverride>
+            <field>Transcribe_Start_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Launch Date</displayNameOverride>
+            <field>Launch_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Account Number</displayNameOverride>
+            <field>CallRevu_Account_Number__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Detail ID</displayNameOverride>
+            <field>Service_Detail_ID__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Status</displayNameOverride>
+            <field>Status__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sold By</displayNameOverride>
+            <field>Sold_By__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Dealer Group Name</displayNameOverride>
+            <field>Account_Dealer_Group_Name__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu360 Last Update</displayNameOverride>
+            <field>CallRevu360_Last_Update__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Salesperson</displayNameOverride>
+            <field>CallRevu_Salesperson__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu360 Contact</displayNameOverride>
+            <field>CallRevu360_Contact__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu 360 Contact Email</displayNameOverride>
+            <field>CallRevu_360_Contact_Email__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu 360 Company Street</displayNameOverride>
+            <field>CallRevu_360_Company_Street__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu 360 Company City</displayNameOverride>
+            <field>CallRevu_360_Company_City__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu 360 Company State</displayNameOverride>
+            <field>CallRevu_360_Company_State__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu 360 Company Zip</displayNameOverride>
+            <field>CallRevu_360_Company_Zip__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Call Revu 360 Company Phone</displayNameOverride>
+            <field>Call_Revu_360_Company_Phone__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>First Bill Date</displayNameOverride>
+            <field>First_Bill_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu360 Company Country</displayNameOverride>
+            <field>CallRevu360_Company_Country__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu 360 Company Contact 2</displayNameOverride>
+            <field>CallRevu_360_Company_Contact_2__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu 360 Company Contact 2 Email</displayNameOverride>
+            <field>CallRevu_360_Company_Contact_2_Email__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Company Website</displayNameOverride>
+            <field>Company_Website__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is Test</displayNameOverride>
+            <field>Is_Test__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enrollment Call Scheduled</displayNameOverride>
+            <field>Enrollment_Call_Scheduled__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill-to Share Account</displayNameOverride>
+            <field>Bill_to_Share_Account__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill-to Share Percentage</displayNameOverride>
+            <field>Bill_to_Share_Percentage__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Workflow Update</displayNameOverride>
+            <field>Last_Workflow_Update__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Call Tracking Vendor Login</displayNameOverride>
+            <field>Call_Tracking_Vendor_Login__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallTracking Vendor Password</displayNameOverride>
+            <field>Call_Tracking_Vendor_Password__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Contract Update Link</displayNameOverride>
+            <field>Contract_Update_Link__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Current Call Tracking Setup Name</displayNameOverride>
+            <field>Current_Call_Tracking_Setup_Name__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Current Share End Date</displayNameOverride>
+            <field>Current_Share_End_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Agreement Signed</displayNameOverride>
+            <field>Date_Agreement_Signed__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Last Account Update Sent</displayNameOverride>
+            <field>Date_Last_Account_Update_Sent__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Display Ad Source</displayNameOverride>
+            <field>Display_Ad_Source__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Display CRM Information</displayNameOverride>
+            <field>Display_CRM_Information__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Display Hours of Operation</displayNameOverride>
+            <field>Display_Hours_of_Operation__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Display Roster</displayNameOverride>
+            <field>Display_Roster__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Display Sync to CallRevu 360 Option</displayNameOverride>
+            <field>Display_Sync_to_CallRevu_360_Option__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Include in Renewal Opportunity Process</displayNameOverride>
+            <field>Include_in_Renewal_Opportunity_Process__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enrollment Link</displayNameOverride>
+            <field>Enrollment_Link__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Fri Closed</displayNameOverride>
+            <field>Fri_Closed__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Intends to Transfer Existing Vendor</displayNameOverride>
+            <field>Intends_to_Transfer_Existing_Vendor__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Kick-off Event ID</displayNameOverride>
+            <field>Kick_off_Event_ID__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Saved Page</displayNameOverride>
+            <field>Last_Saved_Page__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Launch Call Scheduled</displayNameOverride>
+            <field>Launch_Call_Scheduled__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lead Address</displayNameOverride>
+            <field>Lead_Address__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Mon Closed</displayNameOverride>
+            <field>Mon_Closed__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Outbound / C2C Included</displayNameOverride>
+            <field>Outbound_C2C_Included__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Returning From Import Employees</displayNameOverride>
+            <field>Returning_From_Import_Employees__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sat Closed</displayNameOverride>
+            <field>Sat_Closed__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Send Authorized Sender Notification</displayNameOverride>
+            <field>Send_Authorized_Sender_Notification__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sun Closed</displayNameOverride>
+            <field>Sun_Closed__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sync To CallRevu 360</displayNameOverride>
+            <field>Sync_To_CallRevu_360__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Thu Closed</displayNameOverride>
+            <field>Thu_Closed__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tue Closed</displayNameOverride>
+            <field>Tue_Closed__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Website Provider</displayNameOverride>
+            <field>Website_Provider__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Wed Closed</displayNameOverride>
+            <field>Wed_Closed__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Location City</displayNameOverride>
+            <field>Service_Location_City__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Location Billing State</displayNameOverride>
+            <field>Service_Location_Billing_State__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ignore</displayNameOverride>
+            <field>Ignore__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Create Renewal Opportunity</displayNameOverride>
+            <field>Create_Renewal_Opportunity__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Audit Active User Email</displayNameOverride>
+            <field>Audit_Active_User_Email__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Audit Active User First Name</displayNameOverride>
+            <field>Audit_Active_User_First_Name__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Audit Acitve User ID</displayNameOverride>
+            <field>Audit_Active_User_ID__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Audit Active User Last Name</displayNameOverride>
+            <field>Audit_Active_User_Last_Name__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Minimum Ad Source Count For Complete</displayNameOverride>
+            <field>Minimum_Ad_Source_Count_For_Complete__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Minimum Roster Count For Complete</displayNameOverride>
+            <field>Minimum_Roster_Count_For_Complete__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sync Ad Sources</displayNameOverride>
+            <field>Sync_Ad_Sources__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sync Billing Items</displayNameOverride>
+            <field>Sync_Billing_Items__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sync Roster</displayNameOverride>
+            <field>Sync_Roster__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Acitive Audit User Phone</displayNameOverride>
+            <field>Acitive_Audit_User_Phone__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last 360 Sync Date</displayNameOverride>
+            <field>Last_360_Sync_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ready To Sync To CallRevu360</displayNameOverride>
+            <field>Ready_To_Sync_To_CallRevu360__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Agreement ID</displayNameOverride>
+            <field>Billing_Agreement_ID__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu360 Billing Name</displayNameOverride>
+            <field>CallRevu360_Billing_Name__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Parent Agreement</displayNameOverride>
+            <field>Parent_Agreement__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Allow Ad Source Edits</displayNameOverride>
+            <field>Allow_Ad_Source_Edits__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Allow Roster Edits</displayNameOverride>
+            <field>Allow_Roster_Edits__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Audit Active User Phone</displayNameOverride>
+            <field>Audit_Active_User_Phone__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Account Contract GUID</displayNameOverride>
+            <field>CallRevu_Account_Contract_GUID__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Current Case</displayNameOverride>
+            <field>Current_Case__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enrollment Case Reference</displayNameOverride>
+            <field>Enrollment_Case_Reference__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill To Share Fixed Amount</displayNameOverride>
+            <field>Bill_To_Share_Fixed_Amount__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Bill To Share Fixed Frequency</displayNameOverride>
+            <field>Bill_To_Share_Fixed_Frequency__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Opportunity Change Type</displayNameOverride>
+            <field>Last_Opportunity_Change_Type__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Case Type</displayNameOverride>
+            <field>Case_Type__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Opportunity Order Type</displayNameOverride>
+            <field>Last_Opportunity_Order_Type__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Authorization Code</displayNameOverride>
+            <field>Authorization_Code__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Assigned</displayNameOverride>
+            <field>Date_Assigned__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu360 Sync Error</displayNameOverride>
+            <field>CallRevu360_Sync_Error__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enrollment Phone Number</displayNameOverride>
+            <field>Enrollment_Phone_Number__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tier 3 Active</displayNameOverride>
+            <field>Tier_3_Active__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Special Billing Terms</displayNameOverride>
+            <field>Special_Billing_Terms__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Client Success Owner</displayNameOverride>
+            <field>Performance_Manager__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Strategic Account Manager</displayNameOverride>
+            <field>Strategic_Account_M__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Launch Coordinator</displayNameOverride>
+            <field>Launch_Coordinator__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enrollment Coordinator</displayNameOverride>
+            <field>Enrollment_Coordinator__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Primary Account Contact</displayNameOverride>
+            <field>Primary_Account_Contact__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Review Cycle</displayNameOverride>
+            <field>Review_Cycle__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Account Status</displayNameOverride>
+            <field>CallRevu_Account_Status__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tier 2 account status</displayNameOverride>
+            <field>Tier_2_account_status__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Monthly Review</displayNameOverride>
+            <field>Last_Monthly_Review__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Manager</displayNameOverride>
+            <field>Sales_Manager__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Location Billing Address</displayNameOverride>
+            <field>Service_Location_Billing_Address__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Location Billing Zip</displayNameOverride>
+            <field>Service_Location_Billing_Zip__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Location Dealer Group/Parent</displayNameOverride>
+            <field>Service_Location_Parent_Group__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>15 Day Follow Up</displayNameOverride>
+            <field>X15_Day_Follow_Up__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>30 Day Follow Up</displayNameOverride>
+            <field>X30_Day_Follow_Up__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Description</displayNameOverride>
+            <field>Description__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enrollment Case</displayNameOverride>
+            <field>Enrollment_Case__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tier Status</displayNameOverride>
+            <field>Tier_Status__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>MethodCheck</displayNameOverride>
+            <field>MethodCheck__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Quarterly Review</displayNameOverride>
+            <field>Last_Quarterly_Review__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Bill Date</displayNameOverride>
+            <field>Last_Bill_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tier 2 Active</displayNameOverride>
+            <field>Tier_2_Active__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Frequency</displayNameOverride>
+            <field>Billing_Frequency__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Account Dealer Group</displayNameOverride>
+            <field>Account_Dealer_Group__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Unable to Schedule Review</displayNameOverride>
+            <field>Unable_to_Schedule_Review__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dealer Engagement - Enrollment</displayNameOverride>
+            <field>Dealer_Engagement_Enrollment__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Update Review Cycle</displayNameOverride>
+            <field>Update_Review_Cycle__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Update Performance Mgr In CR360</displayNameOverride>
+            <field>Update_Performance_Mgr_In_CR360__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Group Agreement</displayNameOverride>
+            <field>Group_Agreement__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Main Motivation</displayNameOverride>
+            <field>Main_Motivation__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Billing Line Item End Date</displayNameOverride>
+            <field>Billing_Line_Item_End_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>KJ Test</displayNameOverride>
+            <field>KJ_Test__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu360 Parent Account</displayNameOverride>
+            <field>CallRevu360_Parent_Account__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Account Type ID</displayNameOverride>
+            <field>CallRevu_Account_Type_ID__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu360 Parent Account ID</displayNameOverride>
+            <field>CallRevu_Parent_Account_ID__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Is CallRevu360 Parent Account</displayNameOverride>
+            <field>Is_CallRevu360_Parent_Account__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Performance Management  Sync</displayNameOverride>
+            <field>Last_Performance_Management_Sync__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dealer Engagement - Launch</displayNameOverride>
+            <field>Dealer_Engagement_Launch__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Price Book</displayNameOverride>
+            <field>Price_Book__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Special Account Notes</displayNameOverride>
+            <field>Special_Account_Notes__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>What are the Customer Challenges</displayNameOverride>
+            <field>What_are_the__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>What are the Client Objectives</displayNameOverride>
+            <field>What_are_the_Client_Objectives__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity for Expansion</displayNameOverride>
+            <field>Opportunity_for_Expansion__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Previous Solution</displayNameOverride>
+            <field>Previous_Solution__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Previous Solution Sub Source</displayNameOverride>
+            <field>Previous_Solution_Sub_Source__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Features of Interest</displayNameOverride>
+            <field>Features_of_Interest__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Implementation Expectations</displayNameOverride>
+            <field>Implementation_Expectations__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Discovery Notes</displayNameOverride>
+            <field>Discovery_Notes__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Acquisition Date</displayNameOverride>
+            <field>Customer_Acquisition_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Customer Age</displayNameOverride>
+            <field>Customer_Age__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Client Age</displayNameOverride>
+            <field>Client_Age__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>DNI Gmail Account</displayNameOverride>
+            <field>DNI_Gmail_Account__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Auto ID Account Number</displayNameOverride>
+            <field>Auto_ID_Account_Number__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>DMS</displayNameOverride>
+            <field>DMS__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Parent Last Touch Date</displayNameOverride>
+            <field>Parent_Last_Touch_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Quarterly Close Date</displayNameOverride>
+            <field>Quarterly_Close_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Not Eligible For Winback</displayNameOverride>
+            <field>Not_Eligible_For_Winback__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Client Objectives</displayNameOverride>
+            <field>Client_Objectives__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Originating Opportunity Type</displayNameOverride>
+            <field>Originating_Opportunity_Type__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>RR Case Count</displayNameOverride>
+            <field>RR_Case_Count__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>COVID-19 Impact</displayNameOverride>
+            <field>COVID_19_Impact__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Additional Impact Notes</displayNameOverride>
+            <field>Additional_Impact_Notes__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cancellation Request Date</displayNameOverride>
+            <field>Cancellation_Request_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cancellation Finalization Date</displayNameOverride>
+            <field>Cancellation_Finalization_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cancellation Close Date</displayNameOverride>
+            <field>Cancellation_Close_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Cancellation Open Date</displayNameOverride>
+            <field>Cancellation_Open_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Originating Opportunity Amount</displayNameOverride>
+            <field>Originating_Opportunity_Amount__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Last Opportunity Amount</displayNameOverride>
+            <field>Last_Opportunity_Amount__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Net New MRR Added</displayNameOverride>
+            <field>Net_New_MRR_Added__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Emergency POC</displayNameOverride>
+            <field>Emergency_POC__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Client Term</displayNameOverride>
+            <field>Client_Term__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Accounts Payable Contact</displayNameOverride>
+            <field>Accounts_Payable_Contact__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Accounts Payable Email</displayNameOverride>
+            <field>Accounts_Payable_Email__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Accounts Payable Phone Number</displayNameOverride>
+            <field>Accounts_Payable_Phone__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>AP Updated from Enrollment</displayNameOverride>
+            <field>AP_Updated_from_Enrollment__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallRevu Platform</displayNameOverride>
+            <field>CallRevu_Platform__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Dealer Segment</displayNameOverride>
+            <field>Dealer_Segment__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Referral Partner</displayNameOverride>
+            <field>Referral_Partner__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Partner Type</displayNameOverride>
+            <field>Partner_Type__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Pooling Minutes</displayNameOverride>
+            <field>Pooling_Minutes__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallSource Account Status</displayNameOverride>
+            <field>CallSource_Account_Status__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Call Source Active</displayNameOverride>
+            <field>Call_Source_Active__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CallSource Account ID</displayNameOverride>
+            <field>CallSource_Account_ID__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Welcome Letter and Enrollment Links Sent</displayNameOverride>
+            <field>Welcome_Letter_and_Enrollment_Links_Sent__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enrollment Call Completed</displayNameOverride>
+            <field>Enrollment_Call_Completed__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Roster Received</displayNameOverride>
+            <field>Roster_Received__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ad Sources Received/ LOA Received</displayNameOverride>
+            <field>Ad_Sources_Received_LOA_Received__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Ad Sources Created/ Port Submitted</displayNameOverride>
+            <field>Ad_Sources_Created_Port_Submitted__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lines Tested/ Port Accepted</displayNameOverride>
+            <field>Lines_Tested_Port_Accepted__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Routing Approval received for new lines</displayNameOverride>
+            <field>Routing_Approval_received_for_new_lines__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lines Routed/Port completed</displayNameOverride>
+            <field>Lines_Routed_Port_completed__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Lines Tested/ Lines created as needed</displayNameOverride>
+            <field>Lines_Tested_Lines_created_as_needed__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>If a group add group number CRM360</displayNameOverride>
+            <field>If_a_group_add_group_number_CRM__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>CRM and C2C integrations Requested</displayNameOverride>
+            <field>CRM_and_C2C_integrations_Requested__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Transition to Launch Email</displayNameOverride>
+            <field>Transition_to_Launch_Email__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Completed WL</displayNameOverride>
+            <field>Date_Completed_WL__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Completed CC</displayNameOverride>
+            <field>Date_Completed_CC__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Completed RR</displayNameOverride>
+            <field>Date_Completed_RR__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Completed AD/LOA</displayNameOverride>
+            <field>Date_Completed_AD_LOA__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Completed AD/PORT</displayNameOverride>
+            <field>Date_Completed_AD_PORT__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Completed LT/PA</displayNameOverride>
+            <field>Date_Completed_LT_PA__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Completed RA</displayNameOverride>
+            <field>Date_Completed_RA__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Completed LR</displayNameOverride>
+            <field>Date_Completed_LR__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Completed LT/LC</displayNameOverride>
+            <field>Date_Completed_LT_LC__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Completed CR360</displayNameOverride>
+            <field>Date_Completed_CR360__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Completed CRM</displayNameOverride>
+            <field>Date_Completed_CRM__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Completed TLE</displayNameOverride>
+            <field>Date_Completed_TLE__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Trusted Dealer Calling Completed</displayNameOverride>
+            <field>Completed_Carrier_Registration__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Unique Identifier</displayNameOverride>
+            <field>Unique_Identifier__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Owner&apos;s Manager</displayNameOverride>
+            <field>Owner_s_Manager__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enrollment Call Scheduled Date</displayNameOverride>
+            <field>Enrollment_Call_Scheduled_Date2__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Enrollment Call Scheduled Time</displayNameOverride>
+            <field>Enrollment_Call_Scheduled_Time__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>AM Owner Identifier</displayNameOverride>
+            <field>AM_Owner_Identifier__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Trial Count</displayNameOverride>
+            <field>Trial_Count__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Intended Launch Date</displayNameOverride>
+            <field>Intended_Launch_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Check In Date</displayNameOverride>
+            <field>Check_In_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Intended Handoff Date</displayNameOverride>
+            <field>Intended_Handoff_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Handoff Date</displayNameOverride>
+            <field>Handoff_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Authorized Contact Notified</displayNameOverride>
+            <field>Date_Authorized_Contact_Notified__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Intended Check In Date</displayNameOverride>
+            <field>Intended_Check_In_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Sales Vision Machine Summaries</displayNameOverride>
+            <field>Sales_Vision_Machine_Summaries__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Service Vision Machine Summaries</displayNameOverride>
+            <field>Service_Vision_Machine_Summaries__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Number of Active Products</displayNameOverride>
+            <field>Number_of_Products__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Date Processed</displayNameOverride>
+            <field>Date_Processed__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>First QBR Created</displayNameOverride>
+            <field>First_QBR_Created__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Open QBR Cases</displayNameOverride>
+            <field>Open_QBR_Cases__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Active Tracking Product</displayNameOverride>
+            <field>Active_Tracking_Product__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Active Transcription Product</displayNameOverride>
+            <field>Active_Transcription_Product__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Estimated Next Quarterly Review</displayNameOverride>
+            <field>Estimated_Next_Quarterly_Review__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TCX Active</displayNameOverride>
+            <field>TCX_Active__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TCX Account Number</displayNameOverride>
+            <field>TCX_Account_Number__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>TCX Pending Cancellation</displayNameOverride>
+            <field>TCX_Pending_Cancellation__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Review Close Date</displayNameOverride>
+            <field>Review_Close_Date__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tier 1 Pending Cancellation</displayNameOverride>
+            <field>Tier_1_Pending_Cancellation__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tier 2 Pending Cancellation</displayNameOverride>
+            <field>Tier_2_Pending_Cancellation__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Tier 3 Pending Cancellation</displayNameOverride>
+            <field>Tier_3_Pending_Cancellation__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <masterLabel>Service Agreements (Last Opportunity)</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity : Account Name : Billing City</displayNameOverride>
+            <field>Account.BillingCity</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity : Account Name : Billing Zip/Postal Code</displayNameOverride>
+            <field>Account.BillingPostalCode</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <displayNameOverride>Opportunity : Account Name : Billing State/Province</displayNameOverride>
+            <field>Account.BillingState</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Service_Agreement__c.Service_Location__c.Parent.Name</field>
+            <table>Opportunity</table>
+        </columns>
+        <masterLabel>Accounts</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.AboutMe</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Account</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.IsActive</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__ActivityGenerationObjects__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Address</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.ReceivesAdminInfoEmails</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Alias</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.ForecastEnabled</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__AllowMapsExports__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.asknicely__Preferred_Account_NPS_Period__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.CallCenter</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.dfsle__CanManageAccount__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Capsule_User_ID__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.ChatterAdoptionStage</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.ChatterAdoptionStageModifiedDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.DigestFrequency</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.City</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.CompanyName</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Contact</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Country</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.CreatedBy</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.CreatedDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.CurrentStatus</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.DB_Region__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.DefaultGroupNotificationFrequency</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__DefaultProximityRadius__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__DefaultType__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Department</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__DeviceId__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__DeviceVendor__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__DistanceCalculationRule__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Division</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Loop__LOOPlus_Tester__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Loop__dsToken__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Loop__dsPassword__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.dfsle__Provisioned__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.dsfs__DSProSFUsername__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.dfsle__Username__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.dfsle__Status__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.dsfs__DSProSFMembershipStatus__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.dsfs__DSProSFPassword__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__EditMapsOrgWideQueries__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__EditTimesheetEntries__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Email</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.EmailEncodingKey</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.SenderEmail</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.SenderName</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Signature</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.EmployeeNumber</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Enable_DocGen_Access__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.EndDay</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Extension</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.NumberOfFailedLogins</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Fax</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__FinishedAdvRouteSetup__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.FirstName</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Name</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.GeocodeAccuracy</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.GlobalIdentity</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.IsProfilePhotoActive</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Hire_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Individual</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.ReceivesInfoEmails</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.UserSubtype</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.IsSystemControlled</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.LanguageLocaleKey</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.LastLoginDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.LastModifiedBy</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.LastModifiedDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.LastName</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.LastPasswordChangeDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Latitude</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.LocaleSidKey</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Longitude</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Major_Account_Owner__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Manager</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__BetaTester__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__DefaultLatitude__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__DefaultLongitude__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__DefaultZoomLevel__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__MapsSetting__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__MaxExportSize__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__MaxQuerySize__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__Version__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.MiddleName</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Mid_Major_Account_Owner__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.MobilePhone</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.CommunityNickname</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.OfflineTrialExpirationDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.PasswordExpirationDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Personal_Meeting_Room__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Phone</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__PreferredTypeOfMeasurement__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Profile</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__ReceiveBatchExceptionEmails__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__RequireApprovalProcess__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.UserRole</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.OfflinePdaTrialExpirationDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.FederationIdentifier</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Service_Agreements_Authorized_To_Create__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.StartDay</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.State</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.StayInTouchNote</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.StayInTouchSignature</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.StayInTouchSubject</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Street</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.SuAccessExpirationDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Suffix</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.SuOrgAdminExpirationDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Team__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Termination_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__TPApprover__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__TPPublisher__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__TestUserLookup__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.maps__TimesheetPeriod__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.TimeZoneSidKey</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Title</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.User_18_Digit_ID__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Id</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.Username</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.UserType</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.WirelessTrialExpirationDate</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Owner.PostalCode</field>
+            <table>Opportunity</table>
+        </columns>
+        <masterLabel>Owner Fields</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Tied_to_Partner__c</field>
+            <table>Opportunity.Service_Agreements__r</table>
+        </columns>
+        <masterLabel>Service Agreements</masterLabel>
+    </sections>
+</ReportType>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <assignments>
+        <name>assignUpdatedTerritory</name>
+        <label>assignUpdatedTerritory</label>
+        <locationX>50</locationX>
+        <locationY>242</locationY>
+        <assignmentItems>
+            <assignToReference>thisAccountRecord.Territory__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>updatedTerritory</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>updateAccountwithTerritory</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>check_that_Territory_is_blank</name>
+        <label>check that Territory is blank</label>
+        <locationX>314</locationX>
+        <locationY>134</locationY>
+        <defaultConnectorLabel>is NOT blank</defaultConnectorLabel>
+        <rules>
+            <name>is_Blank</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>thisAccountRecord.Territory__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>assignUpdatedTerritory</targetReference>
+            </connector>
+            <label>is Blank</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>updatedTerritory</name>
+        <dataType>String</dataType>
+        <expression>CASE({!thisAccountRecord.BillingState}, 
+&quot;Maine&quot;, &quot;Northeast&quot;,
+&quot;ME&quot;, &quot;Northeast&quot;,
+&quot;New Hampshire&quot;, &quot;Northeast&quot;,
+&quot;NH&quot;, &quot;Northeast&quot;,
+&quot;Vermont&quot;, &quot;Northeast&quot;,
+&quot;VT&quot;, &quot;Northeast&quot;,
+&quot;Massachusetts&quot;, &quot;Northeast&quot;,
+&quot;MA&quot;, &quot;Northeast&quot;,
+&quot;Rhode Island&quot;, &quot;Northeast&quot;,
+&quot;RI&quot;, &quot;Northeast&quot;,
+&quot;Connecticut&quot;, &quot;Northeast&quot;,
+&quot;CT&quot;, &quot;Northeast&quot;,
+&quot;New Jersey&quot;, &quot;Northeast&quot;,
+&quot;NJ&quot;, &quot;Northeast&quot;,
+
+&quot;New York&quot;, &quot;Mid-Atlantic&quot;,
+&quot;NY&quot;, &quot;Mid-Atlantic&quot;,
+&quot;Pennsylvania&quot;, &quot;Mid-Atlantic&quot;,
+&quot;PA&quot;, &quot;Mid-Atlantic&quot;,
+&quot;Delaware&quot;, &quot;Mid-Atlantic&quot;,
+&quot;DE&quot;, &quot;Mid-Atlantic&quot;,
+
+&quot;Maryland&quot;, &quot;Southeast&quot;,
+&quot;MD&quot;, &quot;Southeast&quot;,
+&quot;Virginia&quot;, &quot;Southeast&quot;,
+&quot;VA&quot;, &quot;Southeast&quot;,
+&quot;West Virginia&quot;, &quot;Southeast&quot;,
+&quot;WV&quot;, &quot;Southeast&quot;,
+&quot;North Carolina&quot;, &quot;Southeast&quot;,
+&quot;NC&quot;, &quot;Southeast&quot;,
+&quot;South Carolina&quot;, &quot;Southeast&quot;,
+&quot;SC&quot;, &quot;Southeast&quot;,
+
+&quot;Georgia&quot;, &quot;South Atlantic&quot;,
+&quot;GA&quot;, &quot;South Atlantic&quot;,
+&quot;Florida&quot;, &quot;South Atlantic&quot;,
+&quot;FL&quot;, &quot;South Atlantic&quot;,
+&quot;Alabama&quot;, &quot;South Atlantic&quot;,
+&quot;AL&quot;, &quot;South Atlantic&quot;,
+
+&quot;Indiana&quot;, &quot;Great Lakes&quot;,
+&quot;IN&quot;, &quot;Great Lakes&quot;,
+&quot;Michigan&quot;, &quot;Great Lakes&quot;,
+&quot;MI&quot;, &quot;Great Lakes&quot;,
+&quot;Wisconsin&quot;, &quot;Great Lakes&quot;,
+&quot;WI&quot;, &quot;Great Lakes&quot;,
+&quot;Minnesota&quot;, &quot;Great Lakes&quot;,
+&quot;MN&quot;, &quot;Great Lakes&quot;,
+
+&quot;Kentucky&quot;, &quot;Mid-South&quot;,
+&quot;KY&quot;, &quot;Mid-South&quot;,
+&quot;Tennessee&quot;, &quot;Mid-South&quot;,
+&quot;TN&quot;, &quot;Mid-South&quot;,
+&quot;Mississippi&quot;, &quot;Mid-South&quot;,
+&quot;MS&quot;, &quot;Mid-South&quot;,
+&quot;Louisiana&quot;, &quot;Mid-South&quot;,
+&quot;LA&quot;, &quot;Mid-South&quot;,
+&quot;Ohio&quot;, &quot;Mid-South&quot;,
+&quot;OH&quot;, &quot;Mid-South&quot;,
+
+&quot;Oklahoma&quot;, &quot;South Central&quot;,
+&quot;OK&quot;, &quot;South Central&quot;,
+&quot;Texas&quot;, &quot;South Central&quot;,
+&quot;TX&quot;, &quot;South Central&quot;,
+&quot;Arkansas&quot;, &quot;South Central&quot;,
+&quot;AR&quot;, &quot;South Central&quot;,
+
+&quot;Missouri&quot;, &quot;Central Plains&quot;,
+&quot;MO&quot;, &quot;Central Plains&quot;,
+&quot;Iowa&quot;, &quot;Central Plains&quot;,
+&quot;IA&quot;, &quot;Central Plains&quot;,
+&quot;Kansas&quot;, &quot;Central Plains&quot;,
+&quot;KS&quot;, &quot;Central Plains&quot;,
+&quot;Nebraska&quot;, &quot;Central Plains&quot;,
+&quot;NE&quot;, &quot;Central Plains&quot;,
+&quot;Illinois&quot;, &quot;Central Plains&quot;,
+&quot;IL&quot;, &quot;Central Plains&quot;,
+
+&quot;Montana&quot;, &quot;Mountain West&quot;,
+&quot;MT&quot;, &quot;Mountain West&quot;,
+&quot;Wyoming&quot;, &quot;Mountain West&quot;,
+&quot;WY&quot;, &quot;Mountain West&quot;,
+&quot;Idaho&quot;, &quot;Mountain West&quot;,
+&quot;ID&quot;, &quot;Mountain West&quot;,
+&quot;Colorado&quot;, &quot;Mountain West&quot;,
+&quot;CO&quot;, &quot;Mountain West&quot;,
+&quot;Utah&quot;, &quot;Mountain West&quot;,
+&quot;UT&quot;, &quot;Mountain West&quot;,
+&quot;Washington&quot;, &quot;Mountain West&quot;,
+&quot;WA&quot;, &quot;Mountain West&quot;,
+&quot;Oregon&quot;, &quot;Mountain West&quot;,
+&quot;OR&quot;, &quot;Mountain West&quot;,
+&quot;North Dakota&quot;, &quot;Mountain West&quot;,
+&quot;ND&quot;, &quot;Mountain West&quot;,
+&quot;South Dakota&quot;, &quot;Mountain West&quot;,
+&quot;SD&quot;, &quot;Mountain West&quot;,
+&quot;Arizona&quot;, &quot;Mountain West&quot;,
+&quot;AZ&quot;, &quot;Mountain West&quot;,
+&quot;New Mexico&quot;, &quot;Mountain West&quot;,
+&quot;NM&quot;, &quot;Mountain West&quot;,
+
+&quot;California&quot;, &quot;Pacific&quot;,
+&quot;CA&quot;, &quot;Pacific&quot;,
+&quot;Nevada&quot;, &quot;Pacific&quot;,
+&quot;NV&quot;, &quot;Pacific&quot;,
+&quot;Hawaii&quot;, &quot;Pacific&quot;,
+&quot;HI&quot;, &quot;Pacific&quot;,
+&quot;Alaska&quot;, &quot;Pacific&quot;,
+&quot;AK&quot;, &quot;Pacific&quot;, 
+
+&quot;Quebec&quot;, &quot;Northeast&quot;,
+&quot;QC&quot;, &quot;Northeast&quot;,
+&quot;Ontario&quot;, &quot;Northeast&quot;,
+&quot;ON&quot;, &quot;Northeast&quot;,
+&quot;New Brunswick&quot;, &quot;Northeast&quot;,
+&quot;NB&quot;, &quot;Northeast&quot;,
+&quot;Nova Scotia&quot;, &quot;Northeast&quot;,
+&quot;NS&quot;, &quot;Northeast&quot;,
+&quot;Prince Edward Island&quot;, &quot;Northeast&quot;,
+&quot;PE&quot;, &quot;Northeast&quot;,
+&quot;Newfoundland and Labrador&quot;, &quot;Northeast&quot;,
+&quot;NL&quot;, &quot;Northeast&quot;,
+&quot;Yukon&quot;, &quot;Pacific&quot;,
+&quot;YK&quot;, &quot;Pacific&quot;,
+&quot;British Columbia&quot;, &quot;Pacific&quot;,
+&quot;BC&quot;, &quot;Pacific&quot;,
+&quot;Alberta&quot;, &quot;Pacific&quot;,
+&quot;AB&quot;, &quot;Pacific&quot;,
+&quot;Saskatchewan&quot;, &quot;Pacific&quot;,
+&quot;SK&quot;, &quot;Pacific&quot;,
+&quot;Northwest Territories&quot;, &quot;Pacific&quot;,
+&quot;NT&quot;, &quot;Pacific&quot;,
+&quot;Nunavut&quot;, &quot;Pacific&quot;,
+&quot;NU&quot;, &quot;Pacific&quot;,
+&quot;Manitoba&quot;, &quot;Pacific&quot;,
+&quot;MB&quot;, &quot;Pacific&quot;,
+
+null)</expression>
+    </formulas>
+    <interviewLabel>updateAccountTerritory {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>updateAccountTerritory</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>updateAccountwithTerritory</name>
+        <label>updateAccountwithTerritory</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <faultConnector>
+            <targetReference>sendFaultEmailError</targetReference>
+        </faultConnector>
+        <inputReference>thisAccountRecord</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>check_that_Territory_is_blank</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>sendFaultEmailError</name>
+        <label>Fault Path Flow Flow 1</label>
+        <locationX>314</locationX>
+        <locationY>458</locationY>
+        <flowName>Fault_Path_Flow</flowName>
+        <inputAssignments>
+            <name>RecipientAddressList</name>
+            <value>
+                <stringValue>jamalwarren@callrevu.com,Kristie Jaecklein</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFaultMessage</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFlowname</name>
+            <value>
+                <stringValue>AccountTerritoryAssignment</stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <variables>
+        <name>thisAccountRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+</Flow>

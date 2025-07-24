@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requirements_For_Sync_With_CallRevu</fullName>
+    <active>true</active>
+    <description>Requirements for sync with CallRevu360</description>
+    <errorConditionFormula>(Ready_To_Sync_To_CallRevu360__c || Sync_To_CallRevu_360__c) &amp;&amp;(isblank( Service_Location__r.Main_Car_Makes_Sold__c) || isblank(text(Time_Zone__c)) )</errorConditionFormula>
+    <errorMessage>Main Car Makes Sold is Required on Account and Time Zone is Required on The Service Agreement if you want to Sync to Call Revu360.</errorMessage>
+</ValidationRule>

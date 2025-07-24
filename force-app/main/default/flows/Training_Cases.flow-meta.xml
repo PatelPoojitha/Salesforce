@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <name>Update_Status_to_Closed</name>
+        <label>Update Status to Closed</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Update_Status_to_Closed_0</name>
+        <label>Update Status to Closed</label>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Closed</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <name>Check_Subject</name>
+        <label>Check Subject</label>
+        <locationX>314</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Case_Closed</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Proofpoint Essentials</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Quarantine Digest</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Status_to_Closed</targetReference>
+            </connector>
+            <label>Case Closed</label>
+        </rules>
+        <rules>
+            <name>HubSpot_Form</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>New submission on HubSpot Form</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Status_to_Closed_0</targetReference>
+            </connector>
+            <label>HubSpot Form</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Training Cases {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Training Cases</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>188</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Subject</targetReference>
+        </connector>
+        <filterFormula>{!$Record.RecordType.DeveloperName} = &apos;Training&apos;</filterFormula>
+        <object>Case</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

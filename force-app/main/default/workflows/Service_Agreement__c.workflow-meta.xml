@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alert_Accounting_of_Change_to_Account_Manager</fullName>
+        <ccEmails>kristiejaecklein@callrevu.com</ccEmails>
+        <description>Alert Accounting of Change to Account Manager</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ericafleck@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>sfhelpdesk@callrevu.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Operations/Alert_Accounting_of_AM_Change</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Authorized_Send_Email</fullName>
+        <description>Send Authorized Send Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Authorization_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>Secondary_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>enrollment@callrevu.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Standard_Salesforce_Templates/Send_Authorization_Link</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Enrollment_Call_Reminder</fullName>
+        <description>Send Enrollment Call Reminder</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Authorization_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <field>Secondary_Contact__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderAddress>enrollment@callrevu.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Onboarding/Enrollment_Call_Reminder</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Active_Audit_User_Email</fullName>
+        <field>Audit_Active_User_Email__c</field>
+        <formula>$User.Email</formula>
+        <name>Active Audit User Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Active_Audit_User_Name</fullName>
+        <field>Audit_Active_User_Last_Name__c</field>
+        <formula>$User.LastName</formula>
+        <name>Active Audit User last Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Audit_Active_User_ID</fullName>
+        <description>Update User Who Activated Agreement</description>
+        <field>Audit_Active_User_ID__c</field>
+        <formula>$User.FirstName +&quot; &quot;+ $User.FirstName</formula>
+        <name>Audit Active User ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Audit_User_First_Name</fullName>
+        <field>Audit_Active_User_First_Name__c</field>
+        <formula>$User.FirstName</formula>
+        <name>Audit User First Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Date_of_Authorized_Contact_Notified</fullName>
+        <description>Update date of authorized contact notified on Service Agreement</description>
+        <field>Date_Authorized_Contact_Notified__c</field>
+        <formula>today()</formula>
+        <name>Date of Authorized Contact Notified</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reset_Send_Authorized_Link</fullName>
+        <field>Send_Authorized_Sender_Notification__c</field>
+        <literalValue>0</literalValue>
+        <name>Reset Send Authorized Link</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Allow_Ad_Source_Edits</fullName>
+        <field>Allow_Ad_Source_Edits__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Allow Ad Source Edits</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Allow_Roster_Edits</fullName>
+        <field>Allow_Roster_Edits__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Allow Roster Edits</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Display_Ad_Source_SA</fullName>
+        <description>Set Service Agreement Display Ad Source</description>
+        <field>Display_Ad_Source__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Display Ad Source - SA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Performance_Date_to_Sync_with_360</fullName>
+        <description>Set Performance Date to Sync with CallRevu 360</description>
+        <field>Update_Performance_Mgr_In_CR360__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Performance Date to Sync with 360</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Service_Agreement_Display_Hours_of_O</fullName>
+        <description>Set Service Agreement Display Hours of Operation</description>
+        <field>Display_Hours_of_Operation__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Service Agreement Display Hours of O</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Service_Agreement_Display_Roster</fullName>
+        <description>Set Service Agreement Display Roster</description>
+        <field>Display_Roster__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Service Agreement Display Roster</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Sync_To_CallRevu360</fullName>
+        <field>Sync_To_CallRevu_360__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Sync To CallRevu360</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Update_Review_Cycle</fullName>
+        <description>Sets Update Review Cycle for Sync to CR360</description>
+        <field>Update_Review_Cycle__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Update Review Cycle</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Worfkflow_Update_Audit_on_Service_Ag</fullName>
+        <description>Set Workflow Audit on Service Agreement.  Used for Testing</description>
+        <field>Last_Workflow_Update__c</field>
+        <formula>&quot;Send Enrollment&quot;&amp;text(now())</formula>
+        <name>Set Worfkflow Update Audit on Service Ag</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Uncheck_Send_Account_Link</fullName>
+        <field>Send_Account_Update_Link__c</field>
+        <literalValue>0</literalValue>
+        <name>Uncheck Send Account Link</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Uncheck_Send_Link_Email</fullName>
+        <field>Send_Authorized_Sender_Notification__c</field>
+        <literalValue>0</literalValue>
+        <name>Uncheck Send Link Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Uncheck_Unresponsive</fullName>
+        <field>Unable_to_Schedule_Review__c</field>
+        <literalValue>0</literalValue>
+        <name>Uncheck Unresponsive</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Active_Audit_User_PHone</fullName>
+        <field>Audit_Active_User_Phone__c</field>
+        <formula>$User.Phone</formula>
+        <name>Update Active Audit User PHone</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Agreement_Audit_User_Email</fullName>
+        <description>Update Agreement Audit User Email</description>
+        <field>Audit_Active_User_Email__c</field>
+        <formula>$User.Email</formula>
+        <name>Update Agreement Audit User Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Agreement_Audit_User_First_Name</fullName>
+        <description>Update Agreement Audit User First Name</description>
+        <field>Audit_Active_User_First_Name__c</field>
+        <formula>$User.FirstName</formula>
+        <name>Update Agreement Audit User First Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Agreement_Audit_User_ID</fullName>
+        <description>Update Agreement Audit User ID</description>
+        <field>Audit_Active_User_ID__c</field>
+        <formula>$User.FirstName +&quot; &quot;+ $User.LastName</formula>
+        <name>Update Agreement Audit User ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Agreement_Audit_User_Last_Name</fullName>
+        <description>Update Agreement Audit User Last Name</description>
+        <field>Audit_Active_User_Last_Name__c</field>
+        <formula>$User.LastName</formula>
+        <name>Update Agreement Audit User Last Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Agreement_Audit_User_Phone</fullName>
+        <field>Audit_Active_User_Phone__c</field>
+        <formula>Substitute(Substitute(Substitute($User.Phone
+,&quot;)&quot;,&quot;&quot;)
+,&quot;(&quot;,&quot;&quot;)
+,&quot; &quot;,&quot;-&quot;)</formula>
+        <name>Update Agreement Audit User Phone</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Authorization_Code</fullName>
+        <description>Update Authorization Code</description>
+        <field>Authorization_Code__c</field>
+        <formula>substitute(substitute(Right(casesafeid(Id),5)&amp;text(now()),&quot;-&quot;,&quot;&quot;),&quot; &quot;,&quot;&quot;)</formula>
+        <name>Update Authorization Code</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_CRM_Address</fullName>
+        <description>Checks Lead Address and updates it with http if it does not have it.</description>
+        <field>Lead_Address__c</field>
+        <formula>if(!isblank(Lead_Address__c)&amp;&amp;Contains( Lead_Address__c,&quot;http&quot; ),Lead_Address__c,
+
+
+if(!isblank(Lead_Address__c)&amp;&amp;!Contains( Lead_Address__c,&quot;http&quot; ),&quot;https://&quot;&amp;Lead_Address__c,Lead_Address__c))</formula>
+        <name>Update CRM Address</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Create_Renewal_Opportunity</fullName>
+        <field>Create_Renewal_Opportunity__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Create Renewal Opportunity</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Check Create Renewal Opportunity</fullName>
+        <actions>
+            <name>Update_Create_Renewal_Opportunity</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND( Include_in_Renewal_Opportunity_Process__c = True, End_Date__c = today () + 30)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Enrollment Link</fullName>
+        <actions>
+            <name>Send_Authorized_Send_Email</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Reset_Send_Authorized_Link</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Uncheck_Send_Account_Link</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Uncheck_Send_Link_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Service_Agreement__c.Send_Authorized_Sender_Notification__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Service_Agreement__c.Send_Account_Update_Link__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Send Enrollment Link</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send Enrollment Reminder</fullName>
+        <actions>
+            <name>Send_Enrollment_Call_Reminder</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>Set_Worfkflow_Update_Audit_on_Service_Ag</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Send Enrollment Reminder</description>
+        <formula>ischanged( Enrollment_Call_Scheduled__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Service Agreement Activated</fullName>
+        <actions>
+            <name>Active_Audit_User_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Active_Audit_User_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Audit_Active_User_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Audit_User_First_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Active_Audit_User_PHone</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Service_Agreement__c.Sync_To_CallRevu_360__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Service Agreement Activated</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Authorization Code</fullName>
+        <actions>
+            <name>Update_Authorization_Code</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Set Authorization Code</description>
+        <formula>isnew()||ischanged( Authorization_Contact__c )||ischanged( Secondary_Contact__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Service Agreement Audit Fields for 360</fullName>
+        <actions>
+            <name>Update_Agreement_Audit_User_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Agreement_Audit_User_First_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Agreement_Audit_User_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Agreement_Audit_User_Last_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Agreement_Audit_User_Phone</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_CRM_Address</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Sets audit fields for service agreements</description>
+        <formula>1=1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Service Agreement To Sync</fullName>
+        <actions>
+            <name>Set_Sync_To_CallRevu360</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>ischanged(LastModifiedDate)&amp;&amp; Ready_To_Sync_To_CallRevu360__c</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Service Agreement Values When New</fullName>
+        <actions>
+            <name>Set_Allow_Ad_Source_Edits</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Allow_Roster_Edits</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Display_Ad_Source_SA</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Service_Agreement_Display_Hours_of_O</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Service_Agreement_Display_Roster</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>1=1</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sync Performance Manager</fullName>
+        <actions>
+            <name>Set_Performance_Date_to_Sync_with_360</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Sync Performance Details to CallRevu360</description>
+        <formula>ischanged( Performance_Manager__c ) &amp;&amp;  !ISBLANK(Performance_Manager__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update Review Cycle</fullName>
+        <actions>
+            <name>Set_Update_Review_Cycle</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Update Review Cycle</description>
+        <formula>ischanged( Review_Cycle__c )&amp;&amp; !ISBLANK (CallRevu_Account_Number__c)&amp;&amp; !ISBLANK (Text(Review_Cycle__c))&amp;&amp; NOT(ISPICKVAL(Review_Cycle__c, &apos;--Not Assigned--&apos;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

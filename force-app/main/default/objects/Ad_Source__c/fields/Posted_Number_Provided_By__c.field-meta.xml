@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Posted_Number_Provided_By__c</fullName>
+    <externalId>false</externalId>
+    <label>Posted Number Provided By</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Auto.com</fullName>
+                <default>false</default>
+                <label>Auto.com</label>
+            </value>
+            <value>
+                <fullName>Autobytel</fullName>
+                <default>false</default>
+                <label>Autobytel</label>
+            </value>
+            <value>
+                <fullName>Auto One</fullName>
+                <default>false</default>
+                <label>Auto One</label>
+            </value>
+            <value>
+                <fullName>AutoTrader</fullName>
+                <default>false</default>
+                <label>AutoTrader</label>
+            </value>
+            <value>
+                <fullName>CallBright</fullName>
+                <default>false</default>
+                <label>CallBright</label>
+            </value>
+            <value>
+                <fullName>CallMeasurement</fullName>
+                <default>false</default>
+                <label>CallMeasurement</label>
+            </value>
+            <value>
+                <fullName>CallSource</fullName>
+                <default>false</default>
+                <label>CallSource</label>
+            </value>
+            <value>
+                <fullName>Carfax</fullName>
+                <default>false</default>
+                <label>Carfax</label>
+            </value>
+            <value>
+                <fullName>CarGurus</fullName>
+                <default>false</default>
+                <label>CarGurus</label>
+            </value>
+            <value>
+                <fullName>Cars.com</fullName>
+                <default>false</default>
+                <label>Cars.com</label>
+            </value>
+            <value>
+                <fullName>CarsforSale</fullName>
+                <default>false</default>
+                <label>CarsforSale</label>
+            </value>
+            <value>
+                <fullName>CDK</fullName>
+                <default>false</default>
+                <label>CDK</label>
+            </value>
+            <value>
+                <fullName>Cobalt</fullName>
+                <default>false</default>
+                <label>Cobalt</label>
+            </value>
+            <value>
+                <fullName>Dealer.com</fullName>
+                <default>false</default>
+                <label>Dealer.com</label>
+            </value>
+            <value>
+                <fullName>Dealer.com SNE</fullName>
+                <default>false</default>
+                <label>Dealer.com SNE</label>
+            </value>
+            <value>
+                <fullName>Dealer eProcess</fullName>
+                <default>false</default>
+                <label>Dealer eProcess</label>
+            </value>
+            <value>
+                <fullName>Dealer Inspire</fullName>
+                <default>false</default>
+                <label>Dealer Inspire</label>
+            </value>
+            <value>
+                <fullName>DealerOn</fullName>
+                <default>false</default>
+                <label>DealerOn</label>
+            </value>
+            <value>
+                <fullName>DealerRater</fullName>
+                <default>false</default>
+                <label>DealerRater</label>
+            </value>
+            <value>
+                <fullName>DealerSocket/DealerFire</fullName>
+                <default>false</default>
+                <label>DealerSocket/DealerFire</label>
+            </value>
+            <value>
+                <fullName>Dominion</fullName>
+                <default>false</default>
+                <label>Dominion</label>
+            </value>
+            <value>
+                <fullName>Edmunds</fullName>
+                <default>false</default>
+                <label>Edmunds</label>
+            </value>
+            <value>
+                <fullName>Ford Direct</fullName>
+                <default>false</default>
+                <label>Ford Direct</label>
+            </value>
+            <value>
+                <fullName>FZ Automotive</fullName>
+                <default>false</default>
+                <label>FZ Automotive</label>
+            </value>
+            <value>
+                <fullName>KBB</fullName>
+                <default>false</default>
+                <label>KBB</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Search Optics</fullName>
+                <default>false</default>
+                <label>Search Optics</label>
+            </value>
+            <value>
+                <fullName>TrueCar</fullName>
+                <default>false</default>
+                <label>TrueCar</label>
+            </value>
+            <value>
+                <fullName>VinSolutions</fullName>
+                <default>false</default>
+                <label>VinSolutions</label>
+            </value>
+            <value>
+                <fullName>Yelp</fullName>
+                <default>false</default>
+                <label>Yelp</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

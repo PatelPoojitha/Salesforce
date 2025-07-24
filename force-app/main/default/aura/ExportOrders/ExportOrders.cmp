@@ -1,0 +1,126 @@
+<aura:component controller="ExportOrdersController" 
+        implements="force:lightningQuickActionWithoutHeader,force:hasRecordId,flexipage:availableForRecordHome" access="global" > 
+    
+    <aura:attribute name="alreadyLastWeekOrders" type="ExportOrdersController.TheOrder[]" default="" />
+    <aura:attribute name="alreadyThisWeekOrders" type="ExportOrdersController.TheOrder[]" default="" />
+    <aura:attribute name="alreadyTodayOrders" type="ExportOrdersController.TheOrder[]" default="" />
+    <aura:attribute name="alreadyYesterdayOrders" type="ExportOrdersController.TheOrder[]" default="" />
+    <aura:attribute name="displayOrders" type="ExportOrdersController.TheOrder[]" default="" />
+    <aura:attribute name="pageMessage" type="String" default="" />
+    <aura:attribute name="pageReference" type="Object"/>
+    <aura:attribute name="pendingOrders" type="ExportOrdersController.TheOrder[]" default="" />
+    <aura:attribute name="selectAll" type="Boolean" default="false" />
+    <aura:attribute name="selectedAlready" type="String" default="Today" />
+    <aura:attribute name="selectedExport" type="String" default="Pending Exports" />
+    <aura:attribute name="spinner" type="Boolean" default="true" />
+    <aura:attribute name="url" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <lightning:navigation aura:id="navService"/>
+    
+    <ltng:require styles="{!$Resource.PopupCss}" />
+    
+    <lightning:layout >
+        <lightning:layoutItem >
+            <div class="slds-text-heading_medium" > 
+                Export Orders
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <br/>
+    
+    <aura:if isTrue="{!and(v.pageMessage != null, v.pageMessage != '')}">
+        <div style="color: red;" >
+            {!v.pageMessage}
+        </div>
+        <br/>
+        <br/>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="status">
+                <span class="slds-assistive-text">Please Wait ...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <div style="width: 20%;" >
+        <lightning:select name="typePicklist" aura:id="typePicklist" label="Orders to Export" value="{!v.selectedExport}" onchange="{!c.changeExport}" >
+            <option>Pending Exports</option>
+            <option>Already Exported</option>
+        </lightning:select>
+        <br/>
+        <aura:if isTrue="{!v.selectedExport == 'Already Exported'}">
+            <lightning:select name="typePicklist" aura:id="typePicklist" label="Already Exported Filter Options" value="{!v.selectedAlready}" 
+                    onchange="{!c.changeDates}" >
+                <option>Today</option>
+                <option>Yesterday</option>
+                <option>This Week</option>
+                <option>Last Week</option>
+            </lightning:select>
+        </aura:if>
+    </div>
+    <br/>
+    
+    <div >
+        <div class="slds-text-heading_small" >
+            Filtered Orders
+        </div>
+        <div class="slds-p-around--small">
+            <div class="slds-m-around_small">
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                    <thead>
+                        <tr >
+                            <th scope="col" class="tableHeader" >
+                                <div class="slds-text-title--caps slds-truncate" title="" >
+                                    <ui:inputCheckbox aura:id="selAll" value="{!v.selectAll}" change="{!c.changeSelectAll}" />
+                                </div>
+                            </th>
+                            <th scope="col" class="tableHeader" ><div class="slds-text-title--caps slds-truncate" 
+                                title="Number" style="color: white;" >Order Number</div></th>
+                            <th scope="col" class="tableHeader" ><div class="slds-text-title--caps slds-truncate" title="Date"
+                                style="color: white;" >Date</div></th>
+                            <th scope="col" class="tableHeader" ><div class="slds-text-title--caps slds-truncate" title="BillTo"
+                                style="color: white;" >Bill To Account</div></th>
+                            <th scope="col" class="tableHeader" ><div class="slds-text-title--caps slds-truncate" title="SoldTo"
+                                style="color: white;" >Sold To Account</div></th>
+                            <th scope="col" class="tableHeader" ><div class="slds-text-title--caps slds-truncate" title="Amount"
+                                style="color: white;" >Amount</div></th>
+                            <th scope="col" class="tableHeader" ><div class="slds-text-title--caps slds-truncate" title="Status"
+                                style="color: white;" >Status</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.displayOrders}" var="ord" indexVar="index" >
+                            <tr >
+                                <td scope="col" class="tableRow" >
+                                    <ui:inputCheckbox aura:id="selOne" value="{!ord.selected}" change="{!c.changeSelectOne}" />
+                                </td>
+                                <td class="tableRow" >{!ord.theOrder.Name}</td>
+                                <td class="tableRow" >{!ord.theOrder.CreatedDate}</td>
+                                <td class="tableRow" >{!ord.theOrder.Service_Agreement__r.Bill_To_Account__r.Name}</td>
+                                <td class="tableRow" >{!ord.theOrder.Service_Agreement__r.Service_Location__r.Name}</td>
+                                <td class="tableRow" >{!ord.theOrder.TotalAmount}</td>
+                                <td class="tableRow" >{!ord.theOrder.Status}</td>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <br/>
+    <br/>
+    <div >
+        <button onclick="{!c.save}" styleClass="slds-button" style="background: lightblue; height: 30px; 
+            border-radius: 6px 6px 6px 6px; margin-left: 30px;" >Create Export CSV</button>
+        <a href="{!v.url}" class="slds-button" style="background: lightblue; color: black; height: 25px; margin-left: 30px;
+            border-radius: 4px 4px 4px 5px; box-shadow: 2px 2px gray; padding: 5px;" >Cancel</a>
+    </div>
+        
+</aura:component>

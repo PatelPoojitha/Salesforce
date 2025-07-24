@@ -1,0 +1,129 @@
+<apex:page controller="TestFileLoadController" showHeader="false" cache="false" >
+    
+    <head >
+    
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    </head>
+    
+    <style >
+            
+        .button {
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+        }
+
+        .button:hover {
+            border: 2px solid black;
+        }
+        
+        body .bPageBlock .pbBody .pbSubheader {
+            background-color: #0079c1;
+            color: white;
+        }
+        
+        .bPageBlock { 
+            border-top: 0px; 
+        } 
+        
+        .fileType {
+            display: block;
+            position: relative;
+            width: 115px;
+            cursor: pointer;
+            border: 0;
+            height: 60px;
+            border-radius: 4px;
+            outline: 0;
+        }
+        
+        .fileType:after {
+            transition: 200ms all ease;
+            background: #92cf5c;
+            color: black;
+            font-size: 16px;
+            position: absolute;
+            text-align: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            content: 'Select File';
+            line-height: 60px;
+            border-radius: 4px;
+        }
+       
+    </style>
+    
+    <script type="text/javascript">
+ 
+        function disableOnSubmit(input, display) {
+            var btn = input;
+            setTimeout(function(){ 
+                btn.disabled = 'disabled';
+                // Use the Salesforce CSS style to make the button appear disabled
+                btn.className = 'btnDisabled';
+                btn.value = display; 
+            }, 50);
+        }
+        
+    </script>
+    
+    <apex:form >
+    
+        <apex:actionFunction name="preview" action="{!previewFile}" />
+    
+        <br/>
+        <div style="text-align:center; background-color:#0079c1; width:100%; display:inline-block;" >
+            <br/>
+            <apex:image url="{!company.Bill_To_Account__r.Partner_Logo_URL__c}" width="{!company.Bill_To_Account__r.Partner_Image_Width__c}" 
+                height="{!company.Bill_To_Account__r.Partner_Image_Height__c}" style="margin-left:5%; text-align:center;" 
+                rendered="{!AND(company != null, company.Partner_Implementation__c, company.Bill_To_Account__r.Partner_Logo_URL__c != null)}" />
+            <apex:image url="{!$Resource.CallRevu360Logo}" width="18%" height="9%" style="margin-left:5%; text-align:center;" 
+                rendered="{!OR(company = null, !company.Partner_Implementation__c, company.Bill_To_Account__r.Partner_Logo_URL__c = null)}" />
+            <br/>
+            <br/>
+            <div style="text-align:center; background-color:#0079c1; color:white;">
+                <apex:outputText value="Import Employees" style="font-size:30px; text-align:center; margin-left: 50px;"
+                    rendered="{!!loadAdSources}" />
+                <apex:outputText value="Import Ad Sources" style="font-size:30px; text-align:center; margin-left: 50px;"
+                    rendered="{!loadAdSources}" />
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+    
+        <apex:pageBlock >
+        
+            <div style="text-align:center;" >
+                <apex:commandButton value="Return to Contract Information" action="{!cancelImport}" status="status" 
+                    styleClass="slds-button slds-button_neutral button" style="border-top: 0px; border-bottom: 0px; padding-top:0px; 
+                    padding-bottom:0px; margin-top:0px; margin-bottom:0px; margin-left:20px; width: 280px; height: 60px; font-size: 16px; 
+                    color:white; background: #0079c1;" onclick="disableOnSubmit(this, 'Please wait');" />
+            </div>
+        
+            <apex:outputPanel id="errs1" rendered="{!errorMsg != null}" >
+                <div style="text-align:center;" >
+                    <apex:repeat value="{!errorMsg}" var="err" >
+                        <apex:outputText style="font-weight:800; text-align=center; color:red;" value="{!err}" />
+                        <br/>
+                    </apex:repeat>
+                </div>
+            </apex:outputPanel>
+            
+            <apex:pageBlockSection id="upload" columns="1" >
+                <apex:outputText value="Select the csv file from your computer to Import:" style="color: #0079c1; text-align:center; 
+                    font-size: 20px;" />
+                <apex:inputFile id="file" styleclass="fileType slds-button slds-button_neutral button" value="{!newAttachment.body}" 
+                    filename="{!newAttachment.name}" onchange="preview()" />
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+            
+    </apex:form>
+            
+</apex:page>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Salesforce Help Desk - Simple</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Help_Desk_Status__c</fieldNames>
+        <picklistValueName>Closed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>CallRevu_Employee__c</fieldNames>
+        <fieldNames>Request_Department__c</fieldNames>
+        <fieldNames>Help_Desk_Case_Sub_Type__c</fieldNames>
+        <fieldNames>Help_Desk_Ticket_Type__c</fieldNames>
+        <fieldNames>Help_Desk_Status__c</fieldNames>
+        <picklistValueName>New</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>CallRevu_Employee__c</fieldNames>
+        <fieldNames>Request_Department__c</fieldNames>
+        <fieldNames>Help_Desk_Case_Sub_Type__c</fieldNames>
+        <fieldNames>Help_Desk_Ticket_Type__c</fieldNames>
+        <fieldNames>Help_Desk_Status__c</fieldNames>
+        <picklistValueName>Open</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Sales_Operations</recordTypeName>
+</PathAssistant>

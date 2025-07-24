@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unable_to_Schedule_Review__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked manually by PM when unable to schedule review due to dealer being unresponsive.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checked manually by PM when unable to schedule review due to dealer being unresponsive.</inlineHelpText>
+    <label>Unable to Schedule Review</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

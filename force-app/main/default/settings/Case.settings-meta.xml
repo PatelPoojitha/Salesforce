@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CaseSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAssignNotificationTemplate>Operations/Transferred_Case</caseAssignNotificationTemplate>
+    <caseAutoProcUser>false</caseAutoProcUser>
+    <caseFeedItemSettings>
+        <characterLimit>400</characterLimit>
+        <displayFormat>Default</displayFormat>
+        <feedItemType>EmailMessageEvent</feedItemType>
+    </caseFeedItemSettings>
+    <caseFeedReadUnreadLtng>false</caseFeedReadUnreadLtng>
+    <caseMergeInLightning>true</caseMergeInLightning>
+    <closeCaseThroughStatusChange>true</closeCaseThroughStatusChange>
+    <defaultCaseFeedLayoutOn>false</defaultCaseFeedLayoutOn>
+    <defaultCaseOwner>kristiejaecklein@callrevu.com</defaultCaseOwner>
+    <defaultCaseOwnerType>User</defaultCaseOwnerType>
+    <emailToCase>
+        <enableE2CAttachmentAsFile>true</enableE2CAttachmentAsFile>
+        <enableE2CDeduplicateAttachments>false</enableE2CDeduplicateAttachments>
+        <enableE2CExternalServer>false</enableE2CExternalServer>
+        <enableE2CSourceTracking>true</enableE2CSourceTracking>
+        <enableEmailToCase>true</enableEmailToCase>
+        <enableHtmlEmail>true</enableHtmlEmail>
+        <enableNewToReadTriggers>false</enableNewToReadTriggers>
+        <enableOnDemandEmailToCase>true</enableOnDemandEmailToCase>
+        <enableThreadTokenInBody>true</enableThreadTokenInBody>
+        <enableThreadTokenInSubject>true</enableThreadTokenInSubject>
+        <notifyOwnerOnNewCaseEmail>false</notifyOwnerOnNewCaseEmail>
+        <overEmailLimitAction>Bounce</overEmailLimitAction>
+        <preQuoteSignature>true</preQuoteSignature>
+        <replyWithNewContentOnly>false</replyWithNewContentOnly>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Accounting</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>billingcase@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Accounting - Billing Cases</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Emailed Acura Order</caseOrigin>
+            <caseOwner>ericafleck@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>acuraorders@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Acura Orders</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Accounting</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>sfagreements@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Agreements</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Emailed Audi Order</caseOrigin>
+            <caseOwner>ericafleck@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>audiorders@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Audi Orders</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>CI Feedback</caseOrigin>
+            <caseOwner>Support</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>productfeedback@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>CI Feedback</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Emailed CS eLead Order</caseOrigin>
+            <caseOwner>ericafleck@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>cseleadorders@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>CS eLead Orders</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Web</caseOrigin>
+            <caseOwner>laurenthompson@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>dni@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>CallRevu DNI</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Support</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>support@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>CallRevu Support</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>At_Risk_Cancellations</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>cancellations@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Cancellations</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>DNI Support Email</caseOrigin>
+            <caseOwner>laurenthompson@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>dnirequests@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>DNI Support Requests</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Employee</caseOrigin>
+            <caseOwner>Data_And_Reporting</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>datarequest@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Data Requests</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>philslaughter@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>tier_iii_support@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>DevOps</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Emailed Drive Centric Order</caseOrigin>
+            <caseOwner>ericafleck@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>drivecentricorders@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Drive Centric Orders</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Escalated_Requests</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>High</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>onboardingescalation@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Escalated Requests</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Emailed FCA Order</caseOrigin>
+            <caseOwner>ericafleck@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>fcaorders@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>FCA Orders</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Emailed GM Plus Up Order</caseOrigin>
+            <caseOwner>ericafleck@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>gmplusuporders@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>GM Plus Up Orders</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Emailed Honda Digital Solution Order</caseOrigin>
+            <caseOwner>ericafleck@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>hondadigitalsolutions@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Honda Digital Solutions</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Emailed Partner Order</caseOrigin>
+            <caseOwner>ericafleck@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>partnerorders@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Partner Orders</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Porting_Requests</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>porting@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Porting Requests</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Emailed ML Data</caseOrigin>
+            <caseOwner>nicoleday@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>qcsummaries@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>QC Summaries</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>QC_Support</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>qcsupport@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>QC Support</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Product &amp; Tech Feedback</caseOrigin>
+            <caseOwner>QC_Support</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>qcml@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>QCML</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Rapid Response</caseOrigin>
+            <caseOwner>Rapid_Response</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>success@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Rapid Response</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Sales Enablement</caseOrigin>
+            <caseOwner>Sales_Enablement</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>se@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Sales Enablement</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>SFHelpDesk</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Low</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>sfhelpdesk@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Salesforce Help Desk</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>TCX Email</caseOrigin>
+            <caseOwner>brookejackson@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>tcxbillingcase@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>TCX Billing Base</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>TCX Email</caseOrigin>
+            <caseOwner>Support</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>tcxsupport@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>TCX Support Forward</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>robertmanuel@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>training@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Training Cases</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Emailed Vanity Order</caseOrigin>
+            <caseOwner>ericafleck@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>vanity@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Vanity Orders</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Emailed Volvo Order</caseOrigin>
+            <caseOwner>ericafleck@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>volvoorders@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>Volvo Orders</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Emailed eLead Order</caseOrigin>
+            <caseOwner>ericafleck@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>eleadorders@callrevu.com</emailAddress>
+            <isVerified>true</isVerified>
+            <routingName>eLead Orders</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <unauthorizedSenderAction>Bounce</unauthorizedSenderAction>
+    </emailToCase>
+    <enableCaseFeed>true</enableCaseFeed>
+    <enableCaseSwarming>false</enableCaseSwarming>
+    <enableCollapseEmailThread>true</enableCollapseEmailThread>
+    <enableDraftEmails>false</enableDraftEmails>
+    <enableEarlyEscalationRuleTriggers>false</enableEarlyEscalationRuleTriggers>
+    <enableEmailActionDefaultsHandler>false</enableEmailActionDefaultsHandler>
+    <enableEscalateQfiToCaseInternal>false</enableEscalateQfiToCaseInternal>
+    <enableEscalateQfiToCaseNetworks>false</enableEscalateQfiToCaseNetworks>
+    <enableMultiLangSolnSrchCSS>false</enableMultiLangSolnSrchCSS>
+    <enableMultiLangSolnSrchPKB>false</enableMultiLangSolnSrchPKB>
+    <enableMultiLangSolution>false</enableMultiLangSolution>
+    <enableSolutionCategory>false</enableSolutionCategory>
+    <enableSolutionInlineCategory>true</enableSolutionInlineCategory>
+    <enableSolutionShortSummary>true</enableSolutionShortSummary>
+    <enableSuggestedArticlesApplication>false</enableSuggestedArticlesApplication>
+    <enableSuggestedArticlesCustomerPortal>false</enableSuggestedArticlesCustomerPortal>
+    <enableSuggestedArticlesPartnerPortal>false</enableSuggestedArticlesPartnerPortal>
+    <enableSuggestedSolutions>true</enableSuggestedSolutions>
+    <escalateCaseBefore>false</escalateCaseBefore>
+    <keepCaseMergeRecords>false</keepCaseMergeRecords>
+    <keepRecordTypeOnAssignmentRule>true</keepRecordTypeOnAssignmentRule>
+    <notifyContactOnCaseComment>false</notifyContactOnCaseComment>
+    <notifyDefaultCaseOwner>false</notifyDefaultCaseOwner>
+    <notifyOwnerOnCaseComment>false</notifyOwnerOnCaseComment>
+    <notifyOwnerOnCaseOwnerChange>true</notifyOwnerOnCaseOwnerChange>
+    <showEmailAttachmentsInCaseAttachmentsRL>true</showEmailAttachmentsInCaseAttachmentsRL>
+    <showFewerCloseActions>false</showFewerCloseActions>
+    <systemUserEmail>kristiejaecklein@callrevu.com</systemUserEmail>
+    <useSystemEmailAddress>true</useSystemEmailAddress>
+    <useSystemUserAsDefaultCaseUser>true</useSystemUserAsDefaultCaseUser>
+    <visibleInCssCheckbox>false</visibleInCssCheckbox>
+    <webToCase>
+        <enableWebToCase>false</enableWebToCase>
+    </webToCase>
+</CaseSettings>

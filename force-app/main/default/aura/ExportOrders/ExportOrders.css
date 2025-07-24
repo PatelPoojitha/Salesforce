@@ -1,0 +1,18 @@
+.THIS.slds-spinner_container {  
+    z-index: 10000;
+    position: fixed; 
+}
+
+.THIS.exampleHolder{
+    position: relative;
+    display: inline-block;
+    width: 80px;
+}
+
+.THIS .tableHeader {
+    background-color: #0079c1; 
+}
+
+.THIS .tableRow {
+    background-color: #f2f2f2;
+}

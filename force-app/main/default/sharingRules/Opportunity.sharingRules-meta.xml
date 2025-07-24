@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Not_eLead</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Not eLead</label>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Dealership Credit</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>eLead</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>eLead</label>
+        <sharedTo>
+            <group>eLead</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Tier2</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingGuestRules>
+        <fullName>Site_Guest_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Site Guest User</label>
+        <sharedTo>
+            <guestUser>Data_Collection</guestUser>
+        </sharedTo>
+        <criteriaItems>
+            <field>CloseDate</field>
+            <operation>greaterThan</operation>
+            <value>1/1/1900</value>
+        </criteriaItems>
+        <includeHVUOwnedRecords>false</includeHVUOwnedRecords>
+    </sharingGuestRules>
+</SharingRules>

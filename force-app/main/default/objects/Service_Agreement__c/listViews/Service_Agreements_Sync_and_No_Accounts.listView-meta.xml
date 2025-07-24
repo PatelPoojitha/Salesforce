@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Agreements_Sync_and_No_Accounts</fullName>
+    <columns>NAME</columns>
+    <columns>Sync_To_CallRevu_360__c</columns>
+    <columns>Ready_To_Sync_To_CallRevu360__c</columns>
+    <columns>Tier_Status__c</columns>
+    <columns>Performance_Manager__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bill_to_Account__c</field>
+        <operation>contains</operation>
+        <value>elead</value>
+    </filters>
+    <filters>
+        <field>Tier_Status__c</field>
+        <operation>equals</operation>
+        <value>Tier 3</value>
+    </filters>
+    <label>Service Agreements Sync and No Accounts</label>
+    <sharedTo>
+        <role>Salesforce_Administrator</role>
+        <role>System_Administrator</role>
+    </sharedTo>
+</ListView>
