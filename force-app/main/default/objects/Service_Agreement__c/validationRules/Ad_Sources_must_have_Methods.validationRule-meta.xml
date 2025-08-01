@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ad_Sources_must_have_Methods</fullName>
+    <active>true</active>
+    <description>Check to ensure all Ad Source has Methods before allowing the syncing of Ad Source</description>
+    <errorConditionFormula>Sync_Ad_Sources__c &amp;&amp; MethodCheck__c = 0</errorConditionFormula>
+    <errorMessage>Not all Ad Sources have Methods, please fix before syncing!</errorMessage>
+</ValidationRule>

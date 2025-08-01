@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Email_Action_1</name>
+        <label>Send Email Action 1</label>
+        <locationX>143</locationX>
+        <locationY>708</locationY>
+        <actionName>emailSimple</actionName>
+        <actionType>emailSimple</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>emailAddresses</name>
+            <value>
+                <elementReference>get_Assigned_to_Name.Email</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailSubject</name>
+            <value>
+                <stringValue>A New Marketing Task - Demo Requested</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>emailBody</name>
+            <value>
+                <elementReference>TaskNotificationBody</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>sendRichBody</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>useLineBreaks</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>ccRecipientAddressList</name>
+            <value>
+                <stringValue>jamalwarren@callrevu.com, MarketingLeadAlerts@callrevu.com</stringValue>
+            </value>
+        </inputParameters>
+        <nameSegment>emailSimple</nameSegment>
+    </actionCalls>
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <name>check_Assigned_to_Type</name>
+        <label>check Assigned to Type</label>
+        <locationX>275</locationX>
+        <locationY>492</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Tied_to_a_CONTACT</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.WhoId</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>003</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.WhoId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>get_Contact_Details</targetReference>
+            </connector>
+            <label>Tied to a CONTACT</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>is_this_a_Marketing_Lead_through_Automation</name>
+        <label>is this a Marketing Lead through Automation?</label>
+        <locationX>473</locationX>
+        <locationY>276</locationY>
+        <defaultConnectorLabel>is NOT a Marketing Lead from Automation</defaultConnectorLabel>
+        <rules>
+            <name>is_a_Marketing_Lead_from_Automation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Marketing</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>StartsWith</operator>
+                <rightValue>
+                    <stringValue>Submitted Form</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Subject</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Demo</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>get_Assigned_to_Name</targetReference>
+            </connector>
+            <label>is a Marketing Lead from Automation</label>
+        </rules>
+    </decisions>
+    <description>+Detail link in task notification</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>formDetailLink</name>
+        <dataType>String</dataType>
+        <expression>LEFT({!$Api.Partner_Server_URL_260},FIND(&apos;/services&apos;, {!$Api.Partner_Server_URL_260}))&amp;{!$Record.WhoId}</expression>
+    </formulas>
+    <formulas>
+        <name>formula_FormattedDescription</name>
+        <dataType>String</dataType>
+        <expression>SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE({!$Record.Description}, &quot;Last Name&quot;, BR()&amp;&quot;Last Name&quot;),&quot;First Name&quot;,BR()&amp;&quot;Dealership&quot;),&quot;Work Email&quot;,BR()&amp;&quot;Work Email&quot;),&quot;Department&quot;,BR()&amp;&quot;Department&quot;),&quot;Phone&quot;,BR()&amp;&quot;Phone&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>varActivityType</name>
+        <dataType>String</dataType>
+        <expression>IF(!ISBLANK(TEXT({!$Record.Type})), TEXT({!$Record.Type}), NULL)</expression>
+    </formulas>
+    <formulas>
+        <name>varCallType</name>
+        <dataType>String</dataType>
+        <expression>if(ISPICKVAL({!$Record.Cadence_Task__r.Successor_Task__r.Task_Type__c}, &apos;Outbound&apos;), &apos;Outbound&apos;, NULL)</expression>
+    </formulas>
+    <formulas>
+        <name>varContact</name>
+        <dataType>String</dataType>
+        <expression>IF(LEFT({!$Record.WhoId},3) = &apos;003&apos;, {!$Record.WhoId}, NULL)</expression>
+    </formulas>
+    <formulas>
+        <name>varDueDateOnly</name>
+        <dataType>Date</dataType>
+        <expression>if(MOD((TODAY() + {!$Record.Cadence_Task__r.Successor_Task__r.Days_After_Prior_Task__c}) - DATE(1900, 1, 7 ), 7) = 6,
+TODAY() + {!$Record.Cadence_Task__r.Successor_Task__r.Days_After_Prior_Task__c} + 2,
+if(MOD((TODAY() + {!$Record.Cadence_Task__r.Successor_Task__r.Days_After_Prior_Task__c}) - DATE(1900, 1, 7 ), 7) = 0,
+TODAY() + {!$Record.Cadence_Task__r.Successor_Task__r.Days_After_Prior_Task__c} + 2,
+TODAY() + {!$Record.Cadence_Task__r.Successor_Task__r.Days_After_Prior_Task__c}))</expression>
+    </formulas>
+    <formulas>
+        <name>varNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>varNow01</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW()</expression>
+    </formulas>
+    <formulas>
+        <name>varNow02</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW() + 2160</expression>
+    </formulas>
+    <formulas>
+        <name>varOpportunity</name>
+        <dataType>String</dataType>
+        <expression>IF(LEFT({!$Record.WhatId},3) = &apos;006&apos;, {!$Record.WhatId}, NULL)</expression>
+    </formulas>
+    <formulas>
+        <name>varReminderDateTime</name>
+        <dataType>DateTime</dataType>
+        <expression>if(MOD((TODAY() + {!$Record.Cadence_Task__r.Successor_Task__r.Days_After_Prior_Task__c}) - DATE(1900, 1, 7 ), 7) = 6,
+NOW() + ({!$Record.Cadence_Task__r.Successor_Task__r.Days_After_Prior_Task__c} + 2)*24,
+if(MOD((TODAY() + {!$Record.Cadence_Task__r.Successor_Task__r.Days_After_Prior_Task__c}) - DATE(1900, 1, 7 ), 7) = 0,
+NOW() + ({!$Record.Cadence_Task__r.Successor_Task__r.Days_After_Prior_Task__c} + 2)*24,
+NOW() + {!$Record.Cadence_Task__r.Successor_Task__r.Days_After_Prior_Task__c}*24))</expression>
+    </formulas>
+    <formulas>
+        <name>varToday01</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <formulas>
+        <name>varToday02</name>
+        <dataType>Date</dataType>
+        <expression>TODAY() + 90</expression>
+    </formulas>
+    <interviewLabel>Flow Marketing Task {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Flow Marketing Task</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>get_Assigned_to_Name</name>
+        <label>get Assigned to Name</label>
+        <locationX>275</locationX>
+        <locationY>384</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>check_Assigned_to_Type</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>get_Contact_Details</name>
+        <label>get Contact Details</label>
+        <locationX>143</locationX>
+        <locationY>600</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Send_Email_Action_1</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhoId</elementReference>
+            </value>
+        </filters>
+        <object>Contact</object>
+        <outputAssignments>
+            <assignToReference>varWhoName</assignToReference>
+            <field>Name</field>
+        </outputAssignments>
+    </recordLookups>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Marketing</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>WhoId</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Task</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>is_this_a_Marketing_Lead_through_Automation</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>TaskNotificationBody</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Task Assigned to: {!get_Assigned_to_Name.Name}&lt;/p&gt;&lt;p&gt;For the Lead: {!varWhoName}&lt;/p&gt;&lt;p&gt;Due Date: {!$Record.ActivityDate}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Comments:&lt;/p&gt;&lt;p&gt;{!formula_FormattedDescription}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Link to Contact: {!formDetailLink}&lt;/span&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>varTask01</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Task</objectType>
+    </variables>
+    <variables>
+        <name>varTask02</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Task</objectType>
+    </variables>
+    <variables>
+        <name>varWhoName</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

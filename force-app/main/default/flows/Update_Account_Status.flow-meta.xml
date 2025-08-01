@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <assignments>
+        <name>Count_TCX_Inactive</name>
+        <label>Count TCX Inactive</label>
+        <locationX>402</locationX>
+        <locationY>1619</locationY>
+        <assignmentItems>
+            <assignToReference>varTCXInactiveCount</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_through_Service_Agreements</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Count_Tier1_Inactive</name>
+        <label>Count Tier1 Inactive</label>
+        <locationX>402</locationX>
+        <locationY>719</locationY>
+        <assignmentItems>
+            <assignToReference>varTier1InactiveCount</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_Tier2_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Count_Tier2_Inactive</name>
+        <label>Count Tier2 Inactive</label>
+        <locationX>402</locationX>
+        <locationY>1019</locationY>
+        <assignmentItems>
+            <assignToReference>varTier2InactiveCount</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_Tier3_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Count_Tier3_Inactive</name>
+        <label>Count Tier3 Inactive</label>
+        <locationX>402</locationX>
+        <locationY>1319</locationY>
+        <assignmentItems>
+            <assignToReference>varTier3InactiveCount</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <numberValue>1.0</numberValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_TCX_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>TCX_Current_Client</name>
+        <label>TCX Current Client</label>
+        <locationX>138</locationX>
+        <locationY>1619</locationY>
+        <assignmentItems>
+            <assignToReference>varAccount.TCX_Account_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Current Client</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop_through_Service_Agreements</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Tier1_Current_Client</name>
+        <label>Tier1 Current Client</label>
+        <locationX>138</locationX>
+        <locationY>719</locationY>
+        <assignmentItems>
+            <assignToReference>varAccount.OEM_Account_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Current Client</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_Tier2_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Tier2_Current_Client</name>
+        <label>Tier2 Current Client</label>
+        <locationX>138</locationX>
+        <locationY>1019</locationY>
+        <assignmentItems>
+            <assignToReference>varAccount.Reseller_Account_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Current Client</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_Tier3_Status</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Tier3_Current_Client</name>
+        <label>Tier3 Current Client</label>
+        <locationX>138</locationX>
+        <locationY>1319</locationY>
+        <assignmentItems>
+            <assignToReference>varAccount.CallRevu_Client_Account_Status__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Current Client</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Check_TCX_Status</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Check_Service_Agreements</name>
+        <label>Check Service Agreements</label>
+        <locationX>182</locationX>
+        <locationY>287</locationY>
+        <defaultConnector>
+            <targetReference>Update_Account_Status</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Has_Service_Agreements</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Service_Agreement_Count__c</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <numberValue>0.0</numberValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Get_Service_Agreement_Records</targetReference>
+            </connector>
+            <label>Has Service Agreements</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_TCX_Status</name>
+        <label>Check TCX Status</label>
+        <locationX>402</locationX>
+        <locationY>1511</locationY>
+        <defaultConnector>
+            <targetReference>Loop_through_Service_Agreements</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_TCX_Active</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.Tier_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>TCX</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.CallRevu_Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.CallRevu_Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Pending Cancellation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>TCX_Current_Client</targetReference>
+            </connector>
+            <label>Check TCX Active</label>
+        </rules>
+        <rules>
+            <name>Check_TCX_Inactive</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.Tier_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>TCX</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.CallRevu_Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Count_TCX_Inactive</targetReference>
+            </connector>
+            <label>Check TCX Inactive</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Tier1_Status</name>
+        <label>Check Tier1 Status</label>
+        <locationX>402</locationX>
+        <locationY>611</locationY>
+        <defaultConnector>
+            <targetReference>Check_Tier2_Status</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_Tier1_Active</name>
+            <conditionLogic>1 AND (2 OR 3)</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.Tier_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Tier 1</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.CallRevu_Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.CallRevu_Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Pending Cancellation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Tier1_Current_Client</targetReference>
+            </connector>
+            <label>Check Tier1 Active</label>
+        </rules>
+        <rules>
+            <name>Check_Tier1_Inactive</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.Tier_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Tier 1</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.CallRevu_Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Count_Tier1_Inactive</targetReference>
+            </connector>
+            <label>Check Tier1 Inactive</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Tier2_Status</name>
+        <label>Check Tier2 Status</label>
+        <locationX>402</locationX>
+        <locationY>911</locationY>
+        <defaultConnector>
+            <targetReference>Check_Tier3_Status</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_Tier2_Active</name>
+            <conditionLogic>1 AND ( 2 OR 3 )</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.Tier_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Tier 2</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.CallRevu_Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.CallRevu_Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Pending Cancellation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Tier2_Current_Client</targetReference>
+            </connector>
+            <label>Check Tier2 Active</label>
+        </rules>
+        <rules>
+            <name>Check_Tier2_Inactive</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.Tier_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Tier 2</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.CallRevu_Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Count_Tier2_Inactive</targetReference>
+            </connector>
+            <label>Check Tier2 Inactive</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Check_Tier3_Status</name>
+        <label>Check Tier3 Status</label>
+        <locationX>402</locationX>
+        <locationY>1211</locationY>
+        <defaultConnector>
+            <targetReference>Check_TCX_Status</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_Tier3_Active</name>
+            <conditionLogic>(1 OR 4) AND ( 2 OR 3 )</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.Tier_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Tier 3</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.CallRevu_Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Active</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.CallRevu_Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Pending Cancellation</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.Tier_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Tier 3 Tracking</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Tier3_Current_Client</targetReference>
+            </connector>
+            <label>Check Tier3 Active</label>
+        </rules>
+        <rules>
+            <name>Check_Tier3_Inactive</name>
+            <conditionLogic>2 AND (3 OR 1)</conditionLogic>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.Tier_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Tier 3</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.CallRevu_Account_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Cancelled</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>Loop_through_Service_Agreements.Tier_Status__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Tier 3 Tracking</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Count_Tier3_Inactive</targetReference>
+            </connector>
+            <label>Check Tier3 Inactive</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>varCallRevuClientAccountstatus</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    ISPICKVAL({!varAccount.CallRevu_Client_Account_Status__c}, &quot;Current Client&quot;),
+    &quot;Current Client&quot;,
+    IF(
+        {!varTier3InactiveCount} &gt; 0,
+        &quot;Former Client&quot;,
+        &quot;Prospect&quot;
+    )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>varOEMAccountstatus</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    ISPICKVAL({!varAccount.OEM_Account_Status__c}, &quot;Current Client&quot;),
+    &quot;Current Client&quot;,
+    IF(
+        {!varTier1InactiveCount} &gt; 0,
+        &quot;Former Client&quot;,
+        &quot;Prospect&quot;
+    )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>varResellerAccountstatus</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    ISPICKVAL({!varAccount.Reseller_Account_Status__c}, &quot;Current Client&quot;),
+    &quot;Current Client&quot;,
+    IF(
+        {!varTier2InactiveCount} &gt; 0,
+        &quot;Former Client&quot;,
+        &quot;Prospect&quot;
+    )
+)</expression>
+    </formulas>
+    <formulas>
+        <name>varTCXAccountstatus</name>
+        <dataType>String</dataType>
+        <expression>IF(
+    ISPICKVAL({!varAccount.TCX_Account_Status__c}, &quot;Current Client&quot;),
+    &quot;Current Client&quot;,
+    IF(
+       {!varTCXInactiveCount} &gt; 0,
+        &quot;Former Client&quot;,
+        &quot;Prospect&quot;
+    )
+)</expression>
+    </formulas>
+    <interviewLabel>Update Account Status {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Account Status</label>
+    <loops>
+        <name>Loop_through_Service_Agreements</name>
+        <label>Loop through Service Agreements</label>
+        <locationX>50</locationX>
+        <locationY>503</locationY>
+        <collectionReference>Get_Service_Agreement_Records</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Check_Tier1_Status</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Update_Account_Status</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Service_Agreement_Records</name>
+        <label>Get Service Agreement Records</label>
+        <locationX>50</locationX>
+        <locationY>395</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop_through_Service_Agreements</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Service_Location__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>Service_Agreement__c</object>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Tier_Status__c</queriedFields>
+        <queriedFields>CallRevu_Account_Status__c</queriedFields>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Account_Status</name>
+        <label>Update Account Status</label>
+        <locationX>182</locationX>
+        <locationY>1979</locationY>
+        <inputAssignments>
+            <field>CallRevu_Client_Account_Status__c</field>
+            <value>
+                <elementReference>varCallRevuClientAccountstatus</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OEM_Account_Status__c</field>
+            <value>
+                <elementReference>varOEMAccountstatus</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Reseller_Account_Status__c</field>
+            <value>
+                <elementReference>varResellerAccountstatus</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TCX_Account_Status__c</field>
+            <value>
+                <elementReference>varTCXAccountstatus</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Check_Service_Agreements</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>Tier_1_Active_Service_Agreement__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Tier_2_Active_Agreements__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Tier_3_Active_Agreements__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Service_Agreement_Count__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+        </filters>
+        <filters>
+            <field>Tier_1_Pending_Cancellation_Agreements__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Tier_2_Pending_Cancellation_Agreements__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Tier_3_Pending_Cancellation_Agreements__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>TCX_Active_Service_Agreements__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>TCX_Pending_Cancellation_Agreements__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>varAccount</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <name>varTCXInactiveCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varTier1InactiveCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varTier2InactiveCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+    <variables>
+        <name>varTier3InactiveCount</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>0</scale>
+        <value>
+            <numberValue>0.0</numberValue>
+        </value>
+    </variables>
+</Flow>

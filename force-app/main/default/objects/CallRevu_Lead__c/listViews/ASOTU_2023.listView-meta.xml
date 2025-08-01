@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ASOTU_2023</fullName>
+    <columns>CallRevu_Lead_Owner__c</columns>
+    <columns>NAME</columns>
+    <columns>MQL_Date_Time__c</columns>
+    <columns>Campaign__c</columns>
+    <columns>Notes__c</columns>
+    <columns>Status__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Opportunity_Closed_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MQL_Date_Time__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Campaign__c</field>
+        <operation>equals</operation>
+        <value>GA4 Webinar ASOTU - 1</value>
+    </filters>
+    <label>ASOTU 2023</label>
+</ListView>

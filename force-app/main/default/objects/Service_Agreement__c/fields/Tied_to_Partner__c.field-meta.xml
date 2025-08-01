@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tied_to_Partner__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(!ISBLANK(Referral_Partner__c) &amp;&amp; Referral_Partner__r.RecordType.Name  = &apos;Partner&apos;,  Referral_Partner__r.Name,
+IF(!ISBLANK(Bill_to_Account__c) &amp;&amp; Bill_to_Account__r.RecordType.Name = &apos;Partner&apos;, Bill_to_Account__r.Name,
+&apos;No Referral&apos;)
+)</formula>
+    <label>Tied to Partner</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

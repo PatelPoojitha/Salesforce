@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketing_Type__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;PPC&quot;),&quot;Advertising&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Ad Agency&quot;),&quot;Advertising&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Automotive News&quot;),&quot;Advertising&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;LinkedIn Ad&quot;),&quot;Advertising&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Schedule Demo&quot;),&quot;Advertising&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Print Marketing&quot;),&quot;Advertising&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Facebook Ad&quot;),&quot;Advertising&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Auto Success Magazine&quot;),&quot;Advertising&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Display&quot;),&quot;Advertising&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Geotargeting&quot;),&quot;Advertising&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Sales Geo&quot;),&quot;Advertising&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;ZoomInfo&quot;),&quot;Online&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Lead Score Out&quot;),&quot;Online&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Marketing Campaign&quot;),&quot;Online&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Pricing&quot;),&quot;Online&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;DNI&quot;),&quot;Online&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Material Download&quot;),&quot;Online&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;OEM Landing Page&quot;),&quot;Online&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Contact Us&quot;),&quot;Online&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Digital Marketing&quot;),&quot;Online&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;More Information&quot;),&quot;Online&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Automotive Software - CRM&quot;),&quot;Sales&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Automotive Software Vendor&quot;),&quot;Sales&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;CallSource&quot;),&quot;Sales&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Existing Dealer Upgrade&quot;),&quot;Sales&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Group Expansion&quot;),&quot;Sales&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;New Dealership&quot;),&quot;Sales&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;New Prospect&quot;),&quot;Sales&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Other Referral Partner&quot;),&quot;Sales&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Repackaging - At Risk&quot;),&quot;Sales&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Repacking - Sales&quot;),&quot;Sales&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Sales Campaign&quot;),&quot;Sales&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Training Company&quot;),&quot;Sales&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Win Back&quot;),&quot;Sales&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Driving Sales&quot;),&quot;Events&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;DMSC&quot;),&quot;Events&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;AAAS Summit&quot;),&quot;Events&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;NYSADA&quot;),&quot;Events&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;NADA Pre Show&quot;),&quot;Events&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;NADA Post Show&quot;),&quot;Events&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;NADA at Show&quot;),&quot;Events&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;NIADA 2021&quot;),&quot;Events&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;Digital Dealer&quot;),&quot;Events&quot;,
+IF(CONTAINS(TEXT(CallRevu_Lead_Sub_Source__c),&quot;20 Group&quot;),&quot;Events&quot;,
+&quot;Other&quot;))))))))))))))))))))))))))))))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Marketing Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

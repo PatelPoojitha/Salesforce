@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Display_Sync_to_CallRevu_360_Option__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checking this allow the button to be displayed on the page to sync to CallRevue 360</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checking this allow the button to be displayed on the page to sync to CallRevue 360</inlineHelpText>
+    <label>Display Sync to CallRevu 360 Option</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

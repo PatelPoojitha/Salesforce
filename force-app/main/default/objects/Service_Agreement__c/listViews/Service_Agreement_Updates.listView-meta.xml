@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Agreement_Updates</fullName>
+    <columns>NAME</columns>
+    <columns>Review_Cycle__c</columns>
+    <columns>Performance_Manager__c</columns>
+    <columns>Tier_Status__c</columns>
+    <columns>CallRevu_Account_Status__c</columns>
+    <columns>Account_Dealer_Group__c</columns>
+    <columns>Account_Dealer_Group_Name__c</columns>
+    <columns>Strategic_Account_M__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Strategic_Account_M__c</field>
+        <operation>equals</operation>
+        <value>Amy Shaffer</value>
+    </filters>
+    <label>Service Agreement Updates</label>
+    <sharedTo>
+        <role>Salesforce_Administrator</role>
+    </sharedTo>
+</ListView>

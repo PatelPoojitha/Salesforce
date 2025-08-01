@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>What_are_the_Client_Objectives__c</fullName>
+    <externalId>false</externalId>
+    <label>What are the Client Objectives</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CSI Concerns</fullName>
+                <default>false</default>
+                <label>CSI Concerns</label>
+            </value>
+            <value>
+                <fullName>Identifying Process Breaks</fullName>
+                <default>false</default>
+                <label>Identifying Process Breaks</label>
+            </value>
+            <value>
+                <fullName>Identifying Profit Leaks</fullName>
+                <default>false</default>
+                <label>Identifying Profit Leaks</label>
+            </value>
+            <value>
+                <fullName>Improving Phone Skills</fullName>
+                <default>false</default>
+                <label>Improving Phone Skills</label>
+            </value>
+            <value>
+                <fullName>Providing Accountability with Actionable Insight</fullName>
+                <default>false</default>
+                <label>Providing Accountability with Actionable Insight</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

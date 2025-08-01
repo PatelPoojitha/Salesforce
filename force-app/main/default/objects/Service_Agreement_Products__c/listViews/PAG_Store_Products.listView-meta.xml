@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PAG_Store_Products</fullName>
+    <columns>CallRevu_Contract__c</columns>
+    <columns>NAME</columns>
+    <columns>Billing_Code__c</columns>
+    <columns>Effective_Date__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>Sync_With_CallRevu_360__c</columns>
+    <columns>Update_In_360__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Billing_Agreement__c</field>
+        <operation>contains</operation>
+        <value>PAG</value>
+    </filters>
+    <filters>
+        <field>End_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2999</value>
+    </filters>
+    <label>PAG Store Products</label>
+    <sharedTo>
+        <role>Accounting</role>
+        <role>System_Administrator</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <description>The task is updated with the related Account, Contact, Opportunity, and Activity Type.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Returns Contact ID if WhoId is a Contact; else NULL.</description>
+        <name>ContactIdFromWhoId</name>
+        <dataType>String</dataType>
+        <expression>IF(LEFT({!$Record.WhoId},3) = &apos;003&apos;, {!$Record.WhoId}, NULL)</expression>
+    </formulas>
+    <formulas>
+        <description>Returns WhatId if it’s an Opportunity; otherwise, returns NULL</description>
+        <name>OpportunityIdFromWhatId</name>
+        <dataType>String</dataType>
+        <expression>IF(LEFT({!$Record.WhatId},3) = &apos;006&apos;, {!$Record.WhatId}, NULL)</expression>
+    </formulas>
+    <formulas>
+        <name>varActivityType</name>
+        <dataType>String</dataType>
+        <expression>IF(!ISBLANK(TEXT({!$Record.Type})), TEXT({!$Record.Type}), NULL)</expression>
+    </formulas>
+    <interviewLabel>Flow Task Object {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Task_Update Task Details</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Flow_Configuration_Settings</name>
+        <label>Get Flow Configuration Settings</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Task_with_Account_Contact_Opportunity_and_ActivityType</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Email_1</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>DeveloperName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Flow_Settings</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Flow_Configuration_Settings__mdt</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Task_with_Account_Contact_Opportunity_and_ActivityType</name>
+        <label>Update Task with Account,Contact, Opportunity and ActivityType</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <faultConnector>
+            <targetReference>Error_Email_2</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Account__c</field>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Activity_Type__c</field>
+            <value>
+                <elementReference>varActivityType</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Contact__c</field>
+            <value>
+                <elementReference>ContactIdFromWhoId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Opportunity__c</field>
+            <value>
+                <elementReference>OpportunityIdFromWhatId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Flow_Configuration_Settings</targetReference>
+        </connector>
+        <filterFormula>{!$CustomMetadata.Flow_Control__mdt.Task_Update_Account_Opportunity_Contact.Turn_Off__c}=false</filterFormula>
+        <object>Task</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Error_Email_1</name>
+        <label>Error Email 1</label>
+        <locationX>704</locationX>
+        <locationY>431</locationY>
+        <flowName>Fault_Path_Flow</flowName>
+        <inputAssignments>
+            <name>varElementName</name>
+            <value>
+                <stringValue>Get_Flow_Configuration_Settings</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFaultMessage</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFlowname</name>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>Error_Email_2</name>
+        <label>Error Email 2</label>
+        <locationX>440</locationX>
+        <locationY>539</locationY>
+        <flowName>Fault_Path_Flow</flowName>
+        <inputAssignments>
+            <name>varElementName</name>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFaultMessage</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFlowname</name>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+</Flow>

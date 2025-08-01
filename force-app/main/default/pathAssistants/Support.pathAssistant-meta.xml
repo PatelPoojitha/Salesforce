@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Support</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Type</fieldNames>
+        <fieldNames>Origin</fieldNames>
+        <fieldNames>Category__c</fieldNames>
+        <fieldNames>Category_Action__c</fieldNames>
+        <fieldNames>ContactId</fieldNames>
+        <info>&lt;p&gt;Request Received. Enter in the Contact and Case information for person who submitted the case.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Then proceed to the appropriate stage based on case category.&lt;/p&gt;</info>
+        <picklistValueName>1 - Request Received</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <fieldNames>ContactId</fieldNames>
+        <fieldNames>ContactPhone</fieldNames>
+        <fieldNames>Category_Action__c</fieldNames>
+        <fieldNames>Comments</fieldNames>
+        <info>&lt;p&gt;Check knowledge base articles for a step by step guide on completing case request. Once steps are completed report status back to client. &lt;/p&gt;</info>
+        <picklistValueName>2 -  Working Request</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Status</fieldNames>
+        <fieldNames>Comments</fieldNames>
+        <info>&lt;p&gt;Case is on hold. Enter reason for case being put on hold into internal comments. &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;*If you need to follow up, set yourself a manual task to follow up. &lt;/p&gt;</info>
+        <picklistValueName>5 - On Hold</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Support</recordTypeName>
+</PathAssistant>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Create_Opportunity</fullName>
+    <active>false</active>
+    <description>This is a Major Account, you do not have the ability to create an Opportunity for this Account type. Please reach out to Teresa Clevenger.</description>
+    <errorConditionFormula>AND($User.Id  &lt;&gt;  Account__r.OwnerId, OR(ISPICKVAL(Account__r.Channel_Type__c ,&quot;Major Account&quot;),ISPICKVAL(Account__r.Channel_Type__c ,&quot;Major (&gt;20)&quot;)) ,$Profile.Name = &quot;CallRevu Sales&quot;, OR($User.Major_Account_Owner__c = False, $User.Mid_Major_Account_Owner__c = False), OR(ISPICKVAL(Status__c,&quot;New Opportunity (SQL)&quot;), ISPICKVAL(Status__c,&quot;Sales Lead (CQL)&quot;), ISPICKVAL(Status__c,&quot;Marketing Lead (MQL)&quot;)))</errorConditionFormula>
+    <errorMessage>ERROR #04-CL: Major Account Opportunities can only be created by the Account Owner. Please reach out to your Supervisor</errorMessage>
+</ValidationRule>

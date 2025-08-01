@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Permission Sets grants access to Email Blast abilities</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.Send_Mass_Email__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Access Email Blast</label>
+</PermissionSet>

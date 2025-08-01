@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRM__c</fullName>
+    <externalId>false</externalId>
+    <label>CRM</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Advent</fullName>
+                <default>false</default>
+                <label>Advent</label>
+            </value>
+            <value>
+                <fullName>Arcadium (Partnered with CDK)</fullName>
+                <default>false</default>
+                <label>Arcadium (Partnered with CDK)</label>
+            </value>
+            <value>
+                <fullName>AutoSoft</fullName>
+                <default>false</default>
+                <label>AutoSoft</label>
+            </value>
+            <value>
+                <fullName>CarResearch</fullName>
+                <default>false</default>
+                <label>CarResearch</label>
+            </value>
+            <value>
+                <fullName>CDK</fullName>
+                <default>false</default>
+                <label>CDK</label>
+            </value>
+            <value>
+                <fullName>Contact Management (Reynolds)</fullName>
+                <default>false</default>
+                <label>Contact Management (Reynolds)</label>
+            </value>
+            <value>
+                <fullName>CRM Suite</fullName>
+                <default>false</default>
+                <label>CRM Suite (iMagic)</label>
+            </value>
+            <value>
+                <fullName>D2C Media</fullName>
+                <default>false</default>
+                <label>D2C Media</label>
+            </value>
+            <value>
+                <fullName>DealerMine</fullName>
+                <default>false</default>
+                <label>DealerMine</label>
+            </value>
+            <value>
+                <fullName>DealerPeak</fullName>
+                <default>false</default>
+                <label>DealerPeak</label>
+            </value>
+            <value>
+                <fullName>DealerSocket</fullName>
+                <default>false</default>
+                <label>DealerSocket</label>
+            </value>
+            <value>
+                <fullName>Dominion (AutoBase CRMSuite)</fullName>
+                <default>false</default>
+                <label>Dominion (AutoBase CRMSuite)</label>
+            </value>
+            <value>
+                <fullName>DriveCentric</fullName>
+                <default>false</default>
+                <label>DriveCentric</label>
+            </value>
+            <value>
+                <fullName>eLead1</fullName>
+                <default>false</default>
+                <label>eLead1</label>
+            </value>
+            <value>
+                <fullName>FourOneLabs</fullName>
+                <default>false</default>
+                <label>FourOneLabs</label>
+            </value>
+            <value>
+                <fullName>HigherGear</fullName>
+                <default>false</default>
+                <label>HigherGear</label>
+            </value>
+            <value>
+                <fullName>Interactive360</fullName>
+                <default>false</default>
+                <label>Interactive360</label>
+            </value>
+            <value>
+                <fullName>LIS CRM</fullName>
+                <default>false</default>
+                <label>LIS CRM</label>
+            </value>
+            <value>
+                <fullName>Momentum</fullName>
+                <default>false</default>
+                <label>Momentum</label>
+            </value>
+            <value>
+                <fullName>Oplogic</fullName>
+                <default>false</default>
+                <label>Oplogic</label>
+            </value>
+            <value>
+                <fullName>ProMax</fullName>
+                <default>false</default>
+                <label>ProMax</label>
+            </value>
+            <value>
+                <fullName>VinSolutions</fullName>
+                <default>false</default>
+                <label>VinSolutions</label>
+            </value>
+            <value>
+                <fullName>Votenza</fullName>
+                <default>false</default>
+                <label>Votenza</label>
+            </value>
+            <value>
+                <fullName>ZoHo</fullName>
+                <default>false</default>
+                <label>ZoHo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

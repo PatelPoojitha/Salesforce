@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Set_Order_Product_End_Date</fullName>
+        <description>Set Order Product End Date</description>
+        <field>EndDate</field>
+        <formula>if(isblank( EndDate ),Order.EndDate,EndDate)</formula>
+        <name>Set Order Product End Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Order_Product_Start_Date</fullName>
+        <description>Set Order Product Start Date</description>
+        <field>ServiceDate</field>
+        <formula>if(isblank( ServiceDate ),Order.EffectiveDate ,ServiceDate)</formula>
+        <name>Set Order Product Start Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Order Product On Create and Edit</fullName>
+        <actions>
+            <name>Set_Order_Product_End_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Set_Order_Product_Start_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Order Product On Create and Edit</description>
+        <formula>1=1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

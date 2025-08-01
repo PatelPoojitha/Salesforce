@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <decisions>
+        <name>Is_Opportunity_Product_Created</name>
+        <label>Is Opportunity Product Created?</label>
+        <locationX>182</locationX>
+        <locationY>455</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Opportunity_Product_is_Created</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Product_Description__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Caller&apos;s Journey</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Sales_Price</targetReference>
+            </connector>
+            <label>Opportunity Product is Created</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <name>varNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>varOperationalCode</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!$Record.Quantity_Unit_of_Measure__c} = &apos;Operational&apos;,True,False)</expression>
+    </formulas>
+    <formulas>
+        <name>varSalesPrice</name>
+        <dataType>Currency</dataType>
+        <expression>Case(text({!$Record.Range__c}), &quot;1-25&quot;,249, &quot;26-50&quot;,499, &quot;51-75&quot;,749, &quot;76-100&quot;,999, &quot;101-125&quot;,1249, &quot;126-150&quot;,1499, &quot;151-175&quot;,1749, &quot;175-200&quot;,1999, &quot;201-225&quot;,2249, &quot;226-250&quot;,2499, &quot;251-275&quot;,2749, &quot;276-300&quot;,2999, 0)</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Flow Opportunity Product Object {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Flow Opportunity Product Object</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Opportunity_Product_Fields</name>
+        <label>Update Opportunity Product Fields</label>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
+        <connector>
+            <targetReference>Is_Opportunity_Product_Created</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>MRR_Product_Workflow__c</field>
+            <value>
+                <elementReference>$Record.MRR_Product__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Minutes__c</field>
+            <value>
+                <elementReference>$Record.Minutes_Formula__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Operational_Code__c</field>
+            <value>
+                <elementReference>varOperationalCode</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Product_Description__c</field>
+            <value>
+                <elementReference>$Record.Product_Description_Formula__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Product_Family_Workflow__c</field>
+            <value>
+                <elementReference>$Record.Product_Family__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Sales_Price</name>
+        <label>Update Sales Price</label>
+        <locationX>50</locationX>
+        <locationY>575</locationY>
+        <inputAssignments>
+            <field>UnitPrice</field>
+            <value>
+                <elementReference>varSalesPrice</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Opportunity_Product_Fields</targetReference>
+        </connector>
+        <object>OpportunityLineItem</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

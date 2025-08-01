@@ -1,0 +1,9 @@
+<apex:page standardController="Opportunity" showHeader="false" applyHtmlTag="false" applyBodyTag="false" >
+<head>
+<apex:slds />
+</head>
+
+     <flow:interview name="Maintain_Service_Agreements"     finishLocation="/{!Opportunity.ID}"    >
+         <apex:param name="varOpportunityID" value="{!Opportunity.ID}" /> 
+      </flow:interview>
+</apex:page>

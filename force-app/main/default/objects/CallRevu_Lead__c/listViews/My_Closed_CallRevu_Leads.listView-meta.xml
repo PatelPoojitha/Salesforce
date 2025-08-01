@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Closed_CallRevu_Leads</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Contact_Email__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Lifecycle_Stage__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Not Interested,Bad Lead/Unqualified,Duplicate,Closed Won,Closed Lost</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2020 12:00 AM</value>
+    </filters>
+    <label>My Closed CallRevu Leads</label>
+</ListView>

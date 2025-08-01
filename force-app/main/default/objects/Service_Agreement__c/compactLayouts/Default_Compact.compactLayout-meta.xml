@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default_Compact</fullName>
+    <fields>Name</fields>
+    <fields>Tier_Status__c</fields>
+    <fields>CallRevu_Account_Number__c</fields>
+    <fields>CallRevu_Account_Status__c</fields>
+    <fields>Performance_Manager__c</fields>
+    <label>Default Compact</label>
+</CompactLayout>

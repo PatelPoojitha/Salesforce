@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <name>New_or_Updated_Contact</name>
+        <label>New or Updated Contact</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>was_HubSpot_Action_Taken</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Updated Contact</defaultConnectorLabel>
+        <rules>
+            <name>Is_New_Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>varIsNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Is New Contact</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>was_HubSpot_Action_Taken</name>
+        <label>was HubSpot Action Taken?</label>
+        <locationX>374</locationX>
+        <locationY>431</locationY>
+        <defaultConnectorLabel>HS Action NOT Taken</defaultConnectorLabel>
+        <rules>
+            <name>HS_Action_taken</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Customer_Took_HS_Action__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Prospect_Took_HS_Action__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Perform_HS_Action_Updates</targetReference>
+            </connector>
+            <label>HS Action taken</label>
+        </rules>
+    </decisions>
+    <description>Complete redo for supporting hubspot alerts</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>DetermineActionType</name>
+        <dataType>String</dataType>
+        <expression>IF(
+{!$Record.Prospect_Took_HS_Action__c}, &quot;Prospect&quot;,
+IF({!$Record.Customer_Took_HS_Action__c},&quot;Customer&quot;,
+null))</expression>
+    </formulas>
+    <formulas>
+        <name>varIsNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>Flow Contact Object {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Flow Contact Object - V2</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>New_or_Updated_Contact</targetReference>
+        </connector>
+        <object>Contact</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Perform_HS_Action_Updates</name>
+        <label>Perform HS Action Updates</label>
+        <locationX>242</locationX>
+        <locationY>539</locationY>
+        <flowName>updateContactHubspotActions</flowName>
+        <inputAssignments>
+            <name>actionType</name>
+            <value>
+                <elementReference>DetermineActionType</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varThisContact</name>
+            <value>
+                <elementReference>$Record</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

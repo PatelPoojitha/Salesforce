@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Enrollment</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <fieldNames>ContactId</fieldNames>
+        <fieldNames>ContactEmail</fieldNames>
+        <fieldNames>Level_of_Service__c</fieldNames>
+        <info>&lt;p&gt;&lt;b&gt;Basic Information Needed:&lt;/b&gt; Account/Dealership, Agreement Signer, Point of Contact for Enrollment Setup, Phone Number, Email.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;&lt;u&gt;Visit knowledge base for detail steps on the various types of case tips.&lt;/u&gt;&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Enrollment - Agreement Received &lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>1 - Agreement Completed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <fieldNames>ContactId</fieldNames>
+        <fieldNames>ContactEmail</fieldNames>
+        <fieldNames>Level_of_Service__c</fieldNames>
+        <info>&lt;p&gt;&lt;b&gt;Basic Information Needed:&lt;/b&gt; Account/Dealership, Agreement Signer, Point of Contact for Enrollment Setup, Phone Number, Email, Call Tracker Info (if applicable), Ad Source Setup.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;&lt;u&gt;Visit knowledge base for detail steps on the various types of case tips.&lt;/u&gt;&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Enrollment - Setup Steps&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>2 - Working</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Number_of_Attempts__c</fieldNames>
+        <fieldNames>CallRevu_Employee__c</fieldNames>
+        <fieldNames>ContactPhone</fieldNames>
+        <fieldNames>ContactEmail</fieldNames>
+        <fieldNames>Reason_for_On_Hold__c</fieldNames>
+        <info>&lt;p&gt;&lt;b&gt;Basic Information Needed:&lt;/b&gt; Account/Dealership, Agreement Signer, Point of Contact for Enrollment Setup, Phone Number, Email, Sales Manager who sold Agreement.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Once you have made multiple attempts contacting the Point of Contact via phone &lt;b&gt;&lt;u&gt;and&lt;/u&gt;&lt;/b&gt; email, begin contacting the Agreement Signer. After 3 call attempts and 3 email attempts of contacting both the Point of Contact and the Agreement Signer, notify Enrollment Director and escalate account back to Sales Manager who sold Agreement.&lt;/p&gt;</info>
+        <picklistValueName>3 - On Hold</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <fieldNames>Secondary_Case_Owner__c</fieldNames>
+        <fieldNames>Add_to_Inbound_Queue__c</fieldNames>
+        <fieldNames>Add_to_Outbound_Queue__c</fieldNames>
+        <fieldNames>Turn_on_Hours_of_Operation__c</fieldNames>
+        <info>&lt;p&gt;&lt;b&gt;Basic Information Needed:&lt;/b&gt; Account/Dealership, Agreement Signer, Point of Contact for Enrollment Setup, Phone Number, Email.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;&lt;u&gt;Visit knowledge base for details on escalating accounts for review.&lt;/u&gt;&lt;/b&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Enrollment - Review Setup &lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>4 - In Review</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Enrollment</recordTypeName>
+</PathAssistant>

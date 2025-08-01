@@ -1,0 +1,1082 @@
+<apex:page controller="ContractUpdateController" showHeader="false" sidebar="false" cache="false" action="{!updateReturnFlag}" >
+    
+  <apex:slds />
+  
+    <head >
+    
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+       
+        <apex:includeScript value="{!URLFOR($Resource.ShippConsultingJQuery)}" />
+        <apex:includeScript value="{!URLFOR($Resource.ShippConsultingTableSorter)}" />
+        <apex:stylesheet value="{!URLFOR($Resource.ShippConsultingTheme)}" /> 
+    
+      <script type="text/javascript">
+
+            $j = jQuery.noConflict();
+
+      </script> 
+    
+      <style >
+            
+            .button {
+                -webkit-transition-duration: 0.4s; /* Safari */
+                transition-duration: 0.4s;
+            }
+
+            .button:hover {
+                border: 2px solid black;
+            }
+            
+            div.hideCurrDate span.dateInput span.dateFormat {
+                display:none;
+            }
+            
+            body .bPageBlock .pbBody .pbSubheader {
+                background-color: #0079c1;
+                color: white;
+            }
+            
+            .bPageBlock { 
+                border-top: 0px; 
+            } 
+           
+        </style>
+        
+    </head>
+ 
+    <script type="text/javascript">
+ 
+        function checkAreaCode(phone, putFocus) {
+            if (phone.value.trim() != null && phone.value.trim() != '') {
+                var theNumber = phone.value.replace(/\s+/, '').replace('-', '').replace('-', '').replace('(', '').replace(')', '');
+                if (isNaN(theNumber) || parseInt(theNumber) <= 99 || parseInt(theNumber) > 999) {
+                    alert('Please enter a 3-digit area code.');
+                    areaErr('true');
+                }
+            } else {
+                areaErr('false');
+            }
+        }
+ 
+        var phoneErrorIds = new Set();
+        function checkPhone(phone, inputId) {
+            if (phone.value.trim() != null && phone.value.trim() != '') {
+                var theNumber = phone.value.replace(/\s+/, '').replace('-', '').replace('-', '').replace('(', '').replace(')', '');
+                if (isNaN(theNumber) || parseInt(theNumber) <= 999999999 || parseInt(theNumber) > 9999999999) {
+                    alert('Please enter a 10-digit phone number.');
+                    phoneErrorIds.add(inputId);
+                    phoneErr('true');
+                } else {
+                    phoneErrorIds.delete(inputId);
+                    if (phoneErrorIds.size == 0) {
+                        phoneErr('false');
+                    }
+                }
+            } 
+        }
+ 
+        function disableOnSubmit(input, display) {
+            var btn = input;
+            setTimeout(function(){ 
+                btn.disabled = 'disabled';
+                // Use the Salesforce CSS style to make the button appear disabled
+                btn.className = 'btnDisabled';
+                btn.value = display; 
+            }, 50);
+        }
+        
+        function empty(e) {
+            switch (e) {
+                case "":
+                case 0:
+                case "0":
+                case null:
+                case false:
+                case typeof this == "undefined":
+                    return true;
+                default:
+                    return false;
+            }
+        }
+        
+        function stopRKey(evt) {
+            var evt = (evt) ? evt : ((event) ? event : null);
+            var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+            if ((evt.keyCode == 13) && (node.type=="text")) {return false;}
+        }
+        document.onkeypress = stopRKey;
+        
+    </script>
+    
+   <div class="slds-scope" >
+    
+    <apex:form id="theForm" >
+         
+        <apex:actionFunction name="areaErr" action="{!phoneError}" rerender="block" >
+            <apex:param id="areaErr1" name="areaError" value="" />
+        </apex:actionFunction>
+        <apex:actionFunction name="checkCRM" rerender="block" />
+        <apex:actionFunction name="checkIfSpecial" action="{!checkSpecial}" rerender="block" />
+        <apex:actionFunction name="checkTrackingVendor" rerender="block" />
+        <apex:actionFunction name="doFilter" action="{!filterEmployees}" />
+        <apex:actionFunction name="phoneErr" action="{!phoneError}" rerender="block" >
+            <apex:param name="phoneError" value="" />
+        </apex:actionFunction>
+        
+        <br/>
+        
+        <div class="slds-grid slds-grid_align-spread" >
+
+        <div class="slds-col slds-size_7-of-12" style="text-align: center; background-color: #0079c1; width: 60%; display: inline-block;" >
+            <br/>
+            <div >
+                <apex:image url="{!company.Bill_To_Account__r.Partner_Logo_URL__c}" width="{!company.Bill_To_Account__r.Partner_Image_Width__c}" 
+                    height="{!company.Bill_To_Account__r.Partner_Image_Height__c}" style="margin-left:5%; text-align:center;" 
+                    rendered="{!AND(company != null, company.Partner_Implementation__c, company.Bill_To_Account__r.Partner_Logo_URL__c != null)}" />
+                <apex:image url="{!$Resource.CallRevu360Logo}" width="30%" height="15%" style="margin-left:5%; text-align:center;" 
+                    rendered="{!OR(company = null, !company.Partner_Implementation__c, company.Bill_To_Account__r.Partner_Logo_URL__c = null)}" />
+                <br/>
+                <br/>
+                <div style="text-align: center; background-color: #0079c1; color: white;">
+                    <apex:outputText value="Account Information" style="font-size:30px; margin-left: 30px; text-align:center;" />
+                </div>
+                <apex:outputText value="For help call: {!helpPhone}" style="font-size:16px; margin-left: 30px; text-align:center;
+                    background-color: #0079c1; color: white;" />
+            </div>
+        </div>
+        
+        <div class="slds-col slds-size_3-of-12" style="text-align: left; background-color: #0079c1; display: inline-block; 
+                vertical-align:top; border-left: 2px solid white;" >
+            <div style="font-size: 8px; color: #0079c1" >
+                <br></br>
+            </div> 
+            <apex:outputPanel style="color: white;" >
+                <apex:outputText value="Date Agreement Signed" style="font-weight: 600; margin-left: 20px; margin-right: 10px; color:white" />
+                <div style="margin-left: 25px;" >
+                    <apex:outputField value="{!company.Date_Agreement_Signed__c}" />
+                </div>
+            </apex:outputPanel>
+            <div style="font-size: 8px; color: #0079c1" >
+                  <br></br>
+            </div> 
+            <apex:outputPanel style="color: white;" >
+                <apex:outputText value="Enrollment Call Scheduled" style="font-weight: 600; margin-left: 20px; margin-right: 10px;" />
+                <div style="margin-left: 25px;" >
+                    <apex:outputField value="{!company.Enrollment_Call_Scheduled__c}" />
+                </div>
+            </apex:outputPanel>
+            <div style="font-size: 8px; color: #0079c1" >
+                  <br></br>
+            </div> 
+            <apex:outputPanel style="color: white;" >
+                <apex:outputText value="Launch Call Scheduled" style="font-weight: 600; margin-left: 20px; color:white" />
+                <div style="margin-left: 25px;" >
+                    <apex:outputField value="{!company.Launch_Call_Scheduled__c}" />
+                </div>
+            </apex:outputPanel>
+        </div>
+        <apex:outputPanel id="btns" styleClass="slds-col slds-size_2-of-12" >
+            <div style="display:inline-block; vertical-align:top;" >
+                <apex:commandButton value="{!syncButton}" action="{!sync}" status="status" 
+                    styleClass="slds-button slds-button_neutral button" 
+                    rendered="{!AND(company.Launch_Call_Scheduled__c != null, authenticated, company.Display_Sync_to_CallRevu_360_Option__c,
+                        !company.Sync_To_CallRevu_360__c, !fromSites)}"
+                    style="padding-top:0px; padding-bottom:0px; margin-top:0px; margin-bottom:0px; border-top: 0px; border-bottom: 0px;
+                    margin-left:10px; color: white; width: 185px; height: 40px; font-size: 14px; 
+                    background:{!IF(confirmSync, '#92cf5c', '#0079c1')}" onclick="disableOnSubmit(this, 'Please wait');" rerender="btns" />
+                <br/>
+                <br/>
+                <apex:commandButton value="Logout" action="{!endSession}" status="status" 
+                    styleClass="slds-button slds-button_neutral button" style="border-top: 0px; border-bottom: 0px; padding-top:0px; 
+                    padding-bottom:0px; margin-top:0px; margin-bottom:0px; margin-left:10px; color: white; width: 100px; height: 40px; font-size: 14px; 
+                    background:#0079c1" onclick="disableOnSubmit(this, 'Please wait');" rendered="{!authenticated}"  rerender="btns, block" />
+                <br/>
+                <br/>
+                <apex:commandButton value="{!IF(company.Enrollment_Call_Scheduled__c != null, 'Change Enrollment Call', 'Schedule Enrollment Call')}" 
+                    action="{!scheduleCall}" status="status" styleClass="slds-button slds-button_neutral button" style="border-top: 0px; 
+                    border-bottom: 0px; padding-top:0px; padding-bottom:0px; margin-top:0px; margin-bottom:0px; font-size:14px; height:40px; 
+                    width: 210px; color: black; margin-left: 10px; background: #92cf5c" rendered="{!authenticated}" 
+                    onclick="disableOnSubmit(this, 'Please wait');" rerender="btns, block" />
+                <br/>
+                <br/>
+                <apex:commandButton value="Enrollment Checklist" 
+                    action="{!onboarding}" status="status" styleClass="slds-button slds-button_neutral button" style="border-top: 0px; 
+                    border-bottom: 0px; padding-top:0px; padding-bottom:0px; margin-top:0px; margin-bottom:0px; font-size:14px; height:40px; 
+                    width: 210px; color: white; margin-left: 10px; background:#0079c1" rendered="{!authenticated}" 
+                    onclick="disableOnSubmit(this, 'Please wait');" rerender="btns, block" />
+            </div> 
+        </apex:outputPanel>
+        </div>
+        <br/>
+        
+        <apex:outputPanel rendered="{!authenticated}" >
+            <br/>
+            <apex:outputPanel id="prevNext1" >
+                <apex:outputText value="spacing" style="color : white; margin-right: 187px;" rendered="{!prevLabel = null}" />
+                <apex:commandButton id="prvBtn1" value="" action="{!previous}" image="{!$Resource.ShippConsultingLeftChevron}" 
+                    style="background: #92cf5c; color:white; border-radius: 4px 0px 0px 4px; border-right: 1px solid black; 
+                    margin-left: 15px; margin-right:0px; float:left; height: 60px; width: 60px;" disabled="{!prevLabel = null}" 
+                    status="status" rendered="{!prevLabel != null}" rerender="block, prevNext1, prevNext2" >
+                </apex:commandButton>
+                <apex:commandLink id="prvBtn2" value="Prev" action="{!previous}" styleClass="btn" style="float: left; font-size: 15px; 
+                        margin-left: 0px; border-radius: 0px 4px 4px 0px; border: none; background: #0079c1; color:white; height: 49px; width: 160px; 
+                        margin-top: 5px; text-decoration:none; text-align: center;" rendered="{!prevLabel != null}" 
+                        status="status" rerender="block, prevNext1, prevNext2" >
+                    <span style="font-size:10px; background: #0079c1" ><br/>{!prevLabel}</span>
+                </apex:commandLink>
+                
+            </apex:outputPanel>
+            
+            <canvas id="myCanvas" width="1000" height="65" >
+            </canvas>
+            
+            <apex:outputPanel id="prevNext2" >
+                <apex:commandButton id="nxtBtn1" value="" action="{!next}" image="{!$Resource.ShippConsultingRightChevron}" status="status"
+                    style="background: #92cf5c; color:white; border-radius: 0px 4px 4px 0px; border-left: 1px solid black; margin-right: 15px;
+                    margin-left: 0px; float:right; height: 60px; width: 60px;" 
+                    rendered="{!nextLabel != null}" disabled="{!nextLabel = null}" rerender="block, prevNext1, prevNext2" >
+                </apex:commandButton>
+                <apex:commandLink id="nxtBtn2" value="Next" action="{!next}" styleClass="btn" style="float: right; font-size: 15px; margin-right: 0px;
+                        margin-top: 5px; border-radius: 4px 0px 0px 4px; border: none; background: #0079c1; color:white; height: 49px; width: 160px;
+                        text-decoration:none; text-align: center;" rendered="{!nextLabel != null}" status="status"
+                        rerender="block, prevNext1, prevNext2" >
+                    <span style="font-size:10px; background: #0079c1" ><br/>{!nextLabel}</span>
+                </apex:commandLink> 
+            </apex:outputPanel>
+        </apex:outputPanel>
+        
+        <apex:outputPanel rendered="{!AND(authenticated, company.Kick_off_Event_ID__c != null)}" >
+            <br/>
+            <apex:commandLink value="Dealership Information" style="color: blue; margin-left: 305px; font-size:15px;" action="{!updateCompany}" 
+                rerender="block, prevNext1, prevNext2" />
+            <apex:commandLink value="Roster Information" style="color: blue; margin-left: 55px; font-size:15px;" action="{!updateEmployee}" 
+                rerender="block, prevNext1, prevNext2" />
+            <apex:commandLink value="Ad Source Information" style="color: blue; margin-left: 60px; font-size:15px;" action="{!updateAd}" 
+                rerender="block, prevNext1, prevNext2" />
+            <apex:commandLink value="Hours of Operation" style="color:blue; margin-left: 50px; font-size:15px;" action="{!updateHours}" 
+                rerender="block, prevNext1, prevNext2" />
+            <apex:commandLink value="CRM Integration" style="color:blue; margin-left: 72px; font-size:15px;" action="{!updateCRM}" 
+                rerender="block, prevNext1, prevNext2" />
+        </apex:outputPanel>
+        
+        <apex:outputPanel rendered="{!AND(authenticated, company.Kick_off_Event_ID__c = null)}" >
+            <br/>
+            <apex:outputText value="Dealership Information" style="color: gray; margin-left: 305px; font-size:15px;" />
+            <apex:outputText value="Roster Information" style="color: gray; margin-left: 55px; font-size:15px;" />
+            <apex:outputText value="Ad Source Information" style="color: gray; margin-left: 60px; font-size:15px;" />
+            <apex:outputText value="Hours of Operation" style="color:gray; margin-left: 50px; font-size:15px;" />
+            <apex:outputText value="CRM Integration" style="color:gray; margin-left: 72px; font-size:15px;" />
+        </apex:outputPanel>
+        
+        <apex:outputPanel rendered="{!authenticated}" >
+            <br/>
+            <div style="display:inline-block; width: 150px; margin-left: 305px; float:left;" >
+                <apex:outputText value="{!callRevuCustomSetting.Dealership_Description__c}" />
+            </div>
+            <div style="display:inline-block; width: 150px; margin-left: 70px; vertical-align:top; float:left;" >
+                <apex:outputText value="{!callRevuCustomSetting.Roster_Description__c}" />
+            </div>
+            <div style="display:inline-block; width: 150px; margin-left: 40px; vertical-align:top; float:left;" >
+                <apex:outputText value="{!callRevuCustomSetting.Ad_Source_Description__c}" />
+            </div>
+            <div style="display:inline-block; width: 150px; margin-left: 60px; vertical-align:top; float:left;" >
+                <apex:outputText value="{!callRevuCustomSetting.Hours_Description__c}" />
+            </div>
+            <div style="display:inline-block; width: 150px; margin-left: 55px; vertical-align:top; float:left;" >
+                <apex:outputText value="{!callRevuCustomSetting.CRM_Description__c}" />
+            </div>
+        </apex:outputPanel>
+        
+        <apex:pageBlock id="block" >
+        
+            <apex:pageMessages id="msgs"/>
+          
+            <script type="text/javascript" >
+        
+                $j(document).ready(function() { 
+                    $j("[id$='empTable']").tablesorter({theme: 'blue', dateFormat : "dd/mm/yyyy"}); 
+                    $j("[id$='adTable']").tablesorter({theme: 'blue', dateFormat : "dd/mm/yyyy"});
+                    
+                    var accountName = '{!accountName}';
+                    var accountPhone = '{!account.phone}';
+                    var mainContactFirstName = '{!authorizationContact.firstName}';
+                    var mainContactLastName = '{!authorizationContactLastName}';
+                    var mainContactPhone = '{!authorizationContact.phone}';
+                    var mainContactEmail = '{!authorizationContact.email}';
+                    var hasTrackingVendor = '{!company.Has_A_Current_Call_Tracking_Vendor__c}';
+                    var trackingVendor = '{!company.Current__c}';
+                    var websiteProvider = '{!company.Website_Provider__c}';
+                    var billingFirstName = '{!billingContact.firstName}';
+                    var billingLastName = '{!billingContact.lastName}';
+                    var billingPhone = '{!billingContact.phone}';
+                    var billingEmail = '{!billingContact.email}';
+                    var missingCompanyInfo = empty(accountName) || empty(accountPhone) || empty(mainContactFirstName) || empty(mainContactLastName)
+                        || empty(mainContactPhone) || empty(mainContactEmail) || empty(websiteProvider) || empty(billingFirstName) 
+                        || empty(billingLastName) || empty(billingPhone) || empty(billingEmail) 
+                        || (!empty(hasTrackingVendor) && hasTrackingVendor == 'Yes' && empty(trackingVendor));
+                    var employeesRequired = '{!company.Minimum_Roster_Count_For_Complete__c }';
+                    employeesRequired = employeesRequired == null ? 1 : employeesRequired;
+                    var theEmployeeSize = '{!employeeSize}';
+                    var adsRequired = '{!company.Minimum_Ad_Source_Count_For_Complete__c }';
+                    adsRequired = adsRequired== null ? 1 : adsRequired;
+                    var theAdSize = '{!adSize}';
+                    var monHour = '{!company.mon_open__c}';
+                    var friHour = '{!company.fri_open__c}';
+                    var crm = '{!company.crm__c}';
+                    var companyColor = missingCompanyInfo == true ? '#a9a9a9' : '#92cf5c';
+                    var rosterColor = theEmployeeSize >= employeesRequired ? '#92cf5c' : '#a9a9a9';
+                    var adsColor = theAdSize >= adsRequired ? '#92cf5c' : '#a9a9a9';
+                    var hourColor = monHour != null && friHour != null ? '#92cf5c' : '#a9a9a9';
+                    var crmColor = crm != null ? '#92cf5c' : '#a9a9a9';
+                    var c = document.getElementById("myCanvas");
+                    var ctx = c.getContext("2d");
+                    var coords = [ [150,30], [350,30], [550,30], [750,30], [950,30] ];
+                    var colorCircles = [ companyColor, rosterColor, adsColor, hourColor, crmColor ];
+                    var lines = [ [165,30,250,30], [250,30,335,30], [365,30,450,30], [450,30,535,30], [565,30,650,30], [650,30,735,30],
+                        [765,30,850,30], [850,30,935,30] ];
+                    var colorLines = [ companyColor, rosterColor, rosterColor, adsColor, adsColor, hourColor, hourColor, crmColor ];
+                    for (var i = 0; i < coords.length; i++) {
+                        ctx.beginPath();
+                        ctx.arc(coords[i][0], coords[i][1], 30, 0, Math.PI * 2, true);
+                        ctx.fillStyle=colorCircles[i];
+                        ctx.fill();
+                    } 
+                    ctx.font="14px Arial";
+                    ctx.textAlign="center"; 
+                    ctx.textBaseline = "middle";
+                    ctx.fillStyle = "#000000";
+                    ctx.fillText("8 min.", 150, 30);
+                    ctx.fillText("15 min.", 350, 30);
+                    ctx.fillText("10 min.", 550, 30);
+                    ctx.fillText("2 min.", 750, 30);
+                    ctx.fillText("5 min.", 950, 30);
+                    for (var i = 0; i < lines.length; i++) {
+                        ctx.beginPath();
+                        ctx.moveTo(lines[i][0], lines[i][1]);
+                        ctx.lineTo(lines[i][2], lines[i][3]);
+                        ctx.strokeStyle=colorLines[i];
+                        ctx.stroke();
+                    } 
+                  
+                });    
+
+            </script>
+            
+            <apex:actionStatus id="status">
+                <apex:facet name="start">
+                <div style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0.75; z-index: 1000;" >
+                    &nbsp;
+                </div>
+                <div style="position: fixed; left: 0; top: 0; bottom: 0; right: 0; z-index: 1001; margin: 30% 50%" >
+                    <img src="http://upload.wikimedia.org/wikipedia/commons/e/ed/Cursor_Windows_Vista.gif" />
+                </div>
+                </apex:facet>
+            </apex:actionStatus>
+            
+            <apex:outputPanel id="errs1" rendered="{!errorMsg != null}" >
+                <div style="text-align:center;" >
+                    <apex:repeat value="{!errorMsg}" var="err" >
+                        <apex:outputText style="font-weight:800; text-align=center; color:red;" value="{!err}" />
+                        <br/>
+                    </apex:repeat>
+                </div>
+            </apex:outputPanel>
+            
+            <br/>
+            <apex:pageBlockSection title="Please Enter Authorization Contact Information" rendered="{!noContactYet}" >
+            </apex:pageBlockSection>
+            <apex:outputPanel rendered="{!noContactYet}" >
+                <br/>
+                <div class="slds-form-element" style="margin-left: 18%; width:20%;" >
+                    <label class="slds-form-element__label" for="text-input-01a">First Name</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField label="" id="text-input-01a" value="{!contact.firstname}" styleClass="slds-input" 
+                            html-placeholder="First Name" style="width: 100%;" /> 
+                    </div>
+                </div>
+                <div class="slds-form-element" style="margin-left: 18%; width:20%;" >
+                    <label class="slds-form-element__label" for="text-input-02a">Last Name</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputText label="" id="text-input-02a" value="{!lastName}" styleClass="slds-input" 
+                            html-placeholder="Last Name" style="width: 100%;" /> 
+                    </div>
+                </div>
+                <div class="slds-form-element" style="margin-left: 18%; width:20%;" >
+                    <label class="slds-form-element__label" for="text-input-03a">Mobile Phone</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField label="" id="text-input-03a" value="{!contact.mobilePhone}" styleClass="slds-input" 
+                            html-placeholder="Mobile Phone" style="width: 100%;" onblur="checkPhone(this, 'text-input-03a');" /> 
+                    </div>
+                </div>
+                <div class="slds-form-element" style="margin-left: 18%; width:20%;" >
+                    <label class="slds-form-element__label" for="text-input-04a">Email</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField label="" id="text-input-04a" value="{!contact.email}" styleClass="slds-input" 
+                            html-placeholder="Email" style="width: 100%;" /> 
+                    </div>
+                </div>
+                <div class="slds-form-element" style="margin-left: 18%; width:20%;" >
+                    <label class="slds-form-element__label" for="text-input-05a">Work Phone</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField label="" id="text-input-05a" value="{!contact.phone}" styleClass="slds-input" 
+                            html-placeholder="Work Phone" style="width: 100%;" onblur="checkPhone(this, 'text-input-05a');" /> 
+                    </div>
+                </div>
+                <br/>
+                <apex:commandButton value="Setup Authorization Contact" action="{!setUpAuthorizationContact}" 
+                    onclick="disableOnSubmit(this, 'Please wait');" styleClass="slds-button slds-button_neutral button" style="color:white; 
+                    background: #0079c1; font-size:14px; margin-left: 18%;" />
+            </apex:outputPanel>
+            
+            <apex:pageBlockSection title="Please Enter Identification Information" rendered="{!initialAuthentication}" >
+            </apex:pageBlockSection>
+            <apex:outputPanel rendered="{!initialAuthentication}" >
+                <apex:outputPanel rendered="{!!displayClose}" >
+                    <br/>
+                    <div class="slds-form-element" style="margin-left: 18%; width:20%;" >
+                        <label class="slds-form-element__label" for="text-input-01">First Name</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-01" value="{!contact.firstname}" styleClass="slds-input" 
+                                html-placeholder="First Name" style="width: 100%;" /> 
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="slds-form-element" style="margin-left: 18%; width: 20%; " >
+                        <label class="slds-form-element__label" for="text-input-02">Last Name</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputText label="" id="text-input-02" value="{!lastname}" styleClass="slds-input" html-placeholder="Last Name"
+                                style="width: 100%;" />
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="slds-form-element" style="margin-left: 18%; width: 20%; " >
+                        <label class="slds-form-element__label" for="text-input-03">Email</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-03" value="{!contact.email}" styleClass="slds-input" html-placeholder="Email"
+                                style="width: 100%;" /> 
+                        </div>
+                    </div>
+                    <br/>
+                </apex:outputPanel>
+                <br/>
+                <apex:commandButton value="Verify Identity" action="{!finalAuthentication}" onclick="disableOnSubmit(this, 'Please wait');"
+                    styleClass="slds-button slds-button_neutral button" style="color:white; background: #0079c1; font-size:14px; margin-left: 18%;"
+                    rendered="{!!displayClose}" />
+                <apex:commandButton value="Close Page" action="{!closePage}" onclick="disableOnSubmit(this, 'Please wait');"
+                    styleClass="slds-button slds-button_neutral button" style="color:white; background: #0079c1; font-size:14px; margin-left: 18%;"
+                    rendered="{!displayClose}" />
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!AND(authenticated, displayCompany)}" >
+                <div style="text-align:center; font-size: 22px;" >
+                    <apex:outputText value="Step 2 - Update Dealership Information" />
+                </div>
+            </apex:outputPanel>
+  
+            <apex:pageBlockSection title="Dealership Information" rendered="{!AND(authenticated, displayCompany)}" >
+                <apex:outputPanel >
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" for="text-input-01">Dealership Name</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputText id="text-input-01" value="{!accountName}" styleClass="slds-input" 
+                                html-placeholder="Dealership Name" style="width: 50%; margin-bottom:10px;" /> 
+                        </div>
+                    </div>
+                    <apex:outputText value="Address" style="color: gray;" />
+                    <br/>
+                    <apex:outputText value="{!addressLine}" style="margin-left: 5px;" />
+                    <br/>
+                    <apex:outputText value="{!account.billingcity}, {!account.BillingState} {!account.billingpostalcode}" style="margin-left: 5px;" />
+                    <br/>
+                    <apex:outputText label="" value="{!account.billingcountry}" style="margin-left: 5px;" />
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" for="text-input-02">Phone #</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-02" value="{!account.phone}" styleClass="slds-input" 
+                                html-placeholder="Phone #" style="width: 50%;" onblur="checkPhone(this, 'text-input-02');" /> 
+                        </div>
+                    </div>
+                    <apex:outputText value="Time Zone" style="color: gray;" />
+                    <br/>
+                    <apex:outputText label="" value="{!company.Time_Zone__c}" />
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" for="text-input-03">Main Contact First Name</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-03" value="{!authorizationContact.firstName}" styleClass="slds-input" 
+                                html-placeholder="Main Contact First Name" style="width: 50%;" /> 
+                        </div>
+                    </div>
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" for="text-input-04">Main Contact Last Name</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputText label="" id="text-input-04" value="{!authorizationContactLastName}" styleClass="slds-input" 
+                                html-placeholder="Main Contact Last Name" style="width: 50%;" /> 
+                        </div>
+                    </div> 
+                   <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" for="text-input-05">Main Contact Phone</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-05" value="{!authorizationContact.phone}" styleClass="slds-input" 
+                                html-placeholder="Main Contact Phone" style="width: 50%;" onblur="checkPhone(this, 'text-input-05');" /> 
+                        </div>
+                    </div> 
+                    
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" for="text-input-06">Main Contact Email</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-06" value="{!authorizationContact.email}" styleClass="slds-input" 
+                                html-placeholder="Main Contact Email" style="width: 50%;" /> 
+                        </div>
+                    </div>
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" for="text-input-07">Secondary Contact First Name</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-07" value="{!secondaryContact.firstName}" styleClass="slds-input" 
+                                html-placeholder="Secondary Contact First Name" style="width: 50%;" /> 
+                        </div>
+                    </div>
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" for="text-input-08">Secondary Contact Last Name</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputText label="" id="text-input-08" value="{!secondaryContact.lastName}" styleClass="slds-input" 
+                                html-placeholder="Secondary Contact Last Name" style="width: 50%;" /> 
+                        </div>
+                    </div>
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" for="text-input-09">Secondary Contact Phone</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-09" value="{!secondaryContact.phone}" styleClass="slds-input" 
+                                html-placeholder="Secondary Contact Phone" style="width: 50%;" onblur="checkPhone(this, 'text-input-09');" /> 
+                        </div>
+                    </div>
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" for="text-input-10">Secondary Contact Email</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-10" value="{!secondaryContact.email}" styleClass="slds-input" 
+                                html-placeholder="Secondary Contact Email" style="width: 50%; margin-bottom:10px;" /> 
+                        </div>
+                    </div>
+                </apex:outputPanel>
+                <apex:outputPanel >
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" for="text-input-11">Do you have an existing tracking vendor?</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-11" value="{!company.Has_A_Current_Call_Tracking_Vendor__c}" 
+                                styleClass="slds-input" html-placeholder="Do you have an existing tracking vendor?" style="width: 50%;"
+                                onchange="checkTrackingVendor();" /> 
+                        </div>
+                    </div>
+                    <apex:outputPanel rendered="{!company.Has_A_Current_Call_Tracking_Vendor__c = 'Yes'}">
+                        <div class="slds-form-element" >
+                            <label class="slds-form-element__label" for="text-input-12">Current call tracking vendor</label>
+                            <div class="slds-form-element__control">
+                                <apex:inputField label="" id="text-input-12" value="{!company.Current__c}" 
+                                    styleClass="slds-input" html-placeholder="Current call tracking vendor" style="width: 50%;"
+                                    onchange="checkIfSpecial();" /> 
+                            </div>
+                        </div>
+                        <div class="slds-form-element" style="margin-top:10px;" >
+                            <label class="slds-form-element__label" for="text-input-14">Call tracking vendor user name</label>
+                            <div class="slds-form-element__control">
+                                <apex:inputField label="" id="text-input-14" value="{!company.Call_Tracking_Vendor_Login__c}" 
+                                    styleClass="slds-input" html-placeholder="Call tracking vendor user name" style="width: 50%;" /> 
+                            </div>
+                        </div>
+                        <div class="slds-form-element" style="margin-top:10px;" >
+                            <label class="slds-form-element__label" for="text-input-15">Call tracking vendor password</label>
+                            <div class="slds-form-element__control">
+                                <apex:inputField label="" id="text-input-15" value="{!company.Call_Tracking_Vendor_Password__c}" 
+                                    styleClass="slds-input" html-placeholder="Call tracking vendor password" style="width: 50%;" /> 
+                            </div>
+                        </div>
+                        <apex:outputPanel rendered="{!!specialCurrent}" >
+                            <div class="slds-form-element" style="margin-top:10px;" >
+                                <label class="slds-form-element__label" 
+                                    for="text-input-16">Do you intend to transfer your tracking numbers to CallRevu?</label>
+                                <div class="slds-form-element__control">
+                                    <apex:inputField label="" id="text-input-16" value="{!company.Intends_to_Transfer_Existing_Vendor__c}" 
+                                        styleClass="slds-input" html-placeholder="Do you intend to transfer your tracking numbers to CallRevu?" 
+                                        style="width: 50%;" /> 
+                                </div>
+                            </div>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" 
+                            for="text-input-17">Website Provider</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-17" value="{!company.Website_Provider__c}" 
+                                styleClass="slds-input" html-placeholder="Website Provider" 
+                                style="width: 50%;" /> 
+                        </div>
+                    </div>
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" 
+                            for="text-input-18">Website Provider Login</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-18" value="{!company.Website_Provider_Login__c}" 
+                                styleClass="slds-input" html-placeholder="Website Provider Login" 
+                                style="width: 50%;" /> 
+                        </div>
+                    </div>
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" 
+                            for="text-input-19">Website Provider Password</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-19" value="{!company.Website_Provider_Password__c}" 
+                                styleClass="slds-input" html-placeholder="Website Provider Password" 
+                                style="width: 50%;" /> 
+                        </div>
+                    </div>
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" 
+                            for="text-input-20">Preferred Contact for Billing First Name</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-20" value="{!billingContact.firstName}" 
+                                styleClass="slds-input" html-placeholder="Preferred Contact for Billing First Name" 
+                                style="width: 50%;" /> 
+                        </div>
+                    </div>
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" 
+                            for="text-input-21">Preferred Contact for Billing Last Name</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputText label="" id="text-input-21" value="{!billingContact.lastName}" 
+                                styleClass="slds-input" html-placeholder="Preferred Contact for Billing Last Name" 
+                                style="width: 50%;" /> 
+                        </div>
+                    </div>
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" 
+                            for="text-input-22">Billing Contact Phone</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-22" value="{!billingContact.phone}" 
+                                styleClass="slds-input" html-placeholder="Billing Contact Phone" style="width: 50%;" 
+                                onblur="checkPhone(this, 'text-input-22');" /> 
+                        </div>
+                    </div>
+                    <div class="slds-form-element" style="margin-top:10px;" >
+                        <label class="slds-form-element__label" 
+                            for="text-input-23">Billing Contact Email</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputText label="" id="text-input-23" value="{!billingContact.email}" 
+                                styleClass="slds-input" html-placeholder="Billing Contact Email" 
+                                style="width: 50%;" /> 
+                        </div>
+                    </div>
+                </apex:outputPanel>
+                <br/>
+                <div style="text-align: center;" >
+                    <apex:commandButton value="Save" action="{!saveDealershipStay}" onclick="disableOnSubmit(this, 'Please wait');"
+                        styleClass="slds-button slds-button_neutral button" style="color: black; background:orange; height: 40px; 
+                        font-size: 14px;" rerender="block, prevNext1, prevNext2" />
+                </div>
+            </apex:pageBlockSection>
+            
+            <apex:outputPanel rendered="{!displayHours}" >
+                <div style="text-align:center; font-size: 22px;" >
+                    <apex:outputText value="Step 5 - Update Hours of Operation" />
+                </div>
+            </apex:outputPanel>
+            <apex:pageBlockSection columns="1" title="Hours of Operation" rendered="{!displayHours}" >
+                <apex:pageBlockTable value="{!openCloseList}" var="oc" >
+                    <apex:column >
+                        <apex:outputText value="{!oc}" style="font-weight:800" />
+                    </apex:column>
+                    <apex:repeat value="{!hours}" var="hr" >
+                        <apex:column headerValue="{!hr.day}" >
+                            <apex:selectList value="{!hr.openTime}" rendered="{!oc = 'Open'}" size="1" >
+                                <apex:selectOptions value="{!openHours}" />
+                            </apex:selectList>
+                            <apex:selectList value="{!hr.closeTime}" rendered="{!oc = 'Close'}" size="1" >
+                                <apex:selectOptions value="{!closeHours}" />
+                            </apex:selectList> 
+                            <apex:inputCheckBox value="{!hr.closed}" rendered="{!oc = 'Closed'}" />
+                        </apex:column>
+                    </apex:repeat>
+                </apex:pageBlockTable>
+                <br/>
+                <br/>
+            </apex:pageBlockSection>
+            
+            <apex:outputPanel rendered="{!AND(displayCRM, company.Contract_Type__c != 'Pilot', company.Contract_Type__c != 'Trial')}" >
+                <div style="text-align:center; font-size: 22px;" >
+                    <apex:outputText value="Step 6 - Update CRM Integration Details" />
+                </div>
+            </apex:outputPanel>
+            <apex:pageBlockSection title="CRM Integration" rendered="{!AND(displayCRM, company.Contract_Type__c != 'Pilot',
+                company.Contract_Type__c != 'Trial')}" >
+            </apex:pageBlockSection>
+            <apex:outputPanel rendered="{!AND(displayCRM, company.Contract_Type__c != 'Pilot', company.Contract_Type__c != 'Trial')}" >
+                <br/>
+                <apex:outputPanel style="display:inline-block; width: 300px;" >
+                    <div class="slds-form-element" >
+                        <label class="slds-form-element__label" for="text-input-24">Who is your current CRM Vendor?</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-24" value="{!company.CRM__c}" styleClass="slds-input" 
+                                html-placeholder="Who is your current CRM Vendor?" style="width: 100%;" onchange="checkCRM();" /> 
+                        </div>
+                    </div>
+                </apex:outputPanel>
+                <apex:outputPanel style="display:inline-block; vertical-align:top; margin-left: 50px; width: 500px;" 
+                        rendered="{!AND(company.CRM__c != 'eLead1', company.CRM__c != 'DealerSocket', company.CRM__c != 'CarResearch')}" >
+                    <div class="slds-form-element" >
+                        <label class="slds-form-element__label" for="text-input-26">Lead Address</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputText label="" id="text-input-26" value="{!company.Lead_Address__c}" styleClass="slds-input" 
+                                html-placeholder="Lead Address" style="width: 100%;" /> 
+                        </div>
+                    </div>
+                </apex:outputPanel>
+                <apex:outputPanel style="display:inline-block; vertical-align:top; margin-left: 50px; width: 500px;"
+                        rendered="{!OR(company.CRM__c = 'eLead1', company.CRM__c = 'DealerSocket', company.CRM__c = 'CarResearch')}" >
+                    <apex:outputPanel style="display: block;" >
+                        <apex:outputText value="Lead Address" style="color: gray;" />
+                        <br/>
+                        <apex:outputText value="{!leadAddressMap[company.CRM__c]}" />
+                    </apex:outputPanel>
+                </apex:outputPanel>
+                <apex:outputPanel style="display:inline-block; vertical-align:top; margin-left: 20px; width: 300px;"
+                        rendered="{!company.CRM__c = 'CarResearch'}" >
+                    <div class="slds-form-element" >
+                        <label class="slds-form-element__label" for="text-input-27">Dealer Code</label>
+                        <div class="slds-form-element__control">
+                            <apex:inputField label="" id="text-input-27" value="{!company.Dealer_Code__c}" styleClass="slds-input" 
+                                html-placeholder="Dealer Code" style="width: 100%;" />
+                        </div>
+                    </div>
+                </apex:outputPanel>
+                <apex:outputPanel style="display:inline-block; vertical-align:top; margin-left: 100px; width: 300px;" 
+                        rendered="{!company.CRM__c = 'DealerSocket'}" >
+                    <br/>
+                    <apex:commandLink value="DealerSocket Authorization pdf" action="{!displayPDF}" status="status" target="_blank" 
+                        style="margin-left:10px; color: blue; font-size: 14px;" rendered="{!authenticated}" />
+                </apex:outputPanel>
+            </apex:outputPanel>
+            <br/>
+            <apex:pageBlockSection title="Vendor Login Credentials – (optional)" rendered="{!AND(displayCRM, company.Contract_Type__c != 'Pilot',
+                company.Contract_Type__c != 'Trial')}" >
+            </apex:pageBlockSection>
+            <br/>
+            <apex:outputPanel rendered="{!AND(displayCRM, company.Contract_Type__c != 'Pilot', company.Contract_Type__c != 'Trial')}" >
+                <div class="slds-form-element" >
+                    <label class="slds-form-element__label" for="text-input-05">CRM User Name</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField label="" id="text-input-05" value="{!company.CRM_User_Name__c}" styleClass="slds-input" 
+                            html-placeholder="CRM User Name" style="width: 50%;" /> 
+                    </div>
+                </div>
+                <div class="slds-form-element" style="margin-top:10px;" >
+                    <label class="slds-form-element__label" for="text-input-06">CRM Password</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField label="" id="text-input-06" value="{!company.CRM_Password__c}" styleClass="slds-input" 
+                            html-placeholder="CRM Password" style="width: 50%;" /> 
+                    </div>
+                </div>
+                <br/>
+                <apex:commandButton value="Save" action="{!saveCRMStay}" onclick="disableOnSubmit(this, 'Please wait');"
+                    styleClass="slds-button slds-button_neutral button" style="margin-left: 20px; color: black; background:orange; height: 40px; 
+                    font-size: 14px;" rendered="{!AND(employeeButton = 'Add Employee', company.Allow_Roster_Edits__c)}" 
+                    rerender="block, prevNext1, prevNext2" />
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!showSchedule}" >
+                <div style="text-align:center; font-size: 22px;" >
+                    <apex:outputText value="Step 1 - Schedule Your Enrollment Call" />
+                </div>
+            </apex:outputPanel>
+            <apex:pageBlockSection columns="1" title="RE: FastCall / CallRevu360: Select the Time of the Implementation Call" 
+                rendered="{!showSchedule}" >
+            </apex:pageBlockSection>
+            <apex:outputPanel rendered="{!showSchedule}" >
+                <br/>
+                <br/>
+                <div class="slds-form-element" style="margin-left: 10%; width:20%; display:inline-block;" >
+                    <label class="slds-form-element__label" for="select-02">Select Day of Implementation Call</label>
+                    <div class="slds-form-element__control">
+                        <div class="slds-select_container" >
+                            <apex:selectList id="select-02" value="{!selectedDay}" size="1" styleClass="slds-select" >
+                                <apex:selectOptions value="{!days}" />
+                                <apex:actionSupport event="onchange" rerender="block" />
+                            </apex:selectList>
+                        </div>
+                    </div>
+                </div> 
+                <div class="slds-form-element" style="margin-left: 5%; width:20%; display:inline-block; vertical-align:top;" >
+                    <label class="slds-form-element__label" for="select-01">Select Time of Implementation Call</label>
+                    <div class="slds-form-element__control">
+                        <div class="slds-select_container" >
+                            <apex:selectList id="select-01" value="{!selectedTime}" size="1" styleClass="slds-select" >
+                                <apex:selectOptions value="{!times}" />
+                                <apex:actionSupport event="onchange" rerender="block" />
+                            </apex:selectList>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-form-element" style="margin-left: 5%; width:30%; display:inline-block; vertical-align:top;" >
+                    <label class="slds-form-element__label" for="text-input-30">Enrollment Phone Number</label>
+                    <div class="slds-form-element__control">
+                        <apex:inputField label="" id="text-input-30" value="{!company.Enrollment_Phone_Number__c}" styleClass="slds-input" 
+                            html-placeholder="Enrollment Phone Number" style="width: 50%;" onblur="checkPhone(this, 'text-input-30');" /> 
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <apex:commandButton value="Confirm Appointment" action="{!confirmAppointment}"
+                    styleClass="slds-button slds-button_neutral button" style="margin-left: 26%; color:black; background: #92cf5c; font-size:14px;
+                    height: 40px; width: 250px;"
+                    rendered="{!AND(selectedDay != null, selectedDay != '--None--', selectedTime != null, selectedTime != '--None--',
+                        company.enrollment_phone_number__c != null, errorMsg = null)}" />
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!displayEmployee}" >
+                <div style="text-align:center; font-size: 22px;" >
+                    <apex:outputText value="Step 3 - Update Employee Roster" />
+                </div>
+            </apex:outputPanel>
+            <apex:pageBlockSection columns="1" title="Employee Roster Setup" rendered="{!displayEmployee}" >
+                <apex:outputPanel >
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="select-01">Select Employee Status</label>
+                        <div class="slds-form-element__control">
+                            <div class="slds-select_container" style="width: 6%;" >
+                                <apex:selectList id="select-01" size="1" value="{!filterStatus}" styleClass="slds-select"
+                                        onchange="doFilter();" >
+                                    <apex:selectOption itemValue="Active" itemLabel="Active" />
+                                    <apex:selectOption itemValue="Inactive" itemLabel="Inactive" />
+                                </apex:selectList>
+                            </div>
+                        </div>
+                    </div>
+                    <apex:outputPanel style="margin-left:200px;" >
+                        <apex:commandButton value="Export Current Roster" action="{!exportCSV}" status="status" 
+                            styleClass="slds-button slds-button_neutral button" onclick="disableOnSubmit(this, 'Please wait');" 
+                            rendered="{!AND(authenticated, displayEmployee)}" style="margin-left: 20px; color: white; background:#0079c1; height: 40px; 
+                            font-size: 14px;" rerender="block" />
+                        <apex:commandButton value="Export Roster Template" action="{!exportTemplate}" status="status" 
+                            onclick="disableOnSubmit(this, 'Please wait');" styleClass="slds-button slds-button_neutral button" style="color: white; 
+                            background:#0079c1; height: 40px; margin-left: 20px; font-size: 14px;" rendered="{!AND(authenticated, displayEmployee)}" 
+                            rerender="block" />
+                        <apex:commandButton value="Import Roster" action="{!importRoster}" status="status" 
+                            styleClass="slds-button slds-button_neutral button" onclick="disableOnSubmit(this, 'Please wait');" 
+                            rendered="{!AND(authenticated, displayEmployee)}" style="margin-left: 20px; color: white; background:#0079c1; height: 40px; 
+                            font-size: 14px;" rerender="block" />
+                    </apex:outputPanel>
+                </apex:outputPanel>
+                <apex:dataTable id="empTable" value="{!filteredEmployees}" var="emp" styleClass="tablesorter" >
+                    <apex:column rendered="{!AND(EmployeeButton != 'Save and Update Employees', company.Status__c != 'Launched', !fromSites,
+                            company.Allow_Roster_Edits__c)}" >
+                        <apex:commandLink value="Delete" action="{!deleteEmployee}" styleClass="btn slds-button_neutral button"
+                                style="color: white; background: red; text-decoration:none; padding:4px;" >
+                            <apex:param assignTo="{!selectedId}" value="{!emp.Id}" name="thedeleteId"/>
+                        </apex:commandLink>
+                    </apex:column> 
+                    <apex:column headerValue="First Name" >
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!emp.employee.First_Name__c}" />
+                        </apex:outputPanel>
+                        <apex:inputField value="{!emp.employee.First_Name__c}" rendered="{!company.Allow_Roster_Edits__c}" />
+                        <apex:outputField value="{!emp.employee.First_Name__c}" rendered="{!!company.Allow_Roster_Edits__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Last Name" >
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!emp.employee.Last_Name__c}" />
+                        </apex:outputPanel>
+                        <apex:inputField value="{!emp.employee.Last_Name__c}" rendered="{!company.Allow_Roster_Edits__c}" />
+                        <apex:outputField value="{!emp.employee.Last_Name__c}" rendered="{!!company.Allow_Roster_Edits__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Title" >
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!emp.employee.Title__c}" />
+                        </apex:outputPanel>
+                        <apex:inputField value="{!emp.employee.Title__c}" rendered="{!company.Allow_Roster_Edits__c}" />
+                    </apex:column>  
+                    <apex:column headerValue="Email" >
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!emp.employee.Email__c}" />
+                        </apex:outputPanel>
+                        <apex:inputField value="{!emp.employee.Email__c}" style="width:100px;" rendered="{!company.Allow_Roster_Edits__c}" />
+                        <apex:outputField value="{!emp.employee.Email__c}" style="width:100px;" rendered="{!!company.Allow_Roster_Edits__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Cell Number" >
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!emp.employee.Cell_Phone__c}" />
+                        </apex:outputPanel>
+                        <apex:inputField value="{!emp.employee.Cell_Phone__c}" id="text-input-25" style="width:85px;" 
+                            onblur="checkPhone(this, 'text-input-25');" rendered="{!company.Allow_Roster_Edits__c}" />
+                        <apex:outputField value="{!emp.employee.Cell_Phone__c}" style="width:85px;" rendered="{!!company.Allow_Roster_Edits__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Tel. PIN" >
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!emp.employee.Telephone_PIN__c}" />
+                        </apex:outputPanel>
+                        <apex:inputField id="pinNum" value="{!emp.employee.Telephone_PIN__c}" style="width:40px;" 
+                            rendered="{!company.Allow_Roster_Edits__c}" />
+                        <apex:outputField value="{!emp.employee.Telephone_PIN__c}" style="width:40px;" rendered="{!!company.Allow_Roster_Edits__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Status" >
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!emp.employee.Status__c}" />
+                        </apex:outputPanel>
+                        <apex:inputField value="{!emp.employee.Status__c}" style="width:70px;" rendered="{!company.Allow_Roster_Edits__c}" />
+                        <apex:outputField value="{!emp.employee.Status__c}" style="width:70px;" rendered="{!!company.Allow_Roster_Edits__c}" />
+                    </apex:column>
+                </apex:dataTable>
+                <apex:outputPanel >
+                    <apex:commandButton value="{!employeeButton}" action="{!saveEmployees}" onclick="disableOnSubmit(this, 'Please wait');"
+                        rendered="{!AND(filterStatus = 'Active', company.Allow_Roster_Edits__c)}" styleClass="slds-button slds-button_neutral button" style="margin-left: 20px; 
+                        color: black; background:#92cf5c; height: 40px; font-size: 14px;" rerender="block, prevNext1, prevNext2" />
+                    <apex:commandButton value="Cancel New Employee" action="{!cancelEmployee}" 
+                        rendered="{!employeeButton = 'Save and Update Employees'}" styleClass="slds-button slds-button_neutral button" 
+                        style="margin-left: 20px; color: white; background: #0079c1; height: 40px; font-size: 14px;" 
+                        onclick="disableOnSubmit(this, 'Please wait');" rerender="block" />
+                    <apex:commandButton value="Save" action="{!saveEmployeesStay}" onclick="disableOnSubmit(this, 'Please wait');"
+                        styleClass="slds-button slds-button_neutral button" style="margin-left: 20px; color: black; background:orange; height: 40px; 
+                        font-size: 14px;" rendered="{!AND(employeeButton = 'Add Employee', company.Allow_Roster_Edits__c)}" 
+                        rerender="block, prevNext1, prevNext2" />
+                </apex:outputPanel>
+                <br/>
+                <br/>
+            </apex:pageBlockSection>
+            
+            <apex:outputPanel rendered="{!displayAd}" >
+                <div style="text-align:center; font-size: 22px;" >
+                    <apex:outputText value="Step 4 - Update Ad Sources" />
+                </div>
+            </apex:outputPanel>
+            <apex:pageBlockSection columns="1" title="Ad Source Setup" rendered="{!displayAd}" >
+                <apex:outputPanel style="margin-left:200px;" >
+                    <apex:commandButton value="Export Ad Sources" action="{!exportAdCSV}" status="status" 
+                        styleClass="slds-button slds-button_neutral button" onclick="disableOnSubmit(this, 'Please wait');" 
+                        rendered="{!AND(authenticated, displayAd)}" style="margin-left: 20px; color: white; background:#0079c1; height: 40px; 
+                        font-size: 14px;" rerender="block" />
+                    <apex:commandButton value="Export Ad Source Template" action="{!exportAdTemplate}" status="status" 
+                        onclick="disableOnSubmit(this, 'Please wait');" styleClass="slds-button slds-button_neutral button" style="color: white; 
+                        background:#0079c1; height: 40px; margin-left: 20px; font-size: 14px;" rendered="{!AND(authenticated, displayAd)}" 
+                        rerender="block" />
+                    <apex:commandButton value="Import Ad Sources" action="{!importAd}" status="status" 
+                        styleClass="slds-button slds-button_neutral button" onclick="disableOnSubmit(this, 'Please wait');" 
+                        rendered="{!AND(authenticated, displayAd)}" style="margin-left: 20px; color: white; background:#0079c1; height: 40px; 
+                        font-size: 14px;" rerender="block" />
+                </apex:outputPanel>
+                <apex:dataTable value="{!ads}" var="ad" id="adTable" styleClass="tablesorter" >
+                    <apex:column rendered="{!AND(AdButton != 'Save and Update Ad Sources', company.Status__c != 'Launched', !fromSites,
+                            company.Allow_Ad_Source_Edits__c)}" >
+                        <apex:commandLink value="Delete" action="{!deleteAd}" styleClass="btn slds-button_neutral button" 
+                                style="color: white; background: red; text-decoration:none; padding:4px; height:20px;" >
+                            <apex:param assignTo="{!selectedId}" value="{!ad.Id}" name="thedeleteId"/>
+                        </apex:commandLink>
+                    </apex:column>
+                    <apex:column headerValue="Method" headerClass="ct" style="text-align:center;" rendered="{!!fromSites}" >
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!ad.ad.Method__c}" />
+                        </apex:outputPanel>
+                        <apex:inputField value="{!ad.ad.Method__c}" rendered="{!company.Allow_Ad_Source_Edits__c}" />
+                        <apex:outputField value="{!ad.ad.Method__c}" rendered="{!!company.Allow_Ad_Source_Edits__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Ad Source Name" >
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!ad.ad.name}" />
+                        </apex:outputPanel>
+                        <apex:inputField value="{!ad.ad.name}" rendered="{!company.Allow_Ad_Source_Edits__c}" />
+                        <apex:outputField value="{!ad.ad.name}" rendered="{!!company.Allow_Ad_Source_Edits__c}" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header" >
+                            Area<br/>Code
+                        </apex:facet>
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!ad.ad.Area_Code__c}" /> 
+                        </apex:outputPanel>
+                        <apex:inputField value="{!ad.ad.Area_Code__c}" style="width:25px;" onblur="checkAreaCode(this)" 
+                            rendered="{!company.Allow_Ad_Source_Edits__c}" />
+                        <apex:outputField value="{!ad.ad.Area_Code__c}" style="width:25px;" rendered="{!!company.Allow_Ad_Source_Edits__c}" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header" >
+                            Currently<br/>Posted<br/>Number
+                        </apex:facet>
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!ad.ad.Currently_Posted_Number__c}" />
+                        </apex:outputPanel>
+                        <apex:inputField id="testId" value="{!ad.ad.Currently_Posted_Number__c}" style="width:85px;" 
+                            rendered="{!company.Allow_Ad_Source_Edits__c}" onblur="checkPhone(this, 'testId');" />
+                        <apex:outputField value="{!ad.ad.Currently_Posted_Number__c}" style="width:85px;" 
+                            rendered="{!!company.Allow_Ad_Source_Edits__c}" />
+                    </apex:column>
+                    <apex:column rendered="{!!fromSites}" >
+                        <apex:facet name="header" >
+                            CallRevu<br/>Tracking<br/>Number
+                        </apex:facet>
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!ad.ad.CallRevu_Tracking_Number__c}" />
+                        </apex:outputPanel>
+                        <apex:inputField value="{!ad.ad.CallRevu_Tracking_Number__c}" style="width:80px;" rendered="{!company.Allow_Ad_Source_Edits__c}" />
+                        <apex:outputField value="{!ad.ad.CallRevu_Tracking_Number__c}" style="width:80px;" 
+                            rendered="{!!company.Allow_Ad_Source_Edits__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Rings-to" >
+                        <apex:inputField value="{!ad.ad.Rings_to__c}" id="input-text-26" style="width:85px;" rendered="{!company.Allow_Ad_Source_Edits__c}"
+                            onblur="checkPhone(this, 'text-input-26');" />
+                        <apex:outputField value="{!ad.ad.Rings_to__c}" style="width:85px;" rendered="{!!company.Allow_Ad_Source_Edits__c}" />
+                    </apex:column>
+                    <apex:column >
+                        <apex:facet name="header" >
+                            Posted<br/>Number<br/>Provided By
+                        </apex:facet>
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!ad.ad.Posted_Number_Provided_By__c}" />
+                        </apex:outputPanel>
+                        <apex:inputField value="{!ad.ad.Posted_Number_Provided_By__c}" rendered="{!company.Allow_Ad_Source_Edits__c}" >
+                            <apex:actionSupport event="onchange" action="{!defaultRep}" rerender="rname, remail" >
+                                <apex:param assignTo="{!selectedId}" value="{!ad.Id}" name="theAdId" />
+                            </apex:actionSupport>
+                        </apex:inputField>
+                        <apex:outputField value="{!ad.ad.Posted_Number_Provided_By__c}" rendered="{!!company.Allow_Ad_Source_Edits__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Rep Name" >
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!ad.ad.Rep_Name__c}" />
+                        </apex:outputPanel>
+                        <apex:inputField id="rname" value="{!ad.ad.Rep_Name__c}" rendered="{!company.Allow_Ad_Source_Edits__c}" />
+                        <apex:outputField value="{!ad.ad.Rep_Name__c}" rendered="{!!company.Allow_Ad_Source_Edits__c}" />
+                    </apex:column> 
+                    <apex:column headerValue="Rep Email" >
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!ad.ad.Rep_Email__c}" />
+                        </apex:outputPanel>
+                        <apex:inputField id="remail" value="{!ad.ad.Rep_Email__c}" rendered="{!company.Allow_Ad_Source_Edits__c}" />
+                        <apex:outputField value="{!ad.ad.Rep_Email__c}" rendered="{!!company.Allow_Ad_Source_Edits__c}" />
+                    </apex:column>
+                    <apex:column headerValue="Comments" >
+                        <apex:outputPanel style="display:none" >
+                            <apex:outputField value="{!ad.ad.Comments__c}" />
+                        </apex:outputPanel>
+                        <apex:inputField value="{!ad.ad.Comments__c}" style="width:350px;" rendered="{!company.Allow_Ad_Source_Edits__c}" />
+                        <apex:outputField value="{!ad.ad.Comments__c}" style="width:350px;" rendered="{!!company.Allow_Ad_Source_Edits__c}" />
+                    </apex:column>
+                </apex:dataTable>
+                <apex:outputPanel >
+                    <apex:commandButton value="{!adButton}" action="{!saveAd}" onclick="disableOnSubmit(this, 'Please wait');" 
+                        rendered="{!AND(company.Display_Ad_Source__c, company.Allow_Ad_Source_Edits__c)}" styleClass="slds-button slds-button_neutral button" style="margin-left: 20px; 
+                        color: black; background: #92cf5c; height: 40px; font-size: 14px;" rerender="block, prevNext1, prevNext2" />
+                    <apex:commandButton value="Cancel New Tracking Number" action="{!cancelAd}" rendered="{!AdButton = 'Save and Update Ad Sources'}"
+                        styleClass="slds-button slds-button_neutral button" style="color: white; background:#0079c1; height: 40px; font-size: 14px; 
+                        margin-left:20px;" onclick="disableOnSubmit(this, 'Please wait');" rerender="block" />
+                    <apex:commandButton value="Save" action="{!saveAllAds}" onclick="disableOnSubmit(this, 'Please wait');"
+                        styleClass="slds-button slds-button_neutral button" style="margin-left: 20px; color: black; background:orange; height: 40px; 
+                        font-size: 14px;" rendered="{!AND(adButton = 'Add Tracking Number', company.Allow_Ad_Source_Edits__c)}" 
+                        rerender="block, prevNext1, prevNext2" />
+                </apex:outputPanel>
+                <br/>
+                <br/>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    
+    </apex:form>
+     
+   </div>
+</apex:page>

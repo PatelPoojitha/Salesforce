@@ -1,0 +1,173 @@
+<aura:component controller="CreateOpportunityProductsController" 
+    implements="force:lightningQuickActionWithoutHeader,force:hasRecordId,flexipage:availableForRecordHome" access="global" >
+    
+    <aura:attribute name="categories" type="String[]" default=""/>
+    <aura:attribute name="category" type="String" default=""/>
+    <aura:attribute name="change" type="Boolean" default=""/>
+    <aura:attribute name="confirm" type="Boolean" default=""/>
+    <aura:attribute name="deletedIds" type="String" default="" />
+    <aura:attribute name="displayItems" type="CreateOpportunityProductsController.Product[]" />
+    <aura:attribute name="dummyProduct2" type="Product2" default="" />
+    <aura:attribute name="hasError" type="Boolean" default=""/>
+    <aura:attribute name="inInit" type="Boolean" default="true"/>
+    <aura:attribute name="isClosed" type="Boolean" default=""/>
+    <aura:attribute name="items" type="CreateOpportunityProductsController.Product[]" />
+    <aura:attribute name="opportunityId" type="String" default="" />
+    <aura:attribute name="products" type="CreateOpportunityProductsController.Product[]" />
+    <aura:attribute name="pageMessage" type="String" default="" />
+    <aura:attribute name="pageTitle" type="String" default="" />
+    <aura:attribute name="serviceItems" type="CreateOpportunityProductsController.Product[]" />
+    <aura:attribute name="showCancel" type="Boolean" default=""/>
+    <aura:attribute name="spinner" type="Boolean" default=""/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="changeEvent" event="c:ProductChanged" action="{!c.handleChange}" />
+    <aura:handler name="deleteEvent" event="c:DeleteEvent" action="{!c.handleSelectDelete}" />
+    
+    <ltng:require styles="{!$Resource.PopupCss}" />
+    
+    <lightning:layout >
+        <lightning:layoutItem >
+            <div class="slds-text-heading_medium" style="color: blue;" > 
+                {!v.pageTitle}
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    
+    <aura:if isTrue="{!v.spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="status">
+                <span class="slds-assistive-text">Please Wait ...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <br/>
+    <br/>
+    <aura:renderIf isTrue="{!v.hasError}" >
+        <div style="text-align-center; font-size: 32px;" >
+            You must have a Service Agreement on the Opportunity for any Order Type that is not New.
+        </div>
+        <br/>
+        <br/>
+    </aura:renderIf>
+    
+    <aura:renderIf isTrue="{!v.isClosed}" >
+        <div style="text-align-center; font-size: 32px;" >
+            This Opportunity is closed. You cannot edit the products.
+        </div>
+        <br/>
+        <br/>
+    </aura:renderIf>
+    
+    <div style="text-align: center;" >
+        <button onclick="{!c.returnToOpportunity}" class="slds-button slds-button_outline-brand" >Return To Opportunity</button>
+        <aura:renderIf isTrue="{!!v.hasError}" >
+            <button onclick="{!c.save}" class="slds-button slds-button_success">Save</button>
+        </aura:renderIf>
+        <aura:renderIf isTrue="{!v.showCancel}" >
+            <button onclick="{!c.changeCategory}" class="slds-button slds-button_outline-brand" >Cancel</button>
+        </aura:renderIf>
+    </div>
+    <br/>
+    
+    <div class="slds-p-around--small">
+        <div style="font-size: 20px; color: blue; margin-left: 12%;" >
+            Current Products
+        </div>
+        <div class="slds-m-around_small" style="width: 80%; margin-left: 10%;" >
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr >
+                        <th scope="col"><div class="slds-text-title--caps slds-truncate" title=""></div></th>
+                        <th scope="col"><div class="slds-text-title--caps slds-truncate" title="Description">Product</div></th>
+                        <th scope="col"><div class="slds-text-title--caps slds-truncate" title="Minutes">Minutes</div></th>
+                        <th scope="col"><div class="slds-text-title--caps slds-truncate" title="Minutes">DNI Licensed URL</div></th>
+                        <th scope="col"><div class="slds-text-title--caps slds-truncate" title="ListPrice">List Price</div></th>
+                        <th scope="col"><div class="slds-text-title--caps slds-truncate" title="Quantity">Quantity</div></th>
+                        <th scope="col"><div class="slds-text-title--caps slds-truncate" title="UnitPrice">Unit Price</div></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.products}" var="prd" indexVar="index" >
+                        <c:InlineEditRowProduct singleRec="{!prd}" isClosed="{!v.isClosed}" />
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </div>
+    </div>
+   
+    <br/>
+    <div style="width: 20%; margin-left: 12%;" >
+        <lightning:select name="typePicklist" aura:id="typePicklist" label="Select Product Category" value="{!v.category}" 
+                onchange="{!c.changeCategory}" >
+                <option>-- Select a Product Category --</option>
+            <aura:iteration items="{!v.categories}" var="ct" indexVar="index">
+                <option>{!ct}</option>
+            </aura:iteration>
+        </lightning:select>
+    </div>
+    <br/>
+    
+    <aura:renderIf isTrue="{!v.category != null &amp;&amp; v.category != '--None--'}" >
+        <div class="slds-p-around--small" style="width: 80%; margin-left: 10%;" >
+            <div class="slds-m-around_small">
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                    <thead>
+                        <tr >
+                            <th scope="col"><div class="slds-text-title--caps slds-truncate" title=""></div></th>
+                            <th scope="col"><div class="slds-text-title--caps slds-truncate" title="Description">Product</div></th>
+                            <th scope="col"><div class="slds-text-title--caps slds-truncate" title="Retail Volume">Retail Volume</div></th>
+                            <th scope="col"><div class="slds-text-title--caps slds-truncate" title="Minutes">Minutes</div></th>
+                            <th scope="col"><div class="slds-text-title--caps slds-truncate" title="Minutes">DNI Licensed URL</div></th>
+                            <th scope="col"><div class="slds-text-title--caps slds-truncate" title="ListPrice">List Price</div></th>
+                            <th scope="col"><div class="slds-text-title--caps slds-truncate" title="Quantity">Quantity</div></th>
+                            <th scope="col"><div class="slds-text-title--caps slds-truncate" title="UnitPrice">Unit Price</div></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.displayItems}" var="itm" indexVar="index" >
+                            <aura:renderIf isTrue="{!itm.alreadySelected == false}" >
+                                <c:InlineEditRowItem singleRec="{!itm}" />
+                            </aura:renderIf>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </aura:renderIf>
+        
+    <br/>
+    <br/>
+   
+    <div style="font-size: 20px; color: blue; margin-left: 12%;" >
+        Service Item Products
+    </div>
+    <div class="slds-p-around--small" style="width: 80%; margin-left: 10%;" >
+        <div class="slds-m-around_small">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr >
+                        <th scope="col"><div class="slds-text-title--caps slds-truncate" title=""></div></th>
+                        <th scope="col"><div class="slds-text-title--caps slds-truncate" title="Product">Product</div></th>
+                        <th scope="col"><div class="slds-text-title--caps slds-truncate" title="Minutes">Minutes</div></th>
+                        <th scope="col"><div class="slds-text-title--caps slds-truncate" title="Minutes">DNI Licensed URL</div></th>
+                        <th scope="col"><div class="slds-text-title--caps slds-truncate" title="Quantity">Quantity</div></th>
+                        <th scope="col"><div class="slds-text-title--caps slds-truncate" title="UnitPrice">Unit Price</div></th>
+                        <th scope="col"><div class="slds-text-title--caps slds-truncate" title="StartDate">Start Date</div></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.serviceItems}" var="itm" indexVar="index" >
+                        <aura:renderIf isTrue="{!itm.alreadySelected == false}" >
+                            <c:InlineEditRowServiceItem singleRec="{!itm}" />
+                        </aura:renderIf>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</aura:component>

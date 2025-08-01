@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CallRevu_Account_Type_ID__c</fullName>
+    <externalId>false</externalId>
+    <formula>Case (text( CallRevu_Account_Type__c ),&quot;Test&quot;,&quot;6&quot;, &quot;Active&quot;,&quot;7&quot;,&quot;Sub Account&quot;,&quot;8&quot;, &quot;Term&quot;, &quot;9&quot;, &quot;Promo&quot;, &quot;10&quot;, &quot;Inactive&quot;, &quot;11&quot;, &quot;Tracking&quot;,&quot;12&quot;, &quot;Both&quot;, &quot;13&quot;, &quot;Media&quot;,&quot;14&quot;,&quot;Call Center&quot;, &quot;15&quot;, &quot;Monitoring Package&quot;, &quot;16&quot;, &quot;Transcription- Sales Only&quot;,&quot;17&quot;, &quot;Transcription- Service Only&quot;,&quot;18&quot;,&quot;13&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CallRevu Account Type ID</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

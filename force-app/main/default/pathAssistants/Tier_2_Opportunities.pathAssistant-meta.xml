@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Opportunity</entityName>
+    <fieldName>StageName</fieldName>
+    <masterLabel>Tier 2 Opportunities</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Rep Actions Taken During Stage:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Develop negotiation strategy with leadership&lt;/li&gt;&lt;li&gt;Finalize agreement and deal terms internally&lt;/li&gt;&lt;li&gt;Get new account information filled out&lt;/li&gt;&lt;li&gt;Finalize agreement and deal terms with customer&lt;/li&gt;&lt;li&gt;Confirm sequence of events to close&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Exit Criteria:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Questions concerning contract are addressed&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Contract</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Rep Actions Taken During Stage:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Confirm decision makers are all engaged&lt;/li&gt;&lt;li&gt;Partner with Pre-sales team to scope customer solution&lt;/li&gt;&lt;li&gt;Determine customer decision criteria&lt;/li&gt;&lt;li&gt;Validate Recommendation through an in-depth Demo with SC&amp;#39;s&lt;/li&gt;&lt;li&gt;Confirm next steps&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Exit Criteria:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Buyer confirms that we have the product and services needed&lt;/li&gt;&lt;li&gt;Buyer requests quote for the product&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Demonstrate Value</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Rep Actions Taken During Stage:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Document needs and expectations&lt;/li&gt;&lt;li&gt;Answer the question: What is client pain and what does client hope to gain from solving it?&lt;/li&gt;&lt;li&gt;Identify Decision Making Process including Economic buyer&lt;/li&gt;&lt;li&gt;Possibly cooking demo in 2nd or 3rd Discovery call&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Exit Criteria:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Buyer confirms the problem is worth addressing and identifies timeline/approval process&lt;/li&gt;&lt;li&gt;Buyer request Demo&lt;/li&gt;&lt;li&gt;The buyer is &amp;#39;price qualified&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Discover</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Rep Actions Taken During Stage:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Provide detailed pricing in a meeting&lt;/li&gt;&lt;li&gt;Affirm value of CallRevu vs. competition&lt;/li&gt;&lt;li&gt;Share customer story or facilitate introduction with a current customer (if available)&lt;/li&gt;&lt;li&gt;Share paper (initiate paper process)&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Exit Criteria:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Buyer confirms their intention to buy&lt;/li&gt;&lt;li&gt;Buyer request Contract&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Negotiate</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Rep Actions Taken During Stage:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Conduct a qualification call to validate existing CPQ process (or need specific to your product)&lt;/li&gt;&lt;li&gt;Identify potential key decision makers; ex. Who will be the detractor/who is the champion?&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Exit Criteria&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Buyer has been identified&lt;/li&gt;&lt;li&gt;Buyer has expressed interest in our solutions&lt;/li&gt;&lt;li&gt;Buyer agrees to a meeting/call&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Qualify</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;Rep Actions Taken During Stage:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Submit contract to SOPs for review&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Exit Criteria:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Proposal submitted for review to SOPs&lt;/li&gt;&lt;/ul&gt;</info>
+        <picklistValueName>Submit for Review (Send to SOPs)</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>eLead</recordTypeName>
+</PathAssistant>

@@ -1,0 +1,14 @@
+.THIS h2 {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.THIS button {
+    font-size: 1rem;
+    background: #EFEFEF;
+    border: solid 1px #DDDDDD;
+    border-radius: 3px;
+    padding: 1px;
+    margin: 1px 0;
+    float: right;
+}

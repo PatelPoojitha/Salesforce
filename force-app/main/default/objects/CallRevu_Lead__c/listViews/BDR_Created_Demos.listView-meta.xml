@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BDR_Created_Demos</fullName>
+    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>CallRevu_Lead_Owner__c</columns>
+    <columns>Account__c</columns>
+    <columns>CallRevu_Lead_Channel__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>startsWith</operation>
+        <value>Shareef,Gaby,Justin,Shauna,Nathan,Jonah</value>
+    </filters>
+    <filters>
+        <field>CallRevu_Lead_Channel__c</field>
+        <operation>equals</operation>
+        <value>Outbound Call – BDR</value>
+    </filters>
+    <filters>
+        <field>Owner_Filter__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>BDR Created Demos</label>
+</ListView>

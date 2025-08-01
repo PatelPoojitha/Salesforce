@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CR Employee</fullName>
+        <default>false</default>
+        <label>CR Employee</label>
+    </customValue>
+    <customValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </customValue>
+    <customValue>
+        <fullName>Inbound Call - Direct to RSM</fullName>
+        <default>false</default>
+        <label>Inbound Call - Direct to RSM</label>
+    </customValue>
+    <customValue>
+        <fullName>In Person</fullName>
+        <default>false</default>
+        <label>In Person</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Outbound Call - RSM</fullName>
+        <default>false</default>
+        <label>Outbound Call - RSM</label>
+    </customValue>
+    <customValue>
+        <fullName>Phone Up</fullName>
+        <default>false</default>
+        <label>Phone Up</label>
+    </customValue>
+    <customValue>
+        <fullName>Text</fullName>
+        <default>false</default>
+        <label>Text</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Form/HubSpot</fullName>
+        <default>false</default>
+        <label>Web Form/HubSpot</label>
+    </customValue>
+    <customValue>
+        <fullName>D&amp;B</fullName>
+        <default>false</default>
+        <label>D&amp;B</label>
+    </customValue>
+    <customValue>
+        <fullName>Outbound Call – BDR</fullName>
+        <default>false</default>
+        <label>Outbound Call – BDR</label>
+    </customValue>
+    <masterLabel>Lead Channel</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tier_2_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Tier 2 Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Opportunity_Record_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ad Agency - Client</fullName>
+                <default>false</default>
+                <label>Ad Agency - Client</label>
+            </value>
+            <value>
+                <fullName>Ad Agency - Reseller</fullName>
+                <default>false</default>
+                <label>Ad Agency - Reseller</label>
+            </value>
+            <value>
+                <fullName>ADDP</fullName>
+                <default>false</default>
+                <label>ADDP</label>
+            </value>
+            <value>
+                <fullName>CDK</fullName>
+                <default>false</default>
+                <label>CDK</label>
+            </value>
+            <value>
+                <fullName>Drive Centric</fullName>
+                <default>false</default>
+                <label>Drive Centric</label>
+            </value>
+            <value>
+                <fullName>eLead</fullName>
+                <default>false</default>
+                <label>eLead</label>
+            </value>
+            <value>
+                <fullName>GM DDS</fullName>
+                <default>false</default>
+                <label>GM DDS</label>
+            </value>
+            <value>
+                <fullName>GTC</fullName>
+                <default>false</default>
+                <label>GTC</label>
+            </value>
+            <value>
+                <fullName>HDS</fullName>
+                <default>false</default>
+                <label>HDS</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Tier 2</controllingFieldValue>
+            <controllingFieldValue>Tier 2 Change Order</controllingFieldValue>
+            <valueName>Ad Agency - Client</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tier 2</controllingFieldValue>
+            <controllingFieldValue>Tier 2 Change Order</controllingFieldValue>
+            <valueName>Ad Agency - Reseller</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tier 2</controllingFieldValue>
+            <controllingFieldValue>Tier 2 Change Order</controllingFieldValue>
+            <valueName>ADDP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tier 2</controllingFieldValue>
+            <controllingFieldValue>Tier 2 Change Order</controllingFieldValue>
+            <valueName>CDK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tier 2</controllingFieldValue>
+            <controllingFieldValue>Tier 2 Change Order</controllingFieldValue>
+            <valueName>Drive Centric</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tier 2</controllingFieldValue>
+            <controllingFieldValue>Tier 2 Change Order</controllingFieldValue>
+            <valueName>eLead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tier 2</controllingFieldValue>
+            <controllingFieldValue>Tier 2 Change Order</controllingFieldValue>
+            <valueName>GM DDS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tier 2</controllingFieldValue>
+            <controllingFieldValue>Tier 2 Change Order</controllingFieldValue>
+            <valueName>GTC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tier 2</controllingFieldValue>
+            <controllingFieldValue>Tier 2 Change Order</controllingFieldValue>
+            <valueName>HDS</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

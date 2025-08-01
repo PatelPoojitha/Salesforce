@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kane_CallRevu_leads_2022</fullName>
+    <columns>CREATED_DATE</columns>
+    <columns>Opportunity_Record_Type__c</columns>
+    <columns>CallRevu_Lead_Owner__c</columns>
+    <columns>CallRevu_Lead_Grade__c</columns>
+    <columns>CallRevu_Lead_Score2__c</columns>
+    <columns>Dealer_Group_Penetration__c</columns>
+    <columns>Status__c</columns>
+    <columns>NAME</columns>
+    <columns>Campaign__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Opportunity__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>IsClosed__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Campaign__c</field>
+        <operation>contains</operation>
+        <value>KAIN</value>
+    </filters>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>equals</operation>
+        <value>Kristie Jaecklein</value>
+    </filters>
+    <label>Kane CallRevu leads - 2022</label>
+    <sharedTo>
+        <role>Marketing_Team</role>
+        <role>SVP_Sales_Client_Services</role>
+    </sharedTo>
+</ListView>

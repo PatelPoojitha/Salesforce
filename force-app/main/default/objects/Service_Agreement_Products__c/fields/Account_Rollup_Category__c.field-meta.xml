@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Rollup_Category__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+   CONTAINS(Simplified_Product_Category__c, &quot;SalesVision&quot;),&quot;SalesVision Active&quot;,
+   IF(
+      CONTAINS(Simplified_Product_Category__c, &quot;ServiceVision&quot;),&quot;ServiceVision Active&quot;,
+      IF(
+         OR(
+            Simplified_Product_Category__c = &quot;CI Advanced&quot;,
+            Simplified_Product_Category__c = &quot;CI Basic&quot;,
+            Simplified_Product_Category__c = &quot;CallTracking - Core&quot;,
+            Simplified_Product_Category__c = &quot;CallTracking - Legacy&quot;
+            ),&quot;CTCI Active&quot;,
+         IF(BEGINS(Product__r.ProductCode,&quot;VoiceServices&quot;),&quot;Telephony Active&quot;,
+            IF(Simplified_Product_Category__c = &quot;TestTrack&quot;, &quot;Testtrack Active&quot;,
+               IF(Simplified_Product_Category__c = &quot;LineAssurance&quot;, &quot;LineAssurance Active&quot;, null))))))</formula>
+    <label>Account Rollup Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

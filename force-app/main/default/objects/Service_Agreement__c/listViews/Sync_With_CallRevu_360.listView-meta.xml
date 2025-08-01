@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sync_With_CallRevu_360</fullName>
+    <columns>CallRevu_Account_Number__c</columns>
+    <columns>NAME</columns>
+    <columns>CallRevu_Account_Name__c</columns>
+    <columns>CallRevu_Account_GUID__c</columns>
+    <columns>Tier_Status__c</columns>
+    <columns>Review_Cycle__c</columns>
+    <columns>Performance_Manager__c</columns>
+    <columns>Update_Review_Cycle__c</columns>
+    <columns>Update_Performance_Mgr_In_CR360__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>notContain</operation>
+    </filters>
+    <filters>
+        <field>Performance_Manager__c</field>
+        <operation>equals</operation>
+        <value>alicia gomez</value>
+    </filters>
+    <filters>
+        <field>Review_Cycle__c</field>
+        <operation>equals</operation>
+        <value>Monthly</value>
+    </filters>
+    <label>Sync With CallRevu 360</label>
+</ListView>

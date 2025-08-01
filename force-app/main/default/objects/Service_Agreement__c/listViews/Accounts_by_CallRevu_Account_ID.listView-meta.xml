@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accounts_by_CallRevu_Account_ID</fullName>
+    <columns>NAME</columns>
+    <columns>CallRevu_Account_GUID__c</columns>
+    <columns>CallRevu_Account_ID__c</columns>
+    <columns>CallRevu_360_Company_City__c</columns>
+    <columns>CallRevu_360_Company_State__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Preferred_Contact_For_Billing__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Accounts by CallRevu Account ID</label>
+</ListView>

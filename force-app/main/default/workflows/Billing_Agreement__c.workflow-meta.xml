@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Billing_Aggreeement_Sync_With_CallReu_36</fullName>
+        <field>Sync_With_CallRevu_360__c</field>
+        <literalValue>1</literalValue>
+        <name>Billing Aggreeement Sync With CallReu 36</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Billing_Agreement_Name</fullName>
+        <description>Set Billing Agreement Name</description>
+        <field>Name</field>
+        <formula>left( Bill_to_Account__r.Name &amp; if( Bill_to_Account__r.Id !=   Service_Agreement__r.Service_Location__r.Id ,&quot; - &quot;&amp;Service_Agreement__r.Service_Location__r.Name,&quot;&quot;)+text(CreatedDate),80)</formula>
+        <name>Set Billing Agreement Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_Billing_Agreement_Sync</fullName>
+        <field>Sync_With_CallRevu_360__c</field>
+        <literalValue>1</literalValue>
+        <name>Set Billing Agreement Sync</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_BA_Audit_First_Name</fullName>
+        <field>Audit_User_First_Name__c</field>
+        <formula>$User.FirstName</formula>
+        <name>Update BA Audit First Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_BA_Audit_User_Email</fullName>
+        <field>Audit_User_Email__c</field>
+        <formula>$User.Email</formula>
+        <name>Update BA Audit User Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_BA_Audit_User_Last_Name</fullName>
+        <field>Audit_User_Last_Name__c</field>
+        <formula>$User.LastName</formula>
+        <name>Update BA Audit User Last Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_BA_Audit_User_Phone</fullName>
+        <field>Audit_User_Phone__c</field>
+        <formula>&quot;555-555-1212&quot;</formula>
+        <name>Update BA Audit User Phone</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_BA_User_ID</fullName>
+        <field>Audit_User_ID__c</field>
+        <formula>$User.FirstName&amp;&quot; &quot;&amp;$User.LastName</formula>
+        <name>Update BA User ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Billing Agreement on Create</fullName>
+        <actions>
+            <name>Set_Billing_Agreement_Sync</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Billing_Agreement__c.Sync_With_CallRevu_360__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Billing Agreement on Create and Edit</fullName>
+        <actions>
+            <name>Update_BA_Audit_First_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_BA_Audit_User_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_BA_Audit_User_Last_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_BA_Audit_User_Phone</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_BA_User_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>1=1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Set Name and Audit Fields</fullName>
+        <actions>
+            <name>Set_Billing_Agreement_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_BA_Audit_First_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_BA_Audit_User_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_BA_Audit_User_Last_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_BA_Audit_User_Phone</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_BA_User_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Set Name and Autit Fields</description>
+        <formula>1=1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Sync Billing Agreement</fullName>
+        <actions>
+            <name>Billing_Aggreeement_Sync_With_CallReu_36</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>isnew()</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

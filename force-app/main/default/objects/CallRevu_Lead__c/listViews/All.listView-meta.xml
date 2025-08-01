@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>CallRevu_Lead_Owner__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_ACTIVITY</columns>
+    <columns>Lead_Source__c</columns>
+    <columns>CallRevu_Lead_Sub_Source__c</columns>
+    <columns>CallRevu_Lead_Source__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Not Interested,Bad Lead/Unqualified,Duplicate,Closed Won,Closed Lost</value>
+    </filters>
+    <filters>
+        <field>Opportunity__c</field>
+        <operation>notContain</operation>
+        <value>A,E,I,O,U</value>
+    </filters>
+    <label>MATTS ALL CRLEADS LIST VIEW</label>
+</ListView>

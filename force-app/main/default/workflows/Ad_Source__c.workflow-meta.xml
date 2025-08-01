@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Formate_Currently_Posted_Number</fullName>
+        <description>Update Currently Posted Number</description>
+        <field>Currently_Posted_Number__c</field>
+        <formula>Substitute(Substitute(Substitute( Currently_Posted_Number__c ,&quot; &quot;,&quot;-&quot;),
+&quot;(&quot;,&quot;&quot;),&quot;)&quot;,&quot;&quot;)</formula>
+        <name>Formate Currently Posted Number</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reformat_CallRevu_Tracking_Number</fullName>
+        <field>CallRevu_Tracking_Number__c</field>
+        <formula>Substitute(Substitute(Substitute(  CallRevu_Tracking_Number__c ,&quot; &quot;,&quot;-&quot;),
+&quot;(&quot;,&quot;&quot;),&quot;)&quot;,&quot;&quot;)</formula>
+        <name>Reformat CallRevu Tracking Number</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Ad_Source_Active_User_First_Name</fullName>
+        <description>Update Ad Source Active User First Name</description>
+        <field>Audit_Active_User_First_Name__c</field>
+        <formula>$User.FirstName</formula>
+        <name>Update Ad Source Active User First Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Ad_Source_Active_User_Last_Name</fullName>
+        <field>Audit_Active_User_Last_Name__c</field>
+        <formula>$User.LastName</formula>
+        <name>Update Ad Source Active User Last Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Ad_Source_Audit_User_Email</fullName>
+        <description>Update Ad Source Audit User Email</description>
+        <field>Audit_Active_User_Email__c</field>
+        <formula>$User.Email</formula>
+        <name>Update Ad Source Audit User Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Ad_Source_Audit_User_ID</fullName>
+        <description>Update Ad Source Audit User ID</description>
+        <field>Audit_Active_User_Id__c</field>
+        <formula>$User.FirstName + &quot; &quot;+$User.LastName</formula>
+        <name>Update Ad Source Audit User ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Ad_Source_Sync_On_Account</fullName>
+        <description>Used to Kick of Integration to update Ad Source</description>
+        <field>Sync_Ad_Sources__c</field>
+        <literalValue>1</literalValue>
+        <name>Update Ad Source Sync On Account</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+        <targetObject>Service_Agreement__c</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Rings_To_Phone_Format</fullName>
+        <description>Update Rings To Phone Format</description>
+        <field>Rings_to__c</field>
+        <formula>Substitute(Substitute(Substitute( Rings_to__c ,&quot; &quot;,&quot;-&quot;),
+&quot;(&quot;,&quot;&quot;),&quot;)&quot;,&quot;&quot;)</formula>
+        <name>Update Rings To Phone Format</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Update Ad Source Audit Fields</fullName>
+        <actions>
+            <name>Formate_Currently_Posted_Number</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Reformat_CallRevu_Tracking_Number</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Ad_Source_Active_User_First_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Ad_Source_Active_User_Last_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Ad_Source_Audit_User_Email</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Ad_Source_Audit_User_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Rings_To_Phone_Format</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Update Ad Source Audit Fields</description>
+        <formula>(ischanged(LastModifiedDate)||isnew())&amp;&amp;!isblank(text(Method__c))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,12 @@
+<apex:page >
+ 
+ <html>
+  <img id="liveagent_button_online_5731N000000g6rF" style="display: none; border: 0px none; cursor: pointer" onclick="liveagent.startChat('5731N000000g6rF')" src="https://fixthephone.secure.force.com/resource/1543850454000/Live_Agent_Chat" /><div id="liveagent_button_offline_5731N000000g6rF" style="display: none;"><!-- Offline Chat Content --></div><script type="text/javascript">
+if (!window._laq) { window._laq = []; }
+window._laq.push(function(){liveagent.showWhenOnline('5731N000000g6rF', document.getElementById('liveagent_button_online_5731N000000g6rF'));
+liveagent.showWhenOffline('5731N000000g6rF', document.getElementById('liveagent_button_offline_5731N000000g6rF'));
+});</script>
+
+</html>
+
+</apex:page>

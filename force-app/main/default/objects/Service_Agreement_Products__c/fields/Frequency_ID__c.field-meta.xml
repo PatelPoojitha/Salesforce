@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Frequency_ID__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Frequency__c,&quot;Monthly&quot;), 10,
+IF(ISPICKVAL(Frequency__c,&quot;Quarterly&quot;), 20,
+IF(ISPICKVAL(Frequency__c,&quot;Annual&quot;), 30,
+IF(ISPICKVAL(Frequency__c,&quot;SemiMonthly&quot;), 40,
+IF(ISPICKVAL(Frequency__c,&quot;One Time&quot;), 50,
+IF(ISPICKVAL(Frequency__c,&quot;Monthly, upfront&quot;), 70,
+10))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Frequency ID</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

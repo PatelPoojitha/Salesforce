@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Performance_Management_Sync__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Date and Time the last performance manager or review date was synced.</inlineHelpText>
+    <label>Last Performance Management  Sync</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

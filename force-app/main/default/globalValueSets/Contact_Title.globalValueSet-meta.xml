@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Accounting</fullName>
+        <default>false</default>
+        <label>Accounting</label>
+    </customValue>
+    <customValue>
+        <fullName>Admin</fullName>
+        <default>false</default>
+        <label>Admin</label>
+    </customValue>
+    <customValue>
+        <fullName>Appt Coordinator</fullName>
+        <default>false</default>
+        <label>Appt Coordinator</label>
+    </customValue>
+    <customValue>
+        <fullName>Asst Service Mgr.</fullName>
+        <default>false</default>
+        <label>Asst Service Mgr.</label>
+    </customValue>
+    <customValue>
+        <fullName>Asst SM</fullName>
+        <default>false</default>
+        <label>Asst SM</label>
+    </customValue>
+    <customValue>
+        <fullName>BDC Agent</fullName>
+        <default>false</default>
+        <label>BDC Agent</label>
+    </customValue>
+    <customValue>
+        <fullName>BDC Director</fullName>
+        <default>false</default>
+        <label>BDC Director</label>
+    </customValue>
+    <customValue>
+        <fullName>BDC Mgr.</fullName>
+        <default>false</default>
+        <label>BDC Mgr.</label>
+    </customValue>
+    <customValue>
+        <fullName>BDC Sales</fullName>
+        <default>false</default>
+        <label>BDC Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>BDC Service</fullName>
+        <default>false</default>
+        <label>BDC Service</label>
+    </customValue>
+    <customValue>
+        <fullName>Body Estimator</fullName>
+        <default>false</default>
+        <label>Body Estimator</label>
+    </customValue>
+    <customValue>
+        <fullName>Body Shop Manager</fullName>
+        <default>false</default>
+        <label>Body Shop Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>CallRevu Employee</fullName>
+        <default>false</default>
+        <label>CallRevu Employee</label>
+    </customValue>
+    <customValue>
+        <fullName>CallRevu PM</fullName>
+        <default>false</default>
+        <label>CallRevu PM</label>
+    </customValue>
+    <customValue>
+        <fullName>CallRevu Test</fullName>
+        <default>false</default>
+        <label>CallRevu Test</label>
+    </customValue>
+    <customValue>
+        <fullName>Cashier</fullName>
+        <default>false</default>
+        <label>Cashier</label>
+    </customValue>
+    <customValue>
+        <fullName>Controller</fullName>
+        <default>false</default>
+        <label>Controller</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Relations Manager</fullName>
+        <default>false</default>
+        <label>Customer Relations Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Customer Service Manager</fullName>
+        <default>false</default>
+        <label>Customer Service Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>DX Manager</fullName>
+        <default>false</default>
+        <label>DX Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Executive</fullName>
+        <default>false</default>
+        <label>Executive</label>
+    </customValue>
+    <customValue>
+        <fullName>Fin Agent</fullName>
+        <default>false</default>
+        <label>Fin Agent</label>
+    </customValue>
+    <customValue>
+        <fullName>Fin Director</fullName>
+        <default>false</default>
+        <label>Fin Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Fin Mgr.</fullName>
+        <default>false</default>
+        <label>Fin Mgr.</label>
+    </customValue>
+    <customValue>
+        <fullName>Fixed Ops Director</fullName>
+        <default>false</default>
+        <label>Fixed Ops Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Fleet Mgr</fullName>
+        <default>false</default>
+        <label>Fleet Mgr</label>
+    </customValue>
+    <customValue>
+        <fullName>GM</fullName>
+        <default>false</default>
+        <label>GM</label>
+    </customValue>
+    <customValue>
+        <fullName>Greeter</fullName>
+        <default>false</default>
+        <label>Greeter</label>
+    </customValue>
+    <customValue>
+        <fullName>GSM</fullName>
+        <default>false</default>
+        <label>GSM</label>
+    </customValue>
+    <customValue>
+        <fullName>HR Mgr.</fullName>
+        <default>false</default>
+        <label>HR Mgr.</label>
+    </customValue>
+    <customValue>
+        <fullName>Internet Director</fullName>
+        <default>false</default>
+        <label>Internet Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Internet Manager</fullName>
+        <default>false</default>
+        <label>Internet Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Internet Sales</fullName>
+        <default>false</default>
+        <label>Internet Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>IT</fullName>
+        <default>false</default>
+        <label>IT</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Director</fullName>
+        <default>false</default>
+        <label>Marketing Director</label>
+    </customValue>
+    <customValue>
+        <fullName>NCM</fullName>
+        <default>false</default>
+        <label>NCM</label>
+    </customValue>
+    <customValue>
+        <fullName>Office Mgr.</fullName>
+        <default>false</default>
+        <label>Office Mgr.</label>
+    </customValue>
+    <customValue>
+        <fullName>Operator</fullName>
+        <default>false</default>
+        <label>Operator</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Owner / DP</fullName>
+        <default>false</default>
+        <label>Owner / DP</label>
+    </customValue>
+    <customValue>
+        <fullName>Parts Counter</fullName>
+        <default>false</default>
+        <label>Parts Counter</label>
+    </customValue>
+    <customValue>
+        <fullName>Parts Manager</fullName>
+        <default>false</default>
+        <label>Parts Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>President</fullName>
+        <default>false</default>
+        <label>President</label>
+    </customValue>
+    <customValue>
+        <fullName>Receptionist</fullName>
+        <default>false</default>
+        <label>Receptionist</label>
+    </customValue>
+    <customValue>
+        <fullName>Retail / Counter Rep</fullName>
+        <default>false</default>
+        <label>Retail / Counter Rep</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Person</fullName>
+        <default>false</default>
+        <label>Sales Person</label>
+    </customValue>
+    <customValue>
+        <fullName>Service Advisor</fullName>
+        <default>false</default>
+        <label>Service Advisor</label>
+    </customValue>
+    <customValue>
+        <fullName>Service BDC</fullName>
+        <default>false</default>
+        <label>Service BDC</label>
+    </customValue>
+    <customValue>
+        <fullName>Service Director</fullName>
+        <default>false</default>
+        <label>Service Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Service Writer</fullName>
+        <default>false</default>
+        <label>Service Writer</label>
+    </customValue>
+    <customValue>
+        <fullName>SM</fullName>
+        <default>false</default>
+        <label>SM</label>
+    </customValue>
+    <customValue>
+        <fullName>Srvc Mgr.</fullName>
+        <default>false</default>
+        <label>Srvc Mgr.</label>
+    </customValue>
+    <customValue>
+        <fullName>Trainer</fullName>
+        <default>false</default>
+        <label>Trainer</label>
+    </customValue>
+    <customValue>
+        <fullName>UCM</fullName>
+        <default>false</default>
+        <label>UCM</label>
+    </customValue>
+    <customValue>
+        <fullName>Vice President</fullName>
+        <default>false</default>
+        <label>Vice President</label>
+    </customValue>
+    <customValue>
+        <fullName>Wholesale Parts Mgr</fullName>
+        <default>false</default>
+        <label>Wholesale Parts Mgr</label>
+    </customValue>
+    <customValue>
+        <fullName>Wholesale Parts Rep</fullName>
+        <default>false</default>
+        <label>Wholesale Parts Rep</label>
+    </customValue>
+    <customValue>
+        <fullName>Whsl Parts</fullName>
+        <default>false</default>
+        <label>Whsl Parts</label>
+    </customValue>
+    <customValue>
+        <fullName>CEO</fullName>
+        <default>false</default>
+        <label>CEO</label>
+    </customValue>
+    <customValue>
+        <fullName>Administrative Assistant</fullName>
+        <default>false</default>
+        <label>Administrative Assistant</label>
+    </customValue>
+    <customValue>
+        <fullName>Chief Marketing Officer</fullName>
+        <default>false</default>
+        <label>Chief Marketing Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Chief Operations Officer</fullName>
+        <default>false</default>
+        <label>Chief Operations Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Chief Technical Officer</fullName>
+        <default>false</default>
+        <label>Chief Technical Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Creative Director</fullName>
+        <default>false</default>
+        <label>Creative Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Digital Director</fullName>
+        <default>false</default>
+        <label>Digital Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Digital Manager</fullName>
+        <default>false</default>
+        <label>Digital Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Director</fullName>
+        <default>false</default>
+        <label>Director</label>
+    </customValue>
+    <customValue>
+        <fullName>Manager</fullName>
+        <default>false</default>
+        <label>Manager</label>
+    </customValue>
+    <customValue>
+        <fullName>Specialist</fullName>
+        <default>false</default>
+        <label>Specialist</label>
+    </customValue>
+    <customValue>
+        <fullName>Technical Lead</fullName>
+        <default>false</default>
+        <label>Technical Lead</label>
+    </customValue>
+    <customValue>
+        <fullName>Vice President Client Services</fullName>
+        <default>false</default>
+        <label>Vice President Client Services</label>
+    </customValue>
+    <customValue>
+        <fullName>Vice President Client Success</fullName>
+        <default>false</default>
+        <label>Vice President Client Success</label>
+    </customValue>
+    <customValue>
+        <fullName>Vice President of Operations</fullName>
+        <default>false</default>
+        <label>Vice President of Operations</label>
+    </customValue>
+    <customValue>
+        <fullName>Vice President of Sales</fullName>
+        <default>false</default>
+        <label>Vice President of Sales</label>
+    </customValue>
+    <customValue>
+        <fullName>Vice President Sales &amp; Marketing</fullName>
+        <default>false</default>
+        <label>Vice President Sales &amp; Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Director</fullName>
+        <default>false</default>
+        <label>Sales Director</label>
+    </customValue>
+    <masterLabel>Contact Title</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

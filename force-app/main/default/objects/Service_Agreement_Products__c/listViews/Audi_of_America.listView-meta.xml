@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Audi_of_America</fullName>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bill_to_Account__c</field>
+        <operation>equals</operation>
+        <value>Audi of America,Inc.</value>
+    </filters>
+    <label>Audi of America</label>
+</ListView>

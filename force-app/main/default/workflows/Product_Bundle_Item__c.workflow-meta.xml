@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Set_Product_Bundle_Item_Name</fullName>
+        <description>Set Product Bundle Item Name</description>
+        <field>Name</field>
+        <formula>left(  Product_Bundle__r.Bundle_Product__r.Description +&quot; &quot;+  Bundled_Item__r.Description,80)</formula>
+        <name>Set Product Bundle Item Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Product Bundle Item On Create and Edit</fullName>
+        <actions>
+            <name>Set_Product_Bundle_Item_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Product Bundle On Create and Edit</description>
+        <formula>1=1</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

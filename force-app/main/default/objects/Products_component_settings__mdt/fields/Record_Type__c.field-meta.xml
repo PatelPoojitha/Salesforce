@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Record_Type__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Record Type</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Change Order/Cancellation</fullName>
+                <default>false</default>
+                <label>Change Order/Cancellation</label>
+            </value>
+            <value>
+                <fullName>Dealership Credit</fullName>
+                <default>false</default>
+                <label>Dealership Credit</label>
+            </value>
+            <value>
+                <fullName>Non Trial or Pilot</fullName>
+                <default>false</default>
+                <label>Non Trial or Pilot</label>
+            </value>
+            <value>
+                <fullName>OEM Enterprise</fullName>
+                <default>false</default>
+                <label>OEM Enterprise</label>
+            </value>
+            <value>
+                <fullName>OEM Region/Zone</fullName>
+                <default>false</default>
+                <label>OEM Region/Zone</label>
+            </value>
+            <value>
+                <fullName>Partnership</fullName>
+                <default>false</default>
+                <label>Partnership</label>
+            </value>
+            <value>
+                <fullName>Repackage Change Order</fullName>
+                <default>false</default>
+                <label>Repackage Change Order</label>
+            </value>
+            <value>
+                <fullName>Tier2</fullName>
+                <default>false</default>
+                <label>Tier2</label>
+            </value>
+            <value>
+                <fullName>Tier2 Change Order/Cancellation</fullName>
+                <default>false</default>
+                <label>Tier2 Change Order/Cancellation</label>
+            </value>
+            <value>
+                <fullName>Trial or Pilot</fullName>
+                <default>false</default>
+                <label>Trial or Pilot</label>
+            </value>
+            <value>
+                <fullName>Vision Packages</fullName>
+                <default>false</default>
+                <label>Vision Packages</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

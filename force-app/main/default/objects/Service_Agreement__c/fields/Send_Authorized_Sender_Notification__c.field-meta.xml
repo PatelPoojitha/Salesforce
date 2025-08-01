@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Authorized_Sender_Notification__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used in data collection.  I checked, workflow sends an email.</description>
+    <externalId>false</externalId>
+    <label>Send Authorized Sender Notification</label>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

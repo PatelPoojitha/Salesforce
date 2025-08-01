@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Send_Existing_CallRevu_Lead_Reengaged_Email</fullName>
+        <ccEmails>Marketing@callrevu.com</ccEmails>
+        <description>Send Existing CallRevu Lead Reengaged Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CallRevu_Lead_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <recipient>callrevu@shippconsulting.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Operations/Existing_CallRevu_Lead_Reengaged</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_New_CallRevu_Lead_Email_Alert</fullName>
+        <ccEmails>MarketingLeadAlerts@callrevu.com</ccEmails>
+        <description>Send New CallRevu Lead Email Alert - NEW!</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CallRevu_Lead_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <recipient>marketing@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Operations/New_CallRevu_Lead_All_Template</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_New_CallRevu_Lead_Owner_Email</fullName>
+        <ccEmails>MarketingLeadAlerts@callrevu.com</ccEmails>
+        <description>Send New CallRevu Lead Owner Email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>CallRevu_Lead_Owner_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <recipient>marketing@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <field>CallRevu_Lead_Owner__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Operations/New_CallRevu_Lead_All_Template</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Set_Initial_Response_Date_Time</fullName>
+        <field>Initial_Response_Date_Time__c</field>
+        <formula>if(ischanged(Status__c)&amp;&amp;text(Status__c)=&quot;In Progress&quot;,NOW(), Initial_Response_Date_Time__c )</formula>
+        <name>Set Initial Response Date/Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Bad_Unqualified_Date</fullName>
+        <field>Unqualified_Date__c</field>
+        <formula>if(ischanged(Status__c)&amp;&amp;text(Status__c)=&quot;Bad/Unqualified&quot;,Today(), Unqualified_Date__c)</formula>
+        <name>Update Bad/Unqualified Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_CQL_Date_Time</fullName>
+        <field>CQL_Date_Time__c</field>
+        <formula>if(AND(isnew(),text(Status__c) = &quot;Sales Lead (CQL)&quot;),
+Now(), CQL_Date_Time__c)</formula>
+        <name>Update CQL Date/Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_CallRevu_Lead_Name</fullName>
+        <field>Name</field>
+        <formula>left(if(!isblank(Account__c),Account__r.Name&amp;&quot; - &quot;,&quot;&quot;)
+&amp;Contact__r.FirstName&amp;&quot; &quot;&amp;Contact__r.LastName&amp;&quot; - &quot;&amp;text(Lead_Type__c),
+80)</formula>
+        <name>Update CallRevu Lead Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_CallRevu_Lead_Owner_Email</fullName>
+        <field>CallRevu_Lead_Owner_Email__c</field>
+        <formula>CallRevu_Lead_Owner__r.Email</formula>
+        <name>Update CallRevu Lead Owner Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Date_Closed</fullName>
+        <field>Date_Closed__c</field>
+        <formula>if(AND(ischanged(Status__c),
+OR(contains(text(Status__c),&quot;Closed Won&quot;),
+contains(text(Status__c),&quot;Closed Lost&quot;))),
+Today(),Date_Closed__c)</formula>
+        <name>Update Date Closed</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Duplicate_Date</fullName>
+        <field>Duplicate_Date__c</field>
+        <formula>if(ischanged(Status__c)&amp;&amp;text(Status__c)=&quot;Duplicate&quot;,NOW(), Duplicate_Date__c)</formula>
+        <name>Update Duplicate Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Field_CallRevu_Grade</fullName>
+        <field>CallRevu_Lead_Grade__c</field>
+        <formula>IF(CallRevu_Lead_Score2__c &gt;= 999,&quot;A+&quot;,
+IF(CallRevu_Lead_Score2__c &gt;= 100,&quot;A&quot;,
+IF(CallRevu_Lead_Score2__c &gt;= 70,&quot;B&quot;,
+IF(CallRevu_Lead_Score2__c &lt;= 69,&quot;C&quot;,&quot;N/A&quot;))))</formula>
+        <name>Update Field CallRevu Grade</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_In_Progress_Date</fullName>
+        <field>In_Progress_Date__c</field>
+        <formula>if(ischanged(Status__c)&amp;&amp;text(Status__c)=&quot;In Progress&quot;,NOW(), In_Progress_Date__c)</formula>
+        <name>Update In Progress Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_MQL_Date_Time</fullName>
+        <field>MQL_Date_Time__c</field>
+        <formula>if(AND(isnew(),text(Status__c) = &quot;Marketing Lead (MQL)&quot;),
+Now(), MQL_Date_Time__c)</formula>
+        <name>Update MQL Date/Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_New_Owner_Email</fullName>
+        <field>CallRevu_Lead_Owner_Email__c</field>
+        <formula>CallRevu_Lead_Owner__r.Email</formula>
+        <name>Update New Owner Email</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_SQL_Date_Time</fullName>
+        <field>SQL_Date_Time__c</field>
+        <formula>if(ischanged(Status__c)&amp;&amp;text(Status__c)=&quot;New Opportunity&quot;,NOW(),SQL_Date_Time__c)</formula>
+        <name>Update SQL Date/Time</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Warm_Date</fullName>
+        <field>Warm_Date__c</field>
+        <formula>if(ischanged(Status__c)&amp;&amp;text(Status__c)=&quot;Warm Lead&quot;,NOW(), Warm_Date__c )</formula>
+        <name>Update Warm Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>CallRevu Lead Edit</fullName>
+        <actions>
+            <name>Set_Initial_Response_Date_Time</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Bad_Unqualified_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_CQL_Date_Time</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_CallRevu_Lead_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Date_Closed</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Duplicate_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_In_Progress_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_MQL_Date_Time</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_SQL_Date_Time</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Warm_Date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>CallRevu Lead Edit Updates</description>
+        <formula>1 = 1</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update CallRevu Grade</fullName>
+        <actions>
+            <name>Update_Field_CallRevu_Grade</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>CallRevu_Lead__c.CallRevu_Lead_Score2__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_CallRevu_Leads_This_year</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Contact__c</columns>
+    <columns>Lead_Source__c</columns>
+    <columns>CallRevu_Lead_Channel__c</columns>
+    <columns>CallRevu_Lead_Source__c</columns>
+    <columns>CallRevu_Lead_Sub_Source__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_YEAR</value>
+    </filters>
+    <label>My CallRevu Leads (This year)</label>
+</ListView>

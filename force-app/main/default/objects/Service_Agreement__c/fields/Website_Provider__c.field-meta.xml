@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Website_Provider__c</fullName>
+    <externalId>false</externalId>
+    <label>Website Provider</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active Engage</fullName>
+                <default>false</default>
+                <label>Active Engage</label>
+            </value>
+            <value>
+                <fullName>AutoFusion</fullName>
+                <default>false</default>
+                <label>AutoFusion</label>
+            </value>
+            <value>
+                <fullName>AutoResponsive</fullName>
+                <default>false</default>
+                <label>AutoResponsive</label>
+            </value>
+            <value>
+                <fullName>Boot Strap</fullName>
+                <default>false</default>
+                <label>Boot Strap</label>
+            </value>
+            <value>
+                <fullName>CDK Global</fullName>
+                <default>false</default>
+                <label>CDK Global</label>
+            </value>
+            <value>
+                <fullName>Cobalt Group</fullName>
+                <default>false</default>
+                <label>Cobalt Group</label>
+            </value>
+            <value>
+                <fullName>Dealer.com</fullName>
+                <default>false</default>
+                <label>Dealer.com</label>
+            </value>
+            <value>
+                <fullName>Dealer eProcess</fullName>
+                <default>false</default>
+                <label>Dealer eProcess</label>
+            </value>
+            <value>
+                <fullName>DealerFire</fullName>
+                <default>false</default>
+                <label>DealerFire</label>
+            </value>
+            <value>
+                <fullName>Dealer Inspire</fullName>
+                <default>false</default>
+                <label>Dealer Inspire</label>
+            </value>
+            <value>
+                <fullName>DealerOn</fullName>
+                <default>false</default>
+                <label>DealerOn</label>
+            </value>
+            <value>
+                <fullName>DealerPeak</fullName>
+                <default>false</default>
+                <label>DealerPeak</label>
+            </value>
+            <value>
+                <fullName>DealerSocket</fullName>
+                <default>false</default>
+                <label>DealerSocket</label>
+            </value>
+            <value>
+                <fullName>Dealer Spike</fullName>
+                <default>false</default>
+                <label>Dealer Spike</label>
+            </value>
+            <value>
+                <fullName>DealerTrack</fullName>
+                <default>false</default>
+                <label>DealerTrack</label>
+            </value>
+            <value>
+                <fullName>Dealer Trend</fullName>
+                <default>false</default>
+                <label>Dealer Trend</label>
+            </value>
+            <value>
+                <fullName>DLD Websites</fullName>
+                <default>false</default>
+                <label>DLD Websites</label>
+            </value>
+            <value>
+                <fullName>DOM360</fullName>
+                <default>false</default>
+                <label>DOM360</label>
+            </value>
+            <value>
+                <fullName>Dominion</fullName>
+                <default>false</default>
+                <label>Dominion</label>
+            </value>
+            <value>
+                <fullName>Drive Digital Group</fullName>
+                <default>false</default>
+                <label>Drive Digital Group</label>
+            </value>
+            <value>
+                <fullName>DX1</fullName>
+                <default>false</default>
+                <label>DX1</label>
+            </value>
+            <value>
+                <fullName>eBizAutos</fullName>
+                <default>false</default>
+                <label>eBizAutos</label>
+            </value>
+            <value>
+                <fullName>eDealer</fullName>
+                <default>false</default>
+                <label>eDealer</label>
+            </value>
+            <value>
+                <fullName>FordDirect</fullName>
+                <default>false</default>
+                <label>FordDirect</label>
+            </value>
+            <value>
+                <fullName>Fox Dealer Interactive</fullName>
+                <default>false</default>
+                <label>Fox Dealer Interactive</label>
+            </value>
+            <value>
+                <fullName>fusionZONE Automotive</fullName>
+                <default>false</default>
+                <label>fusionZONE Automotive</label>
+            </value>
+            <value>
+                <fullName>GS Marketing Inc.</fullName>
+                <default>false</default>
+                <label>GS Marketing Inc.</label>
+            </value>
+            <value>
+                <fullName>Jazel Auto</fullName>
+                <default>false</default>
+                <label>Jazel Auto</label>
+            </value>
+            <value>
+                <fullName>Motorwebs</fullName>
+                <default>false</default>
+                <label>Motorwebs</label>
+            </value>
+            <value>
+                <fullName>Naked Lime</fullName>
+                <default>false</default>
+                <label>Naked Lime</label>
+            </value>
+            <value>
+                <fullName>Remora Inc</fullName>
+                <default>false</default>
+                <label>Remora Inc</label>
+            </value>
+            <value>
+                <fullName>Search Optics</fullName>
+                <default>false</default>
+                <label>Search Optics</label>
+            </value>
+            <value>
+                <fullName>Steering Innovation</fullName>
+                <default>false</default>
+                <label>Steering Innovation</label>
+            </value>
+            <value>
+                <fullName>String Automotive</fullName>
+                <default>false</default>
+                <label>String Automotive</label>
+            </value>
+            <value>
+                <fullName>VinSolutions</fullName>
+                <default>false</default>
+                <label>VinSolutions</label>
+            </value>
+            <value>
+                <fullName>Webstreaks</fullName>
+                <default>false</default>
+                <label>Webstreaks</label>
+            </value>
+            <value>
+                <fullName>World Dealer Advertising</fullName>
+                <default>false</default>
+                <label>World Dealer Advertising</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
