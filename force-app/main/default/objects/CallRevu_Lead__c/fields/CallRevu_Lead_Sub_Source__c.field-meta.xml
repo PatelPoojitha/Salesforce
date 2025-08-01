@@ -323,16 +323,6 @@
                 <label>ASOTU</label>
             </value>
             <value>
-                <fullName>NYDA - eDealer</fullName>
-                <default>false</default>
-                <label>NYDA - eDealer</label>
-            </value>
-            <value>
-                <fullName>Marketing Sponsor Event</fullName>
-                <default>false</default>
-                <label>Marketing Sponsor Event</label>
-            </value>
-            <value>
                 <fullName>45 Day Trial</fullName>
                 <default>false</default>
                 <isActive>false</isActive>
@@ -775,15 +765,8 @@
             <valueName>Sales Campaign</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Specified Campaign</controllingFieldValue>
-            <controllingFieldValue>Trade Show/Convention</controllingFieldValue>
-            <controllingFieldValue>Webinar</controllingFieldValue>
-            <valueName>Marketing Sponsor Event</valueName>
-        </valueSettings>
-        <valueSettings>
             <controllingFieldValue>Trade Show/Convention</controllingFieldValue>
             <controllingFieldValue>Reseller – Partner</controllingFieldValue>
-            <controllingFieldValue>Webinar</controllingFieldValue>
             <controllingFieldValue>CallRevu.com</controllingFieldValue>
             <controllingFieldValue>Referral - OEM</controllingFieldValue>
             <valueName>Other</valueName>
@@ -902,10 +885,6 @@
             <controllingFieldValue>Referral - Partner</controllingFieldValue>
             <controllingFieldValue>Reseller – Partner</controllingFieldValue>
             <valueName>Training Company</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Referral - Partner</controllingFieldValue>
-            <valueName>NYDA - eDealer</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Webinar</controllingFieldValue>

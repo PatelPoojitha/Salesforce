@@ -12,7 +12,7 @@
     </values>
     <values>
         <field>Help_Doc__c</field>
-        <value xsi:nil="true"/>
+        <value xsi:type="xsd:string">https://callrevu365.sharepoint.com/:w:/s/SalesforceExports/EUGCi9uYc-tJs3NX3DgIUdcBdoBMjZwzFPjeZKcBKnd06w?e=bHhPRO</value>
     </values>
     <values>
         <field>Turn_Off__c</field>

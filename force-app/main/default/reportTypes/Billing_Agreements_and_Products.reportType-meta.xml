@@ -683,31 +683,6 @@
             <field>Active_Transcription_Product__c</field>
             <table>Billing_Agreement__c.Service_Agreement_Products__r</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>System_Sync__c</field>
-            <table>Billing_Agreement__c.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Product_Catalog__c</field>
-            <table>Billing_Agreement__c.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Notes__c</field>
-            <table>Billing_Agreement__c.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Account_Rollup_Category__c</field>
-            <table>Billing_Agreement__c.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Adjusted_MRR_Amount__c</field>
-            <table>Billing_Agreement__c.Service_Agreement_Products__r</table>
-        </columns>
         <masterLabel>Service Agreement Products</masterLabel>
     </sections>
 </ReportType>

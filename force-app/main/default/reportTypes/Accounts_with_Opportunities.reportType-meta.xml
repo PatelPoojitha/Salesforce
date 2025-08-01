@@ -22,6 +22,16 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>X2018_Closed_Won_Opportunities__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>X45_Day_Trial_Count__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Account_CallRevu_Link__c</field>
             <table>Account</table>
         </columns>
@@ -542,6 +552,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Pre_2018_Closed_Won_Opportunities__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Rating</field>
             <table>Account</table>
         </columns>
@@ -633,11 +648,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>SicDesc</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>tdc_tsw__SMS_Opt_out__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -882,7 +892,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>XXAccount_Grade__c</field>
+            <field>Account_Grade__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -967,16 +977,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>BDM_List_Exemptions__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Account_Grade_24__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Created_from_Conversion__c</field>
             <table>Account</table>
         </columns>
@@ -987,32 +987,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_theme__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>AlignICP_TIER__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>AlignICP_INTENT__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>AlignICP_TOPICS__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Territory_Assignment_Notes__c</field>
+            <field>Case_Rollup_Needed__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -1022,127 +997,27 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_acq_nonoem_buyerphase__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_acq_nonoem_topic1__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_acq_nonoem_topic2__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_acq_nonoem_topic3__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_comp_nonoem_buyerphase__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_comp_nonoem_topic1__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_comp_nonoem_topic2__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_comp_nonoem_topic3__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Current_Customer__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>GM_Brand__c</field>
             <table>Account</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_expan_nonoem_buyerphase__c</field>
+            <field>Territory_Assignment_Hold_test__c</field>
             <table>Account</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_expan_nonoem_topic1__c</field>
+            <field>Open_Enrollment_Cases__c</field>
             <table>Account</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_expan_nonoem_topic2__c</field>
+            <field>Recent_Closed_Opp_Count__c</field>
             <table>Account</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_expan_nonoem_topic3__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_comp_nonoem_buyerphase__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_comp_nonoem_topic1__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_comp_nonoem_topic2__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_comp_nonoem_topic3__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_other_buyerphase__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_other_topic1__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_other_topic2__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_other_topic3__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_priority__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Territory_Assignment_Hold_Count__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Number_of_Territory_on_Hold_Opps__c</field>
+            <field>On_Territory_hold__c</field>
             <table>Account</table>
         </columns>
         <masterLabel>Accounts</masterLabel>
@@ -2020,7 +1895,52 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Migration_ID__c</field>
+            <field>Qualify_Date__c</field>
+            <table>Account.Opportunities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Discover_Date__c</field>
+            <table>Account.Opportunities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Demonstrate_Value_Date__c</field>
+            <table>Account.Opportunities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Negotiate_Date__c</field>
+            <table>Account.Opportunities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Submit_for_Review_Date__c</field>
+            <table>Account.Opportunities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contract_Date__c</field>
+            <table>Account.Opportunities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>MRR2__c</field>
+            <table>Account.Opportunities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Sales_Type__c</field>
+            <table>Account.Opportunities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity_Product__c</field>
+            <table>Account.Opportunities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity_Name_Logic__c</field>
             <table>Account.Opportunities</table>
         </columns>
         <columns>
@@ -2030,47 +1950,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Anticipated_Implementation_Lead__c</field>
-            <table>Account.Opportunities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Products__c</field>
-            <table>Account.Opportunities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Porting__c</field>
-            <table>Account.Opportunities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Secondary_Contact_Information__c</field>
-            <table>Account.Opportunities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Estimated_Go_Live_Date__c</field>
-            <table>Account.Opportunities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Test_User_Lookup__c</field>
-            <table>Account.Opportunities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Custom_Forecast_Category__c</field>
-            <table>Account.Opportunities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Loss_Reason_Notes__c</field>
-            <table>Account.Opportunities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Original_Account_Owner__c</field>
+            <field>Group_MRR__c</field>
             <table>Account.Opportunities</table>
         </columns>
         <columns>
@@ -2080,22 +1960,27 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Business_Development_Team_Member__c</field>
+            <field>Calculate_Group_MRR__c</field>
+            <table>Account.Opportunities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Validation_Bypass_Date_Time__c</field>
+            <table>Account.Opportunities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>isValidationRuleBypassed__c</field>
+            <table>Account.Opportunities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Loss_Reason_Notes__c</field>
             <table>Account.Opportunities</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Billing_Case_Bypass__c</field>
-            <table>Account.Opportunities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Automation_Running__c</field>
-            <table>Account.Opportunities</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Accounting_Case_Manual_Create__c</field>
             <table>Account.Opportunities</table>
         </columns>
         <columns>
@@ -2125,12 +2010,17 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Territory_Assignment_Hold_Flag__c</field>
+            <field>test_ms__c</field>
             <table>Account.Opportunities</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Recent_Opportunity__c</field>
+            <field>Automation_Running__c</field>
+            <table>Account.Opportunities</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Territory_Assignment_Hold__c</field>
             <table>Account.Opportunities</table>
         </columns>
         <masterLabel>Opportunities</masterLabel>

@@ -11,13 +11,14 @@
     <columns>Bill_to_Account__c</columns>
     <columns>Frequency__c</columns>
     <columns>Sync_With_CallRevu_360__c</columns>
+    <columns>CREATED_DATE</columns>
     <columns>Billing_Agreement__c</columns>
-    <columns>Billing_Agreement_And_Prod_Agreement_Key__c</columns>
+    <columns>UPDATEDBY_USER</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>CallRevu_Contract__c</field>
         <operation>contains</operation>
-        <value>Garber Buick GMC Of Ft. Pierce</value>
+        <value>Regal KIA</value>
     </filters>
     <label>All</label>
 </ListView>

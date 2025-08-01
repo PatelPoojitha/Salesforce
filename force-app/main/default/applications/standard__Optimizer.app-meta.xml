@@ -7,8 +7,16 @@
     <label>Optimizer</label>
     <navType>Console</navType>
     <tabs>standard-OrgMetric</tabs>
+    <tabs>Unsupported_Email__c</tabs>
+    <tabs>Bot_Customer_Rating__c</tabs>
     <uiType>Lightning</uiType>
     <workspaceConfig>
+        <mappings>
+            <tab>Bot_Customer_Rating__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Unsupported_Email__c</tab>
+        </mappings>
         <mappings>
             <tab>standard-OrgMetric</tab>
         </mappings>

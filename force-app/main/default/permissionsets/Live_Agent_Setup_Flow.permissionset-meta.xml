@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <customMetadataTypeAccesses>
-        <enabled>true</enabled>
-        <name>Flow_Configuration_Settings__mdt</name>
-    </customMetadataTypeAccesses>
     <fieldPermissions>
         <editable>true</editable>
         <field>Bot_Customer_Rating__c.Chat_Transcript__c</field>
@@ -26,7 +22,27 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Case.Customer_Name__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.Description</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.Description_of_Issue__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Case.Issue_Type__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.Subject</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -121,6 +137,10 @@
         <recordType>Case.Support</recordType>
         <visible>true</visible>
     </recordTypeVisibilities>
+    <tabSettings>
+        <tab>Bot_Customer_Rating__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
     <tabSettings>
         <tab>standard-MessagingSession</tab>
         <visibility>Visible</visibility>

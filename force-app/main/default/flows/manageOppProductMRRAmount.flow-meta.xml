@@ -29,24 +29,12 @@
                 <elementReference>totalMRRPrice</elementReference>
             </value>
         </assignmentItems>
-        <assignmentItems>
-            <assignToReference>thisParentOpportunity.Automation_Running__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>toggleAutomationRunning</elementReference>
-            </value>
-        </assignmentItems>
         <connector>
             <targetReference>saveOpportunity</targetReference>
         </connector>
     </assignments>
-    <description>Used to update the MRR Amount on the Opportunity based on the Opportunity Product - v53 api version + exception toggle</description>
+    <description>Used to update the MRR Amount on the Opportunity based on the Opportunity Product - v53 api version</description>
     <environments>Default</environments>
-    <formulas>
-        <name>toggleAutomationRunning</name>
-        <dataType>Boolean</dataType>
-        <expression>IF({!thisParentOpportunity.Automation_Running__c} = TRUE, FALSE, TRUE)</expression>
-    </formulas>
     <interviewLabel>manageOppProductMRRAmount {!$Flow.CurrentDateTime}</interviewLabel>
     <label>manageOppProductMRRAmount</label>
     <loops>

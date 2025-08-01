@@ -23,98 +23,102 @@
     <businessHours>
         <active>true</active>
         <default>false</default>
-        <fridayEndTime>21:00:00.000Z</fridayEndTime>
-        <fridayStartTime>09:00:00.000Z</fridayStartTime>
-        <mondayEndTime>21:00:00.000Z</mondayEndTime>
-        <mondayStartTime>09:00:00.000Z</mondayStartTime>
+        <fridayEndTime>00:00:00.000Z</fridayEndTime>
+        <fridayStartTime>00:00:00.000Z</fridayStartTime>
+        <mondayEndTime>00:00:00.000Z</mondayEndTime>
+        <mondayStartTime>00:00:00.000Z</mondayStartTime>
         <name>ChatBotHours</name>
-        <saturdayEndTime>21:00:00.000Z</saturdayEndTime>
-        <saturdayStartTime>09:00:00.000Z</saturdayStartTime>
-        <sundayEndTime>21:00:00.000Z</sundayEndTime>
-        <sundayStartTime>09:00:00.000Z</sundayStartTime>
-        <thursdayEndTime>21:00:00.000Z</thursdayEndTime>
-        <thursdayStartTime>09:00:00.000Z</thursdayStartTime>
-        <timeZoneId>America/Panama</timeZoneId>
-        <tuesdayEndTime>21:00:00.000Z</tuesdayEndTime>
-        <tuesdayStartTime>09:00:00.000Z</tuesdayStartTime>
-        <wednesdayEndTime>21:00:00.000Z</wednesdayEndTime>
-        <wednesdayStartTime>09:00:00.000Z</wednesdayStartTime>
+        <saturdayEndTime>00:00:00.000Z</saturdayEndTime>
+        <saturdayStartTime>00:00:00.000Z</saturdayStartTime>
+        <sundayEndTime>00:00:00.000Z</sundayEndTime>
+        <sundayStartTime>00:00:00.000Z</sundayStartTime>
+        <thursdayEndTime>00:00:00.000Z</thursdayEndTime>
+        <thursdayStartTime>00:00:00.000Z</thursdayStartTime>
+        <timeZoneId>Asia/Kolkata</timeZoneId>
+        <tuesdayEndTime>00:00:00.000Z</tuesdayEndTime>
+        <tuesdayStartTime>00:00:00.000Z</tuesdayStartTime>
+        <wednesdayEndTime>00:00:00.000Z</wednesdayEndTime>
+        <wednesdayStartTime>00:00:00.000Z</wednesdayStartTime>
     </businessHours>
     <holidays>
-        <activityDate>2025-12-25</activityDate>
+        <activityDate>2024-08-05</activityDate>
         <businessHours>ChatBotHours</businessHours>
+        <description>aa</description>
+        <endTime>15:33:00.000Z</endTime>
         <isRecurring>false</isRecurring>
-        <name>Christmas Day</name>
+        <name>2 hrs break</name>
+        <startTime>15:30:00.000Z</startTime>
     </holidays>
     <holidays>
-        <activityDate>2025-12-24</activityDate>
+        <activityDate>2024-12-25</activityDate>
+        <businessHours>ChatBotHours</businessHours>
+        <isRecurring>false</isRecurring>
+        <name>Christmas</name>
+    </holidays>
+    <holidays>
+        <activityDate>2024-12-24</activityDate>
         <businessHours>ChatBotHours</businessHours>
         <isRecurring>false</isRecurring>
         <name>Christmas Eve</name>
     </holidays>
     <holidays>
-        <activityDate>2025-11-28</activityDate>
+        <activityDate>2024-11-29</activityDate>
         <businessHours>ChatBotHours</businessHours>
         <isRecurring>false</isRecurring>
         <name>Day After Thanksgiving</name>
     </holidays>
     <holidays>
-        <activityDate>2025-07-04</activityDate>
+        <activityDate>2024-07-04</activityDate>
         <businessHours>ChatBotHours</businessHours>
         <isRecurring>false</isRecurring>
         <name>Independence Day</name>
     </holidays>
     <holidays>
-        <activityDate>2025-06-19</activityDate>
+        <activityDate>2024-06-19</activityDate>
         <businessHours>ChatBotHours</businessHours>
         <isRecurring>false</isRecurring>
-        <name>Juneteenth National</name>
+        <name>Juneteenth</name>
     </holidays>
     <holidays>
-        <activityDate>2025-09-01</activityDate>
+        <activityDate>2024-07-02</activityDate>
         <businessHours>ChatBotHours</businessHours>
         <isRecurring>false</isRecurring>
         <name>Labor Day</name>
     </holidays>
     <holidays>
-        <activityDate>2025-01-20</activityDate>
+        <activityDate>2024-01-15</activityDate>
         <businessHours>ChatBotHours</businessHours>
         <isRecurring>false</isRecurring>
-        <name>Martin Luther King Jr. Holiday</name>
+        <name>Martin Luther King Jr. Day</name>
     </holidays>
     <holidays>
-        <activityDate>2025-05-26</activityDate>
+        <activityDate>2024-05-27</activityDate>
         <businessHours>ChatBotHours</businessHours>
         <isRecurring>false</isRecurring>
         <name>Memorial Day</name>
     </holidays>
     <holidays>
-        <activityDate>2025-01-01</activityDate>
+        <activityDate>2024-01-01</activityDate>
         <businessHours>ChatBotHours</businessHours>
         <isRecurring>false</isRecurring>
         <name>New Year&apos;s Day</name>
     </holidays>
     <holidays>
-        <activityDate>2025-12-31</activityDate>
+        <activityDate>2024-12-31</activityDate>
         <businessHours>ChatBotHours</businessHours>
+        <endTime>20:00:00.000Z</endTime>
         <isRecurring>false</isRecurring>
-        <name>New Year’s Eve (Half Day)</name>
+        <name>New Year&apos;s Eve</name>
+        <startTime>14:00:00.000Z</startTime>
     </holidays>
     <holidays>
-        <activityDate>2025-02-17</activityDate>
+        <activityDate>2024-02-19</activityDate>
         <businessHours>ChatBotHours</businessHours>
         <isRecurring>false</isRecurring>
         <name>Presidents&apos; Day</name>
     </holidays>
     <holidays>
-        <activityDate>2025-05-12</activityDate>
-        <businessHours>ChatBotHours</businessHours>
-        <description>Support Agent Shortage</description>
-        <isRecurring>false</isRecurring>
-        <name>Support Agent Shortage</name>
-    </holidays>
-    <holidays>
-        <activityDate>2025-11-27</activityDate>
+        <activityDate>2024-11-28</activityDate>
         <businessHours>ChatBotHours</businessHours>
         <isRecurring>false</isRecurring>
         <name>Thanksgiving Day</name>

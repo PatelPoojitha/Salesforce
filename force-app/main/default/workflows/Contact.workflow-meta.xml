@@ -49,17 +49,6 @@
         <template>Operations/New_CallRevu_Lead_Current_Client</template>
     </alerts>
     <alerts>
-        <fullName>Send_HS_Email_to_Account_Owner</fullName>
-        <description>Send HS Email to Account Owner</description>
-        <protected>false</protected>
-        <recipients>
-            <type>accountOwner</type>
-        </recipients>
-        <senderAddress>sfhelpdesk@callrevu.com</senderAddress>
-        <senderType>OrgWideEmailAddress</senderType>
-        <template>Onboarding/Form_Submission</template>
-    </alerts>
-    <alerts>
         <fullName>Welcome_Aboard_test</fullName>
         <description>Welcome Aboard test</description>
         <protected>false</protected>

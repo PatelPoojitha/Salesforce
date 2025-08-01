@@ -11,11 +11,6 @@
         <label>Cold Prospecting</label>
     </customValue>
     <customValue>
-        <fullName>Referral - Agency</fullName>
-        <default>false</default>
-        <label>Referral - Agency</label>
-    </customValue>
-    <customValue>
         <fullName>Referral - Dealer</fullName>
         <default>false</default>
         <label>Referral - Dealer</label>
@@ -24,11 +19,6 @@
         <fullName>Referral - OEM</fullName>
         <default>false</default>
         <label>Referral - OEM</label>
-    </customValue>
-    <customValue>
-        <fullName>Reseller</fullName>
-        <default>false</default>
-        <label>Reseller</label>
     </customValue>
     <customValue>
         <fullName>Specified Campaign</fullName>
@@ -41,9 +31,39 @@
         <label>Trade Show/Convention</label>
     </customValue>
     <customValue>
-        <fullName>Up Sell</fullName>
+        <fullName>Up-Sell</fullName>
         <default>false</default>
-        <label>Up Sell</label>
+        <label>Up-Sell</label>
+    </customValue>
+    <customValue>
+        <fullName>Digital Marketing</fullName>
+        <default>false</default>
+        <label>Digital Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Referral - Partner</fullName>
+        <default>false</default>
+        <label>Referral - Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Reseller – Partner</fullName>
+        <default>false</default>
+        <label>Reseller – Partner</label>
+    </customValue>
+    <customValue>
+        <fullName>Webinar</fullName>
+        <default>false</default>
+        <label>Webinar</label>
+    </customValue>
+    <customValue>
+        <fullName>Migration</fullName>
+        <default>false</default>
+        <label>Migration</label>
+    </customValue>
+    <customValue>
+        <fullName>ASOTU</fullName>
+        <default>false</default>
+        <label>ASOTU</label>
     </customValue>
     <masterLabel>Lead Source</masterLabel>
     <sorted>false</sorted>

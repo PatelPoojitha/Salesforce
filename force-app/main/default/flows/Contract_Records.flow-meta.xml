@@ -2,24 +2,26 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>55.0</apiVersion>
     <assignments>
-        <name>Asssignment_Records</name>
-        <label>Asssignment Records</label>
+        <description>Counts the total number of Contracts Related to an Account</description>
+        <name>Count_the_Contracts</name>
+        <label>Count the Contracts</label>
         <locationX>176</locationX>
-        <locationY>455</locationY>
+        <locationY>431</locationY>
         <assignmentItems>
-            <assignToReference>VarCountRecords</assignToReference>
+            <assignToReference>VarCountContracts</assignToReference>
             <operator>AssignCount</operator>
             <value>
-                <elementReference>Get_ID</elementReference>
+                <elementReference>Get_Account_Id_of_Contract</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Update_Records</targetReference>
+            <targetReference>Update_Contract_Count_on_Account</targetReference>
         </connector>
     </assignments>
+    <description>Counts the Contracts related to an Account and populates the count on the Account.</description>
     <environments>Default</environments>
     <interviewLabel>Contract Records {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Contract Records</label>
+    <label>Contract_Count Contracts On Account</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -40,14 +42,18 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
-        <name>Get_ID</name>
-        <label>Get ID</label>
+        <description>Retrieves the Account Id of created or Updated Contract</description>
+        <name>Get_Account_Id_of_Contract</name>
+        <label>Get Account Id of Contract</label>
         <locationX>176</locationX>
-        <locationY>335</locationY>
+        <locationY>323</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Asssignment_Records</targetReference>
+            <targetReference>Count_the_Contracts</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Fault_Path_Flow_Flow_1</targetReference>
+        </faultConnector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>AccountId</field>
@@ -61,10 +67,14 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <name>Update_Records</name>
-        <label>Update Records</label>
+        <description>Updates the total Contracts of an account on Account record</description>
+        <name>Update_Contract_Count_on_Account</name>
+        <label>Update Contract Count on Account</label>
         <locationX>176</locationX>
-        <locationY>575</locationY>
+        <locationY>539</locationY>
+        <faultConnector>
+            <targetReference>Fault_Path_Flow_1</targetReference>
+        </faultConnector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -76,7 +86,7 @@
         <inputAssignments>
             <field>Contracts_Records__c</field>
             <value>
-                <elementReference>VarCountRecords</elementReference>
+                <elementReference>VarCountContracts</elementReference>
             </value>
         </inputAssignments>
         <object>Account</object>
@@ -85,15 +95,68 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_ID</targetReference>
+            <targetReference>Get_Account_Id_of_Contract</targetReference>
         </connector>
+        <filterFormula>{!$CustomMetadata.Flow_Control__mdt.Contract_Count_Contracts_On_Account.Turn_Off__c}=false</filterFormula>
         <object>Contract</object>
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
+    <subflows>
+        <name>Fault_Path_Flow_1</name>
+        <label>Fault Path Flow1</label>
+        <locationX>440</locationX>
+        <locationY>647</locationY>
+        <flowName>Fault_Path_Flow</flowName>
+        <inputAssignments>
+            <name>varElementName</name>
+            <value>
+                <stringValue>Update_Contract_Count_on_Account</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFaultMessage</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFlowname</name>
+            <value>
+                <stringValue>Contract_Count Contracts On Account</stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>Fault_Path_Flow_Flow_1</name>
+        <label>Fault Path Flow Flow 1</label>
+        <locationX>704</locationX>
+        <locationY>431</locationY>
+        <flowName>Fault_Path_Flow</flowName>
+        <inputAssignments>
+            <name>varElementName</name>
+            <value>
+                <stringValue>Get Account Id of Contract</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFaultMessage</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFlowname</name>
+            <value>
+                <stringValue>Contract_Count Contracts On Account</stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
     <variables>
-        <name>VarCountRecords</name>
+        <name>VarCountContracts</name>
         <dataType>Number</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

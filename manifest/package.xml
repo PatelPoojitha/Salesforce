@@ -22,7 +22,6 @@
     <types><members>*</members><name>CustomTab</name></types>
     <types><members>*</members><name>CustomApplication</name></types>
     <types><members>*</members><name>StaticResource</name></types>
-    <types><members>*</members><name>ContentAsset</name></types>
     <types><members>*</members><name>RemoteSiteSetting</name></types>
     <types><members>*</members><name>NamedCredential</name></types>
     <types><members>*</members><name>ConnectedApp</name></types>

@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionCalls>
-        <name>Send_Email_Alert_01</name>
-        <label>Send Email Alert 01</label>
+        <name>Send_Email_to_Manager</name>
+        <label>Send Email to Manager</label>
         <locationX>50</locationX>
-        <locationY>1139</locationY>
+        <locationY>1511</locationY>
         <actionName>GLSendEmail__SendEmail</actionName>
         <actionType>apex</actionType>
+        <connector>
+            <targetReference>Update_Escalated_to_True</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Error_Email2</targetReference>
+        </faultConnector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
             <name>apexErrorEmail</name>
             <value>
-                <stringValue>kristiejaecklein@callrevu.com</stringValue>
+                <stringValue>poojithapatel@callrevu.com</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
             <name>ContactOrLeadID</name>
             <value>
-                <stringValue>0033m000039kw0WAAQ</stringValue>
+                <stringValue>003VC00000uSYlQYAW</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -53,7 +59,7 @@
         <inputParameters>
             <name>ToAddresses</name>
             <value>
-                <stringValue>MattHeher@callrevu.com, AliciaKlyn@callrevu.com, Jimmenard@callrevu.com, NicoleDavis@callrevu.com, TaylorMitchell@callrevu.com, KristiejaeckleiN@callrevu.com, rebeccahughes@callrevu.com</stringValue>
+                <stringValue>poojithapatel@callrevu.com</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -72,16 +78,60 @@
     </actionCalls>
     <apiVersion>55.0</apiVersion>
     <decisions>
-        <name>Escalation_Needed</name>
-        <label>Escalation Needed</label>
-        <locationX>182</locationX>
+        <name>Check_if_escalation_is_required</name>
+        <label>Check if escalation is required?</label>
+        <locationX>446</locationX>
+        <locationY>1403</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>(1 OR 4) AND 2 AND 3</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Response__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Unlikely</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Escalate_to_Manager__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Escalated__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Response__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Dissatisfied</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Email_to_Manager</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Checks if Response contains &apos;Unlikely&apos; or &apos;Dissatisfied&apos; or &apos;Neutral&apos;</description>
+        <name>Check_if_Escalation_Needed</name>
+        <label>Check if Escalation Needed</label>
+        <locationX>446</locationX>
         <locationY>323</locationY>
         <defaultConnector>
-            <targetReference>Survey_Escalations</targetReference>
+            <targetReference>Check_if_Survey_Rating_needs_Update</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
-            <name>Response_Contains</name>
+            <name>Check_Response</name>
             <conditionLogic>(1 OR 2 OR 3) AND 4 AND 5 AND NOT 6</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Response__c</leftValueReference>
@@ -128,59 +178,16 @@
             <connector>
                 <targetReference>Update_Escalate_to_Manager</targetReference>
             </connector>
-            <label>Response Contains</label>
+            <label>Check Response</label>
         </rules>
     </decisions>
     <decisions>
-        <name>Survey_Escalation_0</name>
-        <label>Survey Escalation</label>
-        <locationX>182</locationX>
-        <locationY>923</locationY>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Survey_NPS_Score_Low_0</name>
-            <conditionLogic>(1 OR 4) AND 2 AND 3</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Response__c</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>Unlikely</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Escalate_to_Manager__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Escalated__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Response__c</leftValueReference>
-                <operator>Contains</operator>
-                <rightValue>
-                    <stringValue>Dissatisfied</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Update_Escalated</targetReference>
-            </connector>
-            <label>Survey NPS Score Low</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Survey_Escalations</name>
-        <label>Survey Escalations</label>
-        <locationX>182</locationX>
-        <locationY>623</locationY>
+        <name>Check_if_Survey_Rating_needs_Update</name>
+        <label>Check if Survey Rating needs Update</label>
+        <locationX>446</locationX>
+        <locationY>863</locationY>
         <defaultConnector>
-            <targetReference>Survey_Escalation_0</targetReference>
+            <targetReference>Check_if_escalation_is_required</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -213,15 +220,28 @@
             <label>Parse Survey Value</label>
         </rules>
     </decisions>
-    <description>Update juancruzansaldi@callrevu.com email address with kristiejaecklein@callrevu.com</description>
+    <description>Sends an email to the manager when a survey receives a negative response.</description>
     <environments>Default</environments>
     <formulas>
-        <name>varSurveyRaiting</name>
+        <name>varSurveyRating</name>
         <dataType>String</dataType>
-        <expression>CASE({!$Record.Response__c}, &apos;5 – Very Satisfied&apos;, &apos;5&apos;, &apos;4 - Satisfied&apos;, &apos;4&apos;, &apos;3 - Neutral&apos;, &apos;3&apos;, &apos;2 - Dissatisfied&apos;, &apos;2&apos;, &apos;1 – Very Dissatified&apos;, &apos;1&apos;, &apos;Extremly Likely&apos;, &apos;5&apos;, &apos;Likely&apos;, &apos;4&apos;, &apos;Neutral&apos;, &apos;3&apos;, &apos;Unlikely&apos;, &apos;2&apos;, &apos;Extremly Unlikely&apos;, &apos;1&apos;, NULL)</expression>
+        <expression>CASE(
+    {!$Record.Response__c},
+    &apos;5 – Very Satisfied&apos;, &apos;5&apos;,
+    &apos;4 - Satisfied&apos;, &apos;4&apos;,
+    &apos;3 - Neutral&apos;, &apos;3&apos;,
+    &apos;2 - Dissatisfied&apos;, &apos;2&apos;,
+    &apos;1 – Very Dissatisfied&apos;, &apos;1&apos;,
+    &apos;Extremely Likely&apos;, &apos;5&apos;,
+    &apos;Likely&apos;, &apos;4&apos;,
+    &apos;Neutral&apos;, &apos;3&apos;,
+    &apos;Unlikely&apos;, &apos;2&apos;,
+    &apos;Extremely Unlikely&apos;, &apos;1&apos;,
+    &apos;&apos;
+)</expression>
     </formulas>
     <interviewLabel>Flow Survey {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Flow Survey Question Response Object</label>
+    <label>Survey Question Response_Notify Manager for Negative Rating</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -242,13 +262,17 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordUpdates>
+        <description>Updates Escalate to Manager to True</description>
         <name>Update_Escalate_to_Manager</name>
         <label>Update Escalate to Manager</label>
-        <locationX>50</locationX>
+        <locationX>182</locationX>
         <locationY>431</locationY>
         <connector>
-            <targetReference>Survey_Escalations</targetReference>
+            <targetReference>Check_if_Survey_Rating_needs_Update</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Error_Email</targetReference>
+        </faultConnector>
         <inputAssignments>
             <field>Escalate_to_Manager__c</field>
             <value>
@@ -258,13 +282,13 @@
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
-        <name>Update_Escalated</name>
-        <label>Update Escalated</label>
+        <name>Update_Escalated_to_True</name>
+        <label>Update Escalated to True</label>
         <locationX>50</locationX>
-        <locationY>1031</locationY>
-        <connector>
-            <targetReference>Send_Email_Alert_01</targetReference>
-        </connector>
+        <locationY>1619</locationY>
+        <faultConnector>
+            <targetReference>Error_Email3</targetReference>
+        </faultConnector>
         <inputAssignments>
             <field>Escalated__c</field>
             <value>
@@ -276,28 +300,136 @@
     <recordUpdates>
         <name>Update_Survey_Rating_0</name>
         <label>Update Survey Rating</label>
-        <locationX>50</locationX>
-        <locationY>731</locationY>
+        <locationX>182</locationX>
+        <locationY>971</locationY>
         <connector>
-            <targetReference>Survey_Escalation_0</targetReference>
+            <targetReference>Check_if_escalation_is_required</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Error_Email1</targetReference>
+        </faultConnector>
         <inputAssignments>
             <field>Survey_Rating__c</field>
             <value>
-                <elementReference>varSurveyRaiting</elementReference>
+                <elementReference>varSurveyRating</elementReference>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>56</locationX>
+        <locationX>320</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Escalation_Needed</targetReference>
+            <targetReference>Check_if_Escalation_Needed</targetReference>
         </connector>
+        <filterFormula>{!$CustomMetadata.Flow_Control__mdt.Survey_Question_Response_Notify_Manager.Turn_Off__c}=false</filterFormula>
         <object>SurveyQuestionResponse__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
+    <subflows>
+        <name>Error_Email</name>
+        <label>Error Email</label>
+        <locationX>446</locationX>
+        <locationY>539</locationY>
+        <flowName>Fault_Path_Flow</flowName>
+        <inputAssignments>
+            <name>varElementName</name>
+            <value>
+                <stringValue>Update_Escalate_to_Manager</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFaultMessage</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFlowname</name>
+            <value>
+                <stringValue>Survey Question Response_Notify Manager for Negative Rating  </stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>Error_Email1</name>
+        <label>Error Email1</label>
+        <locationX>446</locationX>
+        <locationY>1079</locationY>
+        <flowName>Fault_Path_Flow</flowName>
+        <inputAssignments>
+            <name>varElementName</name>
+            <value>
+                <stringValue>Update_Survey_Rating</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFaultMessage</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFlowname</name>
+            <value>
+                <stringValue>Survey Question Response_Notify Manager for Negative Rating  </stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>Error_Email2</name>
+        <label>Error Email2</label>
+        <locationX>578</locationX>
+        <locationY>1619</locationY>
+        <flowName>Fault_Path_Flow</flowName>
+        <inputAssignments>
+            <name>varElementName</name>
+            <value>
+                <stringValue>Update_Survey_Rating</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFaultMessage</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFlowname</name>
+            <value>
+                <stringValue>Survey Question Response_Notify Manager for Negative Rating  </stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>Error_Email3</name>
+        <label>Error Email3</label>
+        <locationX>314</locationX>
+        <locationY>1727</locationY>
+        <flowName>Fault_Path_Flow</flowName>
+        <inputAssignments>
+            <name>varElementName</name>
+            <value>
+                <stringValue>Update_Survey_Rating</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFaultMessage</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFlowname</name>
+            <value>
+                <stringValue>Survey Question Response_Notify Manager for Negative Rating  </stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
 </Flow>

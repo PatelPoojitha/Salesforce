@@ -64,7 +64,7 @@
         <description>Returns the WhatId only if it belongs to an Opportunity (prefix &apos;006&apos;); otherwise, returns null.</description>
         <name>OpportunityIdFromWhatId</name>
         <dataType>String</dataType>
-        <expression>IF(LEFT({!$Record.WhatId},3) = &apos;006&apos;, {!$Record.WhatId}, NULL)</expression>
+        <expression>&apos;006VC00000GZ9DhYAL&apos;</expression>
     </formulas>
     <interviewLabel>Flow Event Object {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Event _Task NotifyEnrollment</label>
@@ -130,7 +130,7 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <subflows>
         <name>Error_Email</name>
         <label>Error Email</label>

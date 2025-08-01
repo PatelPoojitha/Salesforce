@@ -167,7 +167,21 @@
             <caseOwnerType>User</caseOwnerType>
             <casePriority>Medium</casePriority>
             <createTask>false</createTask>
+            <emailAddress>babreummeusoiffeu-8078@yopmail.com</emailAddress>
+            <emailServicesAddress>babreummeusoiffeu-8078@fyjem14dmv7iftipwrq8pax6sugu8czutd5fuutq0qarbeuqu.3j-1jg7uae.usa664s.case.sandbox.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>DevOps</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>philslaughter@callrevu.com</caseOwner>
+            <caseOwnerType>User</caseOwnerType>
+            <casePriority>Medium</casePriority>
+            <createTask>false</createTask>
             <emailAddress>tier_iii_support@callrevu.com</emailAddress>
+            <emailServicesAddress>tier_iii_support@cfehdilt9zn5ou9gpydrcehepdmsln33yx6l6n4beq49ti03k.3j-1jg7uae.usa664s.case.sandbox.salesforce.com</emailServicesAddress>
             <isVerified>true</isVerified>
             <routingName>DevOps</routingName>
             <saveEmailHeaders>true</saveEmailHeaders>
@@ -246,18 +260,6 @@
         </routingAddresses>
         <routingAddresses>
             <addressType>EmailToCase</addressType>
-            <caseOrigin>Email</caseOrigin>
-            <caseOwner>Porting_Requests</caseOwner>
-            <caseOwnerType>Queue</caseOwnerType>
-            <casePriority>Medium</casePriority>
-            <createTask>false</createTask>
-            <emailAddress>porting@callrevu.com</emailAddress>
-            <isVerified>true</isVerified>
-            <routingName>Porting Requests</routingName>
-            <saveEmailHeaders>false</saveEmailHeaders>
-        </routingAddresses>
-        <routingAddresses>
-            <addressType>EmailToCase</addressType>
             <caseOrigin>Emailed ML Data</caseOrigin>
             <caseOwner>nicoleday@callrevu.com</caseOwner>
             <caseOwnerType>User</caseOwnerType>
@@ -330,27 +332,29 @@
         </routingAddresses>
         <routingAddresses>
             <addressType>EmailToCase</addressType>
-            <caseOrigin>TCX Email</caseOrigin>
-            <caseOwner>brookejackson@callrevu.com</caseOwner>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>jamalwarren@callrevu.com</caseOwner>
             <caseOwnerType>User</caseOwnerType>
-            <casePriority>Medium</casePriority>
+            <casePriority>Low</casePriority>
             <createTask>false</createTask>
-            <emailAddress>tcxbillingcase@callrevu.com</emailAddress>
+            <emailAddress>jamalbwarren@gmail.com</emailAddress>
+            <emailServicesAddress>jamalbwarren@l-8m73fqg0wrx7ib63psff3msh21pjsorv3u3ki8fx67z1k6pr1.3j-1jg7uae.usa664s.case.sandbox.salesforce.com</emailServicesAddress>
             <isVerified>true</isVerified>
-            <routingName>TCX Billing Base</routingName>
-            <saveEmailHeaders>false</saveEmailHeaders>
+            <routingName>Salesforce Help Desk test clone</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
         </routingAddresses>
         <routingAddresses>
             <addressType>EmailToCase</addressType>
-            <caseOrigin>TCX Email</caseOrigin>
+            <caseOrigin>Email</caseOrigin>
             <caseOwner>Support</caseOwner>
             <caseOwnerType>Queue</caseOwnerType>
             <casePriority>Medium</casePriority>
             <createTask>false</createTask>
-            <emailAddress>tcxsupport@callrevu.com</emailAddress>
+            <emailAddress>taquafodogreu-2621@yopmail.com</emailAddress>
+            <emailServicesAddress>taquafodogreu-2621@h-853voibzxqaaui7yz3wyeqbw8dsiv5vk2ids8z7dqwk9puz8.3j-1jg7uae.cs124.case.sandbox.salesforce.com</emailServicesAddress>
             <isVerified>true</isVerified>
-            <routingName>TCX Support Forward</routingName>
-            <saveEmailHeaders>false</saveEmailHeaders>
+            <routingName>Support</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
         </routingAddresses>
         <routingAddresses>
             <addressType>EmailToCase</addressType>
@@ -429,7 +433,7 @@
     <notifyOwnerOnCaseOwnerChange>true</notifyOwnerOnCaseOwnerChange>
     <showEmailAttachmentsInCaseAttachmentsRL>true</showEmailAttachmentsInCaseAttachmentsRL>
     <showFewerCloseActions>false</showFewerCloseActions>
-    <systemUserEmail>kristiejaecklein@callrevu.com</systemUserEmail>
+    <systemUserEmail>poojithapatel@callrevu.com</systemUserEmail>
     <useSystemEmailAddress>true</useSystemEmailAddress>
     <useSystemUserAsDefaultCaseUser>true</useSystemUserAsDefaultCaseUser>
     <visibleInCssCheckbox>false</visibleInCssCheckbox>

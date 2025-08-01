@@ -7,7 +7,7 @@
     <logoUrl>https://login.salesforce.com/logos/Standard/performance/logo.svg</logoUrl>
     <oauthConfig>
         <callbackUrl>https://callrevu.my.trailhead.com/auth/mytrailhead/callback</callbackUrl>
-        <consumerKey>3MVG9WCdh6PFin0jN5Df21kRJKmKdfb_z2bZkXdvJC63MrKwxod.G9jB8p_4_M8ooamoMEo4kGK81azn6E7Ke</consumerKey>
+        <consumerKey>3MVG9eMnfmfDO5NDmXW4W0sFRzwVbRvQ2aKSCI_9qzOR3xfI6VQhINFZZM3YaEOW.luFLKOzvdpyWGe0G026i</consumerKey>
         <isAdminApproved>true</isAdminApproved>
         <isClientCredentialEnabled>false</isClientCredentialEnabled>
         <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
@@ -26,7 +26,7 @@
         <refreshTokenPolicy>infinite</refreshTokenPolicy>
     </oauthPolicy>
     <permissionSetName>myTrailhead access</permissionSetName>
-    <profileName>Callrevu Supervisor</profileName>
+    <permissionSetName>CallRevu Standard User ConnectedApp PermissionSet</permissionSetName>
     <profileName>CallRevu Standard User</profileName>
     <profileName>System Administrator</profileName>
 </ConnectedApp>

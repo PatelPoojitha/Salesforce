@@ -295,21 +295,6 @@
             <field>HierarchyNumberOfWonOpportunities</field>
             <table>Campaign</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Campaign_Type__c</field>
-            <table>Campaign</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Update_Opportunity_Totals__c</field>
-            <table>Campaign</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Closed_Won_Opportunity_MRR__c</field>
-            <table>Campaign</table>
-        </columns>
         <masterLabel>Campaigns</masterLabel>
     </sections>
     <sections>
@@ -870,6 +855,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>bbvideo__Languages__c</field>
+            <table>Campaign.ContactCampaignMembers</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>LastActivityDate</field>
             <table>Campaign.ContactCampaignMembers</table>
         </columns>
@@ -911,6 +901,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LeadSource</field>
+            <table>Campaign.ContactCampaignMembers</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>bbvideo__Level__c</field>
             <table>Campaign.ContactCampaignMembers</table>
         </columns>
         <columns>
@@ -1166,11 +1161,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>celigo_sfnsio__Skip_Export_To_NetSuite__c</field>
-            <table>Campaign.ContactCampaignMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>tdc_tsw__SMS_Opt_out__c</field>
             <table>Campaign.ContactCampaignMembers</table>
         </columns>
         <columns>

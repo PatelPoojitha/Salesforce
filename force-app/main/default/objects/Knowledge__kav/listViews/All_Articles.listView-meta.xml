@@ -9,7 +9,6 @@
     <columns>LANGUAGE</columns>
     <columns>LAST_PUBLISHED_DATE</columns>
     <columns>ARTICLE_TOTAL_VIEW_COUNT</columns>
-    <columns>CREATEDBY_USER.ALIAS</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>PUBLISH_STATUS</field>

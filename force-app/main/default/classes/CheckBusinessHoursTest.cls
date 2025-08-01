@@ -22,12 +22,12 @@ public class CheckBusinessHoursTest {
         System.assert(result, 'Business Hours Found');
         System.assertEquals(true, result, 'No results returned.');
     }
-    
     @isTest
     static void checkBusinessHoursByNameNegative() {
-        List<String> input = new List<String>{'test'};
+        List<String> input = new List<String>{'test'}; // using an invalid name
         Boolean result = CheckBusinessHours.checkBusinessHoursByName(input)[0];
-        System.debug('Result Neg is: ' +result);
-        System.assertEquals(false, result, 'No results returned.');
+        System.debug('Result Neg is: ' + result);
+        System.assertEquals(false, result, 'Unexpected result for invalid input.');
     }
+    
 }

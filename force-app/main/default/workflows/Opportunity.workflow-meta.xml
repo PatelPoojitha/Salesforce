@@ -2,11 +2,19 @@
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
         <fullName>Alert_Billing_All_Actions_are_Completed</fullName>
-        <ccEmails>SOP@callrevu.com, resourcemanagement@callrevu.com</ccEmails>
+        <ccEmails>SOP@callrevu.com, jamalwarren@callrevu.com</ccEmails>
         <description>Alert Billing All Actions are Completed</description>
         <protected>false</protected>
         <recipients>
+            <recipient>davepurgason@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
             <recipient>ericafleck@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kelleykoliopulos@callrevu.com</recipient>
             <type>user</type>
         </recipients>
         <senderType>CurrentUser</senderType>
@@ -82,14 +90,6 @@
             <type>owner</type>
         </recipients>
         <recipients>
-            <recipient>andreamartin@callrevu.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>davidmalone@callrevu.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
             <recipient>jimmenard@callrevu.com</recipient>
             <type>user</type>
         </recipients>
@@ -101,7 +101,7 @@
         <description>Delete a Opportunity Record</description>
         <protected>false</protected>
         <recipients>
-            <recipient>kristiejaecklein@callrevu.com</recipient>
+            <recipient>poojithapatel@callrevu.com</recipient>
             <type>user</type>
         </recipients>
         <senderType>CurrentUser</senderType>
@@ -109,6 +109,7 @@
     </alerts>
     <alerts>
         <fullName>Email_Matt_Boyle_of_New_Opportunity_Owner_Change</fullName>
+        <ccEmails>jamalwarren@callrevu.com</ccEmails>
         <description>Email Matt Boyle of New Opportunity Owner Change</description>
         <protected>false</protected>
         <recipients>
@@ -131,7 +132,7 @@
     </alerts>
     <alerts>
         <fullName>Send_Billing_Alert_that_SOP_has_actions_pending</fullName>
-        <ccEmails>SOP@callrevu.com</ccEmails>
+        <ccEmails>SOP@callrevu.com,kelleykoliopulos@callrevu.com,davepurgason@callrevu.com, jamalwarren@callrevu.com</ccEmails>
         <description>Send Billing Alert that SOP has actions pending</description>
         <protected>false</protected>
         <recipients>
@@ -262,16 +263,6 @@ if(ischanged(Loss_Reason__c)&amp;&amp;( ISPICKVAL(Loss_Reason__c, &quot;Failure 
         <field>Trial_Pilot_Type__c</field>
         <literalValue>90 Day Pilot</literalValue>
         <name>90 Day Pilot</name>
-        <notifyAssignee>false</notifyAssignee>
-        <operation>Literal</operation>
-        <protected>false</protected>
-        <reevaluateOnChange>false</reevaluateOnChange>
-    </fieldUpdates>
-    <fieldUpdates>
-        <fullName>beynd__Check_Create_beynd_Project_on_ClosedWon</fullName>
-        <field>beynd__CreateBeyndProjectOnClosedWon__c</field>
-        <literalValue>1</literalValue>
-        <name>Check Create beynd Project on ClosedWon</name>
         <notifyAssignee>false</notifyAssignee>
         <operation>Literal</operation>
         <protected>false</protected>
@@ -455,21 +446,6 @@ text(StageName) &lt;&gt; &quot;Converted&quot;)</formula>
             <field>Opportunity.Launch_Date__c</field>
             <operation>notEqual</operation>
         </criteriaItems>
-        <triggerType>onCreateOrTriggeringUpdate</triggerType>
-    </rules>
-    <rules>
-        <fullName>beynd__Create beynd Project on Closed Won</fullName>
-        <actions>
-            <name>beynd__Check_Create_beynd_Project_on_ClosedWon</name>
-            <type>FieldUpdate</type>
-        </actions>
-        <active>true</active>
-        <criteriaItems>
-            <field>Opportunity.IsWon</field>
-            <operation>equals</operation>
-            <value>True</value>
-        </criteriaItems>
-        <description>Marks a flag on the Opportunity which will trigger the creation of a GuideCX Project when the Opportunity Stage is changed to Closed Won.</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>
     </rules>
     <tasks>

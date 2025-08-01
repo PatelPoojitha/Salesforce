@@ -321,7 +321,7 @@
             <label>No</label>
         </rules>
     </decisions>
-    <description>This Flow Converts the Lead into an Account , Contact and Opportunity clone + reduced opportunity RTs+ updated link base urls to production</description>
+    <description>This Flow Converts the Lead into an Account , Contact and Opportunity - clone</description>
     <dynamicChoiceSets>
         <name>AccountOpportunities</name>
         <dataType>String</dataType>
@@ -399,7 +399,7 @@
         <name>OpportunityRecordTypes</name>
         <dataType>String</dataType>
         <displayField>Name</displayField>
-        <filterLogic>1 AND 2 AND (3 OR 4 OR 5)</filterLogic>
+        <filterLogic>and</filterLogic>
         <filters>
             <field>SobjectType</field>
             <operator>EqualTo</operator>
@@ -412,27 +412,6 @@
             <operator>EqualTo</operator>
             <value>
                 <booleanValue>true</booleanValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Name</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Vision Packages</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Name</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Change Order/Cancellation</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Name</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Tier2</stringValue>
             </value>
         </filters>
         <object>RecordType</object>
@@ -1143,7 +1122,7 @@
                 </fields>
                 <fields>
                     <name>AccName</name>
-                    <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(13, 142, 234); font-size: 14px;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://callrevu.lightning.force.com/lightning/r/Account/{!CreatedAccountId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(13, 142, 234); font-size: 14px;&quot;&gt;{!Get_Account_Records.Name}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Phone &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Account_Records.Phone}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;﻿Billing Adresss &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234); background-color: rgb(255, 255, 255);&quot;&gt;{!Get_Account_Records.BillingStreet}, {!Get_Account_Records.BillingCity}, {!Get_Account_Records.BillingState} {!Get_Account_Records.BillingPostalCode}, {!Get_Account_Records.BillingCountry}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Website &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Account_Records.Website}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://callrevu--partial.sandbox.lightning.force.com/lightning/r/Account/{!CreatedAccountId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Account_Records.Name}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Phone &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Account_Records.Phone}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68); font-size: 14px;&quot;&gt;﻿Billing Adresss &lt;/span&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(13, 142, 234); font-size: 14px;&quot;&gt;{!Get_Account_Records.BillingStreet}, {!Get_Account_Records.BillingCity}, {!Get_Account_Records.BillingState} {!Get_Account_Records.BillingPostalCode}, {!Get_Account_Records.BillingCountry}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Website &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Account_Records.Website}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(17, 10, 231);&quot;&gt;﻿&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Account Owner &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Account_Records.TracHier__Owner__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -1184,7 +1163,7 @@
                 </fields>
                 <fields>
                     <name>ConName</name>
-                    <fieldText>&lt;p&gt;&lt;a href=&quot;https://callrevu.lightning.force.com/lightning/r/Contact/{!CreatedContactId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!Get_Contact_Records.Name}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Contact Title &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Title}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Account Name &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Account.Name}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Phone &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Account.Phone}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Mobile &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.MobilePhone}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Email &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Email}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;a href=&quot;https://callrevu--partial.sandbox.lightning.force.com/lightning/r/Contact/{!CreatedContactId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(13, 142, 234); font-size: 14px;&quot;&gt;{!Get_Contact_Records.Name}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Contact Title &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Title}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Account Name &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Account.Name}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Phone &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Account.Phone}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Mobile &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.MobilePhone}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Email &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Email}&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -1225,7 +1204,7 @@
                 </fields>
                 <fields>
                     <name>OppName</name>
-                    <fieldText>&lt;p&gt;&lt;a href=&quot;https://callrevu.lightning.force.com/lightning/r/Opportunity/{!CreatedOpportunityId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot;&gt;{!Get_Opportunity_Records1.Name}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(39, 38, 40); font-size: 14px;&quot;&gt;Account Name &lt;/span&gt;&lt;span style=&quot;color: rgb(13, 142, 234); font-size: 14px;&quot;&gt;{!Get_Opportunity_Records1.Account.Name}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(39, 38, 40); background-color: rgb(255, 255, 255); font-size: 14px;&quot;&gt;Close Date &lt;/span&gt;&lt;span style=&quot;color: rgb(13, 142, 234); font-size: 14px;&quot;&gt;{!Get_Opportunity_Records1.CloseDate}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(39, 38, 40); background-color: rgb(255, 255, 255); font-size: 14px;&quot;&gt;MRR &lt;/span&gt;&lt;span style=&quot;color: rgb(13, 142, 234); font-size: 14px;&quot;&gt;{!Get_Opportunity_Records1.MRR__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(39, 38, 40); background-color: rgb(255, 255, 255); font-size: 14px;&quot;&gt;Closing Probability &lt;/span&gt;&lt;span style=&quot;color: rgb(13, 142, 234); font-size: 14px;&quot;&gt;{!Get_Opportunity_Records1.Closing_Probability__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(39, 38, 40); background-color: rgb(255, 255, 255); font-size: 14px;&quot;&gt;Opportunity Owner&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;color: rgb(13, 142, 234); font-size: 14px;&quot;&gt;{!Get_Opportunity_Records1.Opportunity_Owner_Name__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;a href=&quot;https://callrevu--partial.sandbox.lightning.force.com/lightning/r/Opportunity/{!CreatedOpportunityId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(13, 142, 234); font-size: 14px;&quot;&gt;{!Get_Opportunity_Records1.Name}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(39, 38, 40);&quot;&gt;Account Name &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Opportunity_Records1.Account.Name}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(39, 38, 40);&quot;&gt;Close Date &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Opportunity_Records1.CloseDate}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(39, 38, 40);&quot;&gt;MRR &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Opportunity_Records1.MRR__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(39, 38, 40);&quot;&gt;Closing Probability &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Opportunity_Records1.Closing_Probability__c}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(39, 38, 40);&quot;&gt;Opportunity Owner&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Opportunity_Records1.Opportunity_Owner_Name__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -1326,7 +1305,7 @@
                 </fields>
                 <fields>
                     <name>Copy_1_of_AccName</name>
-                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://callrevu.lightning.force.com/lightning/r/Account/{!CreatedAccountId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Account_Records.Name}&lt;/a&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;﻿&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Phone &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Account_Records.Phone}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(68, 68, 68);&quot;&gt;Billing Adresss &lt;/span&gt;&lt;span style=&quot;color: rgb(13, 142, 234);&quot;&gt;{!Get_Account_Records.BillingStreet}, {!Get_Account_Records.BillingCity}, {!Get_Account_Records.BillingState} {!Get_Account_Records.BillingPostalCode}, {!Get_Account_Records.BillingCountry}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Website &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Account_Records.Website}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://callrevu--partial.sandbox.lightning.force.com/lightning/r/Account/{!CreatedAccountId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Account_Records.Name}&lt;/a&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;﻿&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Phone &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Account_Records.Phone}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 14px; color: rgb(68, 68, 68);&quot;&gt;Billing Adresss &lt;/span&gt;&lt;span style=&quot;color: rgb(13, 142, 234);&quot;&gt;{!Get_Account_Records.BillingStreet}, {!Get_Account_Records.BillingCity}, {!Get_Account_Records.BillingState} {!Get_Account_Records.BillingPostalCode}, {!Get_Account_Records.BillingCountry}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Website &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Account_Records.Website}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px; color: rgb(17, 10, 231);&quot;&gt;﻿&lt;/span&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Account Owner &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 243);&quot;&gt;{!Get_Account_Records.TracHier__Owner__c}&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -1367,7 +1346,7 @@
                 </fields>
                 <fields>
                     <name>Copy_1_of_ConName</name>
-                    <fieldText>&lt;p&gt;&lt;a href=&quot;https://callrevu.lightning.force.com/lightning/r/Contact/{!CreatedContactId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Name}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Contact Title &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Title}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Account Name &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Account.Name}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Phone &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Account.Phone}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Mobile &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.MobilePhone}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Email &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Email}&lt;/span&gt;&lt;/p&gt;</fieldText>
+                    <fieldText>&lt;p&gt;&lt;a href=&quot;https://callrevu--partial.sandbox.lightning.force.com/lightning/r/Contact/{!CreatedContactId}/view&quot; rel=&quot;noopener noreferrer&quot; target=&quot;_blank&quot; style=&quot;color: rgb(13, 142, 234); font-size: 14px;&quot;&gt;{!Get_Contact_Records.Name}&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Contact Title &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Title}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Account Name &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Account.Name}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Phone &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Account.Phone}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Mobile &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.MobilePhone}&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;Email &lt;/span&gt;&lt;span style=&quot;font-size: 14px; color: rgb(13, 142, 234);&quot;&gt;{!Get_Contact_Records.Email}&lt;/span&gt;&lt;/p&gt;</fieldText>
                     <fieldType>DisplayText</fieldType>
                 </fields>
                 <inputParameters>
@@ -1671,7 +1650,7 @@
             <targetReference>Get_Lead_records</targetReference>
         </connector>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <subflows>
         <name>FaultMail1</name>
         <label>FaultMail1</label>

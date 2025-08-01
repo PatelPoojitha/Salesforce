@@ -6,7 +6,7 @@
 *
 *   @author            : CoreFlex
 */
-public class FaultMailService {
+public with sharing class FaultMailService {
     
     /*
     *********************************************************
@@ -17,18 +17,18 @@ public class FaultMailService {
     public static String callFaultMailFlow(String varFlowname, String varFaultMessage, String varElementName) {
         try{
             //Create parameter
-			Map<String, Object> params = new Map<String, Object>
+            Map<String, Object> params = new Map<String, Object>
             {
                 'varFlowname' => varFlowname,
                 'varFaultMessage' => varFaultMessage,
                 'varElementName' => varElementName
             };
 
-			//create instance of Interview
-			Flow.Interview.Fault_Path_Flow FaultMail = new Flow.Interview.Fault_Path_Flow(params);
+            //create instance of Interview
+            Flow.Interview.Fault_Path_Flow FaultMail = new Flow.Interview.Fault_Path_Flow(params);
 
-			//Invoke start method
-			FaultMail.start();
+            //Invoke start method
+            FaultMail.start();
             
             return 'Apex Fault Mail Sent';
 
@@ -37,5 +37,28 @@ public class FaultMailService {
             return 'Apex Fault Mail not Sent';
         }
     }
+    
+    public static String callAIToxicityFaultMailFlow(String varFlowname, String varFaultMessage, String varElementName) {
+        try{
+            //Create parameter
+            Map<String, Object> params = new Map<String, Object>
+            {
+                'varFlowname' => varFlowname,
+                'varFaultMessage' => varFaultMessage,
+                'varElementName' => varElementName
+            };
 
+            //create instance of Interview
+            Flow.Interview.Fault_Path_Flow FaultMail = new Flow.Interview.Fault_Path_Flow(params);
+
+            //Invoke start method
+            FaultMail.start();
+            
+            return 'Apex Fault Mail Sent';
+
+        } catch(Exception e) {
+            System.debug('Exception is : ' + e.getMessage());
+            return 'Apex Fault Mail not Sent';
+        }
+    }
 }

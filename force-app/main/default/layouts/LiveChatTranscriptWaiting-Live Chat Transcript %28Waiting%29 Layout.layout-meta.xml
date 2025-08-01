@@ -16,7 +16,7 @@
                 </sidebarComponents>
                 <sidebarComponents>
                     <componentType>Lookup</componentType>
-                    <createAction>NewCase</createAction>
+                    <createAction>CreateNewCase</createAction>
                     <enableLinking>true</enableLinking>
                     <height>100</height>
                     <lookup>Case</lookup>

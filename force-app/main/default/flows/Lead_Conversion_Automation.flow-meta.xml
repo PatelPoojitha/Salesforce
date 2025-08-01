@@ -5,7 +5,7 @@
         <name>Additional_Mapping_to_Opp</name>
         <label>Additional Mapping to Opp</label>
         <locationX>50</locationX>
-        <locationY>647</locationY>
+        <locationY>539</locationY>
         <assignmentItems>
             <assignToReference>varOpportunityfromConversion.Opportunity_Lead_Source__c</assignToReference>
             <operator>Assign</operator>
@@ -20,13 +20,6 @@
                 <elementReference>$Record.Lead_Sub_Source__c</elementReference>
             </value>
         </assignmentItems>
-        <assignmentItems>
-            <assignToReference>varOpportunityfromConversion.Discovery_Notes__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Description</elementReference>
-            </value>
-        </assignmentItems>
         <connector>
             <targetReference>commitMapping</targetReference>
         </connector>
@@ -35,7 +28,7 @@
         <name>was_Opportunity_created</name>
         <label>was Opportunity created?</label>
         <locationX>314</locationX>
-        <locationY>431</locationY>
+        <locationY>323</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Opportunity_was_Created</name>
@@ -53,7 +46,6 @@
             <label>Opportunity was Created</label>
         </rules>
     </decisions>
-    <description>+ Updated Mapping + contact prospect field update</description>
     <environments>Default</environments>
     <interviewLabel>Lead Conversion Automation {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Lead Conversion Automation</label>
@@ -80,7 +72,7 @@
         <name>findOppfromConvert</name>
         <label>findOppfromConvert</label>
         <locationX>50</locationX>
-        <locationY>539</locationY>
+        <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Additional_Mapping_to_Opp</targetReference>
@@ -101,41 +93,17 @@
         <name>commitMapping</name>
         <label>commitMapping</label>
         <locationX>50</locationX>
-        <locationY>755</locationY>
+        <locationY>647</locationY>
         <faultConnector>
             <targetReference>Fault_Path</targetReference>
         </faultConnector>
         <inputReference>varOpportunityfromConversion</inputReference>
     </recordUpdates>
-    <recordUpdates>
-        <name>findContactfromConvert</name>
-        <label>findContactfromConvert</label>
-        <locationX>314</locationX>
-        <locationY>323</locationY>
-        <connector>
-            <targetReference>was_Opportunity_created</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.ConvertedContactId</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Prospect_Took_HS_Action__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <object>Contact</object>
-    </recordUpdates>
     <start>
         <locationX>188</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>findContactfromConvert</targetReference>
+            <targetReference>was_Opportunity_created</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -149,12 +117,12 @@
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <subflows>
         <name>Fault_Path</name>
         <label>Fault Path</label>
         <locationX>314</locationX>
-        <locationY>863</locationY>
+        <locationY>755</locationY>
         <flowName>Fault_Path_Flow</flowName>
         <inputAssignments>
             <name>varElementName</name>

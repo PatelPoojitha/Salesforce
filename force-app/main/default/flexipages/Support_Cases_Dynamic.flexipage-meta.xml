@@ -154,39 +154,6 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>parentFieldApiName</name>
-                    <value>Case.Id</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>relatedListApiName</name>
-                    <value>GuideCX_Projects__r</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>relatedListComponentOverride</name>
-                    <value>NONE</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>rowsToDisplay</name>
-                    <value>10</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>showActionBar</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>force_relatedListSingleContainer5</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.Addendum_Alert__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>true</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
                     <name>hideHeader</name>
                     <value>false</value>
                 </componentInstanceProperties>
@@ -364,23 +331,79 @@
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.chat_summary__c</fieldItem>
-                <identifier>Recordchat_summary_cField</identifier>
+                <identifier>Recordchat_summary__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Test_Drive_Mentioned__c</fieldItem>
+                <identifier>RecordTest_Drive_Mentioned__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Vehicle_Order_Status__c</fieldItem>
+                <identifier>RecordVehicle_Order_Status__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Vehicle_Not_Available__c</fieldItem>
+                <identifier>RecordVehicle_Not_Available__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Pricing_Discussed__c</fieldItem>
+                <identifier>RecordPricing_Discussed__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Appointment_Set__c</fieldItem>
+                <identifier>RecordAppointment_Set__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Agent_Asked_For_Appointment__c</fieldItem>
+                <identifier>RecordAgent_Asked_For_Appointment__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Broken_Promise__c</fieldItem>
+                <identifier>RecordBroken_Promise__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Tag_Title_Discussed__c</fieldItem>
+                <identifier>RecordTag_Title_Discussed__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Agent__c</fieldItem>
+                <identifier>RecordAgent__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Summary_Grammar__c</fieldItem>
+                <identifier>RecordSummary_Grammar__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Summary_Spelling__c</fieldItem>
+                <identifier>RecordSummary_Spelling__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-e1ee002b-63cc-4e30-8aae-52ff3320adcf</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.ParentId</fieldItem>
-                <identifier>RecordParentIdField2</identifier>
-            </fieldInstance>
-        </itemInstances>
         <itemInstances>
             <fieldInstance>
                 <fieldInstanceProperties>
@@ -1052,23 +1075,6 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.GuideCX_Project__c</fieldItem>
-                <identifier>RecordGuideCX_Project_cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.Addendum_Alert__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>true</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.Tier_Status__c</fieldItem>
                 <identifier>RecordTier_Status_cField2</identifier>
             </fieldInstance>
@@ -1267,25 +1273,6 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
-                <fieldItem>Record.Opportunity__r.OwnerId</fieldItem>
-                <identifier>RecordOpportunity_rOwnerIdField</identifier>
-                <visibilityRule>
-                    <booleanFilter>1 OR 2</booleanFilter>
-                    <criteria>
-                        <leftValue>{!Record.Addendum_Alert__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>true</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.Origin}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Moved from Cancellation</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
                     <value>none</value>
@@ -1421,58 +1408,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Actionable_Items__c</fieldItem>
                 <identifier>RecordActionable_Items_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.Opportunity__r.Products__c</fieldItem>
-                <identifier>RecordOpportunity_rProducts_cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.Addendum_Alert__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>true</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.Opportunity__r.Porting__c</fieldItem>
-                <identifier>RecordOpportunity_rPorting_cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.Addendum_Alert__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>true</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.Opportunity__r.Secondary_Contact_Information__c</fieldItem>
-                <identifier>RecordOpportunity_rSecondary_Contact_Information_cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.Addendum_Alert__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>true</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.Opportunity__r.Estimated_Go_Live_Date__c</fieldItem>
-                <identifier>RecordOpportunity_rEstimated_Go_Live_Date_cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.Addendum_Alert__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>true</rightValue>
-                    </criteria>
-                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -1697,23 +1632,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Description</fieldItem>
                 <identifier>RecordDescriptionField2</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Intended_Account_Manager__c</fieldItem>
-                <identifier>RecordIntended_Account_Manager_cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.Addendum_Alert__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>true</rightValue>
-                    </criteria>
-                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <name>Facet-2xnm089aaxa</name>

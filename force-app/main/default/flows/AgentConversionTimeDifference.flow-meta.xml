@@ -2,12 +2,13 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>58.0</apiVersion>
     <assignments>
+        <description>If Not Null, It Assigns the Conversion Time to a variable varTimeDiff</description>
         <name>Actual_Time_Assignment</name>
         <label>Actual Time Assignment</label>
         <locationX>50</locationX>
         <locationY>539</locationY>
         <assignmentItems>
-            <assignToReference>TimeDIff</assignToReference>
+            <assignToReference>VarTimeDIff</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>ConversionTimeDifference</elementReference>
@@ -18,12 +19,13 @@
         </connector>
     </assignments>
     <assignments>
+        <description>If Null, It assigns zero as Conversion Time to the Variable VarTimeDiff</description>
         <name>Actual_Time_Assignment_Zero</name>
         <label>Actual Time Assignment Zero</label>
         <locationX>314</locationX>
         <locationY>539</locationY>
         <assignmentItems>
-            <assignToReference>TimeDIff</assignToReference>
+            <assignToReference>VarTimeDIff</assignToReference>
             <operator>Assign</operator>
             <value>
                 <numberValue>0.0</numberValue>
@@ -34,6 +36,7 @@
         </connector>
     </assignments>
     <decisions>
+        <description>Checks if Accept Date is Null</description>
         <name>Check_Accept_Time</name>
         <label>Check Accept Time</label>
         <locationX>314</locationX>
@@ -74,6 +77,7 @@
             <label>IsNull</label>
         </rules>
     </decisions>
+    <description>This flow Calculates the Actual Conversion Time of Chat Transcript</description>
     <environments>Default</environments>
     <formulas>
         <name>ConversionTimeDifference</name>
@@ -82,7 +86,7 @@
         <scale>0</scale>
     </formulas>
     <interviewLabel>AgentConversionTimeDifference {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>AgentConversionTimeDifference</label>
+    <label>Chat Transcript_Agent Chat Conversion Time</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -103,6 +107,7 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
+        <description>Gets Agent Work Record of Chat Transcript</description>
         <name>Get_Agent_Work_Record</name>
         <label>Get Agent Work Record</label>
         <locationX>314</locationX>
@@ -129,6 +134,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
+        <description>Updates the Actual Conversion Time with value inside of VarTimeDiff Value</description>
         <name>Update_Actual_Conversion_Time</name>
         <label>Update Actual Conversion Time</label>
         <locationX>314</locationX>
@@ -139,7 +145,7 @@
         <inputAssignments>
             <field>Actual_Conversion_Time__c</field>
             <value>
-                <elementReference>TimeDIff</elementReference>
+                <elementReference>VarTimeDIff</elementReference>
             </value>
         </inputAssignments>
         <inputReference>$Record</inputReference>
@@ -150,14 +156,10 @@
         <connector>
             <targetReference>Get_Agent_Work_Record</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Status</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Completed</stringValue>
-            </value>
-        </filters>
+        <filterFormula>AND(
+    ISPICKVAL({!$Record.Status}, &quot;Completed&quot;),
+    ({!$CustomMetadata.Flow_Control__mdt.Chat_Transcript_AgentChatConversion_Time.Turn_Off__c}=False)
+)</filterFormula>
         <object>LiveChatTranscript</object>
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
@@ -172,7 +174,7 @@
         <inputAssignments>
             <name>varElementName</name>
             <value>
-                <stringValue>Agent Conversion Time Difference</stringValue>
+                <stringValue>Get_Agent_Work_Record</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -184,7 +186,7 @@
         <inputAssignments>
             <name>varFlowname</name>
             <value>
-                <stringValue>Get Agent Work Record</stringValue>
+                <stringValue>Chat Transcript_Agent Chat Conversion Time  </stringValue>
             </value>
         </inputAssignments>
         <storeOutputAutomatically>true</storeOutputAutomatically>
@@ -198,7 +200,7 @@
         <inputAssignments>
             <name>varElementName</name>
             <value>
-                <stringValue>Agent Conversion Time Difference</stringValue>
+                <stringValue>Update_Actual_Conversion_Time</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -210,13 +212,13 @@
         <inputAssignments>
             <name>varFlowname</name>
             <value>
-                <stringValue>Update Actual Conversion Time</stringValue>
+                <stringValue>Chat Transcript_Agent Chat Conversion Time</stringValue>
             </value>
         </inputAssignments>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </subflows>
     <variables>
-        <name>TimeDIff</name>
+        <name>VarTimeDIff</name>
         <dataType>Number</dataType>
         <isCollection>false</isCollection>
         <isInput>true</isInput>

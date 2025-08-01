@@ -97,27 +97,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Migration_ID__c</field>
+                <field>Sales_Type__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Delayed_Implementation__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Anticipated_Implementation_Lead__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Porting__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Projected_MRR__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Business_Development_Team_Member__c</field>
+                <field>Opportunity_Product__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -134,6 +118,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>GM_API_Sync_Date__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Signer_Name__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -661,9 +649,14 @@
             <sortOrder>12</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Opportunity.Maintain_Agreements_Billing</actionName>
+            <actionName>Opportunity.Request_to_Delete_Opportunity_Record</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>13</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Opportunity.Maintain_Agreements_Billing</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>14</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedLists>
@@ -691,7 +684,6 @@
         <fields>Quantity</fields>
         <fields>TotalPrice</fields>
         <fields>ListPrice</fields>
-        <fields>Sync_Date__c</fields>
         <relatedList>RelatedLineItemList</relatedList>
     </relatedLists>
     <relatedLists>
@@ -741,7 +733,6 @@
         <fields>OPPORTUNITY.NAME</fields>
         <fields>ACCOUNT.NAME</fields>
         <fields>OPPORTUNITY.CLOSE_DATE</fields>
-        <fields>OPPORTUNITY.STAGE_NAME</fields>
         <relatedList>Opportunity.Related_Opportunity__c</relatedList>
     </relatedLists>
     <relatedLists>

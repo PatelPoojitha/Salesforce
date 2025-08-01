@@ -1,0 +1,383 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	font-family: 'Raleway', sans-serif !important;
+}
+
+.content-wrap>.table_con_01>h1{ font-weight:normal; font-size:20px !important;color:red !important; font-weight:100; display:inherit}
+.main_tab01 .content-current h1{font-size:20px; text-align:left; font-weight:100; color:#000000;display:inherit}
+.top_tabs nav ul li a span{font-size:14px !important; font-weight:normal !important; text-transform:uppercase; color:#000}
+.top_tabs  nav ul .tab-current a{background-color:#009688 !important; color:#fff !important}
+.top_tabs  nav ul .tab-current a span{color:#fff !important}
+.main_tab01 .content-current .table-responsive .table thead tr th{text-align:center; font-size:14px; color:#333333; font-weight:bold;border-bottom: 1px solid #9f9b9b;}
+.main_tab01 .content-current .table-responsive .table tbody tr td{font-size:14px; color:#666666; font-weight:normal; font-family:Arial, Helvetica, sans-serif}
+.main_tab01 .content-current .table-responsive{padding-top:30px;}
+.tabs-style-bar nav{background: #d0cbcb !important;}
+.main_tab01 .content-current .table-responsive .table tbody tr:nth-child(odd){background: #fff;}
+.main_tab01 .content-current .table-responsive .table tbody tr:nth-child(even){background: #f2f2f5;}
+
+/*.first_img{ background-image:url(../img/img01.png) !important; background-repeat:no-repeat;    padding-left: 27px;}
+.first_img:focus,.first_img:active,.first_img:visited{ background-image:url(../img/img001.png)!important; background-repeat:no-repeat;  }
+*/
+.tab02_btn{ text-align:right;}
+.tab02_btn .btn,.tab02_btn .btn:hover,.tab02_btn .btn:focus,.tab02_btn .btn:active{ background-color:#fff; border:1px solid #9f9b9b; color:#000; font-size:15px;    padding: 5px 23px;}
+.tab03 .table .form-group input{ width:80%; border-radius:0; border:1px solid #b7b7b7; border-left:5px solid #f7585c; margin:0 auto; float:none}
+.tab03 .table .form-group { text-align:center; margin-bottom:0}
+.tab03 .table tbody tr td{ text-align:center}
+.upload_con .table tbody tr { background-color:#fff !important}
+.upload_con .table tbody tr td{ border:0 !important; text-align:left}
+.upload_con .table tbody tr td:nth-child(2){ text-align:right}
+.upload_con .table{ border-top:1px solid #cccccc}
+
+.icon-home::before {
+    content: "" !important;
+    background-image:url(../img/img001.png); width:20px; height:16px;
+}
+.top_tabs nav ul li.tab-current .icon-home::before{ content: "" !important;
+    background-image:url(../img/img01.png); width:20px; height:16px;}
+
+.icon-box::before {
+    content: "" !important;
+    background-image:url(../img/img02.png); width:20px; height:16px;
+}
+.top_tabs nav ul li.tab-current .icon-box::before { content: "" !important;
+    background-image:url(../img/img002.png); width:20px; height:16px;}
+
+.icon-display::before {
+    content: "" !important;
+    background-image:url(../img/img03.png); width:15px; height:17px;
+}
+.top_tabs nav ul li.tab-current .icon-display::before{ content: "" !important;
+background-image:url(../img/img003.png); width:15px; height:17px;}
+
+
+
+.icon-upload::before {
+    content: "" !important;
+    background-image:url(../img/img04.png); width:17px; height:17px;
+}
+.top_tabs nav ul li.tab-current .icon-upload::before{ content: "" !important;
+background-image:url(../img/img004.png); width:17px; height:17px;}
+
+@media screen and (max-width: 767px) {
+.table-responsive{ border:0 !important}
+
+}
+
+
+
+/* *********************************************
+
+****************************************    */
+
+
+
+
+#SMSAPP * {font-family: 'Raleway', sans-serif;}
+        .pbSubheader{display:none; border:0 !important;}
+        .pbHeader>table{border:0 !important;}
+        .apexp>.bPageBlock{ background:none !important; border:0 !important}
+        .list{background-color: #fff !important; border:0 !important}
+        .headerRow{background-color: #fff !important;}
+        .headerRow th{border-width:0 !important; border-bottom:1px solid #9f9b9b !important}
+        .pbHeader table tbody tr td{ text-align:right; padding-bottom: 20px !important;}
+        .pbBody .list thead tr th, .pbBody .list tbody tr td{ text-align:center;     font-size: 14px !important;}
+        .pbBody .list tbody tr td label{font-weight:normal !important; color:##666666 !important; padding-top:8px!important}
+        .pbBottomButtons{display:none;}
+        .heading{display:none}
+        .tabs {overflow-y: visible; }
+        .tab02_btn .btn, .tab02_btn .btn:hover, .tab02_btn .btn:focus, .tab02_btn .btn:active {
+            background: #fff;
+            border: 1px solid #aaa;
+            font-size: 14px;
+            padding: 5px 20px;
+            font-weight: normal;
+        }
+        .tab02_btn {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .noSidebarCell {padding:0}
+        .main_tab01 .content-current .table-responsive {
+            padding-top: 0px; 
+        }
+        .tabs-style-bar nav {
+            background: #ddd !important;
+            border-bottom: 1px solid #bbb;
+            box-shadow: 0px 0px 2px #aaa;
+        }
+        .tabs-style-bar nav ul li a {
+            margin: 0 2px;
+            background-color: #fff;
+            color: #74777b;
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+            z-index: 0;
+        }
+        .tabs-style-bar nav ul li a:focus,.tabs-style-bar nav ul li a:hover {text-decoration: none;}
+        .tabs-style-bar nav ul li a:hover {
+            color: #2CC185;
+            box-shadow: rgba(0, 0, 0, 0.3) 0 12px 12px 0;
+        }
+       #SMSAPP ul li {margin-left:0} 
+       #SMSAPP .btn {
+            background-color: #009688;
+            background-image: none;
+            border: 1px solid #1C887E;
+            color: #FFF;
+            font-size: 14px;
+            padding: 5px 20px;
+            border-radius: 0;
+            transition: all 0.2s ease-out;
+            -webkit-transition: all 0.2s ease-out;
+        }
+        .country-list {font-size: 12px;}
+        #SMSAPP .btn:hover {box-shadow: rgba(0, 0, 0, 0.3) 0 12px 12px 0;}
+        .intl-tel-input .country-list {
+            max-width: 300px;
+            overflow-x: hidden;
+            font-family: "arial";
+        }
+        #SMSAPP table thead tr th {
+            border-top: 1px solid #999;
+            border-bottom: none;
+            background: #009688 !important;
+            color: #fff;
+            text-align: left;
+            padding: 8px;
+        }
+        
+        label {
+            font-weight: normal;
+        }
+        
+        .main_tab01 .content-current h1 {margin-top: 0;}
+        .btn1 {
+            background: #fff;
+            border: 1px solid #aaa;
+            font-size: 14px;
+            padding: 5px;
+            font-weight: normal;
+        }
+        #SMSAPP table tr td, #SMSAPP table tr th {text-align: left}
+        #SMSAPP table.list tr td {border-top: 1px solid #ddd !important; border-color: #ddd !important }
+        #SMSAPP table tr td.pbButton, #SMSAPP .tab02_btn {padding-right: 0px !important}
+        #SMSAPP .pbButton  {text-align: right}
+        #SMSAPP .form-control {max-width: 250px; min-width: 155px;}
+        #SMSAPP .btn-small {padding: 2px 10px !important;}
+        #SMSAPP table.list {margin-bottom: 40px;}
+        #SMSAPP .bPageBlock .pbBody {margin:0px;}
+        #SMSAPP .pbHeader table tbody tr td {
+            padding-bottom: 10px !important;
+        }
+        #SMSAPP table.list tr:nth-child(odd) {
+            background: #fff;
+        }
+        #SMSAPP table.list tr:nth-child(even) {
+            background: #f2f2f5;
+        }
+        #SMSAPP .pbBody .list tbody tr td label {
+            padding-top: 0 !important;
+        }
+        #SMSAPP .btn-row    {
+            padding-bottom: 10px;
+            text-align: right;
+            padding-top: 5px;
+        }
+        .multiselect-container>li {
+            margin-left: 0;
+        }
+        #AutoForwardToMobileSection span, #SMSAPP input.phone-number, .font-arial {
+            font-family: "arial";
+        }
+        *:focus {
+            outline: 0;
+        }
+        #SMSAPP .modal-content {padding-bottom: 20px;}
+        
+        
+        .no-flexbox nav ul li {
+            min-width: 0%;
+            display: inline-block;
+        }
+        .top_tabs ul li .icon{
+            padding:0px 62px;
+        }
+        
+        .table-wrapper {padding:0}
+        
+        
+        /* *********************************** */
+        /* OrgConfigSetup */
+        /* *********************************** */
+        .tab02_btn{text-align:center}
+        .messageText{margin-top:-11px}
+        .modal-body {padding:0}
+        #SMSAPP .modal-content {padding-bottom: 0;}
+        .errorblock { height: 150px;}
+        
+        .errorblock.info {background: #98B4E2; border: 2px solid #375DB8;}
+        .errorblock.info .msgText span, .errorblock.info .msgText p {color: #0F2C76}
+        
+        .errorblock.success {background: #A7FAA7; border: 2px solid #08C108;}
+        .errorblock.success .msgText span, .errorblock.success .msgText p {color: #2C622C}
+        
+        .errorblock.error {background: #FFC7BA; border: 2px solid #D25B3F;}
+        .errorblock.error .msgText span, .errorblock.error .msgText p {color: #AD110E}
+        
+        .errorblock img{width: 70px; margin-top: 10px; margin-right: 10px; float:left;}
+        .errorblock .msgText {float;left}
+        .errorblock .msgText span {font-size: 24px; margin-top: 15px; display: block;}
+        .errorblock .msgText p {font-size: 18px; padding-top: 0; font-weight: normal;}
+        .errorblock a {position: absolute; top: 5px; right: 10px; color: #FFFFFF; font-size: 18px;}
+        
+        
+        /* *********************************** */
+        /* UserConfigSetup */
+        /* *********************************** */        
+        #SMSAPP .pbButton{text-align:center;font-weight: 800;}
+        .headerRow,.dataCell {text-align:center !important}
+        .dataCell{width:24%;font-size: 22px;}
+        .headerRow:first-child,.dataCell:first-child{ text-align:center !important}        
+        .list thead tr th:first-child{text-align:left !important}     
+        .list tbody tr .dataCell:first-child{text-align:left}
+        .list tbody tr .dataCell{text-align:center}
+        .message{ width:500px; margin-bottom:15px !important;}
+        .message .messageText h4{margin-top: 12px;}
+         @media (min-width: 768px) {
+            .modal-dialog {
+                margin: 180px auto;
+            }
+         }
+         .errorM2, .errorS1 {
+            border-color: rgba(204, 0, 0, 0.26);
+        }
+        .UserConfigSetup tr td:nth-child(2),
+        #SMSAPP .UserConfigSetup tr td:nth-child(2) label {
+            font-family: "Arial" !important;
+        }
+        
+        
+        /* *********************************************
+        SmsConfigPage
+        ********************************************** */
+        .popupBackground {
+            position: fixed;
+            top:0;
+            right:0;
+            left:0;
+            bottom: 0;
+            width:100%;
+            background-color: #fff;
+            opacity:0.9;
+            overflow:hidden;
+            text-align: center;
+            z-index: 999999;
+        }
+        .PopupPanel {
+            margin: 0 auto;
+            max-width: 250px;
+        }
+       .requiredInput {
+              position: relative;
+              height: 100%;
+            }
+       .requiredBlock {
+        background-color: #c00;
+          position: absolute;
+          left: -4px;
+          width: 3px;
+          top: 1px;
+          bottom: 1px;
+          }
+       .table thead tr th,.table tbody tr td{text-align:center !important}
+       .table thead tr th:first-child,.table tbody tr td:first-child{text-align:left !important}
+        
+         .message { width: 94%;}
+         .message table {
+            width: 100%;
+                 
+         }
+         
+         .Multiname_mapping{
+                float:right;
+          }
+           
+         @media (min-width: 768px) {
+            .modal-dialog {
+                margin: 180px auto;
+            }
+         }
+         .errorM2, .errorS1 {
+            border-color: rgba(204, 0, 0, 0.26);
+        }
+        #SMSAPP .btn-row {text-align: center}
+        #SMSAPP table.CustomObjectsTable tr th, #SMSAPP table.CustomObjectsTable tr td {text-align:left !important; width: 33%}
+        #ShpwNameApi, #ShpwPhoneApi, ol {padding-left:0}
+        #ShpwNameApi li, #ShpwPhoneApi li {border-bottom: 1px solid #eee}
+        #SMSAPP table.CustomObjectsTable tr td .form-control {min-width: 250px; max-width:250px;}
+        
+        
+        @media(max-width:320px) {
+            .pbBody .btn_margin{
+                margin-bottom:15px;
+            }
+        }
+       
+        
+        @media(max-width:767px) {
+            #SMSAPP nav ul li {
+                margin-left: 0;
+                width: 33%;
+            }
+            
+            .tabs nav a.icon span {
+                display: block;
+            }
+            
+            .main_tab01 .content-current h1 {
+                font-size: 15px;
+                text-align: center;
+            }
+            
+            .top_tabs ul li .icon {
+                padding: 0;
+            }
+
+            .top_tabs nav ul li a span {
+                font-size: 10px !important;
+            }
+            
+            .tabs-style-bar nav ul li a:hover {box-shadow: none}
+            
+            #SMSAPP table.CustomObjectsTable tr td .form-control {
+                min-width: 110px;
+            }
+            
+            .Multiname_mapping{
+                float:left;
+                padding: 7px 0px 5px 0px;
+             }
+              
+             ol li{
+                 margin-left: 2.7rem;
+             }
+             
+             .dataRow .dataCell input[type=text] {
+                max-width: 286px;
+                min-width: 175px;
+                height: 31px;
+                border-radius: 6px;
+                border: 1px solid #aaa;
+             }
+            /* *********************************** */
+            /*userConfigSetup */
+            /* *********************************** */
+            table.UserConfigSetup th:first-child(),
+            table.UserConfigSetup th:nth-child(2) {
+                min-width: 120px;
+            }
+        }
+        

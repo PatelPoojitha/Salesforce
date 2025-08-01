@@ -108,7 +108,7 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>go_through_Demonstrate_Value.Automation_Running__c</assignToReference>
+            <assignToReference>go_through_Demonstrate_Value.Is_Test__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>changeToggleDemonstrate</elementReference>
@@ -138,7 +138,7 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>go_through_Discover.Automation_Running__c</assignToReference>
+            <assignToReference>go_through_Discover.Is_Test__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>changeToggleDiscover</elementReference>
@@ -182,7 +182,7 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>Go_through_Negotiate.Automation_Running__c</assignToReference>
+            <assignToReference>Go_through_Negotiate.Is_Test__c</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>changeToggleNegotiate</elementReference>
@@ -294,7 +294,7 @@
         <assignNextValueToReference>currentItem_Filter_for_Negotiate</assignNextValueToReference>
         <collectionProcessorType>FilterCollectionProcessor</collectionProcessorType>
         <collectionReference>get_Opportunities_with_Missing_Dates</collectionReference>
-        <conditionLogic>(1 OR 6) AND (2 OR 3 OR 4 OR 5)</conditionLogic>
+        <conditionLogic>1 AND (2 OR 3 OR 4 OR 5)</conditionLogic>
         <conditions>
             <leftValueReference>currentItem_Filter_for_Negotiate.Probability</leftValueReference>
             <operator>GreaterThanOrEqualTo</operator>
@@ -330,33 +330,26 @@
                 <booleanValue>true</booleanValue>
             </rightValue>
         </conditions>
-        <conditions>
-            <leftValueReference>currentItem_Filter_for_Negotiate.StageName</leftValueReference>
-            <operator>EqualTo</operator>
-            <rightValue>
-                <stringValue>Closed Lost</stringValue>
-            </rightValue>
-        </conditions>
         <connector>
             <targetReference>Go_through_Negotiate</targetReference>
         </connector>
     </collectionProcessors>
-    <description>Updated using the Running Automation checkbox and toggle</description>
+    <description>testing using collection filters + correction on loops + filtering out records</description>
     <environments>Default</environments>
     <formulas>
         <name>changeToggleDemonstrate</name>
         <dataType>Boolean</dataType>
-        <expression>IF({!go_through_Demonstrate_Value.Automation_Running__c}=TRUE,FALSE,TRUE)</expression>
+        <expression>IF({!go_through_Demonstrate_Value.Is_Test__c}=TRUE,FALSE,TRUE)</expression>
     </formulas>
     <formulas>
         <name>changeToggleDiscover</name>
         <dataType>Boolean</dataType>
-        <expression>IF({!go_through_Discover.Automation_Running__c}=TRUE,FALSE,TRUE)</expression>
+        <expression>IF({!go_through_Discover.Is_Test__c}=TRUE,FALSE,TRUE)</expression>
     </formulas>
     <formulas>
         <name>changeToggleNegotiate</name>
         <dataType>Boolean</dataType>
-        <expression>IF({!Go_through_Negotiate.Automation_Running__c}=TRUE,FALSE,TRUE)</expression>
+        <expression>IF({!Go_through_Negotiate.Is_Test__c}=TRUE,FALSE,TRUE)</expression>
     </formulas>
     <formulas>
         <name>filterDemonstrateValueuupdateDiscover</name>
@@ -480,7 +473,7 @@
         <connector>
             <targetReference>Filter_for_Discover</targetReference>
         </connector>
-        <filterLogic>(1 OR 2 OR 3 OR 4) AND 5</filterLogic>
+        <filterLogic>(1 OR 2 OR 3 OR 4) AND 5 AND 6 AND 7</filterLogic>
         <filters>
             <field>Qualify_Date__c</field>
             <operator>IsNull</operator>
@@ -514,6 +507,20 @@
             <operator>IsNull</operator>
             <value>
                 <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>0063m00000wX4O6AAK</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>0063m00000oXTKsAAO</stringValue>
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>

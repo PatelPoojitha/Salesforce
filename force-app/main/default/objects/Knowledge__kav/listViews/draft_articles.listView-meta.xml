@@ -6,7 +6,6 @@
     <columns>ARTICLE_NUMBER</columns>
     <columns>LANGUAGE</columns>
     <columns>CREATED_DATE</columns>
-    <columns>LAST_UPDATE</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>PUBLISH_STATUS</field>

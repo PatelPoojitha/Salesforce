@@ -12,5 +12,7 @@
     <tabs>SurveyTaker__c</tabs>
     <tabs>standard-report</tabs>
     <tabs>Survey_Question__c</tabs>
+    <tabs>Unsupported_Email__c</tabs>
+    <tabs>Bot_Customer_Rating__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

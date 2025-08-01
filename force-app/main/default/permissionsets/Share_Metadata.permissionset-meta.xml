@@ -52,10 +52,6 @@
         <enabled>true</enabled>
         <name>dlrs__DeclarativeLookupRollupSummaries__c</name>
     </customSettingAccesses>
-    <customSettingAccesses>
-        <enabled>true</enabled>
-        <name>tdc_tsw__SMSIncomingAlert__c</name>
-    </customSettingAccesses>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Share Metadata</label>
 </PermissionSet>

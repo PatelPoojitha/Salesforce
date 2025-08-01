@@ -2,13 +2,13 @@
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
         <fullName>Standard_Lead_Alert</fullName>
-        <ccEmails>MarketingLeadAlerts@callrevu.com</ccEmails>
         <description>Standard Lead Alert</description>
         <protected>false</protected>
         <recipients>
             <type>owner</type>
         </recipients>
-        <senderType>DefaultWorkflowUser</senderType>
-        <template>Onboarding/New_Lead_Alert</template>
+        <senderAddress>sfhelpdesk@callrevu.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Support_Templates/LeadsNewassignmentnotificationSAMPLE</template>
     </alerts>
 </Workflow>

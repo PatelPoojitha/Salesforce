@@ -132,7 +132,7 @@
         <locationX>50</locationX>
         <locationY>455</locationY>
         <inputAssignments>
-            <field>XXAccount_Grade__c</field>
+            <field>Account_Grade__c</field>
             <value>
                 <stringValue>A</stringValue>
             </value>
@@ -145,7 +145,7 @@
         <locationX>314</locationX>
         <locationY>455</locationY>
         <inputAssignments>
-            <field>XXAccount_Grade__c</field>
+            <field>Account_Grade__c</field>
             <value>
                 <stringValue>B</stringValue>
             </value>
@@ -158,7 +158,7 @@
         <locationX>578</locationX>
         <locationY>455</locationY>
         <inputAssignments>
-            <field>XXAccount_Grade__c</field>
+            <field>Account_Grade__c</field>
             <value>
                 <stringValue>C</stringValue>
             </value>
@@ -171,7 +171,7 @@
         <locationX>842</locationX>
         <locationY>455</locationY>
         <inputAssignments>
-            <field>XXAccount_Grade__c</field>
+            <field>Account_Grade__c</field>
             <value>
                 <stringValue>D</stringValue>
             </value>
@@ -184,7 +184,7 @@
         <locationX>1106</locationX>
         <locationY>455</locationY>
         <inputAssignments>
-            <field>XXAccount_Grade__c</field>
+            <field>Account_Grade__c</field>
             <value>
                 <stringValue>E</stringValue>
             </value>

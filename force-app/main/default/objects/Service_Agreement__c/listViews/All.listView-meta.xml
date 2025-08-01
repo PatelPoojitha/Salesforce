@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>All</fullName>
+    <columns>Tier_Status__c</columns>
     <columns>NAME</columns>
     <columns>CallRevu_Account_Name__c</columns>
     <columns>Authorization_Contact__c</columns>
@@ -10,12 +11,10 @@
     <columns>CallRevu_Account_Number__c</columns>
     <columns>Time_Zone__c</columns>
     <columns>CallRevu_Account_Status__c</columns>
-    <columns>Tier_Status__c</columns>
-    <columns>CREATEDBY_USER</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>CallRevu_Account_Number__c</field>
-        <operation>equals</operation>
+        <operation>notEqual</operation>
     </filters>
     <filters>
         <field>NAME</field>
@@ -31,16 +30,6 @@
         <field>Tier_Status__c</field>
         <operation>equals</operation>
         <value>Tier 3,Tier 2,Tier 3 Tracking,Tier 3 Temp-Tracking</value>
-    </filters>
-    <filters>
-        <field>NAME</field>
-        <operation>notEqual</operation>
-        <value>Test Dealer Account,Test Dealer Group</value>
-    </filters>
-    <filters>
-        <field>NAME</field>
-        <operation>notEqual</operation>
-        <value>Jenkins And Wynne</value>
     </filters>
     <label>All</label>
 </ListView>

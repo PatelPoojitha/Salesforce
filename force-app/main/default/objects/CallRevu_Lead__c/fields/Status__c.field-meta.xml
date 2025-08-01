@@ -55,11 +55,6 @@
                 <default>false</default>
                 <label>Closed Lost</label>
             </value>
-            <value>
-                <fullName>Closed</fullName>
-                <default>false</default>
-                <label>Closed</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

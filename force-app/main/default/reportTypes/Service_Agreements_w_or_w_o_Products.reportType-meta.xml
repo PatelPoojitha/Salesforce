@@ -1340,61 +1340,6 @@
             <field>Estimated_Next_Quarterly_Review__c</field>
             <table>Service_Agreement__c</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TCX_Active__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TCX_Account_Number__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.LastActivityDate</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.AccountNumber</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.CallRevu_Client_Account_Status__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.OEM_Account_Status__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.Reseller_Account_Status__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.BillingState</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.Territory__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.Owner</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Tied_to_Partner__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
         <masterLabel>Service Agreements</masterLabel>
     </sections>
     <sections>
@@ -1746,31 +1691,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Active_Transcription_Product__c</field>
-            <table>Service_Agreement__c.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>System_Sync__c</field>
-            <table>Service_Agreement__c.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Product_Catalog__c</field>
-            <table>Service_Agreement__c.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Notes__c</field>
-            <table>Service_Agreement__c.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Account_Rollup_Category__c</field>
-            <table>Service_Agreement__c.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Adjusted_MRR_Amount__c</field>
             <table>Service_Agreement__c.Service_Agreement_Products__r</table>
         </columns>
         <masterLabel>Service Agreement Products</masterLabel>

@@ -20,6 +20,7 @@
     </actionOverrides>
     <brand>
         <headerColor>#0070D2</headerColor>
+        <logo>Sales</logo>
         <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
@@ -2101,6 +2102,8 @@
     <tabs>Cadence_Task__c</tabs>
     <tabs>Service_Agreement_Products__c</tabs>
     <tabs>standard-WaveHomeLightning</tabs>
+    <tabs>Unsupported_Email__c</tabs>
+    <tabs>Bot_Customer_Rating__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Sales_UtilityBar</utilityBar>
 </CustomApplication>

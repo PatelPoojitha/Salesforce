@@ -5,7 +5,7 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>dashboardName</name>
-                    <value>qyCSLDhdudQwDJTXWmarlNKBqrjQaC1</value>
+                    <value>qyCSLDhdudQwDJTXWmarlNKBqrjQaC</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>hideOnError</name>
@@ -327,7 +327,7 @@
                     <criteria>
                         <leftValue>{!$User.Team__c}</leftValue>
                         <operator>EQUAL</operator>
-                        <rightValue>AM / CS</rightValue>
+                        <rightValue>AM</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>

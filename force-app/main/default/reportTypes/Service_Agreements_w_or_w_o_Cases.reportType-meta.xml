@@ -1330,21 +1330,6 @@
             <field>Estimated_Next_Quarterly_Review__c</field>
             <table>Service_Agreement__c</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TCX_Active__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TCX_Account_Number__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Tied_to_Partner__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
         <masterLabel>Service Agreements</masterLabel>
     </sections>
     <sections>
@@ -2525,22 +2510,82 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Opportunity_ID__c</field>
+            <field>Vehicle_Of_Interest__c</field>
             <table>Service_Agreement__c.Cases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>GuideCX_Project__c</field>
+            <field>Payoff_Issue_Discussed__c</field>
             <table>Service_Agreement__c.Cases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Buy_Sell_Close_Date__c</field>
+            <field>Deposit_Mentioned__c</field>
             <table>Service_Agreement__c.Cases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Agent__c</field>
+            <field>Test_Drive_Mentioned__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Vehicle_Order_Status__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Vehicle_Not_Available__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Trade_In_Acquisition_Discussed__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Pricing_Discussed__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Agent_Offered_to_Order_Vehicle__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Appointment_Opportunity__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Appointment_Set__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Agent_Asked_For_Appointment__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Customer_Requested_Appointment__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Broken_Promise__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Tag_Title_Discussed__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Client_Success_Owner__c</field>
             <table>Service_Agreement__c.Cases__r</table>
         </columns>
         <columns>
@@ -2550,7 +2595,77 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Interaction_Type__c</field>
+            <field>Intended_Agent_Name__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Department__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Appointment_Date__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Appointment_Time__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Summary_Accuracy__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Agent_Promised_Callback__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CSI_Warning__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Summary_Accuracy_Notes__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Feedback_Notes__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Agent__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Summary_Grammar__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Summary_Spelling__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Send_Case_Owner_Notification__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Bypass_Reassignment__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TestTrack__c</field>
             <table>Service_Agreement__c.Cases__r</table>
         </columns>
         <columns>
@@ -2560,12 +2675,42 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Created_from_New_Enrollment_Process__c</field>
+            <field>Analytics__c</field>
             <table>Service_Agreement__c.Cases__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Billing_Case_Name__c</field>
+            <field>Capture__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Phones__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>All_Opportunity_Products__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Analytics_Chkbox_Selected__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Capture_Chkbox_Selected__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Phones_Chkbox_Selected__c</field>
+            <table>Service_Agreement__c.Cases__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>All_Opp_Products_Chkbox_Selected__c</field>
             <table>Service_Agreement__c.Cases__r</table>
         </columns>
         <columns>
@@ -2575,27 +2720,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Dealer_Delayed_Reason_Launch__c</field>
-            <table>Service_Agreement__c.Cases__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>has_a_Parent_Case__c</field>
-            <table>Service_Agreement__c.Cases__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Case_Age_Launch_to_Close__c</field>
-            <table>Service_Agreement__c.Cases__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Case_Age_Open_to_Launch__c</field>
-            <table>Service_Agreement__c.Cases__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Handoff_to_Launch_Date__c</field>
+            <field>Billing_Case_Name__c</field>
             <table>Service_Agreement__c.Cases__r</table>
         </columns>
         <masterLabel>Cases</masterLabel>

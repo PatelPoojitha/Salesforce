@@ -29,13 +29,6 @@
                 <booleanValue>true</booleanValue>
             </value>
         </assignmentItems>
-        <assignmentItems>
-            <assignToReference>go_through_Parents.Automation_Running__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>toggleSwitch</elementReference>
-            </value>
-        </assignmentItems>
         <connector>
             <targetReference>add_to_Opps_to_update</targetReference>
         </connector>
@@ -50,13 +43,6 @@
             <operator>Assign</operator>
             <value>
                 <booleanValue>true</booleanValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>getParentOppRecord.Automation_Running__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>toggleSwitchSingle</elementReference>
             </value>
         </assignmentItems>
         <connector>
@@ -217,21 +203,6 @@
     <description>+MRR on child Opp updated</description>
     <environments>Default</environments>
     <formulas>
-        <name>toggleSwitch</name>
-        <dataType>Boolean</dataType>
-        <expression>IF({!go_through_Parents.Automation_Running__c}=TRUE,FALSE, TRUE)</expression>
-    </formulas>
-    <formulas>
-        <name>toggleSwitchSingle</name>
-        <dataType>Boolean</dataType>
-        <expression>IF({!getParentOppRecord.Automation_Running__c}=TRUE,FALSE,TRUE)</expression>
-    </formulas>
-    <formulas>
-        <name>toggleSwitchTriggeringRecord</name>
-        <dataType>Boolean</dataType>
-        <expression>IF({!$Record.Automation_Running__c}=TRUE,FALSE,TRUE)</expression>
-    </formulas>
-    <formulas>
         <name>varIsNew</name>
         <dataType>Boolean</dataType>
         <expression>ISNEW()</expression>
@@ -340,12 +311,6 @@
         <locationX>314</locationX>
         <locationY>731</locationY>
         <inputAssignments>
-            <field>Automation_Running__c</field>
-            <value>
-                <elementReference>toggleSwitchTriggeringRecord</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Calculate_Group_MRR__c</field>
             <value>
                 <booleanValue>true</booleanValue>
@@ -374,12 +339,6 @@
         <label>update Group MRR to null</label>
         <locationX>50</locationX>
         <locationY>731</locationY>
-        <inputAssignments>
-            <field>Automation_Running__c</field>
-            <value>
-                <elementReference>toggleSwitchTriggeringRecord</elementReference>
-            </value>
-        </inputAssignments>
         <inputAssignments>
             <field>Group_MRR__c</field>
         </inputAssignments>

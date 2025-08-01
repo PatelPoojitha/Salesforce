@@ -3,7 +3,7 @@
     <enableComplianceBcc>false</enableComplianceBcc>
     <enableEmailConsentManagement>false</enableEmailConsentManagement>
     <enableEmailSenderIdCompliance>false</enableEmailSenderIdCompliance>
-    <enableEmailSpfCompliance>true</enableEmailSpfCompliance>
+    <enableEmailSpfCompliance>false</enableEmailSpfCompliance>
     <enableEmailToSalesforce>true</enableEmailToSalesforce>
     <enableEmailTrackingIPBlocklist>false</enableEmailTrackingIPBlocklist>
     <enableEmailWorkflowApproval>false</enableEmailWorkflowApproval>
@@ -14,6 +14,8 @@
     <enableListEmailLogActivities>false</enableListEmailLogActivities>
     <enableResendBouncedEmails>false</enableResendBouncedEmails>
     <enableRestrictTlsToDomains>false</enableRestrictTlsToDomains>
+    <enableSendViaExchangePref>true</enableSendViaExchangePref>
+    <enableSendViaGmailPref>false</enableSendViaGmailPref>
     <enableUseOrgFootersForExtTrans>false</enableUseOrgFootersForExtTrans>
     <enableVerifyEmailDomainByDkim>false</enableVerifyEmailDomainByDkim>
     <sendEmailsEvenWhenAutomationUpdatesSameRecord>true</sendEmailsEvenWhenAutomationUpdatesSameRecord>

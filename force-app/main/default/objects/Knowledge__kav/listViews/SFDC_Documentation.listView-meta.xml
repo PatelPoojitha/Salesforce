@@ -12,7 +12,7 @@
     <filters>
         <field>TITLE</field>
         <operation>contains</operation>
-        <value>SFDC Documentation,Salesforce</value>
+        <value>SFDC Documentation</value>
     </filters>
     <filters>
         <field>PUBLISH_STATUS</field>

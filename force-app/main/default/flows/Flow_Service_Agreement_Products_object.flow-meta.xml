@@ -175,7 +175,7 @@ if( AND({!$Record.Product__r.MRR_Product__c},NOT(isblank( {!$Record.Effective_Da
     <formulas>
         <name>varEffectiveDate</name>
         <dataType>Date</dataType>
-        <expression>Date(year(today()),Month(today()),Day(Today()))</expression>
+        <expression>Date(2999,Month(today()),Day(Today()))</expression>
     </formulas>
     <formulas>
         <name>varFirstBillingDate</name>

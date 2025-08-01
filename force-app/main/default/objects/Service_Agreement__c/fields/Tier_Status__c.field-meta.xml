@@ -46,16 +46,6 @@
                 <default>false</default>
                 <label>TCX</label>
             </value>
-            <value>
-                <fullName>Auto Alert</fullName>
-                <default>false</default>
-                <label>Auto Alert</label>
-            </value>
-            <value>
-                <fullName>Team Velocity</fullName>
-                <default>false</default>
-                <label>Team Velocity</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

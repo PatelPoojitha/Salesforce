@@ -6,6 +6,5 @@
     <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>CommerceStarter</label>
     <navType>Standard</navType>
-    <tabs>standard-CommerceLandingPage</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

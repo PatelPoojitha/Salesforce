@@ -8,639 +8,339 @@
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>18 Digit Activity ID</displayNameOverride>
             <field>X18_Digit_Activity_ID__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Account</displayNameOverride>
             <field>Account</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Account</displayNameOverride>
             <field>Account__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Account Team</displayNameOverride>
             <field>Account_Team__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity Group</displayNameOverride>
             <field>Activity_Group__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity ID</displayNameOverride>
             <field>Id</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>All-Day Event</displayNameOverride>
             <field>IsAllDayEvent</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Assigned To</displayNameOverride>
             <field>Owner</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Assigned Role</displayNameOverride>
             <field>Assigned_Role__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Cadence Activity</displayNameOverride>
             <field>Cadence_Activity__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Call Duration</displayNameOverride>
             <field>CallDurationInSeconds</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Call Object Identifier</displayNameOverride>
             <field>CallObject</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Call Result</displayNameOverride>
             <field>CallDisposition</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Call Type</displayNameOverride>
             <field>CallType</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Closed</displayNameOverride>
             <field>IsClosed</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Comments</displayNameOverride>
             <field>Description</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Contact</displayNameOverride>
             <field>Contact__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Created By</displayNameOverride>
             <field>CreatedBy</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Created Date</displayNameOverride>
             <field>CreatedDate</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Date</displayNameOverride>
             <field>ActivityDate</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Disposition</displayNameOverride>
             <field>Disposition__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Due Time</displayNameOverride>
             <field>ActivityTimeOnly</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Duration</displayNameOverride>
             <field>DurationInMinutes</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Email Cc</displayNameOverride>
-            <field>tdc_tsw__Email_Cc__c</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Email To</displayNameOverride>
-            <field>tdc_tsw__Email_To__c</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Event Subtype</displayNameOverride>
             <field>EventSubtype</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>First Cadence Activity</displayNameOverride>
             <field>First_Cadence_Activity__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Group Event Type</displayNameOverride>
             <field>GroupEventType</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Import2 Id</displayNameOverride>
             <field>Import2_Id__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Is Child</displayNameOverride>
             <field>IsChild</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Is Group Event</displayNameOverride>
             <field>IsGroupEvent</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Last Cadence Activity</displayNameOverride>
             <field>Last_Cadence_Activity__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Last Modified By</displayNameOverride>
             <field>LastModifiedBy</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Last Modified Date</displayNameOverride>
             <field>LastModifiedDate</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Lifecycle Stage</displayNameOverride>
             <field>Lifecycle_Stage__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Location</displayNameOverride>
             <field>Location</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Name</displayNameOverride>
             <field>Who</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Opportunity</displayNameOverride>
             <field>Opportunity__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Phone</displayNameOverride>
             <field>Phone__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Priority</displayNameOverride>
             <field>Priority</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Private</displayNameOverride>
             <field>IsPrivate</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Related To</displayNameOverride>
             <field>What</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Related To Count</displayNameOverride>
             <field>WhatCount</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Relation Count</displayNameOverride>
             <field>WhoCount</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Repeat This Task</displayNameOverride>
             <field>RecurrenceRegeneratedType</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Show Time As</displayNameOverride>
             <field>ShowAs</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Status</displayNameOverride>
             <field>Status</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Status</displayNameOverride>
             <field>Status__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
-            <displayNameOverride>Subject</displayNameOverride>
             <field>Subject</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Subject</displayNameOverride>
             <field>Subject__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Task</displayNameOverride>
             <field>IsTask</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Task Subtype</displayNameOverride>
             <field>TaskSubtype</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Time</displayNameOverride>
             <field>ActivityDateTime</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Time of Call</displayNameOverride>
             <field>Time_of_Call__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Time Zone</displayNameOverride>
             <field>Time_Zone__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Department</displayNameOverride>
             <field>Department__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Owner Identifier</displayNameOverride>
             <field>Owner_Identifier__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Related to Object</displayNameOverride>
             <field>Related_to_Object__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : CallRevu Client Account Status</displayNameOverride>
             <field>Account.CallRevu_Client_Account_Status__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Created By : Department</displayNameOverride>
             <field>CreatedBy.Department</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Opportunity : Close Date</displayNameOverride>
             <field>Opportunity__c.CloseDate</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Opportunity : Stage</displayNameOverride>
             <field>Opportunity__c.StageName</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Opportunity : MRR</displayNameOverride>
             <field>Opportunity__c.MRR__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : Campaign : Campaign Name</displayNameOverride>
             <field>Account.Campaign__c.Name</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : TP Area</displayNameOverride>
             <field>Account.TP_Area__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity Due Date</displayNameOverride>
             <field>Activity_Due_Date__c</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : Account Owner : Full Name</displayNameOverride>
+            <field>Account.TracHier__Owner__c</field>
+            <table>Activity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Account.Owner.Name</field>
             <table>Activity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Created by Department</displayNameOverride>
-            <field>Created_by_Team__c</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : Account Name</displayNameOverride>
-            <field>Account.Name</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : Billing State/Province</displayNameOverride>
-            <field>Account.BillingState</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : Dealer Status</displayNameOverride>
-            <field>Account.Dealer_Status__c</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : OEM Client Status</displayNameOverride>
-            <field>Account.OEM_Client_Status__c</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : Status</displayNameOverride>
-            <field>Account.Status__c</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : TCX Account Status</displayNameOverride>
-            <field>Account.TCX_Account_Status__c</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Opportunity : Account Name</displayNameOverride>
-            <field>Opportunity__c.Account</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : Account Name</displayNameOverride>
-            <field>Account__c.Name</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : Billing State/Province</displayNameOverride>
-            <field>Account__c.BillingState</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : CallRevu Client Account Status</displayNameOverride>
-            <field>Account__c.CallRevu_Client_Account_Status__c</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : Dealer Status</displayNameOverride>
-            <field>Account__c.Dealer_Status__c</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : OEM Account Status</displayNameOverride>
-            <field>Account__c.OEM_Account_Status__c</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : Status</displayNameOverride>
-            <field>Account__c.Status__c</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : TCX Account Status</displayNameOverride>
-            <field>Account__c.TCX_Account_Status__c</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Opportunity : Account Name : Account Name</displayNameOverride>
-            <field>Opportunity__c.Account.Name</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : Account ID</displayNameOverride>
-            <field>Account.Id</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : 18 Digit Account ID</displayNameOverride>
-            <field>Account.X18_Digit_Account_ID__c</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : 18 Digit Account ID</displayNameOverride>
-            <field>Account__c.X18_Digit_Account_ID__c</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : Account ID</displayNameOverride>
-            <field>Account__c.Id</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity : Account : Billing City</displayNameOverride>
-            <field>Account.BillingCity</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <displayNameOverride>Activity Type</displayNameOverride>
             <field>Activity_Type__c</field>
             <table>Activity</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Opportunity__c.Business_Development_Team_Member__c.Name</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Opportunity__c.CreatedDate</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Opportunity__c.Account.Parent.Name</field>
-            <table>Activity</table>
-        </columns>
         <masterLabel>Activities</masterLabel>
-    </sections>
-    <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner.IsActive</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner.Alias</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner.Email</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner.FirstName</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner.Name</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner.LastName</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner.MiddleName</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner.Id</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner.Phone</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner.Profile</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner.UserRole</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner.Suffix</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner.Title</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Owner.Username</field>
-            <table>Activity</table>
-        </columns>
-        <masterLabel>Assigned To</masterLabel>
-    </sections>
-    <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy.Manager</field>
-            <table>Activity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy.Manager.Name</field>
-            <table>Activity</table>
-        </columns>
-        <masterLabel>Created By</masterLabel>
     </sections>
 </ReportType>

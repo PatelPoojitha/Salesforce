@@ -4,7 +4,7 @@
         <name>Send_email_notification_0_0</name>
         <label>Send email notification</label>
         <locationX>1034</locationX>
-        <locationY>900</locationY>
+        <locationY>996</locationY>
         <actionName>Case.Send_an_email_notification_to_the_case_owner_when_the_case_is_not_being_followed</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -24,7 +24,7 @@
         <name>Check_Addendum_Fields</name>
         <label>Check Addendum Fields</label>
         <locationX>1276</locationX>
-        <locationY>684</locationY>
+        <locationY>756</locationY>
         <defaultConnector>
             <targetReference>Actions_for_each_case</targetReference>
         </defaultConnector>
@@ -67,7 +67,7 @@
         <name>Is_checker_equal_0</name>
         <label>Is checker equal 0?</label>
         <locationX>176</locationX>
-        <locationY>360</locationY>
+        <locationY>396</locationY>
         <defaultConnector>
             <targetReference>Get_cases_without_follow_up</targetReference>
         </defaultConnector>
@@ -103,7 +103,7 @@
         <name>Is_owner_a_queue_0</name>
         <label>Is owner a queue?</label>
         <locationX>1078</locationX>
-        <locationY>792</locationY>
+        <locationY>876</locationY>
         <defaultConnector>
             <targetReference>Actions_for_each_case</targetReference>
         </defaultConnector>
@@ -147,20 +147,12 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>Actions_for_each_case.Owner:User.IsActive</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>Send_email_notification_0_0</targetReference>
             </connector>
             <label>owner is an user</label>
         </rules>
     </decisions>
-    <description>Added logic to not try to send to a case with inactive Owner</description>
     <environments>Default</environments>
     <formulas>
         <name>Today</name>
@@ -179,7 +171,7 @@
         <name>Actions_for_each_case</name>
         <label>Actions for each case</label>
         <locationX>770</locationX>
-        <locationY>576</locationY>
+        <locationY>636</locationY>
         <collectionReference>Get_cases_without_follow_up</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -209,7 +201,7 @@
         <name>Get_cases_without_follow_up</name>
         <label>Get cases without follow up</label>
         <locationX>770</locationX>
-        <locationY>468</locationY>
+        <locationY>516</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Actions_for_each_case</targetReference>
@@ -244,7 +236,7 @@
         <name>Get_holidays</name>
         <label>Get holidays</label>
         <locationX>176</locationX>
-        <locationY>252</locationY>
+        <locationY>276</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Is_checker_equal_0</targetReference>

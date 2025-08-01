@@ -2,24 +2,26 @@
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>55.0</apiVersion>
     <assignments>
-        <name>Assignment_Records</name>
-        <label>Assignment Records</label>
+        <description>Counts the total number of Chat Transcripts related to an Account</description>
+        <name>Count_the_Chat_Transcripts_of_Account</name>
+        <label>Count the Chat Transcripts of Account</label>
         <locationX>176</locationX>
-        <locationY>455</locationY>
+        <locationY>431</locationY>
         <assignmentItems>
-            <assignToReference>VarCountRecords</assignToReference>
+            <assignToReference>VarCountChatTranscript</assignToReference>
             <operator>AssignCount</operator>
             <value>
-                <elementReference>Get_ID</elementReference>
+                <elementReference>Get_Account_Id_of_Chat_Transcript</elementReference>
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Update_Records</targetReference>
+            <targetReference>Update_Chat_Transcipt_Count_on_Account</targetReference>
         </connector>
     </assignments>
+    <description>Counts the Chat Transcripts related to an Account and populates the count on the Account.</description>
     <environments>Default</environments>
     <interviewLabel>Chat Transcripts {!$Flow.CurrentDateTime}</interviewLabel>
-    <label>Chat Transcripts Records</label>
+    <label>ChatTranscript_Count ChatTranscripts On Account</label>
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
@@ -40,14 +42,18 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <recordLookups>
-        <name>Get_ID</name>
-        <label>Get ID</label>
+        <description>Get Account Id of the created or updated Chat Transcript</description>
+        <name>Get_Account_Id_of_Chat_Transcript</name>
+        <label>Get Account Id of Chat Transcript</label>
         <locationX>176</locationX>
-        <locationY>335</locationY>
+        <locationY>323</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Assignment_Records</targetReference>
+            <targetReference>Count_the_Chat_Transcripts_of_Account</targetReference>
         </connector>
+        <faultConnector>
+            <targetReference>Error_Email</targetReference>
+        </faultConnector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>AccountId</field>
@@ -61,10 +67,13 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <name>Update_Records</name>
-        <label>Update Records</label>
+        <name>Update_Chat_Transcipt_Count_on_Account</name>
+        <label>Update Chat Transcipt Count on Account</label>
         <locationX>176</locationX>
-        <locationY>575</locationY>
+        <locationY>539</locationY>
+        <faultConnector>
+            <targetReference>Error_Email1</targetReference>
+        </faultConnector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -76,7 +85,7 @@
         <inputAssignments>
             <field>Chat_Transcripts__c</field>
             <value>
-                <elementReference>VarCountRecords</elementReference>
+                <elementReference>VarCountChatTranscript</elementReference>
             </value>
         </inputAssignments>
         <object>Account</object>
@@ -85,15 +94,68 @@
         <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_ID</targetReference>
+            <targetReference>Get_Account_Id_of_Chat_Transcript</targetReference>
         </connector>
+        <filterFormula>{!$CustomMetadata.Flow_Control__mdt.ChatTranscriptCountChatTranscriptsOnAcc.Turn_Off__c}=false</filterFormula>
         <object>LiveChatTranscript</object>
         <recordTriggerType>Create</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
+    <subflows>
+        <name>Error_Email</name>
+        <label>Error Email</label>
+        <locationX>704</locationX>
+        <locationY>431</locationY>
+        <flowName>Fault_Path_Flow</flowName>
+        <inputAssignments>
+            <name>varElementName</name>
+            <value>
+                <stringValue>Get Account Id of Chat Transcript</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFaultMessage</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFlowname</name>
+            <value>
+                <stringValue>ChatTranscript_Count ChatTranscripts On Account</stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+    <subflows>
+        <name>Error_Email1</name>
+        <label>Error Email1</label>
+        <locationX>440</locationX>
+        <locationY>647</locationY>
+        <flowName>Fault_Path_Flow</flowName>
+        <inputAssignments>
+            <name>varElementName</name>
+            <value>
+                <stringValue>Update_Chat_Transcipt_Count_on_Account</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFaultMessage</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFlowname</name>
+            <value>
+                <stringValue>ChatTranscript_Count ChatTranscripts On Account</stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
     <variables>
-        <name>VarCountRecords</name>
+        <name>VarCountChatTranscript</name>
         <dataType>Number</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

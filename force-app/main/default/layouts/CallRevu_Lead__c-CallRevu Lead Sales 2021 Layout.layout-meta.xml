@@ -46,6 +46,10 @@
                 <field>Lead_Type__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Current_Opportunity_Stage__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>CallRevu_Lead_Channel__c</field>
             </layoutItems>
@@ -58,7 +62,15 @@
                 <field>CallRevu_Lead_Sub_Source__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Dealer_Group_Penetration__c</field>
+            </layoutItems>
+            <layoutItems>
                 <emptySpace>true</emptySpace>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Date_Closed__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -287,19 +299,9 @@
             <sortOrder>2</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>tdc_tsw__LogACall</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>3</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
             <actionName>Case_Email</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>4</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>tdc_tsw__NewEvent</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>5</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
             <actionName>Create_CRLead_Task</actionName>

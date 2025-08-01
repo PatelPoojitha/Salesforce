@@ -11,6 +11,7 @@
     </actionOverrides>
     <brand>
         <headerColor>#0070D2</headerColor>
+        <logo>Sales_leadersship</logo>
         <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
@@ -80,6 +81,8 @@
     <tabs>Cadence__c</tabs>
     <tabs>Cadence_Task__c</tabs>
     <tabs>Service_Agreement_Products__c</tabs>
+    <tabs>Unsupported_Email__c</tabs>
+    <tabs>Bot_Customer_Rating__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Sales_Leadership_UtilityBar</utilityBar>
 </CustomApplication>

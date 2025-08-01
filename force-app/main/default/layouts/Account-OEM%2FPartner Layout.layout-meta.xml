@@ -5,7 +5,6 @@
     <excludeButtons>DisableCustomerPortalAccount</excludeButtons>
     <excludeButtons>DisablePartnerPortalAccount</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
-    <excludeButtons>OpenSlackRecordChannel</excludeButtons>
     <excludeButtons>Share</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -138,6 +137,10 @@
                 <field>Billing_Locations__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>X45_Day_Trial_Count__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Manufacturer__c</field>
             </layoutItems>
@@ -210,7 +213,7 @@
                 <field>Suggested_Group_Name__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>OEM_Account_Status__c</field>
             </layoutItems>
             <layoutItems>
@@ -262,12 +265,24 @@
                 <field>TCX_Account_Status__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Account_Grade_24__c</field>
+                <behavior>Edit</behavior>
+                <field>GM_BAC_Code__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>GM_BAC_Code__c</field>
+                <field>GM_Brand__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Open_Enrollment_Cases__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Recent_Closed_Opp_Count__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>On_Territory_hold__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -493,9 +508,14 @@
             <sortOrder>9</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>NewCase</actionName>
+            <actionName>CreateNewCase</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>10</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Account.Request_Account_be_Reassignment_to_you</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>11</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <relatedLists>

@@ -288,6 +288,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Toxicity_Detected__c</field>
+            <table>LiveChatTranscript</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Actual_Conversion_Time__c</field>
             <table>LiveChatTranscript</table>
         </columns>

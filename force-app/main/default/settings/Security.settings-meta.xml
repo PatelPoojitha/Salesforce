@@ -39,6 +39,10 @@
             <start>162.248.184.1</start>
         </ipRanges>
         <ipRanges>
+            <end>122.171.18.59</end>
+            <start>122.171.18.58</start>
+        </ipRanges>
+        <ipRanges>
             <description>Canpango</description>
             <end>74.87.121.202</end>
             <start>74.87.121.202</start>
@@ -215,10 +219,10 @@
         <useLocalStorageForLogoutUrl>false</useLocalStorageForLogoutUrl>
     </sessionSettings>
     <singleSignOnSettings>
-        <enableCaseInsensitiveFederationID>false</enableCaseInsensitiveFederationID>
+        <enableCaseInsensitiveFederationID>true</enableCaseInsensitiveFederationID>
         <enableMultipleSamlConfigs>true</enableMultipleSamlConfigs>
         <enableSamlJitProvisioning>false</enableSamlJitProvisioning>
-        <enableSamlLogin>false</enableSamlLogin>
+        <enableSamlLogin>true</enableSamlLogin>
         <isLoginWithSalesforceCredentialsDisabled>false</isLoginWithSalesforceCredentialsDisabled>
     </singleSignOnSettings>
 </SecuritySettings>

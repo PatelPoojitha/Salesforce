@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <excludeButtons>OpenSlackRecordChannel</excludeButtons>
     <layoutSections>
         <customLabel>true</customLabel>
         <detailHeading>false</detailHeading>
@@ -22,6 +21,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>EndTime</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>LiveChatVisitorId</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
@@ -110,10 +113,6 @@
         <editHeading>true</editHeading>
         <label>Visitor Details</label>
         <layoutColumns>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>LiveChatVisitorId</field>
-            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Location</field>

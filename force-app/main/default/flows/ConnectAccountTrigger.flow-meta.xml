@@ -3,41 +3,19 @@
     <actionCalls>
         <name>ConnectAccountTrigger</name>
         <label>ConnectAccountTrigger</label>
-        <locationX>50</locationX>
-        <locationY>539</locationY>
-        <actionName>DNBConnect__DNB_ConnectMatchTrigger</actionName>
-        <actionType>apex</actionType>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>Account.ConnectAccountTrigger</actionName>
+        <actionType>outboundMessage</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
-        <inputParameters>
-            <name>modifiedRecordsIds</name>
-            <value>
-                <elementReference>ID_Collection</elementReference>
-            </value>
-        </inputParameters>
-        <nameSegment>DNBConnect__DNB_ConnectMatchTrigger</nameSegment>
+        <nameSegment>Account.ConnectAccountTrigger</nameSegment>
     </actionCalls>
-    <apiVersion>59.0</apiVersion>
-    <assignments>
-        <name>Assign_ID</name>
-        <label>Assign ID</label>
-        <locationX>182</locationX>
-        <locationY>323</locationY>
-        <assignmentItems>
-            <assignToReference>ID_Collection</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Company_Profile_Check</targetReference>
-        </connector>
-    </assignments>
+    <apiVersion>55.0</apiVersion>
     <decisions>
         <name>Company_Profile_Check</name>
         <label>Company Profile Check</label>
         <locationX>182</locationX>
-        <locationY>431</locationY>
+        <locationY>335</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Record_Has_No_Company_Profile</name>
@@ -76,10 +54,10 @@
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
     <start>
-        <locationX>56</locationX>
+        <locationX>0</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Assign_ID</targetReference>
+            <targetReference>Company_Profile_Check</targetReference>
         </connector>
         <filterFormula>(ISNEW() || ISCHANGED({!$Record.Name}) || ISCHANGED({!$Record.BillingState}) || ISCHANGED({!$Record.Duns_Number__c}) || ISCHANGED({!$Record.BillingPostalCode}) || ISCHANGED({!$Record.BillingCountry}) || ISCHANGED({!$Record.Phone}) || ISCHANGED({!$Record.BillingStreet}) || ISCHANGED({!$Record.BillingCity}))</filterFormula>
         <object>Account</object>
@@ -87,11 +65,4 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
-    <variables>
-        <name>ID_Collection</name>
-        <dataType>String</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>true</isOutput>
-    </variables>
 </Flow>

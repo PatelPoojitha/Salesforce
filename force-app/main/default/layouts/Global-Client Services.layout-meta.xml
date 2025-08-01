@@ -38,14 +38,19 @@
             <sortOrder>6</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Create_Add_on_Opp</actionName>
+            <actionName>New_Repackage_Opp</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>7</sortOrder>
         </platformActionListItems>
         <platformActionListItems>
-            <actionName>Create_New_Trial_Opp</actionName>
+            <actionName>Create_Add_on_Opp</actionName>
             <actionType>QuickAction</actionType>
             <sortOrder>8</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Create_New_Trial_Opp</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>9</sortOrder>
         </platformActionListItems>
     </platformActionList>
     <quickActionList>

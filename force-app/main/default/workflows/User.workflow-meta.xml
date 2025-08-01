@@ -2,15 +2,16 @@
 <Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
     <alerts>
         <fullName>Active_Update</fullName>
+        <ccEmails>soumyak@coreflexsolutions.com</ccEmails>
         <description>Active Update</description>
         <protected>false</protected>
         <recipients>
-            <recipient>kristiejaecklein@callrevu.com</recipient>
+            <recipient>soumyakalmath@callrevu.com</recipient>
             <type>user</type>
         </recipients>
         <senderAddress>sfhelpdesk@callrevu.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
-        <template>unfiled$public/Deactivated</template>
+        <template>footprint__Footprint/Deactivated</template>
     </alerts>
     <rules>
         <fullName>Activated</fullName>

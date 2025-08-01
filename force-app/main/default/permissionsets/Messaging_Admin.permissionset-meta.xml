@@ -52,6 +52,10 @@
     </objectPermissions>
     <userPermissions>
         <enabled>true</enabled>
+        <name>Broadcaster</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>CanAccessCE</name>
     </userPermissions>
     <userPermissions>

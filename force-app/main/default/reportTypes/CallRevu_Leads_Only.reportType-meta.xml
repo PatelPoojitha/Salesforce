@@ -516,16 +516,6 @@
             <field>Contact__c.Title</field>
             <table>CallRevu_Lead__c</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy.Department</field>
-            <table>CallRevu_Lead__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy.Team__c</field>
-            <table>CallRevu_Lead__c</table>
-        </columns>
         <masterLabel>CallRevu Leads</masterLabel>
     </sections>
     <sections>
@@ -661,12 +651,22 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.X2018_Closed_Won_Opportunities__c</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.X45_Day_Trial_Count__c</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Account__c.Account_CallRevu_Link__c</field>
             <table>CallRevu_Lead__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Account__c.XXAccount_Grade__c</field>
+            <field>Account__c.Account_Grade__c</field>
             <table>CallRevu_Lead__c</table>
         </columns>
         <columns>
@@ -707,6 +707,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Account__c.AccountSource</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.DNBoptimizer__DnBCompanyRecord__c</field>
             <table>CallRevu_Lead__c</table>
         </columns>
         <columns>
@@ -966,6 +971,16 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.TracHier__Primary_Master_Account__c</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.TracHier__Hierarchy_ID__c</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Account__c.Contact_Count__c</field>
             <table>CallRevu_Lead__c</table>
         </columns>
@@ -1031,6 +1046,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.DNBoptimizer__DNB_D_U_N_S_Number__c</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Account__c.iSell__OSKeyID__c</field>
             <table>CallRevu_Lead__c</table>
         </columns>
@@ -1091,7 +1111,17 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.TracHier__Disable_Hierarchies__c</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Account__c.DMS__c</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.TracHier__Domain__c</field>
             <table>CallRevu_Lead__c</table>
         </columns>
         <columns>
@@ -1117,6 +1147,16 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Account__c.Fax</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.TracHier__Global_Ultimate_Grouping_Id__c</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.TracHier__DUNS_Global_Ultimate_Parent__c</field>
             <table>CallRevu_Lead__c</table>
         </columns>
         <columns>
@@ -1202,6 +1242,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Account__c.LastActivityDate</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.TracHier__Last_Build_Hierarchy_Date__c</field>
             <table>CallRevu_Lead__c</table>
         </columns>
         <columns>
@@ -1391,6 +1436,16 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.TracHier__Excluded_From_Account_Hierarchies__c</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.TracHier__Owner__c</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Account__c.Owner_Request__c</field>
             <table>CallRevu_Lead__c</table>
         </columns>
@@ -1407,6 +1462,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Account__c.Parent</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.TracHier__Parent_Company__c</field>
             <table>CallRevu_Lead__c</table>
         </columns>
         <columns>
@@ -1456,6 +1516,16 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.Pre_2018_Closed_Won_Opportunities__c</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.TracHier__Primary_Territory__c</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Account__c.Rating</field>
             <table>CallRevu_Lead__c</table>
         </columns>
@@ -1467,6 +1537,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Account__c.Region__c</field>
+            <table>CallRevu_Lead__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Account__c.TracHier__Re_Run_Traction_Hierarchies__c</field>
             <table>CallRevu_Lead__c</table>
         </columns>
         <columns>
@@ -1592,11 +1667,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Account__c.SicDesc</field>
-            <table>CallRevu_Lead__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Account__c.tdc_tsw__SMS_Opt_out__c</field>
             <table>CallRevu_Lead__c</table>
         </columns>
         <columns>

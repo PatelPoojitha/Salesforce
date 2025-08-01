@@ -11,13 +11,19 @@
         <inputParameters>
             <name>emailAddresses</name>
             <value>
-                <elementReference>RecipientAddressList</elementReference>
+                <stringValue>poojithap@coreflexsolutions.com, soumyak@coreflexsolutions.com, minakshik@coreflexsolutions.com</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>senderType</name>
+            <value>
+                <stringValue>OrgWideEmailAddress</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
             <name>senderAddress</name>
             <value>
-                <elementReference>SenderEmailAddress</elementReference>
+                <stringValue>noreply-sf@callrevu.com</stringValue>
             </value>
         </inputParameters>
         <inputParameters>

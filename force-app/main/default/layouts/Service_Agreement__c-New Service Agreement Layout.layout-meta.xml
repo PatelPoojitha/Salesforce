@@ -128,10 +128,6 @@
                 <behavior>Readonly</behavior>
                 <field>Open_QBR_Cases__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>TCX_Account_Number__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -1115,13 +1111,13 @@
     </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
-        <fields>Billing_Product_Description__c</fields>
-        <fields>Billing_Code__c</fields>
         <fields>Quantity__c</fields>
         <fields>Price_Per_Unit__c</fields>
         <fields>Effective_Date__c</fields>
         <fields>End_Date__c</fields>
         <fields>CREATED_DATE</fields>
+        <fields>CREATEDBY_USER</fields>
+        <fields>Ready_To_Invoice__c</fields>
         <fields>Billing_Agreement_And_Prod_Agreement_Key__c</fields>
         <relatedList>Service_Agreement_Products__c.CallRevu_Contract__c</relatedList>
     </relatedLists>

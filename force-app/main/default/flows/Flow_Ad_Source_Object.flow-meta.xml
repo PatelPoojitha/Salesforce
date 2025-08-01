@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <description>Updates the fields on the Ad Source record using details from the running user.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>varAuditActiveUserId</name>
+        <dataType>String</dataType>
+        <expression>{!$User.FirstName} + &quot; &quot;+{!$User.LastName}</expression>
+    </formulas>
+    <formulas>
+        <name>varCallRevuTrackingNumber</name>
+        <dataType>String</dataType>
+        <expression>Substitute(Substitute(Substitute( {!$Record.CallRevu_Tracking_Number__c},&quot; &quot;,&quot;-&quot;),&quot;(&quot;,&quot;&quot;),&quot;)&quot;,&quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>varCurrentlyPostedNumber</name>
+        <dataType>String</dataType>
+        <expression>Substitute(Substitute(Substitute( {!$Record.Currently_Posted_Number__c},&quot; &quot;,&quot;-&quot;),&quot;(&quot;,&quot;&quot;),&quot;)&quot;,&quot;&quot;)</expression>
+    </formulas>
+    <formulas>
+        <name>varNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <formulas>
+        <name>varRingsto</name>
+        <dataType>String</dataType>
+        <expression>Substitute(Substitute(Substitute( {!$Record.Rings_to__c},&quot; &quot;,&quot;-&quot;),&quot;(&quot;,&quot;&quot;),&quot;)&quot;,&quot;&quot;)</expression>
+    </formulas>
+    <interviewLabel>Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Ad Source_Update Fields from User Details</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Ad_Source_Fields</name>
+        <label>Update Ad Source Fields</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <faultConnector>
+            <targetReference>Error_Email</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Audit_Active_User_Email__c</field>
+            <value>
+                <elementReference>$User.Email</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Audit_Active_User_First_Name__c</field>
+            <value>
+                <elementReference>$User.FirstName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Audit_Active_User_Id__c</field>
+            <value>
+                <elementReference>varAuditActiveUserId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Audit_Active_User_Last_Name__c</field>
+            <value>
+                <elementReference>$User.LastName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>CallRevu_Tracking_Number__c</field>
+            <value>
+                <elementReference>varCallRevuTrackingNumber</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Currently_Posted_Number__c</field>
+            <value>
+                <elementReference>varCurrentlyPostedNumber</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Rings_to__c</field>
+            <value>
+                <elementReference>varRingsto</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Ad_Source_Fields</targetReference>
+        </connector>
+        <filterFormula>AND(TEXT({!$Record.Method__c}) &lt;&gt; &quot;&quot;,{!$CustomMetadata.Flow_Control__mdt.Ad_Source_Update_Fields_from_User_Detail.Turn_Off__c}=false)</filterFormula>
+        <object>Ad_Source__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <subflows>
+        <name>Error_Email</name>
+        <label>Error Email</label>
+        <locationX>440</locationX>
+        <locationY>431</locationY>
+        <flowName>Fault_Path_Flow</flowName>
+        <inputAssignments>
+            <name>varElementName</name>
+            <value>
+                <stringValue>Update_Ad_Source_Fields</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFaultMessage</name>
+            <value>
+                <elementReference>$Flow.FaultMessage</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <name>varFlowname</name>
+            <value>
+                <stringValue>Ad Source_Update Fields from User Details</stringValue>
+            </value>
+        </inputAssignments>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </subflows>
+</Flow>

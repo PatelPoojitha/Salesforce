@@ -5,7 +5,7 @@
         <name>Count_contact_records</name>
         <label>Count contact records</label>
         <locationX>176</locationX>
-        <locationY>431</locationY>
+        <locationY>455</locationY>
         <assignmentItems>
             <assignToReference>varContactCount</assignToReference>
             <operator>AssignCount</operator>
@@ -17,7 +17,6 @@
             <targetReference>Update_Account</targetReference>
         </connector>
     </assignments>
-    <description>+ account/contact ownership alignment</description>
     <environments>Default</environments>
     <interviewLabel>Count Contacts on Account Trigger Flow {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Count Contacts on Account Trigger Flow</label>
@@ -38,7 +37,7 @@
         <name>LookupContacts</name>
         <label>LookupContacts</label>
         <locationX>176</locationX>
-        <locationY>323</locationY>
+        <locationY>335</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Count_contact_records</targetReference>
@@ -59,10 +58,7 @@
         <name>Update_Account</name>
         <label>Update Account</label>
         <locationX>176</locationX>
-        <locationY>539</locationY>
-        <connector>
-            <targetReference>update_Contact_to_Account_Owner</targetReference>
-        </connector>
+        <locationY>575</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -79,27 +75,6 @@
         </inputAssignments>
         <object>Account</object>
     </recordUpdates>
-    <recordUpdates>
-        <name>update_Contact_to_Account_Owner</name>
-        <label>update Contact to Account Owner</label>
-        <locationX>176</locationX>
-        <locationY>647</locationY>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>OwnerId</field>
-            <operator>NotEqualTo</operator>
-            <value>
-                <elementReference>$Record.Account.OwnerId</elementReference>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>OwnerId</field>
-            <value>
-                <elementReference>$Record.Account.OwnerId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
     <start>
         <locationX>50</locationX>
         <locationY>0</locationY>
@@ -111,7 +86,7 @@
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Active</status>
     <variables>
         <name>varContactCount</name>
         <dataType>Number</dataType>

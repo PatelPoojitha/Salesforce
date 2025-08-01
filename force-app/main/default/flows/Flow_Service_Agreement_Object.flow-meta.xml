@@ -1,11 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Send_Email_Alert</name>
+        <label>Send Email Alert</label>
+        <locationX>50</locationX>
+        <locationY>575</locationY>
+        <actionName>Service_Agreement__c.Alert_Accounting_of_Change_to_Account_Manager</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Update_KJ_Test</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Service_Agreement__c.Alert_Accounting_of_Change_to_Account_Manager</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email_Alert_1</name>
+        <label>Send Email Alert</label>
+        <locationX>50</locationX>
+        <locationY>5087</locationY>
+        <actionName>Service_Agreement__c.Send_Authorized_Send_Email</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Is_Secondary_Contact_updated</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Service_Agreement__c.Send_Authorized_Send_Email</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Email_Alert_2</name>
+        <label>Send Email Alert</label>
+        <locationX>50</locationX>
+        <locationY>6215</locationY>
+        <actionName>Service_Agreement__c.Send_Enrollment_Call_Reminder</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Service_Agreement__c.Send_Enrollment_Call_Reminder</nameSegment>
+    </actionCalls>
     <apiVersion>53.0</apiVersion>
     <assignments>
         <name>Assign_values_to_new_Opportunity</name>
         <label>Assign values to new Opportunity</label>
-        <locationX>644</locationX>
-        <locationY>1703</locationY>
+        <locationX>50</locationX>
+        <locationY>1823</locationY>
         <assignmentItems>
             <assignToReference>varOpportunity.CloseDate</assignToReference>
             <operator>Assign</operator>
@@ -62,8 +116,8 @@
     <decisions>
         <name>AM_to_the_Account_Record</name>
         <label>AM to the Account Record</label>
-        <locationX>776</locationX>
-        <locationY>478</locationY>
+        <locationX>182</locationX>
+        <locationY>455</locationY>
         <defaultConnector>
             <targetReference>Is_Performance_Manager_Null_0</targetReference>
         </defaultConnector>
@@ -100,7 +154,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_KJ_Test</targetReference>
+                <targetReference>Send_Email_Alert</targetReference>
             </connector>
             <label>KJ Test</label>
         </rules>
@@ -108,8 +162,8 @@
     <decisions>
         <name>Is_Authorization_Contact_field_changed</name>
         <label>Is Authorization Contact field changed?</label>
-        <locationX>776</locationX>
-        <locationY>2903</locationY>
+        <locationX>182</locationX>
+        <locationY>3167</locationY>
         <defaultConnector>
             <targetReference>Is_Current_Case_null</targetReference>
         </defaultConnector>
@@ -147,8 +201,8 @@
     <decisions>
         <name>Is_CallRevu_Account_Number_null</name>
         <label>Is CallRevu Account Number null?</label>
-        <locationX>776</locationX>
-        <locationY>2003</locationY>
+        <locationX>182</locationX>
+        <locationY>2159</locationY>
         <defaultConnector>
             <targetReference>Is_Sync_To_CallRevu_360_True</targetReference>
         </defaultConnector>
@@ -179,8 +233,8 @@
     <decisions>
         <name>Is_Create_Renewal_Opportunity_true</name>
         <label>Is Create Renewal Opportunity true?</label>
-        <locationX>776</locationX>
-        <locationY>1487</locationY>
+        <locationX>182</locationX>
+        <locationY>1583</locationY>
         <defaultConnector>
             <targetReference>Is_CallRevu_Account_Number_null</targetReference>
         </defaultConnector>
@@ -204,8 +258,8 @@
     <decisions>
         <name>Is_CRM_changed</name>
         <label>Is CRM changed?</label>
-        <locationX>776</locationX>
-        <locationY>1187</locationY>
+        <locationX>182</locationX>
+        <locationY>1247</locationY>
         <defaultConnector>
             <targetReference>Is_Create_Renewal_Opportunity_true</targetReference>
         </defaultConnector>
@@ -229,8 +283,8 @@
     <decisions>
         <name>Is_Current_Case_null</name>
         <label>Is Current Case null?</label>
-        <locationX>776</locationX>
-        <locationY>3203</locationY>
+        <locationX>182</locationX>
+        <locationY>3503</locationY>
         <defaultConnector>
             <targetReference>Is_Preferred_Contact_for_Billing_Field_null</targetReference>
         </defaultConnector>
@@ -268,8 +322,8 @@
     <decisions>
         <name>Is_Enrollment_Call_Scheduled_changed</name>
         <label>Is Enrollment Call Scheduled changed?</label>
-        <locationX>776</locationX>
-        <locationY>5411</locationY>
+        <locationX>182</locationX>
+        <locationY>5975</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Enrollment_Call_Scheduled_is_changed</name>
@@ -290,8 +344,8 @@
     <decisions>
         <name>Is_Enrollment_Case_Linked</name>
         <label>Is Enrollment Case Linked</label>
-        <locationX>776</locationX>
-        <locationY>5111</locationY>
+        <locationX>182</locationX>
+        <locationY>5639</locationY>
         <defaultConnector>
             <targetReference>Is_Enrollment_Call_Scheduled_changed</targetReference>
         </defaultConnector>
@@ -329,8 +383,8 @@
     <decisions>
         <name>Is_Include_in_Renewal_Opportunity_Process_field_true</name>
         <label>Is Include in Renewal Opportunity Process field true?</label>
-        <locationX>776</locationX>
-        <locationY>4103</locationY>
+        <locationX>182</locationX>
+        <locationY>4511</locationY>
         <defaultConnector>
             <targetReference>Is_Send_Enrollment_Link_True</targetReference>
         </defaultConnector>
@@ -361,8 +415,8 @@
     <decisions>
         <name>Is_Performance_Manager_Null_0</name>
         <label>Is Performance Manager Null?</label>
-        <locationX>776</locationX>
-        <locationY>887</locationY>
+        <locationX>182</locationX>
+        <locationY>911</locationY>
         <defaultConnector>
             <targetReference>Is_CRM_changed</targetReference>
         </defaultConnector>
@@ -384,13 +438,6 @@
                     <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>$Record.Tier_Status__c</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>TCX</stringValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>Update_Performance_Mgr_in_CR360</targetReference>
             </connector>
@@ -400,8 +447,8 @@
     <decisions>
         <name>Is_Preferred_Contact_for_Billing_Field_null</name>
         <label>Is Preferred Contact for Billing Field null?</label>
-        <locationX>776</locationX>
-        <locationY>3503</locationY>
+        <locationX>182</locationX>
+        <locationY>3839</locationY>
         <defaultConnector>
             <targetReference>Is_Review_Cycle_updated</targetReference>
         </defaultConnector>
@@ -439,8 +486,8 @@
     <decisions>
         <name>Is_Ready_to_Sync_to_CallRevu_360_true</name>
         <label>Is Ready to Sync to CallRevu 360 true?</label>
-        <locationX>776</locationX>
-        <locationY>2602</locationY>
+        <locationX>182</locationX>
+        <locationY>2831</locationY>
         <defaultConnector>
             <targetReference>Is_Authorization_Contact_field_changed</targetReference>
         </defaultConnector>
@@ -471,8 +518,8 @@
     <decisions>
         <name>Is_Review_Cycle_updated</name>
         <label>Is Review Cycle updated?</label>
-        <locationX>776</locationX>
-        <locationY>3803</locationY>
+        <locationX>182</locationX>
+        <locationY>4175</locationY>
         <defaultConnector>
             <targetReference>Is_Include_in_Renewal_Opportunity_Process_field_true</targetReference>
         </defaultConnector>
@@ -517,8 +564,8 @@
     <decisions>
         <name>Is_Secondary_Contact_updated</name>
         <label>Is Secondary Contact updated?</label>
-        <locationX>776</locationX>
-        <locationY>4811</locationY>
+        <locationX>182</locationX>
+        <locationY>5303</locationY>
         <defaultConnector>
             <targetReference>Is_Enrollment_Case_Linked</targetReference>
         </defaultConnector>
@@ -556,8 +603,8 @@
     <decisions>
         <name>Is_Send_Enrollment_Link_True</name>
         <label>Is Send Enrollment Link True?</label>
-        <locationX>776</locationX>
-        <locationY>4403</locationY>
+        <locationX>182</locationX>
+        <locationY>4847</locationY>
         <defaultConnector>
             <targetReference>Is_Secondary_Contact_updated</targetReference>
         </defaultConnector>
@@ -588,8 +635,8 @@
     <decisions>
         <name>Is_Sync_To_CallRevu_360_True</name>
         <label>Is Sync To CallRevu 360 True?</label>
-        <locationX>776</locationX>
-        <locationY>2303</locationY>
+        <locationX>182</locationX>
+        <locationY>2495</locationY>
         <defaultConnector>
             <targetReference>Is_Ready_to_Sync_to_CallRevu_360_true</targetReference>
         </defaultConnector>
@@ -610,7 +657,7 @@
             <label>Sync To CallRevu 360</label>
         </rules>
     </decisions>
-    <description>Added Enrollment Coordinator update from linked Service Agreement Enrollment Case + Deleted Email Alerts + exclusion of TCX tier status for Performance Manager Null check</description>
+    <description>Added Enrollment Coordinator update from linked Service Agreement Enrollment Case</description>
     <environments>Default</environments>
     <formulas>
         <name>varAuditAcitveUserID</name>
@@ -663,7 +710,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -676,8 +723,8 @@
     <recordCreates>
         <name>Create_a_new_Opportunity</name>
         <label>Create a new Opportunity</label>
-        <locationX>644</locationX>
-        <locationY>1811</locationY>
+        <locationX>50</locationX>
+        <locationY>1943</locationY>
         <connector>
             <targetReference>Is_CallRevu_Account_Number_null</targetReference>
         </connector>
@@ -686,8 +733,8 @@
     <recordLookups>
         <name>Get_Opportunity_Record_Type</name>
         <label>Get Opportunity Record Type</label>
-        <locationX>644</locationX>
-        <locationY>1595</locationY>
+        <locationX>50</locationX>
+        <locationY>1703</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Assign_values_to_new_Opportunity</targetReference>
@@ -707,8 +754,8 @@
     <recordUpdates>
         <name>Update_Authorization_Code</name>
         <label>Update Authorization Code</label>
-        <locationX>644</locationX>
-        <locationY>4919</locationY>
+        <locationX>50</locationX>
+        <locationY>5423</locationY>
         <connector>
             <targetReference>Is_Enrollment_Case_Linked</targetReference>
         </connector>
@@ -723,8 +770,8 @@
     <recordUpdates>
         <name>Update_Contact_on_Case_Object</name>
         <label>Update Contact on Case Object</label>
-        <locationX>644</locationX>
-        <locationY>3011</locationY>
+        <locationX>50</locationX>
+        <locationY>3287</locationY>
         <connector>
             <targetReference>Is_Current_Case_null</targetReference>
         </connector>
@@ -747,8 +794,8 @@
     <recordUpdates>
         <name>Update_Contact_on_Case_Object_0</name>
         <label>Update Contact on Case Object</label>
-        <locationX>644</locationX>
-        <locationY>3311</locationY>
+        <locationX>50</locationX>
+        <locationY>3623</locationY>
         <connector>
             <targetReference>Is_Preferred_Contact_for_Billing_Field_null</targetReference>
         </connector>
@@ -771,8 +818,8 @@
     <recordUpdates>
         <name>Update_Contact_on_Case_Object_0_0</name>
         <label>Update Contact on Case Object</label>
-        <locationX>644</locationX>
-        <locationY>3611</locationY>
+        <locationX>50</locationX>
+        <locationY>3959</locationY>
         <connector>
             <targetReference>Is_Review_Cycle_updated</targetReference>
         </connector>
@@ -802,8 +849,8 @@
     <recordUpdates>
         <name>Update_Create_Renewal_Opportunity</name>
         <label>Update Create Renewal Opportunity</label>
-        <locationX>644</locationX>
-        <locationY>4211</locationY>
+        <locationX>50</locationX>
+        <locationY>4631</locationY>
         <connector>
             <targetReference>Is_Send_Enrollment_Link_True</targetReference>
         </connector>
@@ -818,8 +865,8 @@
     <recordUpdates>
         <name>Update_CRM</name>
         <label>Update CRM</label>
-        <locationX>644</locationX>
-        <locationY>1295</locationY>
+        <locationX>50</locationX>
+        <locationY>1367</locationY>
         <connector>
             <targetReference>Is_Create_Renewal_Opportunity_true</targetReference>
         </connector>
@@ -842,7 +889,7 @@
     <recordUpdates>
         <name>Update_KJ_Test</name>
         <label>Update KJ Test</label>
-        <locationX>644</locationX>
+        <locationX>50</locationX>
         <locationY>695</locationY>
         <connector>
             <targetReference>Is_Performance_Manager_Null_0</targetReference>
@@ -858,8 +905,11 @@
     <recordUpdates>
         <name>Update_Last_Workflow_Update</name>
         <label>Update Last Workflow Update</label>
-        <locationX>644</locationX>
-        <locationY>5519</locationY>
+        <locationX>50</locationX>
+        <locationY>6095</locationY>
+        <connector>
+            <targetReference>Send_Email_Alert_2</targetReference>
+        </connector>
         <inputAssignments>
             <field>Last_Workflow_Update__c</field>
             <value>
@@ -871,8 +921,8 @@
     <recordUpdates>
         <name>Update_Performance_Mgr_in_CR360</name>
         <label>Update Performance Mgr in CR360</label>
-        <locationX>644</locationX>
-        <locationY>995</locationY>
+        <locationX>50</locationX>
+        <locationY>1031</locationY>
         <connector>
             <targetReference>Is_CRM_changed</targetReference>
         </connector>
@@ -887,8 +937,8 @@
     <recordUpdates>
         <name>Update_Records</name>
         <label>Update Records</label>
-        <locationX>776</locationX>
-        <locationY>371</locationY>
+        <locationX>182</locationX>
+        <locationY>335</locationY>
         <connector>
             <targetReference>AM_to_the_Account_Record</targetReference>
         </connector>
@@ -969,10 +1019,10 @@
     <recordUpdates>
         <name>Update_Records_0</name>
         <label>Update Records</label>
-        <locationX>644</locationX>
-        <locationY>4511</locationY>
+        <locationX>50</locationX>
+        <locationY>4967</locationY>
         <connector>
-            <targetReference>Is_Secondary_Contact_updated</targetReference>
+            <targetReference>Send_Email_Alert_1</targetReference>
         </connector>
         <inputAssignments>
             <field>Date_Authorized_Contact_Notified__c</field>
@@ -997,8 +1047,8 @@
     <recordUpdates>
         <name>Update_Records_2</name>
         <label>Update Records</label>
-        <locationX>644</locationX>
-        <locationY>2411</locationY>
+        <locationX>50</locationX>
+        <locationY>2615</locationY>
         <connector>
             <targetReference>Is_Ready_to_Sync_to_CallRevu_360_true</targetReference>
         </connector>
@@ -1037,8 +1087,8 @@
     <recordUpdates>
         <name>Update_Review_Cycle</name>
         <label>Update Review Cycle</label>
-        <locationX>644</locationX>
-        <locationY>3911</locationY>
+        <locationX>50</locationX>
+        <locationY>4295</locationY>
         <connector>
             <targetReference>Is_Include_in_Renewal_Opportunity_Process_field_true</targetReference>
         </connector>
@@ -1053,8 +1103,8 @@
     <recordUpdates>
         <name>Update_Service_Agreement</name>
         <label>Update Service Agreement</label>
-        <locationX>644</locationX>
-        <locationY>5219</locationY>
+        <locationX>50</locationX>
+        <locationY>5759</locationY>
         <connector>
             <targetReference>Is_Enrollment_Call_Scheduled_changed</targetReference>
         </connector>
@@ -1069,8 +1119,8 @@
     <recordUpdates>
         <name>Update_Sync_to_CallRevu_360</name>
         <label>Update Sync to CallRevu 360</label>
-        <locationX>644</locationX>
-        <locationY>2711</locationY>
+        <locationX>50</locationX>
+        <locationY>2951</locationY>
         <connector>
             <targetReference>Is_Authorization_Contact_field_changed</targetReference>
         </connector>
@@ -1085,8 +1135,8 @@
     <recordUpdates>
         <name>Update_Sync_With_CallRevu_360</name>
         <label>Update Sync With CallRevu 360</label>
-        <locationX>644</locationX>
-        <locationY>2111</locationY>
+        <locationX>50</locationX>
+        <locationY>2279</locationY>
         <connector>
             <targetReference>Is_Sync_To_CallRevu_360_True</targetReference>
         </connector>
@@ -1107,8 +1157,8 @@
         <object>Billing_Agreement__c</object>
     </recordUpdates>
     <start>
-        <locationX>650</locationX>
-        <locationY>48</locationY>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>Update_Records</targetReference>
         </connector>

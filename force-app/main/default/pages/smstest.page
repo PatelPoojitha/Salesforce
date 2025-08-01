@@ -1,0 +1,139 @@
+<apex:page > <!-- doctype="html-5.0" standardController="tdc_tsw__Message_Template__c" showHeader="true" standardStylesheets="true" sidebar="false"  id="pageId">
+<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>
+
+    
+    <style type="text/css">
+    .slds-scope .form-wrapper {
+        padding: 1.5rem;
+    }
+    .slds-scope .slds-card__body {
+        background: #fff;
+    }
+
+    .slds-scope .slds-section-title--divider {
+        display: block;
+    }
+
+    .slds-scope .slds-card {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    .slds-scope input.btn{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .slds-scope .emojionearea .emojionearea-editor:empty:before 
+       {
+        content: attr(placeholder);
+        display: none;
+        color: #bbb;
+        }
+    
+    .slds-scope .slds-section-title--divider {
+        background: #d8dde6;
+    }
+    
+    .slds-scope .message {
+        margin: 0 0 10px;
+        max-width: 500px;
+    }
+    .slds-scope .slds-section-title--divider {
+        background: #d8dde6;
+    }
+    
+    .slds-scope .slds-card {
+        background-color: #d8dde6;
+    }
+    
+    .slds-scope .slds-textarea {
+        min-height: 100px;
+    }
+    .slds-scope .Verify-btn{
+        display:inline-block;
+        margin-left:5px;
+    }
+    @media (max-width: 767px){
+        .slds-scope .record-type{
+            margin-right:0px !important;
+            padding-top: 10px !important;
+        }
+        .slds-scope .Verify-btn{
+            display:inline-block;
+            margin-top: 10px;
+        }
+        .slds-scope .form-wrapper{
+            padding: 0px
+        }
+        .slds-scope .field{
+            padding-right: .5rem !important;
+            padding-left: .5rem !important;
+        }
+        
+    }
+        .slds-scope .txtsearch{
+            max-width: calc(100% - 0px);
+        }
+       .slds-scope .Go-btn{
+            margin-left: 0.5em;
+        }
+        .slds-scope .record-name{
+            width: calc(100% - 48px);
+        }
+        .slds-scope .slds-select{
+            -webkit-appearance: none;
+            padding: 0px 10px;
+        }
+    @media (max-width: 480px){
+        .slds-scope .Go-btn .slds-button--brand{
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+        }
+    }
+    .slds-scope .infoM3 .msgIcon, .infoMedium{
+        background-image: url(/img/msg_icons/info24.png);
+        background-position: 0 0;
+        width: 35px;
+        height: 24px;
+        background-repeat: no-repeat;
+    }
+    select{
+        max-width: 262px;
+    }
+    
+    .select2-container {
+        width:100% !important;
+    }
+    </style>
+//<script>
+//    function abc(objId, objName) {
+//      document.getElementById('pageId:formId:RecordName').value = objName;
+//      apexmethod(objId);
+        //$('.slds-backdrop').removeClass('slds-backdrop--open');
+        //$('.slds-modal').removeClass('slds-fade-in-open');
+//      $('.recordIdSection').show();
+//      $('.lookupSection').hide();
+//  }
+
+//  $(".slds-modal__close").click(function() {
+//      $('.slds-backdrop').removeClass('slds-backdrop--open');
+//      $('.slds-modal').removeClass('slds-fade-in-open');
+//  });
+
+//  function openModal() {
+    //alert('openModal');
+        //  $('.recordIdSection').hide();
+        // $('.slds-backdrop').addClass('slds-backdrop--open');
+//      $('.slds-modal').addClass('slds-fade-in-open');
+//      $('.lookupSection').show();
+//  }
+</script>
+    
+    
+</head>
+<body>
+
+</body>
+</html>
+--> 
+</apex:page>

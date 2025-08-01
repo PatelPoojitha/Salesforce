@@ -240,10 +240,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Marketing Sponsor Event</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Material Download</fullName>
             <default>false</default>
         </values>
@@ -269,10 +265,6 @@
         </values>
         <values>
             <fullName>NIADA 2021</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>NYDA - eDealer</fullName>
             <default>false</default>
         </values>
         <values>
@@ -515,10 +507,6 @@
         <picklist>Status__c</picklist>
         <values>
             <fullName>Bad Lead%2FUnqualified</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Closed</fullName>
             <default>false</default>
         </values>
         <values>

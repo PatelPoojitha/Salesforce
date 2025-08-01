@@ -33,27 +33,6 @@
                 <identifier>runtime_sales_pathassistant_pathAssistant</identifier>
             </componentInstance>
         </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>decorate</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>richTextValue</name>
-                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 36px; color: rgb(32, 57, 128);&quot;&gt;TOTAL&lt;/strong&gt;&lt;strong style=&quot;font-size: 36px; color: rgb(69, 158, 218);&quot;&gt;C&lt;/strong&gt;&lt;strong style=&quot;font-size: 36px; color: rgb(240, 190, 51);&quot;&gt;X&lt;/strong&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt; &lt;/strong&gt;&lt;/p&gt;&lt;p style=&quot;text-align: center;&quot;&gt;&lt;strong style=&quot;font-size: 16px;&quot;&gt;CAUTION: CURRENT TCX CUSTOMER&lt;/strong&gt;&lt;/p&gt;</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:richText</componentName>
-                <identifier>flexipage_richText6</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.Account__r.TCX_Account_Status__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Current Client</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </componentInstance>
-        </itemInstances>
         <mode>Replace</mode>
         <name>header</name>
         <type>Region</type>
@@ -338,6 +317,25 @@
             <componentInstance>
                 <componentName>ContactActivities</componentName>
                 <identifier>ContactActivities</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentName>bbvideo:BombBombVideo</componentName>
+                <identifier>bbvideo_BombBombVideo</identifier>
+                <visibilityRule>
+                    <booleanFilter>1 OR 2</booleanFilter>
+                    <criteria>
+                        <leftValue>{!$User.UserRole.Name}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>Marketing Team</rightValue>
+                    </criteria>
+                    <criteria>
+                        <leftValue>{!$User.Email}</leftValue>
+                        <operator>NE</operator>
+                        <rightValue>davepurgason@callrevu.com</rightValue>
+                    </criteria>
+                </visibilityRule>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

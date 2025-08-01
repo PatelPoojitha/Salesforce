@@ -13,9 +13,9 @@
     <columns>LAST_UPDATE</columns>
     <filterScope>Everything</filterScope>
     <filters>
-        <field>CREATED_DATE</field>
-        <operation>equals</operation>
-        <value>THIS_YEAR</value>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>Test Dealer</value>
     </filters>
     <label>KRISTIE&apos;S VIEW</label>
     <sharedTo>

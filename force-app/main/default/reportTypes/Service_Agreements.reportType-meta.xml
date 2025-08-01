@@ -38,11 +38,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Referral_Partner__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Active__c</field>
             <table>Service_Agreement__c</table>
         </columns>
@@ -1314,66 +1309,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Service_Location__c.Id</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.Main_Car_Makes_Sold__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.Manufacturer__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TCX_Active__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TCX_Account_Number__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.Open_Review_Cases__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.Name</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.CallRevu_Client_Account_Status__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.CallSource_Client_Account_Status__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.Dealer_Status__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.Status__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Service_Location__c.TCX_Account_Status__c</field>
-            <table>Service_Agreement__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Tied_to_Partner__c</field>
             <table>Service_Agreement__c</table>
         </columns>
         <masterLabel>Service Agreements</masterLabel>

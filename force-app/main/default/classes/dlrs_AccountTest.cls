@@ -7,7 +7,7 @@ private class dlrs_AccountTest
     @IsTest
     private static void testTrigger()
     {
-        // Force the dlrs_AccountTrigger to be invoked, fails the test if org config or other Apex code prevents this.
+        // Force the dlrs_ContractTrigger to be invoked, fails the test if org config or other Apex code prevents this.
         dlrs.RollupService.testHandler(new Account());
     }
 }

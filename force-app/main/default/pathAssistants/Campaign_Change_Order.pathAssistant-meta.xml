@@ -5,10 +5,6 @@
     <fieldName>StageName</fieldName>
     <masterLabel>Campaign Change Order</masterLabel>
     <pathAssistantSteps>
-        <info>&lt;p&gt;Rep Actions Taken During Stage:&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Conduct a qualification call to validate existing CPQ process (or need specific to your product)&lt;/li&gt;&lt;li&gt;Identify potential key decision makers; ex. Who will be the detractor/who is the champion?&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Exit Criteria&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Buyer has been identified&lt;/li&gt;&lt;li&gt;Buyer has expressed interest in our solutions&lt;/li&gt;&lt;li&gt;Buyer agrees to a meeting/call&lt;/li&gt;&lt;/ul&gt;</info>
-        <picklistValueName>Qualify</picklistValueName>
-    </pathAssistantSteps>
-    <pathAssistantSteps>
         <info>&lt;p&gt;At this stage, SOP will be alerted for next action.&lt;/p&gt;</info>
         <picklistValueName>Repackage Accepted</picklistValueName>
     </pathAssistantSteps>

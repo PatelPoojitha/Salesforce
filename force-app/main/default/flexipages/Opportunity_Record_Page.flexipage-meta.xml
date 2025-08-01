@@ -302,12 +302,6 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
-                <componentName>dsfs:DocuSignLightningSendingLocked</componentName>
-                <identifier>dsfs_DocuSignLightningSendingLocked</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
                 <componentInstanceProperties>
                     <name>hideHeader</name>
                     <value>false</value>

@@ -13,12 +13,7 @@
         <description>Returns WhatId if it’s an Opportunity; otherwise, returns NULL</description>
         <name>OpportunityIdFromWhatId</name>
         <dataType>String</dataType>
-        <expression>IF(LEFT({!$Record.WhatId},3) = &apos;006&apos;, {!$Record.WhatId}, NULL)</expression>
-    </formulas>
-    <formulas>
-        <name>varActivityType</name>
-        <dataType>String</dataType>
-        <expression>IF(!ISBLANK(TEXT({!$Record.Type})), TEXT({!$Record.Type}), NULL)</expression>
+        <expression>&apos;006VC00000GZ9DhYAL&apos;</expression>
     </formulas>
     <interviewLabel>Flow Task Object {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Task_Update Task Details</label>
@@ -82,7 +77,7 @@
         <inputAssignments>
             <field>Activity_Type__c</field>
             <value>
-                <elementReference>varActivityType</elementReference>
+                <elementReference>Get_Flow_Configuration_Settings.Task_Activity_Type__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>

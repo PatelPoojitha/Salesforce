@@ -11,10 +11,18 @@
     <tabs>standard-CmsWorkspaces</tabs>
     <tabs>standard-CmsExperiences</tabs>
     <tabs>Service_Agreement_Products__c</tabs>
+    <tabs>Unsupported_Email__c</tabs>
+    <tabs>Bot_Customer_Rating__c</tabs>
     <uiType>Lightning</uiType>
     <workspaceConfig>
         <mappings>
+            <tab>Bot_Customer_Rating__c</tab>
+        </mappings>
+        <mappings>
             <tab>Service_Agreement_Products__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Unsupported_Email__c</tab>
         </mappings>
         <mappings>
             <tab>standard-CmsAuthorHome</tab>

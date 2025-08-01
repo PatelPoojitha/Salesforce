@@ -4,8 +4,8 @@
     <assignments>
         <name>ChangePriceBook</name>
         <label>ChangePriceBook</label>
-        <locationX>578</locationX>
-        <locationY>2486</locationY>
+        <locationX>704</locationX>
+        <locationY>1622</locationY>
         <assignmentItems>
             <assignToReference>LoopThroughClonedOLIs.PricebookEntryId</assignToReference>
             <operator>Assign</operator>
@@ -28,8 +28,8 @@
     <assignments>
         <name>Clone_OLIs</name>
         <label>Clone OLIs</label>
-        <locationX>402</locationX>
-        <locationY>998</locationY>
+        <locationX>264</locationX>
+        <locationY>566</locationY>
         <assignmentItems>
             <assignToReference>ClonedOLIs</assignToReference>
             <operator>Add</operator>
@@ -49,42 +49,10 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Keep_original_Stage</name>
-        <label>Keep original Stage</label>
-        <locationX>182</locationX>
-        <locationY>350</locationY>
-        <assignmentItems>
-            <assignToReference>originalStage</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Query_This_Opportunity.StageName</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Get_Opportunity_Line_Items</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Reset_Stage_Value</name>
-        <label>Reset Stage Value</label>
-        <locationX>578</locationX>
-        <locationY>1406</locationY>
-        <assignmentItems>
-            <assignToReference>Query_This_Opportunity.StageName</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>originalStage</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Sending_out_Fault_message</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <name>SavedNewVariable</name>
         <label>SavedNewVariable</label>
-        <locationX>578</locationX>
-        <locationY>2594</locationY>
+        <locationX>704</locationX>
+        <locationY>1730</locationY>
         <assignmentItems>
             <assignToReference>ClonedOLIs2</assignToReference>
             <operator>Add</operator>
@@ -99,8 +67,8 @@
     <assignments>
         <name>SaveProductId</name>
         <label>SaveProductId</label>
-        <locationX>402</locationX>
-        <locationY>890</locationY>
+        <locationX>264</locationX>
+        <locationY>458</locationY>
         <assignmentItems>
             <assignToReference>ProductsIDs</assignToReference>
             <operator>Add</operator>
@@ -112,145 +80,11 @@
             <targetReference>Clone_OLIs</targetReference>
         </connector>
     </assignments>
-    <assignments>
-        <name>Update_Additional_Opp_Fields</name>
-        <label>Update Additional Opp Fields</label>
-        <locationX>182</locationX>
-        <locationY>1838</locationY>
-        <assignmentItems>
-            <assignToReference>Query_This_Opportunity.Change_Order_Cancellation_Reason__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Product/Service</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Query_This_Opportunity.Change_Order_Cancellation_Type__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Downgrade</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Query_This_Opportunity.Order_Type__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Change Order</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Query_This_Opportunity.Pricebook2Id</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>GetPriceBookId.Id</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Query_This_Opportunity.RecordTypeId</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>Get_Opportunity_Record_Type.Id</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>Query_This_Opportunity.StageName</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Qualify</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Update_Opportunity</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>update_Element_Variable</name>
-        <label>update Element Variable</label>
-        <locationX>842</locationX>
-        <locationY>2054</locationY>
-        <assignmentItems>
-            <assignToReference>varElementName</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Update Opportunity</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <isGoTo>true</isGoTo>
-            <targetReference>Reset_Stage_Value</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Update_Stage_to_Qualify</name>
-        <label>Update Stage to Qualify</label>
-        <locationX>314</locationX>
-        <locationY>1190</locationY>
-        <assignmentItems>
-            <assignToReference>Query_This_Opportunity.StageName</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Qualify</stringValue>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>Delete_OLIs</targetReference>
-        </connector>
-    </assignments>
-    <decisions>
-        <name>check_if_OLI_are_found</name>
-        <label>check if OLI are found</label>
-        <locationX>182</locationX>
-        <locationY>674</locationY>
-        <defaultConnector>
-            <targetReference>Loop_Through_OLIs</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>OLIs found</defaultConnectorLabel>
-        <rules>
-            <name>NO_OLIs_Found</name>
-            <conditionLogic>or</conditionLogic>
-            <conditions>
-                <leftValueReference>Get_Opportunity_Line_Items</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Update_Additional_Opp_Fields</targetReference>
-            </connector>
-            <label>NO OLIs Found</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>check_if_OLIs_need_to_be_replicated</name>
-        <label>check if OLIs need to be replicated</label>
-        <locationX>182</locationX>
-        <locationY>2054</locationY>
-        <defaultConnector>
-            <targetReference>Show_Success_No_Products</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>No OLI to recreate</defaultConnectorLabel>
-        <rules>
-            <name>Recreate_OLI</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Get_Opportunity_Line_Items</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>LoopThroughClonedOLIs</targetReference>
-            </connector>
-            <label>Recreate OLI</label>
-        </rules>
-    </decisions>
     <decisions>
         <name>CheckProduct</name>
         <label>CheckProduct</label>
-        <locationX>710</locationX>
-        <locationY>2378</locationY>
+        <locationX>836</locationX>
+        <locationY>1514</locationY>
         <defaultConnector>
             <targetReference>LoopThroughPriceBookEntry</targetReference>
         </defaultConnector>
@@ -271,35 +105,29 @@
             <label>ProductFound</label>
         </rules>
     </decisions>
-    <description>Added null handling for no product scenario(s)</description>
     <environments>Default</environments>
-    <formulas>
-        <name>OppRTDeveloperNamewithSpaces</name>
-        <dataType>String</dataType>
-        <expression>SUBSTITUTE({!Get_Opportunity_Record_Type.Name},&apos;_&apos;,&apos; &apos;)</expression>
-    </formulas>
     <interviewLabel>Convert to Change Order Opportunity {!$Flow.CurrentDateTime}</interviewLabel>
     <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
     <label>Convert to Change Order Opportunity</label>
     <loops>
         <name>Loop_Through_OLIs</name>
         <label>Loop Through OLIs</label>
-        <locationX>314</locationX>
-        <locationY>782</locationY>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
         <collectionReference>Get_Opportunity_Line_Items</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
             <targetReference>SaveProductId</targetReference>
         </nextValueConnector>
         <noMoreValuesConnector>
-            <targetReference>Update_Stage_to_Qualify</targetReference>
+            <targetReference>Delete_OLIs</targetReference>
         </noMoreValuesConnector>
     </loops>
     <loops>
         <name>LoopThroughClonedOLIs</name>
         <label>LoopThroughClonedOLIs</label>
-        <locationX>50</locationX>
-        <locationY>2162</locationY>
+        <locationX>176</locationX>
+        <locationY>1298</locationY>
         <collectionReference>ClonedOLIs</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -312,8 +140,8 @@
     <loops>
         <name>LoopThroughPriceBookEntry</name>
         <label>LoopThroughPriceBookEntry</label>
-        <locationX>490</locationX>
-        <locationY>2270</locationY>
+        <locationX>616</locationX>
+        <locationY>1406</locationY>
         <collectionReference>GetPriceBookEntry</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -345,8 +173,8 @@
     <recordCreates>
         <name>Create_OLIs</name>
         <label>Create OLIs</label>
-        <locationX>50</locationX>
-        <locationY>2954</locationY>
+        <locationX>176</locationX>
+        <locationY>2090</locationY>
         <connector>
             <targetReference>Show_Success</targetReference>
         </connector>
@@ -355,45 +183,21 @@
     <recordDeletes>
         <name>Delete_OLIs</name>
         <label>Delete OLIs</label>
-        <locationX>314</locationX>
-        <locationY>1298</locationY>
+        <locationX>176</locationX>
+        <locationY>758</locationY>
         <connector>
             <targetReference>GetProduct</targetReference>
         </connector>
-        <faultConnector>
-            <targetReference>Reset_Stage_Value</targetReference>
-        </faultConnector>
         <inputReference>recordstoDelete</inputReference>
     </recordDeletes>
     <recordLookups>
-        <name>Get_Opportunity_Line_Items</name>
-        <label>Get Opportunity Line Items</label>
-        <locationX>182</locationX>
-        <locationY>458</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>GetPriceBookId</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>OpportunityId</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>recordId</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>false</getFirstRecordOnly>
-        <object>OpportunityLineItem</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
-        <name>Get_Opportunity_Record_Type</name>
-        <label>Get Opportunity Record Type</label>
-        <locationX>182</locationX>
+        <name>Get_Opportunity</name>
+        <label>Get Opportunity</label>
+        <locationX>176</locationX>
         <locationY>134</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Query_This_Opportunity</targetReference>
+            <targetReference>Get_Opportunity_Line_Items</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -415,13 +219,34 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
-        <name>GetPriceBookEntry</name>
-        <label>GetPriceBookEntry</label>
-        <locationX>314</locationX>
-        <locationY>1514</locationY>
+        <name>Get_Opportunity_Line_Items</name>
+        <label>Get Opportunity Line Items</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Update_Additional_Opp_Fields</targetReference>
+            <targetReference>Loop_Through_OLIs</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>OpportunityLineItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>GetPriceBookEntry</name>
+        <label>GetPriceBookEntry</label>
+        <locationX>176</locationX>
+        <locationY>1082</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Opportunity</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -445,11 +270,11 @@
     <recordLookups>
         <name>GetPriceBookId</name>
         <label>GetPriceBookId</label>
-        <locationX>182</locationX>
-        <locationY>566</locationY>
+        <locationX>176</locationX>
+        <locationY>974</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>check_if_OLI_are_found</targetReference>
+            <targetReference>GetPriceBookEntry</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -473,11 +298,11 @@
     <recordLookups>
         <name>GetProduct</name>
         <label>GetProduct</label>
-        <locationX>314</locationX>
-        <locationY>1406</locationY>
+        <locationX>176</locationX>
+        <locationY>866</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>GetPriceBookEntry</targetReference>
+            <targetReference>GetPriceBookId</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -491,38 +316,14 @@
         <object>Product2</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
-    <recordLookups>
-        <name>Query_This_Opportunity</name>
-        <label>Query This Opportunity</label>
-        <locationX>182</locationX>
-        <locationY>242</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Keep_original_Stage</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Id</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>recordId</elementReference>
-            </value>
-        </filters>
-        <getFirstRecordOnly>true</getFirstRecordOnly>
-        <object>Opportunity</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
     <recordUpdates>
         <name>Update_Opportunity</name>
         <label>Update Opportunity</label>
-        <locationX>182</locationX>
-        <locationY>1946</locationY>
+        <locationX>176</locationX>
+        <locationY>1190</locationY>
         <connector>
-            <targetReference>check_if_OLIs_need_to_be_replicated</targetReference>
+            <targetReference>LoopThroughClonedOLIs</targetReference>
         </connector>
-        <faultConnector>
-            <targetReference>update_Element_Variable</targetReference>
-        </faultConnector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -558,13 +359,7 @@
         <inputAssignments>
             <field>RecordTypeId</field>
             <value>
-                <elementReference>Get_Opportunity_Record_Type.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>StageName</field>
-            <value>
-                <stringValue>Qualify</stringValue>
+                <elementReference>Get_Opportunity.Id</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -572,75 +367,27 @@
     <screens>
         <name>Show_Success</name>
         <label>Show Success</label>
-        <locationX>50</locationX>
-        <locationY>3062</locationY>
+        <locationX>176</locationX>
+        <locationY>2198</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
         <fields>
             <name>SuccessMessage</name>
-            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(68, 68, 68); background-color: rgb(255, 255, 255);&quot;&gt;Opportunity has been converted to a  {!OppRTDeveloperNamewithSpaces} Opportunity.  Products were successfully recreated.&lt;/span&gt;&lt;/p&gt;</fieldText>
-            <fieldType>DisplayText</fieldType>
-        </fields>
-        <showFooter>true</showFooter>
-        <showHeader>true</showHeader>
-    </screens>
-    <screens>
-        <name>Show_Success_No_Products</name>
-        <label>Show Success No Products</label>
-        <locationX>314</locationX>
-        <locationY>2162</locationY>
-        <allowBack>true</allowBack>
-        <allowFinish>true</allowFinish>
-        <allowPause>true</allowPause>
-        <fields>
-            <name>Copy_1_of_SuccessMessage</name>
-            <fieldText>&lt;p&gt;Opportunity has been converted to a  &lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;{!OppRTDeveloperNamewithSpaces} &lt;/span&gt;Opportunity. No products needed to be recreated.&lt;/p&gt;</fieldText>
+            <fieldText>&lt;p&gt;Convertion of opportunity has been successfully&lt;/p&gt;</fieldText>
             <fieldType>DisplayText</fieldType>
         </fields>
         <showFooter>true</showFooter>
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>56</locationX>
+        <locationX>50</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Get_Opportunity_Record_Type</targetReference>
+            <targetReference>Get_Opportunity</targetReference>
         </connector>
     </start>
     <status>Active</status>
-    <subflows>
-        <name>Sending_out_Fault_message</name>
-        <label>Sending out Fault message</label>
-        <locationX>578</locationX>
-        <locationY>1514</locationY>
-        <flowName>Fault_Path_Flow</flowName>
-        <inputAssignments>
-            <name>RecipientAddressList</name>
-            <value>
-                <stringValue>jamalwarren@callrevu.com,kristiejaecklein@callrevu.com</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varElementName</name>
-            <value>
-                <elementReference>varElementName</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varFaultMessage</name>
-            <value>
-                <elementReference>$Flow.FaultMessage</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varFlowname</name>
-            <value>
-                <stringValue>Convert to Change Order Opportunity</stringValue>
-            </value>
-        </inputAssignments>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </subflows>
     <variables>
         <name>ClonedOLIs</name>
         <dataType>SObject</dataType>
@@ -656,23 +403,6 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>OpportunityLineItem</objectType>
-    </variables>
-    <variables>
-        <name>hasOLI</name>
-        <dataType>Boolean</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <value>
-            <booleanValue>false</booleanValue>
-        </value>
-    </variables>
-    <variables>
-        <name>originalStage</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
     </variables>
     <variables>
         <name>ProductsIDs</name>
@@ -695,15 +425,5 @@
         <isInput>false</isInput>
         <isOutput>false</isOutput>
         <objectType>OpportunityLineItem</objectType>
-    </variables>
-    <variables>
-        <name>varElementName</name>
-        <dataType>String</dataType>
-        <isCollection>false</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <value>
-            <stringValue>Default OLIs</stringValue>
-        </value>
     </variables>
 </Flow>

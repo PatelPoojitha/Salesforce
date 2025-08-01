@@ -630,11 +630,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>tdc_tsw__SMS_Opt_out__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Snail_Mail_Opt_Out__c</field>
             <table>Contact</table>
         </columns>
@@ -793,61 +788,6 @@
             <field>Contact_Opt_Out_NPS_Surveys__c</field>
             <table>Contact</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Department_HS_c__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Auto_Response_Opt_Out__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Auto_Response_Email_Exempt__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Sync_to_Outreach__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>HubSpot_Action_Triggered__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Is_Decision_Maker__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Contact_Health_Status__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Last_Activity_Date__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>BriteVerify_Status__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Marked_for_OWN__c</field>
-            <table>Contact</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Include_in_Active_Contact_Rollup__c</field>
-            <table>Contact</table>
-        </columns>
         <masterLabel>Contacts</masterLabel>
     </sections>
     <sections>
@@ -859,6 +799,16 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>X18_Digit_Account_ID__c</field>
+            <table>Contact.Accounts__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>X2018_Closed_Won_Opportunities__c</field>
+            <table>Contact.Accounts__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>X45_Day_Trial_Count__c</field>
             <table>Contact.Accounts__r</table>
         </columns>
         <columns>
@@ -1468,6 +1418,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>Pre_2018_Closed_Won_Opportunities__c</field>
+            <table>Contact.Accounts__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Rating</field>
             <table>Contact.Accounts__r</table>
         </columns>
@@ -1569,11 +1524,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>SicDesc</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>tdc_tsw__SMS_Opt_out__c</field>
             <table>Contact.Accounts__r</table>
         </columns>
         <columns>
@@ -1903,7 +1853,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>XXAccount_Grade__c</field>
+            <field>Account_Grade__c</field>
             <table>Contact.Accounts__r</table>
         </columns>
         <columns>
@@ -1988,16 +1938,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>BDM_List_Exemptions__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Account_Grade_24__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Created_from_Conversion__c</field>
             <table>Contact.Accounts__r</table>
         </columns>
@@ -2008,32 +1948,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_theme__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>AlignICP_TIER__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>AlignICP_INTENT__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>AlignICP_TOPICS__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Territory_Assignment_Notes__c</field>
+            <field>Case_Rollup_Needed__c</field>
             <table>Contact.Accounts__r</table>
         </columns>
         <columns>
@@ -2043,127 +1958,27 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_acq_nonoem_buyerphase__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_acq_nonoem_topic1__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_acq_nonoem_topic2__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_acq_nonoem_topic3__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_comp_nonoem_buyerphase__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_comp_nonoem_topic1__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_comp_nonoem_topic2__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_comp_nonoem_topic3__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Current_Customer__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>GM_Brand__c</field>
             <table>Contact.Accounts__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_expan_nonoem_buyerphase__c</field>
+            <field>Territory_Assignment_Hold_test__c</field>
             <table>Contact.Accounts__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_expan_nonoem_topic1__c</field>
+            <field>Open_Enrollment_Cases__c</field>
             <table>Contact.Accounts__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_expan_nonoem_topic2__c</field>
+            <field>Recent_Closed_Opp_Count__c</field>
             <table>Contact.Accounts__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_expan_nonoem_topic3__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_comp_nonoem_buyerphase__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_comp_nonoem_topic1__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_comp_nonoem_topic2__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_comp_nonoem_topic3__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_other_buyerphase__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_other_topic1__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_other_topic2__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_all_other_topic3__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>alignicp_icp_priority__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Territory_Assignment_Hold_Count__c</field>
-            <table>Contact.Accounts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Number_of_Territory_on_Hold_Opps__c</field>
+            <field>On_Territory_hold__c</field>
             <table>Contact.Accounts__r</table>
         </columns>
         <masterLabel>Accounts</masterLabel>
@@ -3097,21 +2912,6 @@
             <field>Estimated_Next_Quarterly_Review__c</field>
             <table>Contact.Accounts__r.Service_Agreement2__r</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TCX_Active__c</field>
-            <table>Contact.Accounts__r.Service_Agreement2__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TCX_Account_Number__c</field>
-            <table>Contact.Accounts__r.Service_Agreement2__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Tied_to_Partner__c</field>
-            <table>Contact.Accounts__r.Service_Agreement2__r</table>
-        </columns>
         <masterLabel>Service Agreements</masterLabel>
     </sections>
     <sections>
@@ -3133,31 +2933,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Active_Transcription_Product__c</field>
-            <table>Contact.Accounts__r.Service_Agreement2__r.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>System_Sync__c</field>
-            <table>Contact.Accounts__r.Service_Agreement2__r.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Product_Catalog__c</field>
-            <table>Contact.Accounts__r.Service_Agreement2__r.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Notes__c</field>
-            <table>Contact.Accounts__r.Service_Agreement2__r.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Account_Rollup_Category__c</field>
-            <table>Contact.Accounts__r.Service_Agreement2__r.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Adjusted_MRR_Amount__c</field>
             <table>Contact.Accounts__r.Service_Agreement2__r.Service_Agreement_Products__r</table>
         </columns>
         <masterLabel>Service Agreement Products</masterLabel>

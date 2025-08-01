@@ -1336,7 +1336,52 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Migration_ID__c</field>
+            <field>Qualify_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Discover_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Demonstrate_Value_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Negotiate_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Submit_for_Review_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contract_Date__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>MRR2__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Sales_Type__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity_Product__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Opportunity_Name_Logic__c</field>
             <table>Opportunity</table>
         </columns>
         <columns>
@@ -1346,47 +1391,7 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Anticipated_Implementation_Lead__c</field>
-            <table>Opportunity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Products__c</field>
-            <table>Opportunity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Porting__c</field>
-            <table>Opportunity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Secondary_Contact_Information__c</field>
-            <table>Opportunity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Estimated_Go_Live_Date__c</field>
-            <table>Opportunity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Test_User_Lookup__c</field>
-            <table>Opportunity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Custom_Forecast_Category__c</field>
-            <table>Opportunity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Loss_Reason_Notes__c</field>
-            <table>Opportunity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Original_Account_Owner__c</field>
+            <field>Group_MRR__c</field>
             <table>Opportunity</table>
         </columns>
         <columns>
@@ -1396,22 +1401,27 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Business_Development_Team_Member__c</field>
+            <field>Calculate_Group_MRR__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Validation_Bypass_Date_Time__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>isValidationRuleBypassed__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Loss_Reason_Notes__c</field>
             <table>Opportunity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Billing_Case_Bypass__c</field>
-            <table>Opportunity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Automation_Running__c</field>
-            <table>Opportunity</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Accounting_Case_Manual_Create__c</field>
             <table>Opportunity</table>
         </columns>
         <columns>
@@ -1441,12 +1451,17 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Territory_Assignment_Hold_Flag__c</field>
+            <field>test_ms__c</field>
             <table>Opportunity</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Recent_Opportunity__c</field>
+            <field>Automation_Running__c</field>
+            <table>Opportunity</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Territory_Assignment_Hold__c</field>
             <table>Opportunity</table>
         </columns>
         <masterLabel>Opportunities</masterLabel>
@@ -3125,31 +3140,6 @@
             <field>Active_Transcription_Product__c</field>
             <table>Opportunity.CallRevu_Contracts__r.Service_Agreement_Products__r</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>System_Sync__c</field>
-            <table>Opportunity.CallRevu_Contracts__r.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Product_Catalog__c</field>
-            <table>Opportunity.CallRevu_Contracts__r.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Notes__c</field>
-            <table>Opportunity.CallRevu_Contracts__r.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Account_Rollup_Category__c</field>
-            <table>Opportunity.CallRevu_Contracts__r.Service_Agreement_Products__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Adjusted_MRR_Amount__c</field>
-            <table>Opportunity.CallRevu_Contracts__r.Service_Agreement_Products__r</table>
-        </columns>
         <masterLabel>Service Agreement Products</masterLabel>
     </sections>
     <sections>
@@ -3251,21 +3241,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Estimated_Next_Quarterly_Review__c</field>
-            <table>Opportunity.CallRevu_Contracts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TCX_Active__c</field>
-            <table>Opportunity.CallRevu_Contracts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TCX_Account_Number__c</field>
-            <table>Opportunity.CallRevu_Contracts__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Tied_to_Partner__c</field>
             <table>Opportunity.CallRevu_Contracts__r</table>
         </columns>
         <masterLabel>Service Agreements</masterLabel>

@@ -156,7 +156,7 @@
     <label>Service Agreement</label>
     <nameField>
         <label>Service Agreement Name</label>
-        <trackHistory>true</trackHistory>
+        <trackHistory>false</trackHistory>
         <type>Text</type>
     </nameField>
     <pluralLabel>Service Agreements</pluralLabel>

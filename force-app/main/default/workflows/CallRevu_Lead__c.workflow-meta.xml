@@ -9,10 +9,6 @@
             <field>CallRevu_Lead_Owner_Email__c</field>
             <type>email</type>
         </recipients>
-        <recipients>
-            <recipient>callrevu@shippconsulting.com</recipient>
-            <type>user</type>
-        </recipients>
         <senderType>CurrentUser</senderType>
         <template>Operations/Existing_CallRevu_Lead_Reengaged</template>
     </alerts>

@@ -58,7 +58,7 @@
     <apiVersion>60.0</apiVersion>
     <decisions>
         <name>Check_Opportunity_Criteria_for_Closed_Completed</name>
-        <label>Check Opportunity Criteria for Closed-Completed</label>
+        <label>Check Opportunity Criteria for Closed or Closed Won</label>
         <locationX>182</locationX>
         <locationY>323</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
@@ -106,7 +106,7 @@
             <label>If Stage is Closed-Completed or Closed Won</label>
         </rules>
     </decisions>
-    <description>+ SOP project stage update</description>
+    <description>Updated to include updated opp stage</description>
     <environments>Default</environments>
     <interviewLabel>Flow Opportunity {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Flow Opportunity Email Alert</label>

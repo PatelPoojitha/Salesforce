@@ -143,7 +143,27 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Duration__c</field>
+            <field>Customer_Name__c</field>
+            <table>MessagingSession</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Dealership_Company_Name__c</field>
+            <table>MessagingSession</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Email_Address__c</field>
+            <table>MessagingSession</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Issue_Description__c</field>
+            <table>MessagingSession</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Issue_Type__c</field>
             <table>MessagingSession</table>
         </columns>
         <masterLabel>Messaging Sessions</masterLabel>

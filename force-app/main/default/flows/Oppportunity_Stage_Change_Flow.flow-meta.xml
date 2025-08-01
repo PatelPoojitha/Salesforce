@@ -133,7 +133,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <field>Date_Time_SOP_Sent__c</field>
+            <field>Date_Time_SOP_Alerted__c</field>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
             </value>
@@ -198,7 +198,7 @@
         <locationX>1106</locationX>
         <locationY>395</locationY>
         <inputAssignments>
-            <field>Date_Time_SOP_Alerted__c</field>
+            <field>Date_Time_SOP_Sent__c</field>
             <value>
                 <elementReference>$Flow.CurrentDateTime</elementReference>
             </value>
@@ -217,9 +217,16 @@
         <connector>
             <targetReference>Confirm_which_date_field_to_update</targetReference>
         </connector>
-        <filterFormula>ISNEW() || ISCHANGED({!$Record.StageName})</filterFormula>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
         <object>Opportunity</object>
-        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordBeforeSave</triggerType>
     </start>
     <status>Active</status>

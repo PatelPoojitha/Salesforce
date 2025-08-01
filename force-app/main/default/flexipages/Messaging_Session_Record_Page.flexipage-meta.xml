@@ -176,6 +176,12 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
+                <componentName>runtime_service_livemessage:messagingSessionLinkedRecords</componentName>
+                <identifier>rsl_messagingSessionLinkedRecords</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>lookupFieldName</name>
                     <value>MessagingEndUserId</value>
@@ -190,12 +196,6 @@
                 </componentInstanceProperties>
                 <componentName>console:relatedRecord</componentName>
                 <identifier>console_relatedRecord</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>runtime_service_livemessage:messagingSessionLinkedRecords</componentName>
-                <identifier>rsl_messagingSessionLinkedRecords</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -218,14 +218,6 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>parentFieldApiName</name>
-                    <value>MessagingSession.Id</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>relatedListApiName</name>
-                    <value>AttachedContentDocuments</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>relatedListComponentOverride</name>
                     <value>NONE</value>
                 </componentInstanceProperties>
@@ -237,8 +229,8 @@
                     <name>showActionBar</name>
                     <value>true</value>
                 </componentInstanceProperties>
-                <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>force_relatedListSingleContainer2</identifier>
+                <componentName>force:relatedListContainer</componentName>
+                <identifier>force_relatedListContainer</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

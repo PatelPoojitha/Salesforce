@@ -130,36 +130,6 @@
                 <default>false</default>
                 <label>Call Summarization</label>
             </value>
-            <value>
-                <fullName>Telephony</fullName>
-                <default>false</default>
-                <label>Telephony</label>
-            </value>
-            <value>
-                <fullName>TotalTrack</fullName>
-                <default>false</default>
-                <label>TotalTrack</label>
-            </value>
-            <value>
-                <fullName>Sensei</fullName>
-                <default>false</default>
-                <label>Sensei</label>
-            </value>
-            <value>
-                <fullName>New - Bundled Products</fullName>
-                <default>false</default>
-                <label>New - Bundled Products</label>
-            </value>
-            <value>
-                <fullName>New - Spanish Bundled Products</fullName>
-                <default>false</default>
-                <label>New - Spanish Bundled Products</label>
-            </value>
-            <value>
-                <fullName>CarResearch</fullName>
-                <default>false</default>
-                <label>CarResearch</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

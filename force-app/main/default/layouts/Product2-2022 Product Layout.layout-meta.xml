@@ -50,14 +50,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>DocGen_Template__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Product_Catalog__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>OEM_Product_Code__c</field>
             </layoutItems>
             <layoutItems>
@@ -71,10 +63,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Billable_Frequency__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>GM_Eligible__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>

@@ -17,7 +17,7 @@
         <inputParameters>
             <name>emailSubject</name>
             <value>
-                <stringValue>A New Marketing Task - Demo Requested</stringValue>
+                <stringValue>A New Marketing Task</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -41,7 +41,7 @@
         <inputParameters>
             <name>ccRecipientAddressList</name>
             <value>
-                <stringValue>jamalwarren@callrevu.com, MarketingLeadAlerts@callrevu.com</stringValue>
+                <stringValue>jamalwarren@callrevu.com</stringValue>
             </value>
         </inputParameters>
         <nameSegment>emailSimple</nameSegment>
@@ -112,13 +112,7 @@
             <label>is a Marketing Lead from Automation</label>
         </rules>
     </decisions>
-    <description>+Detail link in task notification</description>
     <environments>Default</environments>
-    <formulas>
-        <name>formDetailLink</name>
-        <dataType>String</dataType>
-        <expression>LEFT({!$Api.Partner_Server_URL_260},FIND(&apos;/services&apos;, {!$Api.Partner_Server_URL_260}))&amp;{!$Record.WhoId}</expression>
-    </formulas>
     <formulas>
         <name>formula_FormattedDescription</name>
         <dataType>String</dataType>
@@ -285,7 +279,7 @@ NOW() + {!$Record.Cadence_Task__r.Successor_Task__r.Days_After_Prior_Task__c}*24
     <textTemplates>
         <name>TaskNotificationBody</name>
         <isViewedAsPlainText>false</isViewedAsPlainText>
-        <text>&lt;p&gt;Task Assigned to: {!get_Assigned_to_Name.Name}&lt;/p&gt;&lt;p&gt;For the Lead: {!varWhoName}&lt;/p&gt;&lt;p&gt;Due Date: {!$Record.ActivityDate}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Comments:&lt;/p&gt;&lt;p&gt;{!formula_FormattedDescription}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); color: rgb(68, 68, 68);&quot;&gt;Link to Contact: {!formDetailLink}&lt;/span&gt;&lt;/p&gt;</text>
+        <text>&lt;p&gt;Task Assigned to: {!get_Assigned_to_Name.Name}&lt;/p&gt;&lt;p&gt;For the Lead: {!varWhoName}&lt;/p&gt;&lt;p&gt;Due Date: {!$Record.ActivityDate}&lt;/p&gt;&lt;p&gt;Comments:&lt;/p&gt;&lt;p&gt;{!formula_FormattedDescription}&lt;/p&gt;</text>
     </textTemplates>
     <variables>
         <name>varTask01</name>

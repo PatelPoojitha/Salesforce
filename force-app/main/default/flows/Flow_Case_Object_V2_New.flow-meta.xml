@@ -3,7 +3,7 @@
     <actionCalls>
         <name>Add_QC_ML_Case_Auto_Response</name>
         <label>Add QC ML Case Auto Response</label>
-        <locationX>5198</locationX>
+        <locationX>5044</locationX>
         <locationY>863</locationY>
         <actionName>GLSendEmail__SendEmail</actionName>
         <actionType>apex</actionType>
@@ -76,7 +76,7 @@
     <actionCalls>
         <name>Auto_Reply_for_Escalated_Requests</name>
         <label>Auto Reply for Escalated Requests</label>
-        <locationX>6870</locationX>
+        <locationX>6716</locationX>
         <locationY>863</locationY>
         <actionName>Case.Escalated_Request_new_Email_alert</actionName>
         <actionType>emailAlert</actionType>
@@ -95,7 +95,7 @@
     <actionCalls>
         <name>Auto_Response_for_DevOps_Case</name>
         <label>Auto-Response for DevOps Case</label>
-        <locationX>4230</locationX>
+        <locationX>4076</locationX>
         <locationY>1163</locationY>
         <actionName>Case.DevOps_Auto_Response</actionName>
         <actionType>emailAlert</actionType>
@@ -114,7 +114,7 @@
     <actionCalls>
         <name>Copy_1_of_Support_Response</name>
         <label>Copy 1 of Support Response</label>
-        <locationX>12634</locationX>
+        <locationX>11666</locationX>
         <locationY>2771</locationY>
         <actionName>Case.Customer_Responded_to_Support_Case</actionName>
         <actionType>emailAlert</actionType>
@@ -133,7 +133,7 @@
     <actionCalls>
         <name>Data_and_Reporting_New_Case_Alert</name>
         <label>Data and Reporting New Case Alert</label>
-        <locationX>4230</locationX>
+        <locationX>4076</locationX>
         <locationY>1271</locationY>
         <actionName>Case.Data_and_Reporting_New_Case_Alert</actionName>
         <actionType>emailAlert</actionType>
@@ -152,7 +152,7 @@
     <actionCalls>
         <name>Salesforce_Help_Desk_2023</name>
         <label>Salesforce Help Desk 2023</label>
-        <locationX>5638</locationX>
+        <locationX>5484</locationX>
         <locationY>755</locationY>
         <actionName>Case.Salesforce_Help_Desk_2023</actionName>
         <actionType>emailAlert</actionType>
@@ -172,7 +172,7 @@
         <name>Send</name>
         <label>Send account lookover email</label>
         <locationX>6914</locationX>
-        <locationY>6311</locationY>
+        <locationY>6011</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
         <connector>
@@ -202,7 +202,7 @@
     <actionCalls>
         <name>Send_Auto_Response</name>
         <label>Send Auto Response</label>
-        <locationX>3042</locationX>
+        <locationX>2888</locationX>
         <locationY>1079</locationY>
         <actionName>GLSendEmail__SendEmail</actionName>
         <actionType>apex</actionType>
@@ -275,7 +275,7 @@
     <actionCalls>
         <name>Send_CSM_Cancellation_Working_Notification</name>
         <label>Send CSM Cancellation Working Notification</label>
-        <locationX>5110</locationX>
+        <locationX>4736</locationX>
         <locationY>2171</locationY>
         <actionName>GLSendEmail__SendEmail</actionName>
         <actionType>apex</actionType>
@@ -345,21 +345,15 @@
         </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
-            <name>ccAddresses</name>
+            <name>EmailTemplateName</name>
             <value>
-                <stringValue>amyshaffer@callrevu.com, jonathanjackson@callrevu.com, ericafleck@callrevu.com,Jimmenard@Callrevu.com,NicoleDavis@callrevu.com</stringValue>
+                <stringValue>CSM_Alert_Cancellation_Case_Created</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
             <name>ContactOrLeadID</name>
             <value>
                 <stringValue>0033m00002wghMBAAY</stringValue>
-            </value>
-        </inputParameters>
-        <inputParameters>
-            <name>EmailTemplateName</name>
-            <value>
-                <stringValue>CSM_Alert_Cancellation_Case_Created</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -381,15 +375,15 @@
             </value>
         </inputParameters>
         <inputParameters>
-            <name>ToAddresses</name>
+            <name>ccAddresses</name>
             <value>
-                <stringValue>kristiejaecklein@callrevu.com{!forToEmailAddress}</stringValue>
+                <stringValue>Aliciagomez@callrevu.com,BobbieRoberts@callrevu.com,ericafleck@callrevu.com,Jimmenard@Callrevu.com,NicoleDavis@callrevu.com</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
-            <name>TreatBodiesAsTemplate</name>
+            <name>ToAddresses</name>
             <value>
-                <booleanValue>true</booleanValue>
+                <stringValue>kristiejaecklein@callrevu.com{!forToEmailAddress}</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
@@ -398,12 +392,18 @@
                 <booleanValue>false</booleanValue>
             </value>
         </inputParameters>
+        <inputParameters>
+            <name>TreatBodiesAsTemplate</name>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputParameters>
         <nameSegment>GLSendEmail__SendEmail</nameSegment>
     </actionCalls>
     <actionCalls>
         <name>Send_DNI_Case_Alert</name>
         <label>Send DNI Case Alert</label>
-        <locationX>6430</locationX>
+        <locationX>6276</locationX>
         <locationY>971</locationY>
         <actionName>Case.CallRevu_DNI_New_Case_Alert</actionName>
         <actionType>emailAlert</actionType>
@@ -441,7 +441,7 @@
     <actionCalls>
         <name>Send_Email_Alert_01</name>
         <label>Send Email Alert</label>
-        <locationX>6496</locationX>
+        <locationX>6012</locationX>
         <locationY>8975</locationY>
         <actionName>Case.DNI_case_created_alert</actionName>
         <actionType>emailAlert</actionType>
@@ -479,7 +479,7 @@
     <actionCalls>
         <name>Send_Email_Alert_03</name>
         <label>Send Email Alert</label>
-        <locationX>12194</locationX>
+        <locationX>11226</locationX>
         <locationY>3179</locationY>
         <actionName>Case.Customer_Responded_to_RR_Case</actionName>
         <actionType>emailAlert</actionType>
@@ -498,7 +498,7 @@
     <actionCalls>
         <name>Send_Email_Alert_09</name>
         <label>Send Email Alert</label>
-        <locationX>3526</locationX>
+        <locationX>3372</locationX>
         <locationY>755</locationY>
         <actionName>Case.Alert_Alicia_when_At_Risk_case_is_created</actionName>
         <actionType>emailAlert</actionType>
@@ -517,7 +517,7 @@
     <actionCalls>
         <name>Send_Email_Alert_10</name>
         <label>Send Email Alert</label>
-        <locationX>4670</locationX>
+        <locationX>4516</locationX>
         <locationY>863</locationY>
         <actionName>Case.CallRevu_QC_New_Case_Alert</actionName>
         <actionType>emailAlert</actionType>
@@ -536,7 +536,7 @@
     <actionCalls>
         <name>Send_Email_Alert_11</name>
         <label>Send Email Alert</label>
-        <locationX>5638</locationX>
+        <locationX>5484</locationX>
         <locationY>863</locationY>
         <actionName>Case.Salesforce_Operations_New_Case_Alert</actionName>
         <actionType>emailAlert</actionType>
@@ -555,7 +555,7 @@
     <actionCalls>
         <name>Send_Email_Alert_12</name>
         <label>Send Email Alert</label>
-        <locationX>6166</locationX>
+        <locationX>6012</locationX>
         <locationY>1187</locationY>
         <actionName>Case.CallRevu_Support_New_Case_Alert</actionName>
         <actionType>emailAlert</actionType>
@@ -650,12 +650,12 @@
     <actionCalls>
         <name>Send_Email_Through_Apex_Action_1</name>
         <label>Send Email Through Apex Action</label>
-        <locationX>10082</locationX>
-        <locationY>3287</locationY>
+        <locationX>9554</locationX>
+        <locationY>3179</locationY>
         <actionName>GLSendEmail__SendEmail</actionName>
         <actionType>apex</actionType>
         <connector>
-            <targetReference>is_there_a_CSO</targetReference>
+            <targetReference>Asign_values_to_new_task_0_0_0</targetReference>
         </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
@@ -711,8 +711,8 @@
     <actionCalls>
         <name>Support_Response</name>
         <label>Support Response</label>
-        <locationX>10038</locationX>
-        <locationY>4793</locationY>
+        <locationX>9290</locationX>
+        <locationY>4211</locationY>
         <actionName>Case.Customer_Responded_to_Support_Case</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -730,7 +730,7 @@
     <actionCalls>
         <name>TEST03</name>
         <label>TEST</label>
-        <locationX>2910</locationX>
+        <locationX>2756</locationX>
         <locationY>1295</locationY>
         <actionName>Case.Accounting_Internal_Billing_Case_Alert</actionName>
         <actionType>emailAlert</actionType>
@@ -749,7 +749,7 @@
     <actionCalls>
         <name>TEST_EMAIL</name>
         <label>TEST EMAIL</label>
-        <locationX>2910</locationX>
+        <locationX>2756</locationX>
         <locationY>1403</locationY>
         <actionName>emailSimple</actionName>
         <actionType>emailSimple</actionType>
@@ -799,7 +799,7 @@
     <assignments>
         <name>Asign_values_to_new_task_0</name>
         <label>Asign values to new task</label>
-        <locationX>12194</locationX>
+        <locationX>11226</locationX>
         <locationY>2771</locationY>
         <assignmentItems>
             <assignToReference>varTask01.Subject</assignToReference>
@@ -850,8 +850,8 @@
     <assignments>
         <name>Asign_values_to_new_task_0_0_0</name>
         <label>Asign values to new task</label>
-        <locationX>10082</locationX>
-        <locationY>3587</locationY>
+        <locationX>9554</locationX>
+        <locationY>3287</locationY>
         <assignmentItems>
             <assignToReference>varTask01.ActivityDate</assignToReference>
             <operator>Assign</operator>
@@ -1067,7 +1067,7 @@
         <name>Asign_values_to_new_task_0_0_0_0_0_0_0_0</name>
         <label>Asign values to new task</label>
         <locationX>6914</locationX>
-        <locationY>5987</locationY>
+        <locationY>5687</locationY>
         <assignmentItems>
             <assignToReference>varTask01.ActivityDate</assignToReference>
             <operator>Assign</operator>
@@ -1143,11 +1143,10 @@
         </connector>
     </assignments>
     <assignments>
-        <description>Adds Support case to collection</description>
         <name>Assign_cases_to_new_variable</name>
         <label>Assign cases to new variable</label>
-        <locationX>5440</locationX>
-        <locationY>10307</locationY>
+        <locationX>5088</locationX>
+        <locationY>10415</locationY>
         <assignmentItems>
             <assignToReference>varCases</assignToReference>
             <operator>Add</operator>
@@ -1155,8 +1154,308 @@
                 <elementReference>varCase05</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCases</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>varCase06</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCases</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>varCase07</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCases</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>varCase14</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Create_new_Cases</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_cases_to_new_variable_0</name>
+        <label>Assign cases to new variable</label>
+        <locationX>6672</locationX>
+        <locationY>10307</locationY>
+        <assignmentItems>
+            <assignToReference>varCases</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>varCase12</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCases</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>varCase13</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCases</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>varCase15</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Create_new_Cases_0</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_values_to_new_Accounting_Case1</name>
+        <label>Assign values to new Accounting Case1</label>
+        <locationX>5088</locationX>
+        <locationY>10307</locationY>
+        <assignmentItems>
+            <assignToReference>varCase14.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.ContactId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Description</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.Opportunity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Opportunity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.Level_of_Service__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Level_of_Service__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>00G1N000002fuJXUAY</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.ParentId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>0121N000001HyMrQAK</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.Secondary_Case_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.Service_Agreement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Service_Agreement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.Setup_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Setup_Type__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.SuppliedEmail</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ContactEmail</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.SuppliedPhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ContactPhone</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>New Account Setup</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.Origin</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Moved from Enrollment</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase14.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>AccountCase1Name</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_cases_to_new_variable</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_values_to_new_Accounting_Case2</name>
+        <label>Assign values to new Accounting Case2</label>
+        <locationX>6672</locationX>
+        <locationY>10199</locationY>
+        <assignmentItems>
+            <assignToReference>varCase15.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.Actionable_Items__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Actionable_Items__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.ContactId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Description</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.Origin</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Moved from Enrollment</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>00G1N000002fuJXUAY</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.ParentId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>0121N000001HyMrQAK</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.Service_Agreement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Service_Agreement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>AddendumSubject1</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>New Account Setup</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.Opportunity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Opportunity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.Level_of_Service__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Level_of_Service__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.Secondary_Case_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase15.Setup_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Setup_Type__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_cases_to_new_variable_0</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -1825,7 +2124,7 @@
     <assignments>
         <name>Assign_values_to_new_Case_0_0_0_0_0_0_0</name>
         <label>Assign values to new Case</label>
-        <locationX>8146</locationX>
+        <locationX>7618</locationX>
         <locationY>3071</locationY>
         <assignmentItems>
             <assignToReference>varCase01.AccountId</assignToReference>
@@ -1866,7 +2165,7 @@
             <assignToReference>varCase01.Secondary_Case_Owner__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>form_AdjustedSecondaryOwner</elementReference>
+                <elementReference>$Record.OwnerId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -1923,11 +2222,10 @@
         </connector>
     </assignments>
     <assignments>
-        <description>Creates a Support Case</description>
         <name>Assign_values_to_new_Case_1</name>
         <label>Assign values to new Case</label>
-        <locationX>5440</locationX>
-        <locationY>10199</locationY>
+        <locationX>5088</locationX>
+        <locationY>10091</locationY>
         <assignmentItems>
             <assignToReference>varCase05.AccountId</assignToReference>
             <operator>Assign</operator>
@@ -1995,7 +2293,7 @@
             <assignToReference>varCase05.Secondary_Case_Owner__c</assignToReference>
             <operator>Assign</operator>
             <value>
-                <elementReference>form_AdjustedSecondaryOwner</elementReference>
+                <elementReference>$Record.OwnerId</elementReference>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -2048,7 +2346,7 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Assign_cases_to_new_variable</targetReference>
+            <targetReference>Assign_values_to_new_Case_2_0</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -2280,10 +2578,287 @@
         </connector>
     </assignments>
     <assignments>
+        <name>Assign_values_to_new_Case_2</name>
+        <label>Assign values to new Case</label>
+        <locationX>5088</locationX>
+        <locationY>9983</locationY>
+        <assignmentItems>
+            <assignToReference>varCase06.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.Case_Subtype__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Other</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.ContactId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.Dealer_Engagement_Enrollment__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Dealer_Engagement_Enrollment__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Description</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.Level_of_Service_Dept__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Level_of_Service_Dept__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.Level_of_Service__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Level_of_Service__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>00G1N000002fu3QUAQ</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.ParentId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>0121N000001HyN6QAK</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.Secondary_Case_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.Service_Agreement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Service_Agreement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.Setup_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Setup_Type__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>1 -Coordinator Assigned</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.SuppliedEmail</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ContactEmail</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.SuppliedPhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ContactPhone</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Launch</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.Opportunity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Opportunity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.Phone_System_Provider__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.Phone_System_Provider__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase06.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>LaunchCaseSubject</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_values_to_new_Case_1</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_values_to_new_Case_2_0</name>
+        <label>Assign values to new Case</label>
+        <locationX>5088</locationX>
+        <locationY>10199</locationY>
+        <assignmentItems>
+            <assignToReference>varCase07.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.ContactId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Description</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.Opportunity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Opportunity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.Level_of_Service__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Level_of_Service__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>00G1N000002fuJXUAY</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.ParentId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>0121N000001HyMrQAK</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.Secondary_Case_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.Service_Agreement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Service_Agreement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.Setup_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Setup_Type__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.SuppliedEmail</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ContactEmail</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.SuppliedPhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ContactPhone</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>New Account Setup</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.Origin</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Moved from Enrollment</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase07.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>AccountCaseName</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_values_to_new_Accounting_Case1</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Assign_values_to_new_Case_3</name>
         <label>Assign values to new Case</label>
-        <locationX>6496</locationX>
-        <locationY>11363</locationY>
+        <locationX>6012</locationX>
+        <locationY>11471</locationY>
         <assignmentItems>
             <assignToReference>varCase08.AccountId</assignToReference>
             <operator>Assign</operator>
@@ -2375,8 +2950,8 @@
     <assignments>
         <name>Assign_values_to_new_Case_4</name>
         <label>Assign values to new Case</label>
-        <locationX>10214</locationX>
-        <locationY>3887</locationY>
+        <locationX>9554</locationX>
+        <locationY>3503</locationY>
         <assignmentItems>
             <assignToReference>varCase07.AccountId</assignToReference>
             <operator>Assign</operator>
@@ -2503,7 +3078,7 @@
     <assignments>
         <name>Assign_values_to_new_Case_4_0</name>
         <label>Assign values to new Case</label>
-        <locationX>10170</locationX>
+        <locationX>9422</locationX>
         <locationY>2771</locationY>
         <assignmentItems>
             <assignToReference>varCase09.AccountId</assignToReference>
@@ -2668,8 +3243,8 @@
     <assignments>
         <name>Assign_values_to_new_Case_6</name>
         <label>Assign values to new Case</label>
-        <locationX>6694</locationX>
-        <locationY>11771</locationY>
+        <locationX>6210</locationX>
+        <locationY>11879</locationY>
         <assignmentItems>
             <assignToReference>varCase11.AccountId</assignToReference>
             <operator>Assign</operator>
@@ -2749,6 +3324,255 @@
         </assignmentItems>
         <connector>
             <targetReference>Create_a_new_Case_6</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_values_to_new_Case_7</name>
+        <label>Assign values to new Case</label>
+        <locationX>6672</locationX>
+        <locationY>9983</locationY>
+        <assignmentItems>
+            <assignToReference>varCase12.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.Case_Subtype__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Other</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.ContactId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Description</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.Level_of_Service_Dept__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Level_of_Service_Dept__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.Level_of_Service__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Level_of_Service__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>00G1N000002fu3QUAQ</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.ParentId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>0121N000001HyN6QAK</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.Secondary_Case_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.Service_Agreement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Service_Agreement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.Setup_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Setup_Type__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>1 -Coordinator Assigned</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.SuppliedEmail</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SuppliedEmail</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.SuppliedPhone</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.SuppliedPhone</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Launch</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase12.Phone_System_Provider__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Account.Phone_System_Provider__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_values_to_new_Case_8</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_values_to_new_Case_8</name>
+        <label>Assign values to new Case</label>
+        <locationX>6672</locationX>
+        <locationY>10091</locationY>
+        <assignmentItems>
+            <assignToReference>varCase13.AccountId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.AccountId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.Actionable_Items__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Actionable_Items__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.ContactId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ContactId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.Description</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Description</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.Origin</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Moved from Enrollment</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>00G1N000002fuJXUAY</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.ParentId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.RecordTypeId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>0121N000001HyMrQAK</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.Service_Agreement__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Service_Agreement__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.Status</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>New</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.Subject</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>AddendumSubject</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.Type</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>New Account Setup</stringValue>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.Opportunity__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Opportunity__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.Level_of_Service__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Level_of_Service__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.Secondary_Case_Owner__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varCase13.Setup_Type__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Setup_Type__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_values_to_new_Accounting_Case2</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -3367,8 +4191,8 @@
     <assignments>
         <name>Assign_values_to_new_task</name>
         <label>Assign values to new task</label>
-        <locationX>6496</locationX>
-        <locationY>10955</locationY>
+        <locationX>6012</locationX>
+        <locationY>11063</locationY>
         <assignmentItems>
             <assignToReference>varTask03.ActivityDate</assignToReference>
             <operator>Assign</operator>
@@ -3451,25 +4275,9 @@
         </connector>
     </assignments>
     <assignments>
-        <name>Copy_2_of_Update_Dealer_Engagement_Launch_on_Service_Agreement</name>
-        <label>Update Dealer Engagement Launch on Service Agreement</label>
-        <locationX>6914</locationX>
-        <locationY>5087</locationY>
-        <assignmentItems>
-            <assignToReference>getRelatedServiceAgreement.Strategic_Account_M__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Strategic_Account_Manager__c</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>is_there_a_Service_Agreement_related</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
         <name>Update_Check_in_Date_on_Service_Agreement</name>
         <label>Update Check in Date on Service Agreement</label>
-        <locationX>6914</locationX>
+        <locationX>6650</locationX>
         <locationY>3179</locationY>
         <assignmentItems>
             <assignToReference>getRelatedServiceAgreement.Check_In_Date__c</assignToReference>
@@ -3485,7 +4293,7 @@
     <assignments>
         <name>Update_Date_of_Launch_on_Service_Agreement</name>
         <label>Update Date of Launch on Service Agreement</label>
-        <locationX>6914</locationX>
+        <locationX>6650</locationX>
         <locationY>2879</locationY>
         <assignmentItems>
             <assignToReference>getRelatedServiceAgreement.Launch_Date__c</assignToReference>
@@ -3508,7 +4316,7 @@
     <assignments>
         <name>Update_Dealer_Engagement_Launch_on_Service_Agreement</name>
         <label>Update Dealer Engagement Launch on Service Agreement</label>
-        <locationX>6914</locationX>
+        <locationX>6650</locationX>
         <locationY>4787</locationY>
         <assignmentItems>
             <assignToReference>getRelatedServiceAgreement.Dealer_Engagement_Launch__c</assignToReference>
@@ -3518,13 +4326,13 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Is_SAM_assigned</targetReference>
+            <targetReference>is_there_a_Service_Agreement_related</targetReference>
         </connector>
     </assignments>
     <assignments>
         <name>Update_Handoff_Date_on_Service_Agreement</name>
         <label>Update Handoff Date on Service Agreement</label>
-        <locationX>6914</locationX>
+        <locationX>6650</locationX>
         <locationY>3779</locationY>
         <assignmentItems>
             <assignToReference>getRelatedServiceAgreement.Handoff_Date__c</assignToReference>
@@ -3540,7 +4348,7 @@
     <assignments>
         <name>Update_Intended_Handoff_Date_on_Service_Agreement</name>
         <label>Update Intended Handoff Date on Service Agreement</label>
-        <locationX>6914</locationX>
+        <locationX>6650</locationX>
         <locationY>3479</locationY>
         <assignmentItems>
             <assignToReference>getRelatedServiceAgreement.Intended_Handoff_Date__c</assignToReference>
@@ -3556,7 +4364,7 @@
     <assignments>
         <name>Update_Launch_Coordinator_on_Service_Agreement</name>
         <label>Update Launch Coordinator on Service Agreement</label>
-        <locationX>6914</locationX>
+        <locationX>6650</locationX>
         <locationY>4079</locationY>
         <assignmentItems>
             <assignToReference>getRelatedServiceAgreement.Launch_Coordinator__c</assignToReference>
@@ -3572,7 +4380,7 @@
     <assignments>
         <name>Update_Performance_Manager_on_Service_Agreement</name>
         <label>Update Performance Manager on Service Agreement</label>
-        <locationX>6914</locationX>
+        <locationX>6650</locationX>
         <locationY>4379</locationY>
         <assignmentItems>
             <assignToReference>getRelatedServiceAgreement.Performance_Manager__c</assignToReference>
@@ -3602,7 +4410,7 @@
     <assignments>
         <name>Update_Review_Cycle_on_Service_Agreement</name>
         <label>Update Review Cycle on Service Agreement</label>
-        <locationX>6914</locationX>
+        <locationX>6650</locationX>
         <locationY>4487</locationY>
         <assignmentItems>
             <assignToReference>getRelatedServiceAgreement.Review_Cycle__c</assignToReference>
@@ -3630,34 +4438,9 @@
         </value>
     </constants>
     <decisions>
-        <name>are_Implementation_Notes_blank</name>
-        <label>are Implementation Notes blank?</label>
-        <locationX>6298</locationX>
-        <locationY>11771</locationY>
-        <defaultConnector>
-            <targetReference>Is_Status_Launch_Complete</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Implementation_Notes_are_blank</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Implementation_Expectations__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Update_Notes</targetReference>
-            </connector>
-            <label>Implementation Notes are blank</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Bypass_Decision</name>
         <label>Bypass Decision</label>
-        <locationX>6100</locationX>
+        <locationX>5748</locationX>
         <locationY>9983</locationY>
         <defaultConnector>
             <targetReference>Copy_1_of_Create_Case_with_Email_Carryover_QC</targetReference>
@@ -3682,7 +4465,7 @@
     <decisions>
         <name>Case_Assignment_Rule</name>
         <label>Case Assignment Rule</label>
-        <locationX>3922</locationX>
+        <locationX>3768</locationX>
         <locationY>755</locationY>
         <defaultConnector>
             <targetReference>Update_Cancellation_Request_Date</targetReference>
@@ -3735,7 +4518,7 @@
     <decisions>
         <name>Case_Assignment_Rule_0</name>
         <label>Case Assignment Rule</label>
-        <locationX>4362</locationX>
+        <locationX>4208</locationX>
         <locationY>755</locationY>
         <defaultConnector>
             <targetReference>Copy_1_of_Is_Created_by_System</targetReference>
@@ -3781,7 +4564,7 @@
     <decisions>
         <name>Case_Assignment_Rules</name>
         <label>Case Assignment Rules</label>
-        <locationX>6364</locationX>
+        <locationX>6210</locationX>
         <locationY>1679</locationY>
         <defaultConnector>
             <targetReference>Check_Service_Agreement</targetReference>
@@ -3906,7 +4689,7 @@
                 <leftValueReference>$Record.Owner:Group.Name</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
-                    <stringValue>TotalTrack Support</stringValue>
+                    <stringValue>Total Track Support</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -3914,13 +4697,6 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Owner:Group.DeveloperName</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>Porting_Requests</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -3933,7 +4709,7 @@
         <description>Is QC or Not QC</description>
         <name>Case_Assignment_RulesQC</name>
         <label>Case Assignment Rules</label>
-        <locationX>5066</locationX>
+        <locationX>4912</locationX>
         <locationY>1163</locationY>
         <defaultConnector>
             <targetReference>Check_Service_Agreement</targetReference>
@@ -3993,7 +4769,7 @@
     <decisions>
         <name>Case_creation_needed</name>
         <label>Case creation needed?</label>
-        <locationX>6474</locationX>
+        <locationX>5990</locationX>
         <locationY>9383</locationY>
         <defaultConnector>
             <targetReference>Is_Status_Moved_to_Launch</targetReference>
@@ -4018,7 +4794,7 @@
     <decisions>
         <name>Check_If_Email_Found</name>
         <label>Check If Email Found?</label>
-        <locationX>6034</locationX>
+        <locationX>5880</locationX>
         <locationY>1079</locationY>
         <defaultConnector>
             <targetReference>Send_Email_Alert_12</targetReference>
@@ -4043,7 +4819,7 @@
     <decisions>
         <name>Check_Service_Agreement</name>
         <label>Check Service Agreement</label>
-        <locationX>5242</locationX>
+        <locationX>4868</locationX>
         <locationY>2063</locationY>
         <defaultConnector>
             <targetReference>Record_Type</targetReference>
@@ -4135,7 +4911,7 @@
     <decisions>
         <name>Copy_1_of_Is_Created_by_System</name>
         <label>DevOps New Case</label>
-        <locationX>4362</locationX>
+        <locationX>4208</locationX>
         <locationY>1055</locationY>
         <defaultConnector>
             <targetReference>Check_Service_Agreement</targetReference>
@@ -4174,7 +4950,7 @@
     <decisions>
         <name>Copy_1_of_Is_Status_equal_to_Customer_Responded</name>
         <label>Customer Responded to Escalation</label>
-        <locationX>12766</locationX>
+        <locationX>11798</locationX>
         <locationY>2663</locationY>
         <defaultConnector>
             <targetReference>Is_Status_Changed</targetReference>
@@ -4220,7 +4996,7 @@
     <decisions>
         <name>how_should_be_marked</name>
         <label>how should be marked?</label>
-        <locationX>9246</locationX>
+        <locationX>8718</locationX>
         <locationY>2663</locationY>
         <defaultConnector>
             <targetReference>Is_Status_Changed</targetReference>
@@ -4366,7 +5142,7 @@
     <decisions>
         <name>how_should_be_marked_0</name>
         <label>how should be marked?</label>
-        <locationX>8278</locationX>
+        <locationX>7750</locationX>
         <locationY>2663</locationY>
         <defaultConnector>
             <targetReference>Is_Closing_Outcome_Moved_to_Support</targetReference>
@@ -4446,7 +5222,7 @@
     <decisions>
         <name>Is_Addendum_Alert_true</name>
         <label>Is Addendum Alert true?</label>
-        <locationX>10302</locationX>
+        <locationX>9554</locationX>
         <locationY>3071</locationY>
         <defaultConnector>
             <targetReference>Is_Original_Close_Date_null_0</targetReference>
@@ -4460,6 +5236,13 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Support</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -4485,6 +5268,13 @@
             <name>Addendum_Closed</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Support</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
                 <leftValueReference>$Record.Addendum_Alert__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
@@ -4499,6 +5289,13 @@
                 </rightValue>
             </conditions>
             <conditions>
+                <leftValueReference>$Record.CSM_Email__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
                 <leftValueReference>$Record.Status</leftValueReference>
                 <operator>IsChanged</operator>
                 <rightValue>
@@ -4506,7 +5303,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>is_There_a_Lead_or_Contact</targetReference>
+                <targetReference>Send_Email_Through_Apex_Action_1</targetReference>
             </connector>
             <label>Addendum Closed</label>
         </rules>
@@ -4893,8 +5690,8 @@
     <decisions>
         <name>Is_Category_Action_Cancellation</name>
         <label>Is Category Action Cancellation?</label>
-        <locationX>10302</locationX>
-        <locationY>4985</locationY>
+        <locationX>9554</locationX>
+        <locationY>4403</locationY>
         <defaultConnector>
             <targetReference>Is_Status_Changed</targetReference>
         </defaultConnector>
@@ -5098,7 +5895,7 @@
     <decisions>
         <name>Is_Closing_Outcome_Moved_to_Support</name>
         <label>Is Closing Outcome Moved to Support?</label>
-        <locationX>8278</locationX>
+        <locationX>7750</locationX>
         <locationY>2963</locationY>
         <defaultConnector>
             <targetReference>Is_Status_Changed</targetReference>
@@ -5222,7 +6019,7 @@
     <decisions>
         <name>Is_Created_by_System</name>
         <label>Is Created by System?</label>
-        <locationX>5066</locationX>
+        <locationX>4912</locationX>
         <locationY>755</locationY>
         <defaultConnector>
             <targetReference>Case_Assignment_RulesQC</targetReference>
@@ -5411,10 +6208,10 @@
     <decisions>
         <name>Is_Dealer_Engagement_Launch_updated_0</name>
         <label>Is Dealer Engagement Launch updated?</label>
-        <locationX>7046</locationX>
+        <locationX>6782</locationX>
         <locationY>4679</locationY>
         <defaultConnector>
-            <targetReference>Is_SAM_assigned</targetReference>
+            <targetReference>is_there_a_Service_Agreement_related</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -5436,7 +6233,7 @@
     <decisions>
         <name>Is_DNI_Alert_true</name>
         <label>Is DNI Alert true?</label>
-        <locationX>6628</locationX>
+        <locationX>6144</locationX>
         <locationY>8759</locationY>
         <defaultConnector>
             <targetReference>Is_Failure_to_Launch_Date</targetReference>
@@ -5507,8 +6304,8 @@
     <decisions>
         <name>Is_DNI_Case_Setup</name>
         <label>Is DNI Case Setup?</label>
-        <locationX>6628</locationX>
-        <locationY>11255</locationY>
+        <locationX>6144</locationX>
+        <locationY>11363</locationY>
         <defaultConnector>
             <targetReference>Is_Record_Type_Launch_or_Enrollment</targetReference>
         </defaultConnector>
@@ -5631,7 +6428,7 @@
     <decisions>
         <name>Is_Failure_to_Launch_Date</name>
         <label>Is Failure to Launch Date?</label>
-        <locationX>6628</locationX>
+        <locationX>6144</locationX>
         <locationY>9167</locationY>
         <defaultConnector>
             <targetReference>Is_Status_Moved_to_Launch</targetReference>
@@ -5716,7 +6513,7 @@
     <decisions>
         <name>Is_Launch_Coordinator_assigned</name>
         <label>Is Launch Coordinator assigned?</label>
-        <locationX>7046</locationX>
+        <locationX>6782</locationX>
         <locationY>3971</locationY>
         <defaultConnector>
             <targetReference>Is_PM_Assigned_null_0</targetReference>
@@ -5730,27 +6527,6 @@
                 <operator>IsChanged</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.OwnerId</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>00G1N000002fu3Q</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.OwnerId</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>3D00G1N000002fu3Q</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Status</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>5 - Needs Coordinator Assigned</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -5801,7 +6577,7 @@
     <decisions>
         <name>Is_New</name>
         <label>Is New?</label>
-        <locationX>6628</locationX>
+        <locationX>6144</locationX>
         <locationY>539</locationY>
         <defaultConnector>
             <targetReference>Record_Type</targetReference>
@@ -5826,8 +6602,8 @@
     <decisions>
         <name>Is_Original_Close_Date_null_0</name>
         <label>Is Original Close Date null?</label>
-        <locationX>10302</locationX>
-        <locationY>4385</locationY>
+        <locationX>9554</locationX>
+        <locationY>3803</locationY>
         <defaultConnector>
             <targetReference>Is_Status_equal_to_Customer_Responded_0_0</targetReference>
         </defaultConnector>
@@ -5858,7 +6634,7 @@
     <decisions>
         <name>Is_PM_Assigned_null_0</name>
         <label>Is PM Assigned null?</label>
-        <locationX>7046</locationX>
+        <locationX>6782</locationX>
         <locationY>4271</locationY>
         <defaultConnector>
             <targetReference>Is_Dealer_Engagement_Launch_updated_0</targetReference>
@@ -5975,11 +6751,10 @@
     <decisions>
         <name>Is_preferred_contact_for_Billing_changed</name>
         <label>Is preferred contact for Billing changed?</label>
-        <locationX>7046</locationX>
-        <locationY>6503</locationY>
+        <locationX>6782</locationX>
+        <locationY>6203</locationY>
         <defaultConnector>
-            <isGoTo>true</isGoTo>
-            <targetReference>Is_Addendum_Alert_true</targetReference>
+            <targetReference>Is_Status_Changed</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -6015,12 +6790,12 @@
     <decisions>
         <name>Is_Record_Type_Launch_or_Enrollment</name>
         <label>Is Record Type Launch or Enrollment?</label>
-        <locationX>6628</locationX>
-        <locationY>11663</locationY>
+        <locationX>6144</locationX>
+        <locationY>11771</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Launch_or_Enrollment</name>
-            <conditionLogic>(1 OR 2) AND 3</conditionLogic>
+            <conditionLogic>(1 OR 2) AND 3 AND 4</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
                 <operator>EqualTo</operator>
@@ -6036,6 +6811,13 @@
                 </rightValue>
             </conditions>
             <conditions>
+                <leftValueReference>$Record.Implementation_Expectations__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
                 <leftValueReference>$Record.Service_Agreement__c</leftValueReference>
                 <operator>IsNull</operator>
                 <rightValue>
@@ -6043,7 +6825,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>are_Implementation_Notes_blank</targetReference>
+                <targetReference>Update_Notes</targetReference>
             </connector>
             <label>Launch or Enrollment</label>
         </rules>
@@ -6186,8 +6968,8 @@
     <decisions>
         <name>Is_RT_Enrollment_with_Referral</name>
         <label>Is RT Enrollment with Referral?</label>
-        <locationX>6628</locationX>
-        <locationY>10847</locationY>
+        <locationX>6144</locationX>
+        <locationY>10955</locationY>
         <defaultConnector>
             <targetReference>Is_DNI_Case_Setup</targetReference>
         </defaultConnector>
@@ -6206,7 +6988,7 @@
                 <leftValueReference>$Record.Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>5 - Needs Coordinator Assigned</stringValue>
+                    <stringValue>5 - Moved to Launch</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -6241,7 +7023,7 @@
                 <leftValueReference>$Record.Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>9.1 - Enrollment Complete</stringValue>
+                    <stringValue>5.1 - Enrollment Complete</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -6253,7 +7035,7 @@
     <decisions>
         <name>Is_RT_Support_Addendum_Closed</name>
         <label>Is RT Support - Addendum Closed?</label>
-        <locationX>10302</locationX>
+        <locationX>9554</locationX>
         <locationY>2663</locationY>
         <defaultConnector>
             <targetReference>Is_Addendum_Alert_true</targetReference>
@@ -6291,31 +7073,6 @@
                 <targetReference>Assign_values_to_new_Case_4_0</targetReference>
             </connector>
             <label>RT Support - Addendum Closed</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Is_SAM_assigned</name>
-        <label>Is SAM assigned? (Strategic Account Manager)</label>
-        <locationX>7046</locationX>
-        <locationY>4979</locationY>
-        <defaultConnector>
-            <targetReference>is_there_a_Service_Agreement_related</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Outcome_1_of_Is_SAM_assigned</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Strategic_Account_Manager__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Copy_2_of_Update_Dealer_Engagement_Launch_on_Service_Agreement</targetReference>
-            </connector>
-            <label>Outcome 1 of Is SAM assigned? (Strategic Account Manager)</label>
         </rules>
     </decisions>
     <decisions>
@@ -6399,7 +7156,7 @@
     <decisions>
         <name>Is_Status_Changed</name>
         <label>Is Status Changed?</label>
-        <locationX>6628</locationX>
+        <locationX>6144</locationX>
         <locationY>8459</locationY>
         <defaultConnector>
             <targetReference>Is_DNI_Alert_true</targetReference>
@@ -6637,7 +7394,7 @@
     <decisions>
         <name>Is_Status_equal_to_Customer_Responded_0</name>
         <label>Is Status equal to Customer Responded?</label>
-        <locationX>12326</locationX>
+        <locationX>11358</locationX>
         <locationY>3071</locationY>
         <defaultConnector>
             <targetReference>Is_Status_Changed</targetReference>
@@ -6683,8 +7440,8 @@
     <decisions>
         <name>Is_Status_equal_to_Customer_Responded_0_0</name>
         <label>Is Status equal to Customer Responded?</label>
-        <locationX>10302</locationX>
-        <locationY>4685</locationY>
+        <locationX>9554</locationX>
+        <locationY>4103</locationY>
         <defaultConnector>
             <targetReference>Is_Category_Action_Cancellation</targetReference>
         </defaultConnector>
@@ -6723,20 +7480,6 @@
             <conditions>
                 <leftValueReference>$Record.Status</leftValueReference>
                 <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.OwnerId</leftValueReference>
-                <operator>StartsWith</operator>
-                <rightValue>
-                    <stringValue>005</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Owner:User.IsActive</leftValueReference>
-                <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
@@ -6793,8 +7536,8 @@
     <decisions>
         <name>Is_Status_Launch_Complete</name>
         <label>Is Status Launch Complete?</label>
-        <locationX>6298</locationX>
-        <locationY>12071</locationY>
+        <locationX>5814</locationX>
+        <locationY>11987</locationY>
         <defaultConnectorLabel>Status is NOT Launch Complete</defaultConnectorLabel>
         <rules>
             <name>Status_is_Launch_Complete</name>
@@ -6803,7 +7546,7 @@
                 <leftValueReference>$Record.Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>9 - Launch Complete</stringValue>
+                    <stringValue>5 - Launch Complete</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -6816,14 +7559,13 @@
             <connector>
                 <targetReference>Update_Review_Date_and_Notes</targetReference>
             </connector>
-            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
             <label>Status is Launch Complete</label>
         </rules>
     </decisions>
     <decisions>
         <name>Is_Status_Moved_to_Launch</name>
         <label>Is Status Moved to Launch?</label>
-        <locationX>6628</locationX>
+        <locationX>6144</locationX>
         <locationY>9875</locationY>
         <defaultConnector>
             <targetReference>Is_RT_Enrollment_with_Referral</targetReference>
@@ -6843,7 +7585,7 @@
                 <leftValueReference>$Record.Status</leftValueReference>
                 <operator>Contains</operator>
                 <rightValue>
-                    <stringValue>5 - Needs Coordinator Assigned</stringValue>
+                    <stringValue>Moved to Launch</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -6861,9 +7603,9 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Update_Billing_Case_Name_field</targetReference>
+                <targetReference>Assign_values_to_new_Case_2</targetReference>
             </connector>
-            <label>Moved to Launch or Needs Coordinator</label>
+            <label>Moved to Launch</label>
         </rules>
         <rules>
             <name>Closed_Moved_to_QC</name>
@@ -6974,8 +7716,8 @@
             <label>Closed Move at Risk</label>
         </rules>
         <rules>
-            <name>Closed_Moved_to_Hosted_Phones_Support</name>
-            <conditionLogic>1 AND 2 AND (3 OR 4)</conditionLogic>
+            <name>Addendum_to_Launch</name>
+            <conditionLogic>1 AND 2 AND (3 OR 4 OR 5)</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Status</leftValueReference>
                 <operator>IsChanged</operator>
@@ -6987,7 +7729,14 @@
                 <leftValueReference>$Record.Status</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>6.6 - Closed - Moved to Hosted Phones Support</stringValue>
+                    <stringValue>6.4 - Closed - Addendum moved to Launch</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Child_Case_Count__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -6998,88 +7747,16 @@
                 </rightValue>
             </conditions>
             <conditions>
-                <leftValueReference>$Record.Child_Case_Count__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Create_Hosted_Phones_Support_Case</targetReference>
-            </connector>
-            <label>Closed - Moved to Hosted Phones Support</label>
-        </rules>
-        <rules>
-            <name>Closed_Moved_to_TotalTrack_Support</name>
-            <conditionLogic>1 AND 2 AND (3 OR 4)</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Status</leftValueReference>
+                <leftValueReference>$Record.KJTESTS__c</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>$Record.Status</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>6.7 - Closed - Moved to TotalTrack Support</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Child_Case_Count__c</leftValueReference>
-                <operator>LessThan</operator>
-                <rightValue>
-                    <numberValue>1.0</numberValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Child_Case_Count__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
             <connector>
-                <targetReference>Create_Total_Track_Support_Case</targetReference>
+                <targetReference>Assign_values_to_new_Case_7</targetReference>
             </connector>
-            <label>Closed - Moved to TotalTrack Support</label>
-        </rules>
-        <rules>
-            <name>Closed_Moved_to_CallRevu_Support</name>
-            <conditionLogic>1 AND 2 AND (3 OR 4)</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Status</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Status</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>6.8 – Closed – Moved to CallRevu Support</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Child_Case_Count__c</leftValueReference>
-                <operator>LessThan</operator>
-                <rightValue>
-                    <numberValue>1.0</numberValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Child_Case_Count__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Create_CallRevu_Support_Case</targetReference>
-            </connector>
-            <label>Closed - Moved to CallRevu Support</label>
+            <label>Addendum to Launch</label>
         </rules>
     </decisions>
     <decisions>
@@ -7138,7 +7815,7 @@
     <decisions>
         <name>Is_Support_Case</name>
         <label>Is Support Case?</label>
-        <locationX>6364</locationX>
+        <locationX>6210</locationX>
         <locationY>863</locationY>
         <defaultConnector>
             <targetReference>Get_User_Role_Tier_2_Support</targetReference>
@@ -7211,67 +7888,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>is_there_a_CSO</name>
-        <label>is there a CSO?</label>
-        <locationX>10214</locationX>
-        <locationY>3479</locationY>
-        <defaultConnector>
-            <targetReference>Assign_values_to_new_Case_4</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>there_IS_a_CSO</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Service_Agreement__r.Performance_Manager__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Service_Agreement__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Asign_values_to_new_task_0_0_0</targetReference>
-            </connector>
-            <label>there IS a CSO</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>is_There_a_Lead_or_Contact</name>
-        <label>is There a Lead or Contact</label>
-        <locationX>10214</locationX>
-        <locationY>3179</locationY>
-        <defaultConnector>
-            <targetReference>is_there_a_CSO</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>there_IS_a_Contact</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.ContactId</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Send_Email_Through_Apex_Action_1</targetReference>
-            </connector>
-            <label>there IS a Contact</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>is_there_a_Service_Agreement_related</name>
         <label>is there a Service Agreement related?</label>
-        <locationX>7046</locationX>
-        <locationY>5279</locationY>
+        <locationX>6782</locationX>
+        <locationY>4979</locationY>
         <defaultConnector>
             <targetReference>Manual_Accounting_Case_to_be_Created</targetReference>
         </defaultConnector>
@@ -7360,35 +7980,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>make_sure_there_s_an_account</name>
-        <label>make sure there&apos;s an account</label>
-        <locationX>7398</locationX>
-        <locationY>755</locationY>
-        <defaultConnector>
-            <targetReference>create_Billing_Case</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>There_is_an_account</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.AccountId</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Update_Case_Roll_Up_on_Account_New</targetReference>
-            </connector>
-            <label>There is an account</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Manual_Accounting_Case_to_be_Created</name>
         <label>Manual Accounting Case to be Created</label>
-        <locationX>7046</locationX>
-        <locationY>5579</locationY>
+        <locationX>6782</locationX>
+        <locationY>5279</locationY>
         <defaultConnector>
             <targetReference>What_is_Case_Status</targetReference>
         </defaultConnector>
@@ -7410,6 +8005,13 @@
                     <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record__Prior.Billing_Case_Name__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>manually_Create_Accounting_Case</targetReference>
             </connector>
@@ -7419,7 +8021,7 @@
     <decisions>
         <name>Record_Type</name>
         <label>Record Type</label>
-        <locationX>6628</locationX>
+        <locationX>6144</locationX>
         <locationY>2555</locationY>
         <defaultConnector>
             <targetReference>Is_Status_Changed</targetReference>
@@ -7654,7 +8256,7 @@
     <decisions>
         <name>Record_Type_0</name>
         <label>Record Type</label>
-        <locationX>5242</locationX>
+        <locationX>4868</locationX>
         <locationY>647</locationY>
         <defaultConnector>
             <targetReference>Check_Service_Agreement</targetReference>
@@ -7813,7 +8415,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>make_sure_there_s_an_account</targetReference>
+                <targetReference>create_Billing_Case</targetReference>
             </connector>
             <label>Enrollment</label>
         </rules>
@@ -7867,7 +8469,7 @@
     <decisions>
         <name>TEST01</name>
         <label>TEST</label>
-        <locationX>3042</locationX>
+        <locationX>2888</locationX>
         <locationY>1187</locationY>
         <defaultConnector>
             <targetReference>Check_Service_Agreement</targetReference>
@@ -7892,7 +8494,7 @@
     <decisions>
         <name>Update_Check_in_Date_related_with_Service_Agreement</name>
         <label>Update Check in Date related with Service Agreement</label>
-        <locationX>7046</locationX>
+        <locationX>6782</locationX>
         <locationY>3071</locationY>
         <defaultConnector>
             <targetReference>Update_Intended_Handoff_Date_related_with_Service_Agreement</targetReference>
@@ -7917,7 +8519,7 @@
     <decisions>
         <name>Update_Date_of_Launch_related_with_Service_Agreement</name>
         <label>Update Date of Launch related with Service Agreement</label>
-        <locationX>7046</locationX>
+        <locationX>6782</locationX>
         <locationY>2771</locationY>
         <defaultConnector>
             <targetReference>Update_Check_in_Date_related_with_Service_Agreement</targetReference>
@@ -7949,7 +8551,7 @@
     <decisions>
         <name>Update_Handoff_Date_related_with_Service_Agreement</name>
         <label>Update Handoff Date related with Service Agreement</label>
-        <locationX>7046</locationX>
+        <locationX>6782</locationX>
         <locationY>3671</locationY>
         <defaultConnector>
             <targetReference>Is_Launch_Coordinator_assigned</targetReference>
@@ -7974,7 +8576,7 @@
     <decisions>
         <name>Update_Intended_Handoff_Date_related_with_Service_Agreement</name>
         <label>Update Intended Handoff Date related with Service Agreement</label>
-        <locationX>7046</locationX>
+        <locationX>6782</locationX>
         <locationY>3371</locationY>
         <defaultConnector>
             <targetReference>Update_Handoff_Date_related_with_Service_Agreement</targetReference>
@@ -7999,7 +8601,7 @@
     <decisions>
         <name>Verify_conditions_to_auto_response</name>
         <label>Verify conditions to auto response</label>
-        <locationX>3196</locationX>
+        <locationX>3042</locationX>
         <locationY>971</locationY>
         <defaultConnector>
             <targetReference>Check_Service_Agreement</targetReference>
@@ -8122,8 +8724,8 @@
     <decisions>
         <name>What_is_Case_Status</name>
         <label>What is Case Status?</label>
-        <locationX>7046</locationX>
-        <locationY>5879</locationY>
+        <locationX>6782</locationX>
+        <locationY>5579</locationY>
         <defaultConnector>
             <targetReference>Is_preferred_contact_for_Billing_changed</targetReference>
         </defaultConnector>
@@ -8148,7 +8750,6 @@
             <connector>
                 <targetReference>Update_Date_of_Working_Status_0</targetReference>
             </connector>
-            <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
             <label>Working</label>
         </rules>
         <rules>
@@ -8171,7 +8772,7 @@
             <connector>
                 <targetReference>Update_Date_of_Launch_Status</targetReference>
             </connector>
-            <label>Moved to Launch ( Needs Coordinator)</label>
+            <label>Moved to Launch</label>
         </rules>
         <rules>
             <name>In_Review</name>
@@ -8201,35 +8802,6 @@
                 <targetReference>Asign_values_to_new_task_0_0_0_0_0_0_0_0</targetReference>
             </connector>
             <label>In Review</label>
-        </rules>
-        <rules>
-            <name>Case_is_now_Closed</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Status</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.IsClosed</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.AccountId</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Update_Case_Roll_Up_on_Account</targetReference>
-            </connector>
-            <label>Case is now Closed</label>
         </rules>
     </decisions>
     <decisions>
@@ -8545,7 +9117,7 @@
     <decisions>
         <name>What_is_Record_Type_0_0</name>
         <label>Is Days Since Closed field equal 7?</label>
-        <locationX>12326</locationX>
+        <locationX>11358</locationX>
         <locationY>2663</locationY>
         <defaultConnector>
             <targetReference>Is_Status_equal_to_Customer_Responded_0</targetReference>
@@ -8577,7 +9149,7 @@
     <decisions>
         <name>What_is_the_Trainig_Status</name>
         <label>What is the Trainig Status?</label>
-        <locationX>11490</locationX>
+        <locationX>10522</locationX>
         <locationY>2663</locationY>
         <defaultConnector>
             <targetReference>Is_Status_Changed</targetReference>
@@ -8728,7 +9300,7 @@
             <label>Closed</label>
         </rules>
     </decisions>
-    <description>Updated Unsupported Email logic to no longer check for keywords+devops email and cancel billing case use case and direct assignment removed + automation to populate service agreement review date on close for launch cases. + SOP project stage updates + accounting fol up and Case type + UpdateNS Order automation+Enrollment/Launch merge + Update Moved to launch decision + updated routing to exclude porting from support cases + Hosted Phones support or TotalTrack support</description>
+    <description>Updated Unsupported Email logic to no longer check for keywords+devops email and cancel billing case use case and direct assignment removed + automation to populate service agreement review date on close for launch cases. + SOP project stage updates + accounting fol up and Case type + Updated for Enrollment to Launch merge + Case Enrollment Accounting case creation</description>
     <environments>Default</environments>
     <formulas>
         <name>AccountCase1Name</name>
@@ -8766,27 +9338,6 @@
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!$Record.ContactEmail}), IF(ISBLANK({!$Record.SuppliedEmail}),&quot;&quot;,{!$Record.SuppliedEmail}),IF(ISBLANK({!$Record.SuppliedEmail}),{!$Record.ContactEmail},
     {!$Record.SuppliedEmail} &amp; &apos;,&apos; &amp; {!$Record.ContactEmail} ))</expression>
-    </formulas>
-    <formulas>
-        <description>If the case owner is a queue, then be blank</description>
-        <name>form_AdjustedSecondaryOwner</name>
-        <dataType>String</dataType>
-        <expression>IF(LEFT({!$Record.OwnerId},3)=&apos;00G&apos;,null,{!$Record.OwnerId})</expression>
-    </formulas>
-    <formulas>
-        <name>form_SecondaryCaseOwner_calc</name>
-        <dataType>String</dataType>
-        <expression>IF(LEFT({!$Record.OwnerId},3) != &apos;00G&apos;,
-{!$Record.OwnerId},
-null)</expression>
-    </formulas>
-    <formulas>
-        <name>formBillingCaseValue</name>
-        <dataType>String</dataType>
-        <expression>CASE({!$Record.Opportunity__r.Agreement_Workflow__c},
-&quot;Send to Enrollment&quot;, &quot;Create NS Order&quot;,
-&quot;Addendum Workflow&quot;, &quot;Update NS Order&quot;,
-null)</expression>
     </formulas>
     <formulas>
         <name>forToEmailAddress</name>
@@ -9023,7 +9574,7 @@ null)</expression>
     <recordCreates>
         <name>Create_a_new_Case_0_0_0_0_0_0_0</name>
         <label>Create a new Case</label>
-        <locationX>8146</locationX>
+        <locationX>7618</locationX>
         <locationY>3179</locationY>
         <connector>
             <targetReference>Is_Status_Changed</targetReference>
@@ -9033,8 +9584,8 @@ null)</expression>
     <recordCreates>
         <name>Create_a_new_case_2</name>
         <label>Create a new case</label>
-        <locationX>6496</locationX>
-        <locationY>11471</locationY>
+        <locationX>6012</locationX>
+        <locationY>11579</locationY>
         <connector>
             <targetReference>Is_Record_Type_Launch_or_Enrollment</targetReference>
         </connector>
@@ -9043,20 +9594,17 @@ null)</expression>
     <recordCreates>
         <name>Create_a_new_case_3</name>
         <label>Create a new case</label>
-        <locationX>10214</locationX>
-        <locationY>3995</locationY>
+        <locationX>9554</locationX>
+        <locationY>3611</locationY>
         <connector>
             <targetReference>Is_Original_Close_Date_null_0</targetReference>
         </connector>
-        <faultConnector>
-            <targetReference>Fault_Path_Flow_Flow_3</targetReference>
-        </faultConnector>
         <inputReference>varCase07</inputReference>
     </recordCreates>
     <recordCreates>
         <name>Create_a_new_Case_3_0</name>
         <label>Create a new Case</label>
-        <locationX>10170</locationX>
+        <locationX>9422</locationX>
         <locationY>2879</locationY>
         <connector>
             <targetReference>Is_Addendum_Alert_true</targetReference>
@@ -9076,15 +9624,15 @@ null)</expression>
     <recordCreates>
         <name>Create_a_new_Case_6</name>
         <label>Create a new Case</label>
-        <locationX>6694</locationX>
-        <locationY>11879</locationY>
+        <locationX>6210</locationX>
+        <locationY>11987</locationY>
         <inputReference>varCase11</inputReference>
     </recordCreates>
     <recordCreates>
         <name>Create_a_new_Task</name>
         <label>Create a new Task</label>
-        <locationX>6496</locationX>
-        <locationY>11063</locationY>
+        <locationX>6012</locationX>
+        <locationY>11171</locationY>
         <connector>
             <targetReference>Is_DNI_Case_Setup</targetReference>
         </connector>
@@ -9093,7 +9641,7 @@ null)</expression>
     <recordCreates>
         <name>Create_a_new_task_0</name>
         <label>Create a new task</label>
-        <locationX>12194</locationX>
+        <locationX>11226</locationX>
         <locationY>2879</locationY>
         <connector>
             <targetReference>Is_Status_equal_to_Customer_Responded_0</targetReference>
@@ -9103,8 +9651,8 @@ null)</expression>
     <recordCreates>
         <name>Create_a_new_task_0_0_0</name>
         <label>Create a new task</label>
-        <locationX>10082</locationX>
-        <locationY>3695</locationY>
+        <locationX>9554</locationX>
+        <locationY>3395</locationY>
         <connector>
             <targetReference>Assign_values_to_new_Case_4</targetReference>
         </connector>
@@ -9134,7 +9682,7 @@ null)</expression>
         <name>Create_a_new_task_0_0_0_0_0_0_0_0</name>
         <label>Create a new task</label>
         <locationX>6914</locationX>
-        <locationY>6095</locationY>
+        <locationY>5795</locationY>
         <connector>
             <targetReference>getEmailTemplate</targetReference>
         </connector>
@@ -9226,7 +9774,7 @@ null)</expression>
     <recordCreates>
         <name>Create_FTL_Case</name>
         <label>Create FTL Case</label>
-        <locationX>6342</locationX>
+        <locationX>5858</locationX>
         <locationY>9491</locationY>
         <connector>
             <targetReference>Update_Records_77</targetReference>
@@ -9321,13 +9869,26 @@ null)</expression>
     <recordCreates>
         <name>Create_new_Cases</name>
         <label>Create new Cases</label>
-        <locationX>5440</locationX>
-        <locationY>10415</locationY>
+        <locationX>5088</locationX>
+        <locationY>10523</locationY>
         <connector>
             <targetReference>Update_Dealer_Engagement_Enrollment</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Fault_Path</targetReference>
+        </faultConnector>
+        <inputReference>varCases</inputReference>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_new_Cases_0</name>
+        <label>Create new Cases</label>
+        <locationX>6672</locationX>
+        <locationY>10415</locationY>
+        <connector>
+            <targetReference>Is_RT_Enrollment_with_Referral</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Fault_Path1</targetReference>
         </faultConnector>
         <inputReference>varCases</inputReference>
     </recordCreates>
@@ -9414,7 +9975,7 @@ null)</expression>
     <recordLookups>
         <name>Get_any_contact</name>
         <label>Get any contact</label>
-        <locationX>3196</locationX>
+        <locationX>3042</locationX>
         <locationY>863</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9469,7 +10030,7 @@ null)</expression>
     <recordLookups>
         <name>Get_Flow_Configuration_Settings</name>
         <label>Get Flow Configuration Settings</label>
-        <locationX>6628</locationX>
+        <locationX>6144</locationX>
         <locationY>431</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9518,7 +10079,7 @@ null)</expression>
     <recordLookups>
         <name>Get_Unsupported_Email_Records</name>
         <label>Get Unsupported Email Records</label>
-        <locationX>6034</locationX>
+        <locationX>5880</locationX>
         <locationY>971</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9546,7 +10107,7 @@ null)</expression>
     <recordLookups>
         <name>Get_User_Role_Director_of_Support</name>
         <label>Get User Role - Director of Support</label>
-        <locationX>6364</locationX>
+        <locationX>6210</locationX>
         <locationY>1571</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9567,7 +10128,7 @@ null)</expression>
     <recordLookups>
         <name>Get_User_Role_Tier_2_Support</name>
         <label>Get User Role - Tier 2 Support</label>
-        <locationX>6364</locationX>
+        <locationX>6210</locationX>
         <locationY>1463</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9589,7 +10150,7 @@ null)</expression>
         <name>getEmailTemplate</name>
         <label>Get Email Template</label>
         <locationX>6914</locationX>
-        <locationY>6203</locationY>
+        <locationY>5903</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Send</targetReference>
@@ -9609,7 +10170,7 @@ null)</expression>
     <recordLookups>
         <name>getRelatedServiceAgreement</name>
         <label>getRelatedServiceAgreement</label>
-        <locationX>7046</locationX>
+        <locationX>6782</locationX>
         <locationY>2663</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -9630,7 +10191,7 @@ null)</expression>
     <recordUpdates>
         <name>ML_Data_Case_Close</name>
         <label>ML Data Case Close</label>
-        <locationX>4934</locationX>
+        <locationX>4780</locationX>
         <locationY>863</locationY>
         <connector>
             <targetReference>Case_Assignment_RulesQC</targetReference>
@@ -9682,8 +10243,8 @@ null)</expression>
     <recordUpdates>
         <name>save_Service_Agreement_Changes</name>
         <label>save Service Agreement Changes</label>
-        <locationX>6914</locationX>
-        <locationY>5387</locationY>
+        <locationX>6650</locationX>
+        <locationY>5087</locationY>
         <connector>
             <targetReference>Manual_Accounting_Case_to_be_Created</targetReference>
         </connector>
@@ -9708,11 +10269,10 @@ null)</expression>
     <recordUpdates>
         <name>Update_Attached_Service_Agreement</name>
         <label>Update Attached Service Agreement</label>
-        <locationX>6914</locationX>
-        <locationY>6611</locationY>
+        <locationX>6650</locationX>
+        <locationY>6311</locationY>
         <connector>
-            <isGoTo>true</isGoTo>
-            <targetReference>Is_Addendum_Alert_true</targetReference>
+            <targetReference>Is_Status_Changed</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -9735,30 +10295,6 @@ null)</expression>
             </value>
         </inputAssignments>
         <object>Service_Agreement__c</object>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Update_Billing_Case_Name_field</name>
-        <label>Update Billing Case Name field</label>
-        <locationX>5440</locationX>
-        <locationY>9983</locationY>
-        <connector>
-            <targetReference>Copy_2_of_manually_Create_Accounting_Case</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Opportunity__c</field>
-            <operator>IsNull</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </filters>
-        <inputAssignments>
-            <field>Billing_Case_Name__c</field>
-            <value>
-                <elementReference>formBillingCaseValue</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
         <name>Update_Billing_Line_Item_End_Date</name>
@@ -9883,7 +10419,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Cancellation_Request_Date</name>
         <label>Update Cancellation Request Date</label>
-        <locationX>3922</locationX>
+        <locationX>3768</locationX>
         <locationY>1055</locationY>
         <connector>
             <targetReference>Check_Service_Agreement</targetReference>
@@ -9915,7 +10451,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Owner_0</name>
         <label>Update Case Owner</label>
-        <locationX>6232</locationX>
+        <locationX>6078</locationX>
         <locationY>1787</locationY>
         <connector>
             <targetReference>Check_Service_Agreement</targetReference>
@@ -9937,7 +10473,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Owner_0_0</name>
         <label>Update Case Owner</label>
-        <locationX>3196</locationX>
+        <locationX>3042</locationX>
         <locationY>755</locationY>
         <connector>
             <targetReference>Get_any_contact</targetReference>
@@ -9959,7 +10495,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Owner_0_0_0</name>
         <label>Update Case Owner</label>
-        <locationX>4670</locationX>
+        <locationX>4516</locationX>
         <locationY>971</locationY>
         <connector>
             <targetReference>Case_Assignment_RulesQC</targetReference>
@@ -9975,7 +10511,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Owner_0_0_0_0</name>
         <label>Update Case Owner</label>
-        <locationX>3790</locationX>
+        <locationX>3636</locationX>
         <locationY>863</locationY>
         <connector>
             <targetReference>Update_Cancellation_Request_Date</targetReference>
@@ -9991,7 +10527,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Owner_0_0_0_0_0</name>
         <label>Update Case Owner</label>
-        <locationX>4230</locationX>
+        <locationX>4076</locationX>
         <locationY>863</locationY>
         <connector>
             <targetReference>Copy_1_of_Is_Created_by_System</targetReference>
@@ -10007,7 +10543,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Owner_to_QC</name>
         <label>Update Case Owner to QC</label>
-        <locationX>4934</locationX>
+        <locationX>4780</locationX>
         <locationY>1271</locationY>
         <connector>
             <targetReference>Check_Service_Agreement</targetReference>
@@ -10021,49 +10557,9 @@ null)</expression>
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
-        <name>Update_Case_Roll_Up_on_Account</name>
-        <label>Update Case Roll Up on Account</label>
-        <locationX>7178</locationX>
-        <locationY>5987</locationY>
-        <connector>
-            <targetReference>Is_preferred_contact_for_Billing_changed</targetReference>
-        </connector>
-        <faultConnector>
-            <isGoTo>true</isGoTo>
-            <targetReference>Is_preferred_contact_for_Billing_changed</targetReference>
-        </faultConnector>
-        <inputAssignments>
-            <field>Case_Rollup_Needed__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record.Account</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Update_Case_Roll_Up_on_Account_New</name>
-        <label>Update Case Roll Up on Account (New)</label>
-        <locationX>7134</locationX>
-        <locationY>863</locationY>
-        <connector>
-            <targetReference>create_Billing_Case</targetReference>
-        </connector>
-        <faultConnector>
-            <isGoTo>true</isGoTo>
-            <targetReference>create_Billing_Case</targetReference>
-        </faultConnector>
-        <inputAssignments>
-            <field>Case_Rollup_Needed__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record.Account</inputReference>
-    </recordUpdates>
-    <recordUpdates>
         <name>Update_Case_Status</name>
         <label>Update Case Status</label>
-        <locationX>8850</locationX>
+        <locationX>8322</locationX>
         <locationY>2771</locationY>
         <connector>
             <targetReference>Is_Status_Changed</targetReference>
@@ -10079,7 +10575,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Status_0</name>
         <label>Update Case Status</label>
-        <locationX>9114</locationX>
+        <locationX>8586</locationX>
         <locationY>2771</locationY>
         <connector>
             <targetReference>Is_Status_Changed</targetReference>
@@ -10095,7 +10591,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Status_0_0</name>
         <label>Update Case Status</label>
-        <locationX>9378</locationX>
+        <locationX>8850</locationX>
         <locationY>2771</locationY>
         <connector>
             <targetReference>Is_Status_Changed</targetReference>
@@ -10111,7 +10607,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Status_0_0_0</name>
         <label>Update Case Status</label>
-        <locationX>7882</locationX>
+        <locationX>7354</locationX>
         <locationY>2771</locationY>
         <connector>
             <targetReference>Is_Closing_Outcome_Moved_to_Support</targetReference>
@@ -10127,7 +10623,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Status_0_0_0_0</name>
         <label>Update Case Status</label>
-        <locationX>8146</locationX>
+        <locationX>7618</locationX>
         <locationY>2771</locationY>
         <connector>
             <targetReference>Is_Closing_Outcome_Moved_to_Support</targetReference>
@@ -10143,7 +10639,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Status_0_0_0_0_0</name>
         <label>Update Case Status</label>
-        <locationX>8410</locationX>
+        <locationX>7882</locationX>
         <locationY>2771</locationY>
         <connector>
             <targetReference>Is_Closing_Outcome_Moved_to_Support</targetReference>
@@ -10159,7 +10655,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Status_1</name>
         <label>Update Case Status</label>
-        <locationX>10962</locationX>
+        <locationX>9994</locationX>
         <locationY>2771</locationY>
         <connector>
             <targetReference>Is_Status_Changed</targetReference>
@@ -10175,7 +10671,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Status_1_0</name>
         <label>Update Case Status</label>
-        <locationX>11226</locationX>
+        <locationX>10258</locationX>
         <locationY>2771</locationY>
         <connector>
             <targetReference>Is_Status_Changed</targetReference>
@@ -10191,7 +10687,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Status_1_0_0</name>
         <label>Update Case Status</label>
-        <locationX>11490</locationX>
+        <locationX>10522</locationX>
         <locationY>2771</locationY>
         <connector>
             <targetReference>Is_Status_Changed</targetReference>
@@ -10207,7 +10703,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Status_1_0_0_0</name>
         <label>Update Case Status</label>
-        <locationX>11754</locationX>
+        <locationX>10786</locationX>
         <locationY>2771</locationY>
         <connector>
             <targetReference>Is_Status_Changed</targetReference>
@@ -10223,7 +10719,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Case_Type</name>
         <label>Update Case Type</label>
-        <locationX>2646</locationX>
+        <locationX>2492</locationX>
         <locationY>755</locationY>
         <connector>
             <isGoTo>true</isGoTo>
@@ -10256,7 +10752,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_CSM_Email_0_0_0</name>
         <label>Update CSM Email</label>
-        <locationX>9818</locationX>
+        <locationX>9290</locationX>
         <locationY>3179</locationY>
         <connector>
             <targetReference>Is_Original_Close_Date_null_0</targetReference>
@@ -10320,7 +10816,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Date_for_Original_Creation</name>
         <label>Update Date for Original Creation</label>
-        <locationX>6870</locationX>
+        <locationX>6716</locationX>
         <locationY>755</locationY>
         <connector>
             <targetReference>Auto_Reply_for_Escalated_Requests</targetReference>
@@ -10381,18 +10877,12 @@ null)</expression>
         <name>Update_Date_of_Launch_Status</name>
         <label>Update Date of Launch Status</label>
         <locationX>6650</locationX>
-        <locationY>5987</locationY>
+        <locationY>5687</locationY>
         <connector>
             <targetReference>Is_preferred_contact_for_Billing_changed</targetReference>
         </connector>
         <inputAssignments>
             <field>Date_of_Launch_Status__c</field>
-            <value>
-                <elementReference>varNow</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Handoff_to_Launch_Date__c</field>
             <value>
                 <elementReference>varNow</elementReference>
             </value>
@@ -10403,7 +10893,7 @@ null)</expression>
         <name>Update_Date_of_Working_Status_0</name>
         <label>Update Date of Working Status</label>
         <locationX>6386</locationX>
-        <locationY>5987</locationY>
+        <locationY>5687</locationY>
         <connector>
             <targetReference>Is_preferred_contact_for_Billing_changed</targetReference>
         </connector>
@@ -10434,8 +10924,8 @@ null)</expression>
     <recordUpdates>
         <name>Update_Dealer_Engagement_Enrollment</name>
         <label>Update Dealer Engagement - Enrollment</label>
-        <locationX>5440</locationX>
-        <locationY>10523</locationY>
+        <locationX>5088</locationX>
+        <locationY>10631</locationY>
         <connector>
             <targetReference>Is_RT_Enrollment_with_Referral</targetReference>
         </connector>
@@ -10458,7 +10948,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_DNI_Alert</name>
         <label>Update DNI Alert</label>
-        <locationX>6496</locationX>
+        <locationX>6012</locationX>
         <locationY>8867</locationY>
         <connector>
             <targetReference>Send_Email_Alert_01</targetReference>
@@ -10474,7 +10964,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Email_Alert_Date</name>
         <label>Update Email Alert Date</label>
-        <locationX>5110</locationX>
+        <locationX>4736</locationX>
         <locationY>2279</locationY>
         <connector>
             <targetReference>Record_Type</targetReference>
@@ -10490,7 +10980,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Failure_to_Launch_Date</name>
         <label>Update Failure to Launch Date</label>
-        <locationX>6474</locationX>
+        <locationX>5990</locationX>
         <locationY>9275</locationY>
         <connector>
             <targetReference>Case_creation_needed</targetReference>
@@ -10554,17 +11044,11 @@ null)</expression>
     <recordUpdates>
         <name>Update_Launch_Age</name>
         <label>Update Launch Age</label>
-        <locationX>6496</locationX>
+        <locationX>6012</locationX>
         <locationY>8567</locationY>
         <connector>
             <targetReference>Is_DNI_Alert_true</targetReference>
         </connector>
-        <inputAssignments>
-            <field>Handoff_to_Launch_Date__c</field>
-            <value>
-                <elementReference>varNow</elementReference>
-            </value>
-        </inputAssignments>
         <inputAssignments>
             <field>Launch_Total_Days__c</field>
             <value>
@@ -10616,8 +11100,8 @@ null)</expression>
     <recordUpdates>
         <name>Update_Line_Takedown_Method</name>
         <label>Update Line Takedown Method</label>
-        <locationX>10170</locationX>
-        <locationY>5093</locationY>
+        <locationX>9422</locationX>
+        <locationY>4511</locationY>
         <connector>
             <targetReference>Is_Status_Changed</targetReference>
         </connector>
@@ -10664,7 +11148,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Notes</name>
         <label>Update Notes</label>
-        <locationX>6166</locationX>
+        <locationX>5814</locationX>
         <locationY>11879</locationY>
         <connector>
             <targetReference>Is_Status_Launch_Complete</targetReference>
@@ -10731,8 +11215,8 @@ null)</expression>
     <recordUpdates>
         <name>Update_Original_Close_Date_0</name>
         <label>Update Original Close Date</label>
-        <locationX>10170</locationX>
-        <locationY>4493</locationY>
+        <locationX>9422</locationX>
+        <locationY>3911</locationY>
         <connector>
             <targetReference>Is_Status_equal_to_Customer_Responded_0_0</targetReference>
         </connector>
@@ -10747,7 +11231,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Original_Create_Date</name>
         <label>Update Original Create Date</label>
-        <locationX>6364</locationX>
+        <locationX>6210</locationX>
         <locationY>755</locationY>
         <connector>
             <targetReference>Is_Support_Case</targetReference>
@@ -10779,7 +11263,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Record_without_conditions</name>
         <label>Update Record without conditions</label>
-        <locationX>6628</locationX>
+        <locationX>6144</locationX>
         <locationY>323</locationY>
         <connector>
             <targetReference>Get_Flow_Configuration_Settings</targetReference>
@@ -10801,7 +11285,7 @@ null)</expression>
     <recordUpdates>
         <name>Update_Records_77</name>
         <label>Add SF Related case</label>
-        <locationX>6342</locationX>
+        <locationX>5858</locationX>
         <locationY>9599</locationY>
         <connector>
             <targetReference>Is_Status_Moved_to_Launch</targetReference>
@@ -10817,8 +11301,8 @@ null)</expression>
     <recordUpdates>
         <name>Update_Review_Date_and_Notes</name>
         <label>Update Review Date and Notes</label>
-        <locationX>6166</locationX>
-        <locationY>12179</locationY>
+        <locationX>5682</locationX>
+        <locationY>12095</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -10984,7 +11468,7 @@ null)</expression>
         <object>Account</object>
     </recordUpdates>
     <start>
-        <locationX>6502</locationX>
+        <locationX>6018</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Update_Record_without_conditions</targetReference>
@@ -10993,12 +11477,12 @@ null)</expression>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Obsolete</status>
+    <status>Draft</status>
     <subflows>
         <name>Call_Dev_Ops_Flow</name>
         <label>Call Dev Ops Flow</label>
-        <locationX>10302</locationX>
-        <locationY>4793</locationY>
+        <locationX>9554</locationX>
+        <locationY>4211</locationY>
         <connector>
             <targetReference>Is_Category_Action_Cancellation</targetReference>
         </connector>
@@ -11156,7 +11640,7 @@ null)</expression>
     <subflows>
         <name>Case_Email_carryover_Support</name>
         <label>Case Email carryover Support</label>
-        <locationX>6496</locationX>
+        <locationX>6144</locationX>
         <locationY>9983</locationY>
         <connector>
             <targetReference>Is_RT_Enrollment_with_Referral</targetReference>
@@ -11209,7 +11693,7 @@ null)</expression>
     <subflows>
         <name>Case_Email_carryover_Support_0</name>
         <label>Case Email carryover Support</label>
-        <locationX>6760</locationX>
+        <locationX>6408</locationX>
         <locationY>9983</locationY>
         <connector>
             <targetReference>Is_RT_Enrollment_with_Referral</targetReference>
@@ -11262,7 +11746,7 @@ null)</expression>
     <subflows>
         <name>Copy_1_of_Create_Case_with_Email_Carryover_QC</name>
         <label>Create Case with Email Carryover - QC</label>
-        <locationX>6232</locationX>
+        <locationX>5880</locationX>
         <locationY>10091</locationY>
         <connector>
             <targetReference>Is_RT_Enrollment_with_Referral</targetReference>
@@ -11307,68 +11791,10 @@ null)</expression>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </subflows>
     <subflows>
-        <name>Copy_2_of_manually_Create_Accounting_Case</name>
-        <label>Copy 2 of manually Create Accounting Case</label>
-        <locationX>5440</locationX>
-        <locationY>10091</locationY>
-        <connector>
-            <targetReference>Assign_values_to_new_Case_1</targetReference>
-        </connector>
-        <flowName>create_Billing_Case_Accounting</flowName>
-        <inputAssignments>
-            <name>billingCaseAccountIDOverride</name>
-            <value>
-                <elementReference>$Record.AccountId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>billingCaseOrigin</name>
-            <value>
-                <stringValue>Internal Alert</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>billingCaseOwnerIDOverride</name>
-            <value>
-                <elementReference>Get_Flow_Configuration_Settings.Billing_OwnerId__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>billingCaseServiceAgreementIDOverride</name>
-            <value>
-                <elementReference>$Record.Service_Agreement__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>billingCaseSubject</name>
-            <value>
-                <elementReference>$Record.Billing_Case_Name__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>billingCaseType</name>
-            <value>
-                <stringValue>Internal Alert</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>relatedCaseId</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>relatedOppIDOverride</name>
-            <value>
-                <elementReference>$Record.Opportunity__c</elementReference>
-            </value>
-        </inputAssignments>
-    </subflows>
-    <subflows>
         <name>create_Billing_Case</name>
         <label>create Billing Case</label>
-        <locationX>7398</locationX>
-        <locationY>1103</locationY>
+        <locationX>6980</locationX>
+        <locationY>755</locationY>
         <connector>
             <targetReference>Check_Service_Agreement</targetReference>
         </connector>
@@ -11423,110 +11849,9 @@ null)</expression>
         </inputAssignments>
     </subflows>
     <subflows>
-        <name>Create_CallRevu_Support_Case</name>
-        <label>Create CallRevu Support Case</label>
-        <locationX>7552</locationX>
-        <locationY>9983</locationY>
-        <connector>
-            <targetReference>Is_RT_Enrollment_with_Referral</targetReference>
-        </connector>
-        <flowName>Create_Case_Initial_Email_Message</flowName>
-        <inputAssignments>
-            <name>varAccountID</name>
-            <value>
-                <elementReference>$Record.AccountId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varActionableItems</name>
-            <value>
-                <elementReference>$Record.Actionable_Items__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varCaseID</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varCaseOrigin</name>
-            <value>
-                <elementReference>$Record.Origin</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varCaseType</name>
-            <value>
-                <elementReference>$Record.Type</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varCategory</name>
-            <value>
-                <elementReference>$Record.Category__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varContactID</name>
-            <value>
-                <elementReference>$Record.ContactId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varDescription</name>
-            <value>
-                <elementReference>$Record.Description</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varDescriptionOfIssue</name>
-            <value>
-                <elementReference>$Record.Level_of_Service__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varLevelOfService</name>
-            <value>
-                <elementReference>$Record.AccountId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varOwnerId</name>
-            <value>
-                <elementReference>Get_Flow_Configuration_Settings.Support_Queue_Id__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varPriority</name>
-            <value>
-                <elementReference>$Record.Priority</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varRecordTypeId</name>
-            <value>
-                <elementReference>Get_Flow_Configuration_Settings.Case_Support_RT_Id__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varServiceAgreement</name>
-            <value>
-                <elementReference>$Record.Service_Agreement__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varSubject</name>
-            <value>
-                <elementReference>$Record.Subject</elementReference>
-            </value>
-        </inputAssignments>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </subflows>
-    <subflows>
         <name>Create_Case_with_Email_Carryover_QC</name>
         <label>Create Case with Email Carryover - QC Without Description</label>
-        <locationX>5968</locationX>
+        <locationX>5616</locationX>
         <locationY>10091</locationY>
         <connector>
             <targetReference>Is_RT_Enrollment_with_Referral</targetReference>
@@ -11565,212 +11890,10 @@ null)</expression>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </subflows>
     <subflows>
-        <name>Create_Hosted_Phones_Support_Case</name>
-        <label>Create Hosted Phones Support Case</label>
-        <locationX>7024</locationX>
-        <locationY>9983</locationY>
-        <connector>
-            <targetReference>Is_RT_Enrollment_with_Referral</targetReference>
-        </connector>
-        <flowName>Create_Case_Initial_Email_Message</flowName>
-        <inputAssignments>
-            <name>varAccountID</name>
-            <value>
-                <elementReference>$Record.AccountId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varActionableItems</name>
-            <value>
-                <elementReference>$Record.Actionable_Items__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varCaseID</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varCaseOrigin</name>
-            <value>
-                <elementReference>$Record.Origin</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varCaseType</name>
-            <value>
-                <elementReference>$Record.Type</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varCategory</name>
-            <value>
-                <elementReference>$Record.Category__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varContactID</name>
-            <value>
-                <elementReference>$Record.ContactId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varDescription</name>
-            <value>
-                <elementReference>$Record.Description</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varDescriptionOfIssue</name>
-            <value>
-                <elementReference>$Record.Level_of_Service__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varLevelOfService</name>
-            <value>
-                <elementReference>$Record.AccountId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varOwnerId</name>
-            <value>
-                <stringValue>00G8V000005NJX6</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varPriority</name>
-            <value>
-                <elementReference>$Record.Priority</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varRecordTypeId</name>
-            <value>
-                <elementReference>Get_Flow_Configuration_Settings.Case_Support_RT_Id__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varServiceAgreement</name>
-            <value>
-                <elementReference>$Record.Service_Agreement__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varSubject</name>
-            <value>
-                <elementReference>$Record.Subject</elementReference>
-            </value>
-        </inputAssignments>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </subflows>
-    <subflows>
-        <name>Create_Total_Track_Support_Case</name>
-        <label>Create Total Track Support Case</label>
-        <locationX>7288</locationX>
-        <locationY>9983</locationY>
-        <connector>
-            <targetReference>Is_RT_Enrollment_with_Referral</targetReference>
-        </connector>
-        <flowName>Create_Case_Initial_Email_Message</flowName>
-        <inputAssignments>
-            <name>varAccountID</name>
-            <value>
-                <elementReference>$Record.AccountId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varActionableItems</name>
-            <value>
-                <elementReference>$Record.Actionable_Items__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varCaseID</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varCaseOrigin</name>
-            <value>
-                <elementReference>$Record.Origin</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varCaseType</name>
-            <value>
-                <elementReference>$Record.Type</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varCategory</name>
-            <value>
-                <elementReference>$Record.Category__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varContactID</name>
-            <value>
-                <elementReference>$Record.ContactId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varDescription</name>
-            <value>
-                <elementReference>$Record.Description</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varDescriptionOfIssue</name>
-            <value>
-                <elementReference>$Record.Level_of_Service__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varLevelOfService</name>
-            <value>
-                <elementReference>$Record.AccountId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varOwnerId</name>
-            <value>
-                <stringValue>00G8V000005NJX1</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varPriority</name>
-            <value>
-                <elementReference>$Record.Priority</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varRecordTypeId</name>
-            <value>
-                <elementReference>Get_Flow_Configuration_Settings.Case_Support_RT_Id__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varServiceAgreement</name>
-            <value>
-                <elementReference>$Record.Service_Agreement__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varSubject</name>
-            <value>
-                <elementReference>$Record.Subject</elementReference>
-            </value>
-        </inputAssignments>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </subflows>
-    <subflows>
         <name>Fault_Path</name>
         <label>Fault Path</label>
-        <locationX>5704</locationX>
-        <locationY>10523</locationY>
+        <locationX>5352</locationX>
+        <locationY>10631</locationY>
         <flowName>Fault_Path_Flow</flowName>
         <inputAssignments>
             <name>varElementName</name>
@@ -11785,7 +11908,7 @@ null)</expression>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Flow Case Object V2 New</stringValue>
             </value>
@@ -11793,19 +11916,15 @@ null)</expression>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </subflows>
     <subflows>
-        <name>Fault_Path_Flow_Flow_3</name>
-        <label>Fault Path Flow Flow 3</label>
-        <locationX>10522</locationX>
-        <locationY>4103</locationY>
-        <connector>
-            <isGoTo>true</isGoTo>
-            <targetReference>Is_Original_Close_Date_null_0</targetReference>
-        </connector>
+        <name>Fault_Path1</name>
+        <label>Fault Path1</label>
+        <locationX>6936</locationX>
+        <locationY>10523</locationY>
         <flowName>Fault_Path_Flow</flowName>
         <inputAssignments>
             <name>varElementName</name>
             <value>
-                <stringValue>Create a new case under addendum alert is true</stringValue>
+                <stringValue>Create_new_Cases_0</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -11815,7 +11934,7 @@ null)</expression>
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Flow Case Object V2 New</stringValue>
             </value>
@@ -11825,8 +11944,8 @@ null)</expression>
     <subflows>
         <name>manually_Create_Accounting_Case</name>
         <label>manually Create Accounting Case</label>
-        <locationX>6914</locationX>
-        <locationY>5687</locationY>
+        <locationX>6650</locationX>
+        <locationY>5387</locationY>
         <connector>
             <targetReference>What_is_Case_Status</targetReference>
         </connector>
@@ -11883,7 +12002,7 @@ null)</expression>
     <subflows>
         <name>Subject_Match_Keyword_Flow_1</name>
         <label>Subject Match Keyword Flow 1</label>
-        <locationX>5902</locationX>
+        <locationX>5748</locationX>
         <locationY>1187</locationY>
         <connector>
             <targetReference>Get_User_Role_Tier_2_Support</targetReference>

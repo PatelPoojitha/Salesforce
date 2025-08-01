@@ -5,7 +5,7 @@
         <name>Assignment_data_to_create_new_task</name>
         <label>Assignment data to create new task</label>
         <locationX>138</locationX>
-        <locationY>684</locationY>
+        <locationY>1008</locationY>
         <assignmentItems>
             <assignToReference>varTask01.ActivityDate</assignToReference>
             <operator>Assign</operator>
@@ -70,7 +70,7 @@
         <name>Assignment_data_to_create_new_task_Service_Agreement</name>
         <label>Assignment data to create new task (Service Agreement)</label>
         <locationX>138</locationX>
-        <locationY>1416</locationY>
+        <locationY>1740</locationY>
         <assignmentItems>
             <assignToReference>varTask02.ActivityDate</assignToReference>
             <operator>Assign</operator>
@@ -135,7 +135,7 @@
         <name>Assignment_data_to_create_new_task_Service_Agreement_2</name>
         <label>Assignment data to create new task (Service Agreement)</label>
         <locationX>402</locationX>
-        <locationY>1416</locationY>
+        <locationY>1740</locationY>
         <assignmentItems>
             <assignToReference>varTask03.ActivityDate</assignToReference>
             <operator>Assign</operator>
@@ -200,7 +200,7 @@
         <name>Assignment_new_values_of_case_field</name>
         <label>Assignment new values of case field</label>
         <locationX>138</locationX>
-        <locationY>2016</locationY>
+        <locationY>2340</locationY>
         <assignmentItems>
             <assignToReference>varCase01.X15_Day_Post_Launch_CTA_Created__c</assignToReference>
             <operator>Assign</operator>
@@ -223,7 +223,7 @@
         <name>Assignment_new_values_of_case_field_2</name>
         <label>Assignment new values of case field</label>
         <locationX>138</locationX>
-        <locationY>2424</locationY>
+        <locationY>2748</locationY>
         <assignmentItems>
             <assignToReference>varCase02.First_QBR_CTA_Created__c</assignToReference>
             <operator>Assign</operator>
@@ -246,7 +246,7 @@
         <name>Assignment_new_values_of_service_agreement_field</name>
         <label>Assignment new values of service agreement field</label>
         <locationX>138</locationX>
-        <locationY>2832</locationY>
+        <locationY>3156</locationY>
         <assignmentItems>
             <assignToReference>varServiceAgreement01.First_QBR_Created__c</assignToReference>
             <operator>Assign</operator>
@@ -269,7 +269,7 @@
         <name>Assignment_values_to_Collection_variable</name>
         <label>Assignment values to Collection variable</label>
         <locationX>138</locationX>
-        <locationY>792</locationY>
+        <locationY>1116</locationY>
         <assignmentItems>
             <assignToReference>varTasks</assignToReference>
             <operator>Add</operator>
@@ -285,7 +285,7 @@
         <name>Assignment_values_to_Collection_variable_01</name>
         <label>Assignment values to Collection variable</label>
         <locationX>138</locationX>
-        <locationY>2124</locationY>
+        <locationY>2448</locationY>
         <assignmentItems>
             <assignToReference>varCases</assignToReference>
             <operator>Add</operator>
@@ -301,7 +301,7 @@
         <name>Assignment_values_to_Collection_variable_2</name>
         <label>Assignment values to Collection variable</label>
         <locationX>138</locationX>
-        <locationY>2532</locationY>
+        <locationY>2856</locationY>
         <assignmentItems>
             <assignToReference>varCases</assignToReference>
             <operator>Add</operator>
@@ -317,7 +317,7 @@
         <name>Assignment_values_to_Collection_variable_3</name>
         <label>Assignment values to Collection variable</label>
         <locationX>138</locationX>
-        <locationY>2940</locationY>
+        <locationY>3264</locationY>
         <assignmentItems>
             <assignToReference>varServiceAgreements</assignToReference>
             <operator>Add</operator>
@@ -333,7 +333,7 @@
         <name>Assignment_values_to_Collection_variable_Service_Agreement</name>
         <label>Assignment values to Collection variable (Service Agreement)</label>
         <locationX>138</locationX>
-        <locationY>1524</locationY>
+        <locationY>1848</locationY>
         <assignmentItems>
             <assignToReference>varTasks</assignToReference>
             <operator>Add</operator>
@@ -356,7 +356,7 @@
         <name>Assignment_values_to_Collection_variable_Service_Agreement_2</name>
         <label>Assignment values to Collection variable (Service Agreement)</label>
         <locationX>402</locationX>
-        <locationY>1524</locationY>
+        <locationY>1848</locationY>
         <assignmentItems>
             <assignToReference>varTasks</assignToReference>
             <operator>Add</operator>
@@ -379,7 +379,7 @@
         <name>Validation</name>
         <label>Validation</label>
         <locationX>402</locationX>
-        <locationY>1308</locationY>
+        <locationY>1632</locationY>
         <defaultConnector>
             <targetReference>Loop_Batch_02</targetReference>
         </defaultConnector>
@@ -439,12 +439,11 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>Get_Enrollment_Record_Type</targetReference>
+                <targetReference>Get_Launch_Record_Type</targetReference>
             </connector>
             <label>Workday</label>
         </rules>
     </decisions>
-    <description>Updated with simplified Users</description>
     <environments>Default</environments>
     <formulas>
         <name>CloseDate15Days</name>
@@ -503,7 +502,7 @@
         <name>Loop_Batch_01</name>
         <label>Loop Batch 01</label>
         <locationX>50</locationX>
-        <locationY>576</locationY>
+        <locationY>900</locationY>
         <collectionReference>Get_Batch_01</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -517,7 +516,7 @@
         <name>Loop_Batch_01_01</name>
         <label>Loop Batch 01-01</label>
         <locationX>50</locationX>
-        <locationY>1908</locationY>
+        <locationY>2232</locationY>
         <collectionReference>Get_Batch_01</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -531,7 +530,7 @@
         <name>Loop_Batch_02</name>
         <label>Loop Batch 02</label>
         <locationX>50</locationX>
-        <locationY>1200</locationY>
+        <locationY>1524</locationY>
         <collectionReference>Get_Batch_02</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -545,7 +544,7 @@
         <name>Loop_Batch_02_01</name>
         <label>Loop Batch 02-01</label>
         <locationX>50</locationX>
-        <locationY>2316</locationY>
+        <locationY>2640</locationY>
         <collectionReference>varCaseIds</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -559,7 +558,7 @@
         <name>Loop_Batch_02_02</name>
         <label>Loop Batch 02-02</label>
         <locationX>50</locationX>
-        <locationY>2724</locationY>
+        <locationY>3048</locationY>
         <collectionReference>Get_Batch_02</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -592,7 +591,7 @@
         <name>Create_tasks</name>
         <label>Create tasks</label>
         <locationX>50</locationX>
-        <locationY>1800</locationY>
+        <locationY>2124</locationY>
         <connector>
             <targetReference>Loop_Batch_01_01</targetReference>
         </connector>
@@ -602,7 +601,7 @@
         <name>Get_Alicia_Klyn_Id</name>
         <label>Get Alicia Klyn Id</label>
         <locationX>50</locationX>
-        <locationY>984</locationY>
+        <locationY>1308</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Get_Batch_02</targetReference>
@@ -620,20 +619,41 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
+        <name>Get_Ashley_Riccio_Id</name>
+        <label>Get Ashley Riccio Id</label>
+        <locationX>50</locationX>
+        <locationY>576</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Stacey_Baxter_Id</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Ashley Riccio</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
         <name>Get_Batch_01</name>
         <label>Get Batch 01</label>
         <locationX>50</locationX>
-        <locationY>468</locationY>
+        <locationY>792</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_Batch_01</targetReference>
         </connector>
-        <filterLogic>1 AND 2 AND 3 AND 5 AND 6 AND (4 OR 7)</filterLogic>
+        <filterLogic>1 AND 2 AND 3 AND 9 AND 5 AND 6 AND 7 AND 8 AND (4 OR 10)</filterLogic>
         <filters>
             <field>RecordTypeId</field>
             <operator>EqualTo</operator>
             <value>
-                <elementReference>Get_Enrollment_Record_Type.Id</elementReference>
+                <elementReference>Get_Launch_Record_Type.Id</elementReference>
             </value>
         </filters>
         <filters>
@@ -654,7 +674,28 @@
             <field>Status</field>
             <operator>EqualTo</operator>
             <value>
-                <stringValue>5 - Needs Coordinator Assigned</stringValue>
+                <stringValue>5.1 - PM Assigned</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>AM_Assigned__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>Get_Melissa_Parvis_Id.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>AM_Assigned__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>Get_Ashley_Riccio_Id.Id</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>AM_Assigned__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>Get_Stacey_Baxter_Id.Id</elementReference>
             </value>
         </filters>
         <filters>
@@ -675,7 +716,7 @@
             <field>Status</field>
             <operator>EqualTo</operator>
             <value>
-                <stringValue>9 - Launch Complete</stringValue>
+                <stringValue>5 - Launch Complete</stringValue>
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>
@@ -686,7 +727,7 @@
         <name>Get_Batch_02</name>
         <label>Get Batch 02</label>
         <locationX>50</locationX>
-        <locationY>1092</locationY>
+        <locationY>1416</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_Batch_02</targetReference>
@@ -732,13 +773,13 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordLookups>
-        <name>Get_Enrollment_Record_Type</name>
-        <label>Get Enrollment Record Type</label>
+        <name>Get_Launch_Record_Type</name>
+        <label>Get Launch Record Type</label>
         <locationX>50</locationX>
         <locationY>360</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
-            <targetReference>Get_Batch_01</targetReference>
+            <targetReference>Get_Melissa_Parvis_Id</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
@@ -752,18 +793,60 @@
             <field>DeveloperName</field>
             <operator>EqualTo</operator>
             <value>
-                <stringValue>Enrollment</stringValue>
+                <stringValue>Launch</stringValue>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
         <object>RecordType</object>
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
+    <recordLookups>
+        <name>Get_Melissa_Parvis_Id</name>
+        <label>Get Melissa Parvis Id</label>
+        <locationX>50</locationX>
+        <locationY>468</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Ashley_Riccio_Id</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Melissa Parvis</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Stacey_Baxter_Id</name>
+        <label>Get Stacey Baxter Id</label>
+        <locationX>50</locationX>
+        <locationY>684</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Batch_01</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Stacey Baxter</stringValue>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>User</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
     <recordUpdates>
         <name>Update_Case_fields</name>
         <label>Update Case fields</label>
         <locationX>50</locationX>
-        <locationY>3132</locationY>
+        <locationY>3456</locationY>
         <connector>
             <targetReference>Update_Service_Agreement_Fields</targetReference>
         </connector>
@@ -773,7 +856,7 @@
         <name>Update_Service_Agreement_Fields</name>
         <label>Update Service Agreement Fields</label>
         <locationX>50</locationX>
-        <locationY>3240</locationY>
+        <locationY>3564</locationY>
         <inputReference>varServiceAgreement01</inputReference>
     </recordUpdates>
     <start>
@@ -789,7 +872,7 @@
         </schedule>
         <triggerType>Scheduled</triggerType>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>varCase01</name>
         <dataType>SObject</dataType>

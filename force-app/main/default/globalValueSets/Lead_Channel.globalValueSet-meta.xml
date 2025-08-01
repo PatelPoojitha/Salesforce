@@ -50,11 +50,6 @@
         <default>false</default>
         <label>D&amp;B</label>
     </customValue>
-    <customValue>
-        <fullName>Outbound Call – BDR</fullName>
-        <default>false</default>
-        <label>Outbound Call – BDR</label>
-    </customValue>
     <masterLabel>Lead Channel</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>

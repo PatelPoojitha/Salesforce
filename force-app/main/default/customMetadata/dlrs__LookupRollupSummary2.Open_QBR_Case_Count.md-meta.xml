@@ -19,6 +19,10 @@
         <value xsi:type="xsd:string">Open_QBR_Cases__c</value>
     </values>
     <values>
+        <field>dlrs__BypassPermissionApiName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
         <field>dlrs__CalculationMode__c</field>
         <value xsi:type="xsd:string">Realtime</value>
     </values>
@@ -56,7 +60,7 @@
     </values>
     <values>
         <field>dlrs__RelationshipCriteria__c</field>
-        <value xsi:type="xsd:string">IsClosed = FALSE AND RecordTypeId = &apos;0123m000001DxjGAAS&apos; AND Touchpoint_Origin__c = &apos;Quarterly Review&apos;</value>
+        <value xsi:type="xsd:string">IsClosed = FALSE AND RecordTypeId = &apos;0123m000001DxjGAAS&apos; AND Touchpoint_Origin__c = &apos;Quarterly Check-in&apos;</value>
     </values>
     <values>
         <field>dlrs__RelationshipField__c</field>
@@ -68,6 +72,10 @@
     </values>
     <values>
         <field>dlrs__TestCode2__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>dlrs__TestCodeParent__c</field>
         <value xsi:nil="true"/>
     </values>
     <values>

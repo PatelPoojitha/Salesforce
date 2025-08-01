@@ -552,6 +552,16 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Contact.bbvideo__Languages__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Contact.bbvideo__Level__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Contact.iSell__Avention_ID__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -568,11 +578,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Contact.of_Unsuccessful_Cadences__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Contact.tdc_tsw__SMS_Opt_out__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>

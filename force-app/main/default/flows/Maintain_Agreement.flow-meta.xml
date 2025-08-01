@@ -548,9 +548,9 @@
         </connector>
     </assignments>
     <assignments>
-        <name>setAddendumAlerttoTrue</name>
-        <label>setAddendumAlerttoTrue</label>
-        <locationX>3042</locationX>
+        <name>set_Addendum_Alert_Billing_Subject</name>
+        <label>set Addendum Alert + Billing Subject</label>
+        <locationX>3086</locationX>
         <locationY>2927</locationY>
         <assignmentItems>
             <assignToReference>varAddendumAlert</assignToReference>
@@ -576,7 +576,7 @@
         <locationX>3086</locationX>
         <locationY>2819</locationY>
         <defaultConnector>
-            <targetReference>is_Billing_Bypass_True</targetReference>
+            <targetReference>Update_Opportunity_Processed</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>No Workflow</defaultConnectorLabel>
         <rules>
@@ -605,7 +605,7 @@
                 </rightValue>
             </conditions>
             <connector>
-                <targetReference>setAddendumAlerttoTrue</targetReference>
+                <targetReference>set_Addendum_Alert_Billing_Subject</targetReference>
             </connector>
             <label>Addendum Workflow</label>
         </rules>
@@ -633,38 +633,6 @@
                 <targetReference>Assign_Service_Agreement_Product_Loop_Variables</targetReference>
             </connector>
             <label>Match to Current Product</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>is_Billing_Bypass_True</name>
-        <label>is Billing Bypass True?</label>
-        <locationX>3394</locationX>
-        <locationY>2927</locationY>
-        <defaultConnector>
-            <targetReference>Create_No_Workflow_Accounting_Case</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Bypass_is_TRUE_no_accounting_Case</name>
-            <conditionLogic>or</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record__Prior.Billing_Case_Bypass__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Accounting_Case_Manual_Create__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Update_Opportunity_Processed</targetReference>
-            </connector>
-            <label>Bypass is TRUE (no accounting Case)</label>
         </rules>
     </decisions>
     <decisions>
@@ -878,7 +846,7 @@
             <label>Greater Or Equal to 1</label>
         </rules>
     </decisions>
-    <description>10/10/24 - adjusted effective date + Addendum changes + removal of accounting case creation + Enrollment/Launch changes</description>
+    <description>10/10/24 - adjusted effective date + Addendum changes + billing automation</description>
     <environments>Default</environments>
     <formulas>
         <name>EnrollmentCaseOwner</name>
@@ -893,15 +861,9 @@
         <expression>&quot;Account Setup - &quot;  &amp; {!$Record.Account.Name}</expression>
     </formulas>
     <formulas>
-        <name>form_AdjustedTier2Status</name>
-        <dataType>String</dataType>
-        <expression>IF({!$Record.RecordType.Name} = &apos;Tier2&apos;,&apos;Tier 2&apos;,null)</expression>
-    </formulas>
-    <formulas>
-        <description>Sets the billing case subject for the enrollment case created with consideration to the Billing Case Bypass field.</description>
         <name>formula_BillingCaseSubject</name>
         <dataType>String</dataType>
-        <expression>IF({!$Record.Billing_Case_Bypass__c}, null, {!varBillingCaseSubject})</expression>
+        <expression>IF({!$Record.Billing_Case_Bypass__c},null,{!varBillingCaseSubject})</expression>
     </formulas>
     <formulas>
         <name>varCurrentUser</name>
@@ -1017,7 +979,7 @@
     <recordCreates>
         <name>Create_Enrollment_Case</name>
         <label>Create Enrollment Case</label>
-        <locationX>2778</locationX>
+        <locationX>2822</locationX>
         <locationY>2927</locationY>
         <assignRecordIdToReference>varEnrollmentCaseId</assignRecordIdToReference>
         <connector>
@@ -1118,7 +1080,7 @@
     <recordCreates>
         <name>Create_Enrollment_Case_Addendum</name>
         <label>Create Enrollment Case (Addendum)</label>
-        <locationX>3042</locationX>
+        <locationX>3086</locationX>
         <locationY>3035</locationY>
         <assignRecordIdToReference>varEnrollmentCaseId</assignRecordIdToReference>
         <connector>
@@ -1335,12 +1297,6 @@
             <field>Service_Location__c</field>
             <value>
                 <elementReference>$Record.AccountId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Tier_Status__c</field>
-            <value>
-                <elementReference>form_AdjustedTier2Status</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1569,7 +1525,7 @@
     <recordUpdates>
         <name>Update_Service_Agreement</name>
         <label>Update Service Agreement</label>
-        <locationX>2778</locationX>
+        <locationX>2822</locationX>
         <locationY>3035</locationY>
         <connector>
             <targetReference>Update_Opportunity_Processed</targetReference>
@@ -1611,7 +1567,7 @@
     <recordUpdates>
         <name>Update_Service_Agreement_Addendum</name>
         <label>Update Service Agreement (Addendum)</label>
-        <locationX>3042</locationX>
+        <locationX>3086</locationX>
         <locationY>3143</locationY>
         <connector>
             <targetReference>Update_Opportunity_Processed</targetReference>
@@ -1692,61 +1648,6 @@
     </start>
     <status>Active</status>
     <subflows>
-        <name>Create_No_Workflow_Accounting_Case</name>
-        <label>Create No Workflow Accounting Case</label>
-        <locationX>3482</locationX>
-        <locationY>3035</locationY>
-        <connector>
-            <targetReference>Update_Opportunity_Processed</targetReference>
-        </connector>
-        <flowName>create_Billing_Case_Accounting</flowName>
-        <inputAssignments>
-            <name>billingCaseAccountIDOverride</name>
-            <value>
-                <elementReference>$Record.AccountId</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>billingCaseOrigin</name>
-            <value>
-                <stringValue>Internal Alert</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>billingCaseOwnerIDOverride</name>
-            <value>
-                <elementReference>Get_Flow_Configuration_Settings.Billing_OwnerId__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>billingCaseServiceAgreementIDOverride</name>
-            <value>
-                <elementReference>$Record.Service_Agreement_ID__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>billingCaseSubject</name>
-            <value>
-                <elementReference>$Record.Accounting_Case_Manual_Create__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>billingCaseType</name>
-            <value>
-                <stringValue>Internal Alert</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>relatedCaseId</name>
-        </inputAssignments>
-        <inputAssignments>
-            <name>relatedOppIDOverride</name>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-    </subflows>
-    <subflows>
         <name>Fault_Path</name>
         <label>Fault Path</label>
         <locationX>6914</locationX>
@@ -1765,7 +1666,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>
@@ -1791,7 +1692,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>
@@ -1817,7 +1718,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>
@@ -1843,7 +1744,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>
@@ -1869,7 +1770,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>
@@ -1895,7 +1796,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>
@@ -1921,7 +1822,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>
@@ -1947,7 +1848,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>
@@ -1973,7 +1874,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>
@@ -1999,7 +1900,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>
@@ -2025,7 +1926,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>
@@ -2051,7 +1952,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>
@@ -2077,7 +1978,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>
@@ -2103,7 +2004,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>
@@ -2129,7 +2030,7 @@
             </value>
         </inputAssignments>
         <inputAssignments>
-            <name>varFlowname</name>
+            <name>varFlowName</name>
             <value>
                 <stringValue>Maintain Agreement</stringValue>
             </value>

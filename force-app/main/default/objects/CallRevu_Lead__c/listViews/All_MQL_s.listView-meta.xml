@@ -19,7 +19,7 @@
     <filters>
         <field>CREATED_DATE</field>
         <operation>equals</operation>
-        <value>THIS_MONTH</value>
+        <value>LAST_MONTH</value>
     </filters>
     <label>All MQL&apos;s</label>
 </ListView>

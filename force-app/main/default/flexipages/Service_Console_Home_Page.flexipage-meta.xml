@@ -5,7 +5,25 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>dashboardName</name>
-                    <value>qyCSLDhdudQwDJTXWmarlNKBqrjQaC1</value>
+                    <value>wqkyNmGIvzYZugHNKXxEXEBDxpIzYb</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>hideOnError</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentName>desktopDashboards:embeddedDashboard</componentName>
+                <identifier>desktopDashboards_embeddedDashboard</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-d0cdf9b3-6066-4970-bff1-0c37839bed11</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>dashboardName</name>
+                    <value>TptVhYsWnqvwZykJncNTRRikZIJEFD</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>hideOnError</name>
@@ -75,6 +93,24 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>active</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-d0cdf9b3-6066-4970-bff1-0c37839bed11</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>AM Perf. Dashboard</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>customTab</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>active</name>
                     <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -83,7 +119,7 @@
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
-                    <value>Client Success Dashboard</value>
+                    <value>SAM Dashboard</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>customTab2</identifier>
@@ -291,7 +327,7 @@
                     <criteria>
                         <leftValue>{!$User.Team__c}</leftValue>
                         <operator>EQUAL</operator>
-                        <rightValue>AM / CS</rightValue>
+                        <rightValue>AM</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>

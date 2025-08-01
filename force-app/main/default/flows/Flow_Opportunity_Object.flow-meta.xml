@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Send_Email_Alert_01</name>
         <label>Send Email Alert</label>
-        <locationX>292</locationX>
-        <locationY>3335</locationY>
+        <locationX>446</locationX>
+        <locationY>2795</locationY>
         <actionName>Opportunity.Send_Dealer_Launched_Email</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -22,12 +22,12 @@
     <actionCalls>
         <name>Send_Email_Alert_10_0_0</name>
         <label>Send Email Alert</label>
-        <locationX>292</locationX>
-        <locationY>9107</locationY>
+        <locationX>446</locationX>
+        <locationY>8507</locationY>
         <actionName>Opportunity.Closed_Lost_Opportunity_Email</actionName>
         <actionType>emailAlert</actionType>
         <connector>
-            <targetReference>isAccountPopulated</targetReference>
+            <targetReference>Is_Closed_Lost</targetReference>
         </connector>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
         <inputParameters>
@@ -42,7 +42,7 @@
         <name>Send_Email_Alert_11</name>
         <label>Send Email Alert</label>
         <locationX>578</locationX>
-        <locationY>9791</locationY>
+        <locationY>8939</locationY>
         <actionName>Opportunity.Alert_SOP_to_Void_DS</actionName>
         <actionType>emailAlert</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -58,7 +58,7 @@
         <name>Send_Email_Alert_1_0</name>
         <label>Send Email Alert</label>
         <locationX>50</locationX>
-        <locationY>1679</locationY>
+        <locationY>1247</locationY>
         <actionName>Opportunity.Send_Billing_Alert_that_SOP_has_actions_pending</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -77,7 +77,7 @@
         <name>Send_Email_Alert_2_0</name>
         <label>Send Email Alert</label>
         <locationX>314</locationX>
-        <locationY>1679</locationY>
+        <locationY>1247</locationY>
         <actionName>Opportunity.Alert_Billing_All_Actions_are_Completed</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -96,7 +96,7 @@
         <name>Send_Email_Alert_3_0</name>
         <label>Send Email Alert</label>
         <locationX>578</locationX>
-        <locationY>1787</locationY>
+        <locationY>1355</locationY>
         <actionName>Opportunity.Send_Email_Alert_for_Campaign_Change_Order</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -115,7 +115,7 @@
         <name>Send_Email_Alert_7</name>
         <label>Send Email Alert</label>
         <locationX>314</locationX>
-        <locationY>8051</locationY>
+        <locationY>7559</locationY>
         <actionName>Opportunity.Closed_Won_Opportunity</actionName>
         <actionType>emailAlert</actionType>
         <connector>
@@ -135,7 +135,7 @@
         <name>Assign_values_to_new_Opportunity</name>
         <label>Assign values to new Opportunity</label>
         <locationX>842</locationX>
-        <locationY>7943</locationY>
+        <locationY>7451</locationY>
         <assignmentItems>
             <assignToReference>varOpportunity02.CloseDate</assignToReference>
             <operator>Assign</operator>
@@ -312,7 +312,7 @@
         <name>Assign_values_to_new_task</name>
         <label>Assign values to new task</label>
         <locationX>578</locationX>
-        <locationY>3719</locationY>
+        <locationY>3227</locationY>
         <assignmentItems>
             <assignToReference>varNewTask01.OwnerId</assignToReference>
             <operator>Assign</operator>
@@ -363,7 +363,7 @@
         <name>Assign_values_to_Opportunity_Contact_Role</name>
         <label>Assign values to Opportunity Contact Role</label>
         <locationX>578</locationX>
-        <locationY>4127</locationY>
+        <locationY>3635</locationY>
         <assignmentItems>
             <assignToReference>varOpportunityContactRole.ContactId</assignToReference>
             <operator>Assign</operator>
@@ -400,7 +400,7 @@
         <name>Assign_values_to_Variable_1</name>
         <label>Assign values to Variable</label>
         <locationX>424</locationX>
-        <locationY>647</locationY>
+        <locationY>755</locationY>
         <assignmentItems>
             <assignToReference>varOpportunityTeamMember.OpportunityId</assignToReference>
             <operator>Assign</operator>
@@ -434,10 +434,39 @@
         </connector>
     </assignments>
     <decisions>
+        <name>check_for_test</name>
+        <label>check for test</label>
+        <locationX>248</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Update_records_without_conditions</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>is_a_Test</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Is_Test__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Is_Test__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>is a Test</label>
+        </rules>
+    </decisions>
+    <decisions>
         <name>Closed_Probability</name>
         <label>Closed Probability</label>
         <locationX>710</locationX>
-        <locationY>2711</locationY>
+        <locationY>2279</locationY>
         <defaultConnector>
             <targetReference>Is_launch_date_null</targetReference>
         </defaultConnector>
@@ -610,7 +639,7 @@
         <name>Copy_1_of_Is_Tier_2_Type_equals_to_eLead</name>
         <label>Tier 2 Type equals to HDS?</label>
         <locationX>710</locationX>
-        <locationY>5735</locationY>
+        <locationY>5243</locationY>
         <defaultConnector>
             <targetReference>Is_Tier_2_Type_equals_to_eLead</targetReference>
         </defaultConnector>
@@ -677,7 +706,7 @@
         <name>Does_a_Contact_Role_need_Opportunity</name>
         <label>Does a Contact Role need Opportunity?</label>
         <locationX>710</locationX>
-        <locationY>4019</locationY>
+        <locationY>3527</locationY>
         <defaultConnector>
             <targetReference>Is_Change_Order_Cancellation_Type_equal_to_Full_Cancellation</targetReference>
         </defaultConnector>
@@ -716,7 +745,7 @@
         <name>Is_Account_Rooftop_less_than_8</name>
         <label>Is Account Rooftop less than 8</label>
         <locationX>710</locationX>
-        <locationY>3611</locationY>
+        <locationY>3119</locationY>
         <defaultConnector>
             <targetReference>Does_a_Contact_Role_need_Opportunity</targetReference>
         </defaultConnector>
@@ -741,7 +770,7 @@
         <name>Is_Account_sources_null</name>
         <label>Is Account sources null?</label>
         <locationX>710</locationX>
-        <locationY>8375</locationY>
+        <locationY>7883</locationY>
         <defaultConnector>
             <targetReference>Is_Closed_Lost_recently_Changed</targetReference>
         </defaultConnector>
@@ -787,7 +816,7 @@
         <name>Is_Ad_Agency</name>
         <label>Is Ad Agency?</label>
         <locationX>710</locationX>
-        <locationY>7535</locationY>
+        <locationY>7043</locationY>
         <defaultConnector>
             <targetReference>Is_Status_Closed_Won</targetReference>
         </defaultConnector>
@@ -861,7 +890,7 @@
         <name>Is_Change_Order_Cancellation_Type_equal_to_Full_Cancellation</name>
         <label>Is Change Order Cancellation Type equal to Full-Cancellation?</label>
         <locationX>710</locationX>
-        <locationY>4427</locationY>
+        <locationY>3935</locationY>
         <defaultConnector>
             <targetReference>Is_Change_Order_Cancellation_Type_Equal_to_Saved_or_Upgrade</targetReference>
         </defaultConnector>
@@ -907,7 +936,7 @@
         <name>Is_Change_Order_Cancellation_Type_Equal_to_Saved_or_Upgrade</name>
         <label>Is Change Order Cancellation Type Equal to Saved or Upgrade</label>
         <locationX>710</locationX>
-        <locationY>4727</locationY>
+        <locationY>4235</locationY>
         <defaultConnector>
             <targetReference>Is_Update_Tier_Status_equal_True</targetReference>
         </defaultConnector>
@@ -988,7 +1017,7 @@
         <name>Is_Changing_Orders</name>
         <label>Is Changing Orders?</label>
         <locationX>710</locationX>
-        <locationY>6935</locationY>
+        <locationY>6443</locationY>
         <defaultConnector>
             <targetReference>Is_Tier_2_Type_HDS</targetReference>
         </defaultConnector>
@@ -1062,7 +1091,7 @@
         <name>Is_close_date_greather_than_2021</name>
         <label>Is close date greather than 2021</label>
         <locationX>710</locationX>
-        <locationY>2411</locationY>
+        <locationY>1979</locationY>
         <defaultConnector>
             <targetReference>Closed_Probability</targetReference>
         </defaultConnector>
@@ -1077,6 +1106,13 @@
                     <dateValue>2021-01-01</dateValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.CloseDate</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Convert_date_to_month</targetReference>
             </connector>
@@ -1087,7 +1123,7 @@
         <name>Is_Closed_Lost</name>
         <label>Is Closed Lost?</label>
         <locationX>710</locationX>
-        <locationY>9683</locationY>
+        <locationY>8831</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Closed_Lost</name>
@@ -1123,11 +1159,11 @@
         <name>Is_Closed_Lost_recently_Changed</name>
         <label>Is Closed Lost recently Changed</label>
         <locationX>710</locationX>
-        <locationY>8675</locationY>
+        <locationY>8183</locationY>
         <defaultConnector>
-            <targetReference>isAccountPopulated</targetReference>
+            <targetReference>Is_Closed_Lost</targetReference>
         </defaultConnector>
-        <defaultConnectorLabel>Default</defaultConnectorLabel>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Closed_Lost_updated_stage</name>
             <conditionLogic>and</conditionLogic>
@@ -1155,7 +1191,7 @@
         <name>Is_Direct_Sales</name>
         <label>Is Direct Sales?</label>
         <locationX>710</locationX>
-        <locationY>6335</locationY>
+        <locationY>5843</locationY>
         <defaultConnector>
             <targetReference>Is_Vision_Packages</targetReference>
         </defaultConnector>
@@ -1222,7 +1258,7 @@
         <name>Is_launch_date_null</name>
         <label>Is launch date null?</label>
         <locationX>710</locationX>
-        <locationY>3011</locationY>
+        <locationY>2579</locationY>
         <defaultConnector>
             <targetReference>Is_Account_Rooftop_less_than_8</targetReference>
         </defaultConnector>
@@ -1247,7 +1283,7 @@
         <name>Is_Loss_Reason_Failure_to_Launch</name>
         <label>Is Loss Reason Failure to Launch?</label>
         <locationX>710</locationX>
-        <locationY>2111</locationY>
+        <locationY>1679</locationY>
         <defaultConnector>
             <targetReference>Is_close_date_greather_than_2021</targetReference>
         </defaultConnector>
@@ -1262,6 +1298,13 @@
                     <stringValue>Failure to Launch</stringValue>
                 </rightValue>
             </conditions>
+            <conditions>
+                <leftValueReference>$Record.Loss_Reason__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
             <connector>
                 <targetReference>Update_Failure_Date</targetReference>
             </connector>
@@ -1272,9 +1315,9 @@
         <name>Is_new_record</name>
         <label>Is new record?</label>
         <locationX>710</locationX>
-        <locationY>431</locationY>
+        <locationY>539</locationY>
         <defaultConnector>
-            <targetReference>Needs_to_Update_Campaign</targetReference>
+            <targetReference>Select_stage_after_update</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -1294,35 +1337,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>is_Owner_Active</name>
-        <label>is Owner Active?</label>
-        <locationX>424</locationX>
-        <locationY>8999</locationY>
-        <defaultConnector>
-            <targetReference>isAccountPopulated</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Owner_is_Active</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Owner.IsActive</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Send_Email_Alert_10_0_0</targetReference>
-            </connector>
-            <label>Owner is Active</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Is_Partnership_Opportunity</name>
         <label>Is Partnership Opportunity?</label>
         <locationX>710</locationX>
-        <locationY>5435</locationY>
+        <locationY>4943</locationY>
         <defaultConnector>
             <targetReference>Copy_1_of_Is_Tier_2_Type_equals_to_eLead</targetReference>
         </defaultConnector>
@@ -1368,7 +1386,7 @@
         <name>Is_Status_Closed_Won</name>
         <label>Is Status Closed Won?</label>
         <locationX>710</locationX>
-        <locationY>7835</locationY>
+        <locationY>7343</locationY>
         <defaultConnector>
             <targetReference>Is_Account_sources_null</targetReference>
         </defaultConnector>
@@ -1391,6 +1409,13 @@
                 </rightValue>
             </conditions>
             <conditions>
+                <leftValueReference>$Record.CallRevu_Lead__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
                 <leftValueReference>$Record.RecordType.Name</leftValueReference>
                 <operator>NotEqualTo</operator>
                 <rightValue>
@@ -1400,7 +1425,7 @@
             <connector>
                 <targetReference>Update_Contacts_0_0</targetReference>
             </connector>
-            <label>Closed Won - Non Trial</label>
+            <label>Closed Won - No CallRevu Lead</label>
         </rules>
         <rules>
             <name>Closed_Won_Trial_No_Lead</name>
@@ -1420,6 +1445,13 @@
                 </rightValue>
             </conditions>
             <conditions>
+                <leftValueReference>$Record.CallRevu_Lead__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
                 <leftValueReference>$Record.RecordType.Name</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
@@ -1429,14 +1461,14 @@
             <connector>
                 <targetReference>Assign_values_to_new_Opportunity</targetReference>
             </connector>
-            <label>Closed Won Trial</label>
+            <label>Closed Won Trial No Lead</label>
         </rules>
     </decisions>
     <decisions>
         <name>Is_Tier_2_Type_equals_to_eLead</name>
         <label>Is Tier 2 Type equals to eLead?</label>
         <locationX>710</locationX>
-        <locationY>6035</locationY>
+        <locationY>5543</locationY>
         <defaultConnector>
             <targetReference>Is_Direct_Sales</targetReference>
         </defaultConnector>
@@ -1496,9 +1528,9 @@
         <name>Is_Tier_2_Type_equals_to_Select_One</name>
         <label>Is Tier 2 Type equals to Select One?</label>
         <locationX>556</locationX>
-        <locationY>539</locationY>
+        <locationY>647</locationY>
         <defaultConnector>
-            <targetReference>Needs_to_Update_Campaign</targetReference>
+            <targetReference>Select_stage_after_update</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -1535,7 +1567,7 @@
         <name>Is_Tier_2_Type_HDS</name>
         <label>Is Tier 2 Type HDS?</label>
         <locationX>710</locationX>
-        <locationY>7235</locationY>
+        <locationY>6743</locationY>
         <defaultConnector>
             <targetReference>Is_Ad_Agency</targetReference>
         </defaultConnector>
@@ -1595,7 +1627,7 @@
         <name>Is_Update_Tier_Status_equal_True</name>
         <label>Is Update Tier Status equal True</label>
         <locationX>710</locationX>
-        <locationY>5027</locationY>
+        <locationY>4535</locationY>
         <defaultConnector>
             <targetReference>Is_Partnership_Opportunity</targetReference>
         </defaultConnector>
@@ -1641,7 +1673,7 @@
         <name>Is_Vision_Packages</name>
         <label>Is Vision Packages?</label>
         <locationX>710</locationX>
-        <locationY>6635</locationY>
+        <locationY>6143</locationY>
         <defaultConnector>
             <targetReference>Is_Changing_Orders</targetReference>
         </defaultConnector>
@@ -1691,139 +1723,22 @@
         </rules>
     </decisions>
     <decisions>
-        <name>isAccountPopulated</name>
-        <label>isAccountPopulated</label>
-        <locationX>710</locationX>
-        <locationY>9383</locationY>
-        <defaultConnector>
-            <targetReference>Is_Closed_Lost</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Account_is_populated</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.AccountId</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Original_Account_Owner__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>update_Original_Account_Owner</targetReference>
-            </connector>
-            <label>Account is populated</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Needs_to_Update_Campaign</name>
-        <label>Needs to Update Campaign</label>
-        <locationX>710</locationX>
-        <locationY>1031</locationY>
-        <defaultConnector>
-            <targetReference>Select_stage_after_update</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Tied_to_a_Campaign</name>
-            <conditionLogic>(1 OR 2) OR 3 OR (4 AND 5 AND 6)</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.CampaignId</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.CampaignId</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Amount</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record__Prior.IsClosed</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record__Prior.IsClosed</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record__Prior.StageName</leftValueReference>
-                <operator>NotEqualTo</operator>
-                <rightValue>
-                    <stringValue>Closed Lost</stringValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>update_Campaign</targetReference>
-            </connector>
-            <label>Tied to a Campaign</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Owner_an_active_user</name>
-        <label>Owner an active user</label>
-        <locationX>424</locationX>
-        <locationY>3227</locationY>
-        <defaultConnector>
-            <targetReference>Is_Account_Rooftop_less_than_8</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Owner is NOT Active</defaultConnectorLabel>
-        <rules>
-            <name>Owner_is_Active1</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Owner.IsActive</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Send_Email_Alert_01</targetReference>
-            </connector>
-            <label>Owner is Active</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Select_stage_after_update</name>
         <label>Select stage after update</label>
         <locationX>710</locationX>
-        <locationY>1571</locationY>
+        <locationY>1139</locationY>
         <defaultConnector>
             <targetReference>Is_Loss_Reason_Failure_to_Launch</targetReference>
         </defaultConnector>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Stage_Send_Agreement_Request</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>(1 OR 3) AND 2</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.StageName</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <stringValue>Submit for Review (Send to SOPs)</stringValue>
+                    <stringValue>4c - Send Agreement Requested - Waiting for SOP to Send Client</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -1831,6 +1746,13 @@
                 <operator>IsChanged</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Submit for Review (Send to SOPs)</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -1840,12 +1762,19 @@
         </rules>
         <rules>
             <name>Stage_Agreement_Sent</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>(1 OR 3) AND 2</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.StageName</leftValueReference>
                 <operator>IsChanged</operator>
                 <rightValue>
                     <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>4d - Agreement Sent - Waiting for Client Signature</stringValue>
                 </rightValue>
             </conditions>
             <conditions>
@@ -1931,8 +1860,8 @@
 Poojitha Patel 5/12/24 - Flow Optimization
 6/12/24 - Updated default Vision Pricebook to FY24 Pricebook
 6/12/24 - Removed Enrollment and DNI workflow
-+ SOP project changes
-+ Original Account Owner field populated</description>
+======
+Updates for SOP project</description>
     <environments>Default</environments>
     <formulas>
         <name>varAccountofRooftops</name>
@@ -1977,26 +1906,7 @@ Poojitha Patel 5/12/24 - Flow Optimization
     <formulas>
         <name>varOpportunityName01</name>
         <dataType>String</dataType>
-        <expression>LEFT(
-IF(
-YEAR({!$Record.CloseDate}) &gt;= 2025 &amp;&amp;
-OR(
-{!$Record.RecordType.Name} = &apos;Tier2&apos;,
-{!$Record.RecordType.Name} = &apos;Vision Packages&apos;)
-&amp;&amp;
-!ISBLANK(TEXT({!$Record.Sales_Type__c} ))
-&amp;&amp;
-!ISBLANK(TEXT({!$Record.Opportunity_Product__c}))
-&amp;&amp;
-!ISBLANK({!$Record.of_Rooftops_for_Opportunity__c}),
-/*New logic*/
-{!$Record.Account.Name} &amp;
-&apos; - &apos; &amp; TEXT({!$Record.Sales_Type__c} ) &amp;
-&apos; - &apos; &amp; TEXT({!$Record.Opportunity_Product__c}) &amp;
-&apos; - &apos; &amp; TEXT({!$Record.of_Rooftops_for_Opportunity__c}) &amp; &apos; locations&apos;,
-/*old logic*/
-{!$Record.Account.Name} &amp;&apos; - &apos;&amp; {!$Record.RecordType.Name} &amp;&apos; - &apos;&amp; TEXT(MONTH({!$Record.CloseDate})) &amp; &apos;/&apos; &amp; TEXT(DAY({!$Record.CloseDate})) &amp; &apos;/&apos; &amp; TEXT(YEAR({!$Record.CloseDate})))
-,120)</expression>
+        <expression>Left( {!$Record.Account.Name} + &apos; - &apos; + if({!$Record.RecordType.Name} = &apos;Dealer Opportunity&apos;,&apos;&apos;,{!$Record.RecordType.Name} + &apos; - &apos;) +text(MONTH({!$Record.CloseDate})) + &apos;/&apos; + text(DAY({!$Record.CloseDate})) + &apos;/&apos; + text(YEAR({!$Record.CloseDate})),80)</expression>
     </formulas>
     <formulas>
         <name>varOpportunityName02</name>
@@ -2043,7 +1953,7 @@ OR(
         <name>Create_a_new_Opportunity_0</name>
         <label>Create a new Opportunity</label>
         <locationX>842</locationX>
-        <locationY>8051</locationY>
+        <locationY>7559</locationY>
         <connector>
             <targetReference>Is_Account_sources_null</targetReference>
         </connector>
@@ -2053,7 +1963,7 @@ OR(
         <name>Create_a_new_Opportunity_Contact_Role</name>
         <label>Create a new Opportunity Contact Role</label>
         <locationX>578</locationX>
-        <locationY>4235</locationY>
+        <locationY>3743</locationY>
         <connector>
             <targetReference>Is_Change_Order_Cancellation_Type_equal_to_Full_Cancellation</targetReference>
         </connector>
@@ -2063,7 +1973,7 @@ OR(
         <name>Create_a_new_task</name>
         <label>Create a new task</label>
         <locationX>578</locationX>
-        <locationY>3827</locationY>
+        <locationY>3335</locationY>
         <connector>
             <targetReference>Does_a_Contact_Role_need_Opportunity</targetReference>
         </connector>
@@ -2073,9 +1983,9 @@ OR(
         <name>Create_Opportunity_Team_Member</name>
         <label>Create Opportunity Team Member</label>
         <locationX>424</locationX>
-        <locationY>755</locationY>
+        <locationY>863</locationY>
         <connector>
-            <targetReference>Needs_to_Update_Campaign</targetReference>
+            <targetReference>Select_stage_after_update</targetReference>
         </connector>
         <inputReference>varOpportunityTeamMember</inputReference>
     </recordCreates>
@@ -2083,7 +1993,7 @@ OR(
         <name>Convert_date_to_month</name>
         <label>Convert date to month</label>
         <locationX>578</locationX>
-        <locationY>2519</locationY>
+        <locationY>2087</locationY>
         <connector>
             <targetReference>Closed_Probability</targetReference>
         </connector>
@@ -2099,7 +2009,7 @@ OR(
         <name>Update_Account_Sources</name>
         <label>Update Account Sources</label>
         <locationX>578</locationX>
-        <locationY>8483</locationY>
+        <locationY>7991</locationY>
         <connector>
             <targetReference>Is_Closed_Lost_recently_Changed</targetReference>
         </connector>
@@ -2132,29 +2042,10 @@ OR(
         <object>Account</object>
     </recordUpdates>
     <recordUpdates>
-        <name>update_Campaign</name>
-        <label>update Campaign</label>
-        <locationX>446</locationX>
-        <locationY>1139</locationY>
-        <connector>
-            <targetReference>Select_stage_after_update</targetReference>
-        </connector>
-        <faultConnector>
-            <targetReference>send_Exception</targetReference>
-        </faultConnector>
-        <inputAssignments>
-            <field>Update_Opportunity_Totals__c</field>
-            <value>
-                <booleanValue>true</booleanValue>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record.Campaign</inputReference>
-    </recordUpdates>
-    <recordUpdates>
         <name>Update_Closing_Probability</name>
         <label>Update Closing Probability</label>
         <locationX>446</locationX>
-        <locationY>2819</locationY>
+        <locationY>2387</locationY>
         <connector>
             <targetReference>Is_launch_date_null</targetReference>
         </connector>
@@ -2170,7 +2061,7 @@ OR(
         <name>Update_Closing_Probability_0</name>
         <label>Update Closing Probability</label>
         <locationX>710</locationX>
-        <locationY>2819</locationY>
+        <locationY>2387</locationY>
         <connector>
             <targetReference>Is_launch_date_null</targetReference>
         </connector>
@@ -2185,8 +2076,8 @@ OR(
     <recordUpdates>
         <name>Update_Contact_0_0_0</name>
         <label>Update Contact</label>
-        <locationX>424</locationX>
-        <locationY>8783</locationY>
+        <locationX>446</locationX>
+        <locationY>8291</locationY>
         <connector>
             <targetReference>Update_Opportunity_Close_Date_0_0_0</targetReference>
         </connector>
@@ -2217,7 +2108,7 @@ OR(
         <name>Update_Contacts_0_0</name>
         <label>Update Contacts</label>
         <locationX>314</locationX>
-        <locationY>7943</locationY>
+        <locationY>7451</locationY>
         <connector>
             <targetReference>Send_Email_Alert_7</targetReference>
         </connector>
@@ -2251,7 +2142,7 @@ OR(
         <name>Update_Failure_Date</name>
         <label>Update Failure Date</label>
         <locationX>578</locationX>
-        <locationY>2219</locationY>
+        <locationY>1787</locationY>
         <connector>
             <targetReference>Is_close_date_greather_than_2021</targetReference>
         </connector>
@@ -2274,10 +2165,10 @@ OR(
     <recordUpdates>
         <name>Update_Launche_Date</name>
         <label>Update Launche Date</label>
-        <locationX>424</locationX>
-        <locationY>3119</locationY>
+        <locationX>446</locationX>
+        <locationY>2687</locationY>
         <connector>
-            <targetReference>Owner_an_active_user</targetReference>
+            <targetReference>Send_Email_Alert_01</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Fault_Path4</targetReference>
@@ -2293,10 +2184,10 @@ OR(
     <recordUpdates>
         <name>Update_Opportunity_Close_Date_0_0_0</name>
         <label>Update Opportunity Close Date</label>
-        <locationX>424</locationX>
-        <locationY>8891</locationY>
+        <locationX>446</locationX>
+        <locationY>8399</locationY>
         <connector>
-            <targetReference>is_Owner_Active</targetReference>
+            <targetReference>Send_Email_Alert_10_0_0</targetReference>
         </connector>
         <faultConnector>
             <targetReference>Copy_1_of_Fault_Path1</targetReference>
@@ -2310,26 +2201,10 @@ OR(
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <recordUpdates>
-        <name>update_Original_Account_Owner</name>
-        <label>update Original Account Owner</label>
-        <locationX>578</locationX>
-        <locationY>9491</locationY>
-        <connector>
-            <targetReference>Is_Closed_Lost</targetReference>
-        </connector>
-        <inputAssignments>
-            <field>Original_Account_Owner__c</field>
-            <value>
-                <elementReference>$Record.Account_Owner__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputReference>$Record</inputReference>
-    </recordUpdates>
-    <recordUpdates>
         <name>Update_Price_Book</name>
         <label>Update Price Book</label>
         <locationX>578</locationX>
-        <locationY>5543</locationY>
+        <locationY>5051</locationY>
         <connector>
             <targetReference>Copy_1_of_Is_Tier_2_Type_equals_to_eLead</targetReference>
         </connector>
@@ -2345,7 +2220,7 @@ OR(
         <name>Update_Price_Book1</name>
         <label>Update Price Book</label>
         <locationX>578</locationX>
-        <locationY>5843</locationY>
+        <locationY>5351</locationY>
         <connector>
             <targetReference>Is_Tier_2_Type_equals_to_eLead</targetReference>
         </connector>
@@ -2361,7 +2236,7 @@ OR(
         <name>Update_Price_Book_0</name>
         <label>Update Price Book</label>
         <locationX>578</locationX>
-        <locationY>6143</locationY>
+        <locationY>5651</locationY>
         <connector>
             <targetReference>Is_Direct_Sales</targetReference>
         </connector>
@@ -2377,7 +2252,7 @@ OR(
         <name>Update_Price_Book_0_0</name>
         <label>Update Price Book</label>
         <locationX>578</locationX>
-        <locationY>6443</locationY>
+        <locationY>5951</locationY>
         <connector>
             <targetReference>Is_Vision_Packages</targetReference>
         </connector>
@@ -2393,7 +2268,7 @@ OR(
         <name>Update_Price_Book_0_0_0</name>
         <label>Update Price Book</label>
         <locationX>578</locationX>
-        <locationY>6743</locationY>
+        <locationY>6251</locationY>
         <connector>
             <targetReference>Is_Changing_Orders</targetReference>
         </connector>
@@ -2417,7 +2292,7 @@ OR(
         <name>Update_Price_Book_0_0_0_0</name>
         <label>Update Price Book</label>
         <locationX>578</locationX>
-        <locationY>7043</locationY>
+        <locationY>6551</locationY>
         <connector>
             <targetReference>Is_Tier_2_Type_HDS</targetReference>
         </connector>
@@ -2433,7 +2308,7 @@ OR(
         <name>Update_Price_Book_0_0_0_0_0</name>
         <label>Update Price Book</label>
         <locationX>578</locationX>
-        <locationY>7343</locationY>
+        <locationY>6851</locationY>
         <connector>
             <targetReference>Is_Ad_Agency</targetReference>
         </connector>
@@ -2449,7 +2324,7 @@ OR(
         <name>Update_Price_Book_0_0_0_0_0_0</name>
         <label>Update Price Book</label>
         <locationX>578</locationX>
-        <locationY>7643</locationY>
+        <locationY>7151</locationY>
         <connector>
             <targetReference>Is_Status_Closed_Won</targetReference>
         </connector>
@@ -2465,7 +2340,7 @@ OR(
         <name>Update_records_without_conditions</name>
         <label>Update records without conditions</label>
         <locationX>710</locationX>
-        <locationY>323</locationY>
+        <locationY>431</locationY>
         <connector>
             <targetReference>Is_new_record</targetReference>
         </connector>
@@ -2487,7 +2362,7 @@ OR(
         <name>Update_Service_Agreement</name>
         <label>Update Service Agreement</label>
         <locationX>578</locationX>
-        <locationY>4535</locationY>
+        <locationY>4043</locationY>
         <connector>
             <targetReference>Is_Change_Order_Cancellation_Type_Equal_to_Saved_or_Upgrade</targetReference>
         </connector>
@@ -2511,7 +2386,7 @@ OR(
         <name>Update_Service_Agreement_0</name>
         <label>Update Service Agreement</label>
         <locationX>578</locationX>
-        <locationY>4835</locationY>
+        <locationY>4343</locationY>
         <connector>
             <targetReference>Is_Update_Tier_Status_equal_True</targetReference>
         </connector>
@@ -2535,7 +2410,7 @@ OR(
         <name>Update_Service_Agreement_1</name>
         <label>Update Service Agreement</label>
         <locationX>578</locationX>
-        <locationY>5135</locationY>
+        <locationY>4643</locationY>
         <connector>
             <targetReference>Update_Tier_Status</targetReference>
         </connector>
@@ -2559,7 +2434,7 @@ OR(
         <name>Update_Tier_Status</name>
         <label>Update Tier Status</label>
         <locationX>578</locationX>
-        <locationY>5243</locationY>
+        <locationY>4751</locationY>
         <connector>
             <targetReference>Is_Partnership_Opportunity</targetReference>
         </connector>
@@ -2575,7 +2450,7 @@ OR(
         <name>Update_Trigger_Campaign_Alert_0</name>
         <label>Update Trigger Campaign Alert</label>
         <locationX>578</locationX>
-        <locationY>1679</locationY>
+        <locationY>1247</locationY>
         <connector>
             <targetReference>Send_Email_Alert_3_0</targetReference>
         </connector>
@@ -2591,26 +2466,11 @@ OR(
         <inputReference>$Record</inputReference>
     </recordUpdates>
     <start>
-        <locationX>584</locationX>
+        <locationX>122</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>Update_records_without_conditions</targetReference>
+            <targetReference>check_for_test</targetReference>
         </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>Automation_Running__c</field>
-            <operator>IsChanged</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Updated_from_Case__c</field>
-            <operator>IsChanged</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </filters>
         <object>Opportunity</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
@@ -2619,8 +2479,8 @@ OR(
     <subflows>
         <name>Copy_1_of_Fault_Path1</name>
         <label>Copy 1 of Fault Path1</label>
-        <locationX>732</locationX>
-        <locationY>8999</locationY>
+        <locationX>710</locationX>
+        <locationY>8507</locationY>
         <flowName>Fault_Path_Flow</flowName>
         <inputAssignments>
             <name>varElementName</name>
@@ -2646,7 +2506,7 @@ OR(
         <name>Fault_Path3</name>
         <label>Fault Path3</label>
         <locationX>842</locationX>
-        <locationY>1787</locationY>
+        <locationY>1355</locationY>
         <flowName>Fault_Path_Flow</flowName>
         <inputAssignments>
             <name>varElementName</name>
@@ -2671,8 +2531,8 @@ OR(
     <subflows>
         <name>Fault_Path4</name>
         <label>Fault Path4</label>
-        <locationX>732</locationX>
-        <locationY>3227</locationY>
+        <locationX>710</locationX>
+        <locationY>2795</locationY>
         <flowName>Fault_Path_Flow</flowName>
         <inputAssignments>
             <name>varElementName</name>
@@ -2698,7 +2558,7 @@ OR(
         <name>Fault_Path6</name>
         <label>Fault Path6</label>
         <locationX>578</locationX>
-        <locationY>8051</locationY>
+        <locationY>7559</locationY>
         <flowName>Fault_Path_Flow</flowName>
         <inputAssignments>
             <name>varElementName</name>
@@ -2724,7 +2584,7 @@ OR(
         <name>Launch_a_sub_flow_0</name>
         <label>Launch a sub flow</label>
         <locationX>1106</locationX>
-        <locationY>1679</locationY>
+        <locationY>1247</locationY>
         <connector>
             <targetReference>Is_Loss_Reason_Failure_to_Launch</targetReference>
         </connector>
@@ -2733,38 +2593,6 @@ OR(
             <name>VarCampaignID</name>
             <value>
                 <elementReference>$Record.CampaignId</elementReference>
-            </value>
-        </inputAssignments>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </subflows>
-    <subflows>
-        <name>send_Exception</name>
-        <label>send Exception</label>
-        <locationX>710</locationX>
-        <locationY>1247</locationY>
-        <flowName>Fault_Path_Flow</flowName>
-        <inputAssignments>
-            <name>RecipientAddressList</name>
-            <value>
-                <stringValue>jamalwarren@callrevu.com</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varElementName</name>
-            <value>
-                <stringValue>update Campaign</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varFaultMessage</name>
-            <value>
-                <elementReference>$Flow.FaultMessage</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <name>varFlowname</name>
-            <value>
-                <stringValue>Flow Opportunity Object</stringValue>
             </value>
         </inputAssignments>
         <storeOutputAutomatically>true</storeOutputAutomatically>

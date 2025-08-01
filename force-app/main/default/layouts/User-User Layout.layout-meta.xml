@@ -20,14 +20,6 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Loop__dsToken__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>dfsle__Username__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>dsfs__DSProSFUsername__c</field>
             </layoutItems>
             <layoutItems>

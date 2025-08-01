@@ -450,11 +450,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>tdc_tsw__SMS_Opt_out__c</field>
-            <table>Account</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>Implementation_Contact__c</field>
             <table>Account</table>
         </columns>
@@ -520,7 +515,37 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>TracHier__DUNS_Global_Ultimate_Parent__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TracHier__Disable_Hierarchies__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TracHier__Domain__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TracHier__Excluded_From_Account_Hierarchies__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TracHier__Global_Ultimate_Grouping_Id__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Paid_Referral__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TracHier__Hierarchy_ID__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -540,7 +565,22 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>TracHier__Last_Build_Hierarchy_Date__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Authorization_Contact__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TracHier__Owner__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TracHier__Parent_Company__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -685,6 +725,11 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>TracHier__Primary_Master_Account__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Toll_Free_Phone_Number__c</field>
             <table>Account</table>
         </columns>
@@ -696,6 +741,16 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Sub_Region__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TracHier__Primary_Territory__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TracHier__Re_Run_Traction_Hierarchies__c</field>
             <table>Account</table>
         </columns>
         <columns>
@@ -860,6 +915,16 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
+            <field>X2018_Closed_Won_Opportunities__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Pre_2018_Closed_Won_Opportunities__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
             <field>Email_Domain__c</field>
             <table>Account</table>
         </columns>
@@ -906,6 +971,11 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Billing_Locations__c</field>
+            <table>Account</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>X45_Day_Trial_Count__c</field>
             <table>Account</table>
         </columns>
         <columns>

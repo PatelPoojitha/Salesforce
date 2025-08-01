@@ -20,6 +20,7 @@
     </actionOverrides>
     <brand>
         <headerColor>#0070D2</headerColor>
+        <logo>Sales_operation</logo>
         <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
@@ -720,12 +721,15 @@
     <tabs>standard-Product2</tabs>
     <tabs>standard-CollaborationGroup</tabs>
     <tabs>CallRevu_Lead__c</tabs>
+    <tabs>standard-Lead</tabs>
     <tabs>Active_Employees__c</tabs>
     <tabs>Data_Collection_HTML__c</tabs>
     <tabs>Review__c</tabs>
     <tabs>Cadence__c</tabs>
     <tabs>Cadence_Task__c</tabs>
     <tabs>Service_Agreement_Products__c</tabs>
+    <tabs>Unsupported_Email__c</tabs>
+    <tabs>Bot_Customer_Rating__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Sales_Operations_UtilityBar</utilityBar>
 </CustomApplication>

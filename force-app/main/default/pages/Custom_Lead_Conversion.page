@@ -1,0 +1,5 @@
+<apex:page standardController="Lead">
+    <flow:interview name="Lead_Conversion">
+        <apex:param name="recordId" value="{!Lead.Id}" />
+    </flow:interview>
+</apex:page>

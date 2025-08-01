@@ -5,7 +5,7 @@
         <name>Assign_values_to_child_records</name>
         <label>Assign values to child records</label>
         <locationX>270</locationX>
-        <locationY>1355</locationY>
+        <locationY>1055</locationY>
         <assignmentItems>
             <assignToReference>varContact.Id</assignToReference>
             <operator>Assign</operator>
@@ -28,7 +28,7 @@
         <name>Assign_Values_to_Variable</name>
         <label>Assign Values to Variable</label>
         <locationX>270</locationX>
-        <locationY>1463</locationY>
+        <locationY>1163</locationY>
         <assignmentItems>
             <assignToReference>varContacts</assignToReference>
             <operator>Add</operator>
@@ -44,7 +44,7 @@
         <name>Check_Account_status</name>
         <label>Check Account status</label>
         <locationX>314</locationX>
-        <locationY>623</locationY>
+        <locationY>323</locationY>
         <defaultConnector>
             <targetReference>Update_without_conditions</targetReference>
         </defaultConnector>
@@ -105,7 +105,7 @@
         <name>Check_Channel_type_field</name>
         <label>Check Channel type field</label>
         <locationX>314</locationX>
-        <locationY>2147</locationY>
+        <locationY>1847</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>Channel_type_field_is_changed_and_Mid_Major</name>
@@ -153,49 +153,10 @@
         </rules>
     </decisions>
     <decisions>
-        <name>isNew_Account</name>
-        <label>isNew Account</label>
-        <locationX>314</locationX>
-        <locationY>323</locationY>
-        <defaultConnector>
-            <targetReference>Check_Account_status</targetReference>
-        </defaultConnector>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>is_New_Account</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>varIsNew</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Territory__c</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.BillingState</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>updateTerritory</targetReference>
-            </connector>
-            <label>is New Account</label>
-        </rules>
-    </decisions>
-    <decisions>
         <name>Start_Condition_2</name>
         <label>Start Condition 2</label>
         <locationX>314</locationX>
-        <locationY>1031</locationY>
+        <locationY>731</locationY>
         <defaultConnector>
             <targetReference>Start_Conditions_3</targetReference>
         </defaultConnector>
@@ -220,7 +181,7 @@
         <name>Start_Conditions_3</name>
         <label>Start Conditions 3</label>
         <locationX>314</locationX>
-        <locationY>1847</locationY>
+        <locationY>1547</locationY>
         <defaultConnector>
             <targetReference>Check_Channel_type_field</targetReference>
         </defaultConnector>
@@ -255,7 +216,6 @@
             <label>State of Incorporation</label>
         </rules>
     </decisions>
-    <description>Fixed North Dakota, trailing spaces. + territory update check</description>
     <environments>Default</environments>
     <formulas>
         <name>varCallRevuClientAccountStatus</name>
@@ -313,11 +273,6 @@
         <expression>ISCHANGED({!$Record.Tier_3_Inactive_Agreements__c})</expression>
     </formulas>
     <formulas>
-        <name>varIsNew</name>
-        <dataType>Boolean</dataType>
-        <expression>ISNEW()</expression>
-    </formulas>
-    <formulas>
         <name>varOEMAccountStatus</name>
         <dataType>String</dataType>
         <expression>IF({!$Record.Tier_1_Active_Service_Agreement__c} &gt; 0 &amp;&amp; {!$Record.Tier_1_Inactive_Service_Agreements__c} &gt;= 0, &apos;Current Client&apos;, IF({!$Record.Tier_1_Active_Service_Agreement__c} = 0 &amp;&amp; {!$Record.Tier_1_Inactive_Service_Agreements__c} &gt; 0, &apos;Former Client&apos;, IF({!$Record.Tier_1_Active_Service_Agreement__c} = 0 &amp;&amp; {!$Record.Tier_1_Inactive_Service_Agreements__c} = 0, &apos;Prospect&apos;, NULL)))</expression>
@@ -330,7 +285,7 @@
     <formulas>
         <name>varStateofIncorporation</name>
         <dataType>String</dataType>
-        <expression>CASE({!$Record.BillingState}, &quot;AL&quot;,&quot;Alabama&quot;, &quot;AK&quot;,&quot;Alaska&quot;, &quot;AZ&quot;,&quot;Arizona&quot;, &quot;AR&quot;,&quot;Arkansas&quot;, &quot;CA&quot;,&quot;California&quot;, &quot;CO&quot;,&quot;Colorado&quot;, &quot;CT&quot;,&quot;Connecticut&quot;, &quot;DE&quot;,&quot;Delaware&quot;, &quot;FL&quot;,&quot;Florida&quot;, &quot;GA&quot;,&quot;Georgia&quot;, &quot;HI&quot;,&quot;Hawaii&quot;, &quot;ID&quot;,&quot;Idaho&quot;, &quot;IL&quot;,&quot;Illinois&quot;, &quot;IN&quot;,&quot;Indiana&quot;, &quot;IA&quot;,&quot;Iowa&quot;, &quot;KS&quot;,&quot;Kansas&quot;, &quot;KY&quot;,&quot;Kentucky&quot;, &quot;LA&quot;,&quot;Louisiana&quot;, &quot;ME&quot;,&quot;Maine&quot;, &quot;MD&quot;,&quot;Maryland&quot;, &quot;MA&quot;,&quot;Massachusetts&quot;, &quot;MI&quot;,&quot;Michigan&quot;, &quot;MN&quot;,&quot;Minnesota&quot;, &quot;MS&quot;,&quot;Mississippi&quot;, &quot;MO&quot;,&quot;Missouri&quot;, &quot;MT&quot;,&quot;Montana&quot;, &quot;NE&quot;,&quot;Nebraska&quot;, &quot;NV&quot;,&quot;Nevada&quot;, &quot;NH&quot;,&quot;New Hampshire&quot;, &quot;NJ&quot;,&quot;New Jersey&quot;, &quot;NM&quot;,&quot;New Mexico&quot;, &quot;NY&quot;,&quot;New York&quot;, &quot;NC&quot;,&quot;North Carolina&quot;, &quot;ND&quot;,&quot;North Dakota&quot;, &quot;OH&quot;,&quot;Ohio&quot;, &quot;OK&quot;,&quot;Oklahoma&quot;, &quot;OR&quot;,&quot;Oregon&quot;, &quot;PA&quot;,&quot;Pennsylvania&quot;, &quot;RI&quot;,&quot;Rhode Island&quot;, &quot;SC&quot;,&quot;South Carolina&quot;, &quot;SD&quot;,&quot;South Dakota&quot;, &quot;TN&quot;,&quot;Tennessee&quot;, &quot;TX&quot;,&quot;Texas&quot;, &quot;UT&quot;,&quot;Utah&quot;, &quot;VT&quot;,&quot;Vermont&quot;, &quot;VA&quot;,&quot;Virginia&quot;, &quot;WA&quot;,&quot;Washington&quot;, &quot;WV&quot;,&quot;West Virginia&quot;, &quot;WI&quot;,&quot;Wisconsin&quot;, &quot;WY&quot;,&quot;Wyoming&quot;, &quot;&quot;)</expression>
+        <expression>CASE({!$Record.BillingState}, &quot;AL&quot;,&quot;Alabama&quot;, &quot;AK&quot;,&quot;Alaska&quot;, &quot;AZ&quot;,&quot;Arizona&quot;, &quot;AR&quot;,&quot;Arkansas&quot;, &quot;CA&quot;,&quot;California&quot;, &quot;CO&quot;,&quot;Colorado&quot;, &quot;CT&quot;,&quot;Connecticut&quot;, &quot;DE&quot;,&quot;Delaware&quot;, &quot;FL&quot;,&quot;Florida&quot;, &quot;GA&quot;,&quot;Georgia&quot;, &quot;HI&quot;,&quot;Hawaii&quot;, &quot;ID&quot;,&quot;Idaho&quot;, &quot;IL&quot;,&quot;Illinois&quot;, &quot;IN&quot;,&quot;Indiana&quot;, &quot;IA&quot;,&quot;Iowa&quot;, &quot;KS&quot;,&quot;Kansas&quot;, &quot;KY&quot;,&quot;Kentucky&quot;, &quot;LA&quot;,&quot;Louisiana&quot;, &quot;ME&quot;,&quot;Maine&quot;, &quot;MD&quot;,&quot;Maryland&quot;, &quot;MA&quot;,&quot;Massachusetts&quot;, &quot;MI&quot;,&quot;Michigan&quot;, &quot;MN&quot;,&quot;Minnesota&quot;, &quot;MS&quot;,&quot;Mississippi&quot;, &quot;MO&quot;,&quot;Missouri&quot;, &quot;MT&quot;,&quot;Montana&quot;, &quot;NE&quot;,&quot;Nebraska&quot;, &quot;NV&quot;,&quot;Nevada&quot;, &quot;NH&quot;,&quot;New Hampshire&quot;, &quot;NJ&quot;,&quot;New Jersey&quot;, &quot;NM&quot;,&quot;New Mexico&quot;, &quot;NY&quot;,&quot;New York&quot;, &quot;NC&quot;,&quot;North Carolina&quot;, &quot;ND&quot;,&quot;North  Dakota&quot;, &quot;OH&quot;,&quot;Ohio&quot;, &quot;OK&quot;,&quot;Oklahoma&quot;, &quot;OR&quot;,&quot;Oregon&quot;, &quot;PA&quot;,&quot;Pennsylvania&quot;, &quot;RI&quot;,&quot;Rhode Island&quot;, &quot;SC&quot;,&quot;South Carolina&quot;, &quot;SD&quot;,&quot;South Dakota&quot;, &quot;TN&quot;,&quot;Tennessee&quot;, &quot;TX&quot;,&quot;Texas&quot;, &quot;UT&quot;,&quot;Utah&quot;, &quot;VT&quot;,&quot;Vermont&quot;, &quot;VA&quot;,&quot;Virginia&quot;, &quot;WA&quot;,&quot;Washington&quot;, &quot;WV&quot;,&quot;West Virginia&quot;, &quot;WI&quot;,&quot;Wisconsin&quot;, &quot;WY&quot;,&quot;Wyoming&quot;, &quot;&quot;)</expression>
     </formulas>
     <formulas>
         <name>varStreetAddressPhone</name>
@@ -348,7 +303,7 @@
         <name>Loop_Account_Child_Records</name>
         <label>Loop Account Child Records</label>
         <locationX>182</locationX>
-        <locationY>1247</locationY>
+        <locationY>947</locationY>
         <collectionReference>Get_Child_Contacts</collectionReference>
         <iterationOrder>Asc</iterationOrder>
         <nextValueConnector>
@@ -381,7 +336,7 @@
         <name>Get_Child_Contacts</name>
         <label>Get Child Contacts</label>
         <locationX>182</locationX>
-        <locationY>1139</locationY>
+        <locationY>839</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Loop_Account_Child_Records</targetReference>
@@ -402,7 +357,7 @@
         <name>Update_Account_Owner</name>
         <label>Update Account Owner</label>
         <locationX>50</locationX>
-        <locationY>731</locationY>
+        <locationY>431</locationY>
         <connector>
             <targetReference>Update_without_conditions</targetReference>
         </connector>
@@ -418,7 +373,7 @@
         <name>Update_Checkbox</name>
         <label>Update Checkbox</label>
         <locationX>314</locationX>
-        <locationY>731</locationY>
+        <locationY>431</locationY>
         <connector>
             <targetReference>Update_without_conditions</targetReference>
         </connector>
@@ -440,7 +395,7 @@
         <name>Update_Child_Records</name>
         <label>Update Child Records</label>
         <locationX>182</locationX>
-        <locationY>1655</locationY>
+        <locationY>1355</locationY>
         <connector>
             <targetReference>Start_Conditions_3</targetReference>
         </connector>
@@ -450,7 +405,7 @@
         <name>Update_Major_field_on_Account_Owner_Profile</name>
         <label>Update Major field on Account Owner Profile</label>
         <locationX>314</locationX>
-        <locationY>2255</locationY>
+        <locationY>1955</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -471,7 +426,7 @@
         <name>Update_Mid_Major_field_on_Account_Owner_Profile</name>
         <label>Update Mid Major field on Account Owner Profile</label>
         <locationX>50</locationX>
-        <locationY>2255</locationY>
+        <locationY>1955</locationY>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -492,7 +447,7 @@
         <name>Update_State_of_Incorporation</name>
         <label>Update State of Incorporation</label>
         <locationX>182</locationX>
-        <locationY>1955</locationY>
+        <locationY>1655</locationY>
         <connector>
             <targetReference>Check_Channel_type_field</targetReference>
         </connector>
@@ -508,7 +463,7 @@
         <name>Update_without_conditions</name>
         <label>Update without conditions</label>
         <locationX>314</locationX>
-        <locationY>923</locationY>
+        <locationY>623</locationY>
         <connector>
             <targetReference>Start_Condition_2</targetReference>
         </connector>
@@ -554,18 +509,11 @@
         <locationX>188</locationX>
         <locationY>0</locationY>
         <connector>
-            <targetReference>isNew_Account</targetReference>
+            <targetReference>Check_Account_status</targetReference>
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Contact_Count__c</field>
-            <operator>IsChanged</operator>
-            <value>
-                <booleanValue>false</booleanValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Case_Rollup_Needed__c</field>
             <operator>IsChanged</operator>
             <value>
                 <booleanValue>false</booleanValue>
@@ -576,22 +524,6 @@
         <triggerType>RecordAfterSave</triggerType>
     </start>
     <status>Active</status>
-    <subflows>
-        <name>updateTerritory</name>
-        <label>updateTerritory</label>
-        <locationX>182</locationX>
-        <locationY>431</locationY>
-        <connector>
-            <targetReference>Check_Account_status</targetReference>
-        </connector>
-        <flowName>updateAccountTerritory</flowName>
-        <inputAssignments>
-            <name>thisAccountRecord</name>
-            <value>
-                <elementReference>$Record</elementReference>
-            </value>
-        </inputAssignments>
-    </subflows>
     <variables>
         <name>varContact</name>
         <dataType>SObject</dataType>

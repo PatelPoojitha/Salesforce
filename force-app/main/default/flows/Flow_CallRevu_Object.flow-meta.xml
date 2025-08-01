@@ -101,7 +101,7 @@
             <assignToReference>varNewOpportunity.StageName</assignToReference>
             <operator>Assign</operator>
             <value>
-                <stringValue>Qualify</stringValue>
+                <stringValue>1 - Sales Qualified Opportunity</stringValue>
             </value>
         </assignmentItems>
         <assignmentItems>
@@ -907,7 +907,6 @@
         </rules>
     </decisions>
     <decisions>
-        <description>Adding in logic to notify if the owner is Josh Desmond OR the account owner</description>
         <name>Is_New</name>
         <label>Is New?</label>
         <locationX>710</locationX>
@@ -918,7 +917,7 @@
         <defaultConnectorLabel>Update Record</defaultConnectorLabel>
         <rules>
             <name>New_Record</name>
-            <conditionLogic>1 AND 2 AND 3 AND (4 OR 7) AND 5 AND 6</conditionLogic>
+            <conditionLogic>and</conditionLogic>
             <conditions>
                 <leftValueReference>varIsNew</leftValueReference>
                 <operator>EqualTo</operator>
@@ -959,13 +958,6 @@
                 <operator>NotEqualTo</operator>
                 <rightValue>
                     <stringValue>0123m000000U9RoAAK</stringValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.CallRevu_Lead_Owner__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <stringValue>005Um000002hW0HIAU</stringValue>
                 </rightValue>
             </conditions>
             <connector>
@@ -1273,7 +1265,7 @@
             <label>Start SOFT MQL Cadence True</label>
         </rules>
     </decisions>
-    <description>Added CQL alert exclusion + Adding in logic to notify if the owner is Josh Desmond OR the account owner + SOP changes/updates</description>
+    <description>Added CQL alert exclusion</description>
     <environments>Default</environments>
     <formulas>
         <name>varCadenceTask01</name>

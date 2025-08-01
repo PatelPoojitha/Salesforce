@@ -36,11 +36,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Hosted_Phones_Support_Queue_Id__c</field>
+                <field>Account_Default_Record_Type__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>TotalTrack_Support_Queue_Id__c</field>
+                <field>Default_Contact_Record_Type__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -49,14 +49,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Billing_OwnerId__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Default_Lead_OwnerId__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Case_Cancellation_RT_Id__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -99,14 +91,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Enrollment_OwnerId__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Account_Default_Record_Type__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Default_Contact_Record_Type__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

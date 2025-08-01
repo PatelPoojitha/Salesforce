@@ -12,6 +12,10 @@
         <label>Contact Information</label>
         <layoutColumns>
             <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Contact_Owner_Different_than_Acct_Owner__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Required</behavior>
                 <field>Name</field>
             </layoutItems>
@@ -22,6 +26,10 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Status__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>Account_Owner_18_Digit_ID__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -40,11 +48,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Readonly</behavior>
-                <field>Reseller_Account_Status__c</field>
+                <field>Account_ID_Email_Key__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Department_HS_c__c</field>
+                <behavior>Readonly</behavior>
+                <field>Reseller_Account_Status__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
@@ -57,6 +65,22 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Emergency_Contact__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>asknicely__CSAT_Last_Responded__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>asknicely__FIVESTAR_Last_Responded__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>asknicely__fivestarscore__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>celigo_sfnsio__NetSuite_Record__c</field>
             </layoutItems>
             <layoutItems>
                 <emptySpace>true</emptySpace>
@@ -122,15 +146,11 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Auto_Response_Opt_Out__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Is_Decision_Maker__c</field>
+                <field>Contact_Opt_Out_CSAT_Surveys__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>BriteVerify_Status__c</field>
+                <field>Contact_Opt_Out_NPS_Surveys__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -199,10 +219,6 @@
                 <behavior>Readonly</behavior>
                 <field>Time_Zone_Uses_Phone__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Migration_Notes__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
@@ -265,22 +281,14 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>Contact_Opt_Out_CSAT_Surveys__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Contact_Opt_Out_NPS_Surveys__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
                 <field>HasOptedOutOfEmail</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>tdc_tsw__SMS_Opt_out__c</field>
+                <field>Survey_Opt_Out__c</field>
             </layoutItems>
+        </layoutColumns>
+        <layoutColumns>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>HasOptedOutOfFax</field>
@@ -337,8 +345,24 @@
                 <field>Date_Cadence_Delayed__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ZoomInfo_First_Name__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Date_Cadence_Completed__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ZoomInfo_Email__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ZoomInfo_Account_Name__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>ZoomInfo_Last_Name__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

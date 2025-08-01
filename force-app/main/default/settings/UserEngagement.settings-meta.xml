@@ -16,7 +16,7 @@
     <enableIBILOptOutReports>false</enableIBILOptOutReports>
     <enableIBILOptOutTasks>false</enableIBILOptOutTasks>
     <enableLexToClassicFeedbackEnable>false</enableLexToClassicFeedbackEnable>
-    <enableOrchestrationInSandbox>false</enableOrchestrationInSandbox>
+    <enableOrchestrationInSandbox>true</enableOrchestrationInSandbox>
     <enableOrgUserAssistEnabled>true</enableOrgUserAssistEnabled>
     <enableScheduledSwitcher>true</enableScheduledSwitcher>
     <enableSfdcProductFeedbackSurvey>true</enableSfdcProductFeedbackSurvey>

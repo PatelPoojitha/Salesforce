@@ -166,11 +166,6 @@
             <field>IsConference</field>
             <table>AgentWork</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Handle_Time_NEW__c</field>
-            <table>AgentWork</table>
-        </columns>
         <masterLabel>Agent Work</masterLabel>
     </sections>
 </ReportType>

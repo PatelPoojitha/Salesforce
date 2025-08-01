@@ -504,11 +504,6 @@
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>dfsle__CanManageAccount__c</field>
-            <table>Network.NetworkMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
             <field>DB_Region__c</field>
             <table>Network.NetworkMembers</table>
         </columns>
@@ -605,21 +600,6 @@
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>maps__Version__c</field>
-            <table>Network.NetworkMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>dfsle__Provisioned__c</field>
-            <table>Network.NetworkMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>dfsle__Status__c</field>
-            <table>Network.NetworkMembers</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>dfsle__Username__c</field>
             <table>Network.NetworkMembers</table>
         </columns>
         <columns>

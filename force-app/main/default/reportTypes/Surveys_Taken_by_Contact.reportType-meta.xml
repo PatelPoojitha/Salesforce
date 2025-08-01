@@ -175,11 +175,6 @@
             <field>Case__c.Service_Agreement__c.Service_Location__c.Parent.Name</field>
             <table>SurveyTaker__c</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Manager_Note__c</field>
-            <table>SurveyTaker__c</table>
-        </columns>
         <masterLabel>Surveys Taken</masterLabel>
     </sections>
     <sections>

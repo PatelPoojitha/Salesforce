@@ -7,10 +7,6 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-                <componentInstanceProperties>
-                    <name>showLegacyActivityComposer</name>
-                    <value>false</value>
-                </componentInstanceProperties>
                 <componentName>runtime_sales_activities:activityPanel</componentName>
                 <identifier>runtime_sales_activities_activityPanel</identifier>
             </componentInstance>
@@ -196,6 +192,42 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentInstanceProperties>
+                    <name>Height</name>
+                    <value>600</value>
+                </componentInstanceProperties>
+                <componentName>TracHier:hierarchy</componentName>
+                <identifier>TracHier_hierarchy1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>createQuickActionName</name>
+                    <value>NewAccount</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>lookupFieldName</name>
+                    <value>Id</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>titleFieldName</name>
+                    <value>Hierarchy Fields</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>updateQuickActionName</name>
+                    <value>Account.Hierarchy_Fields</value>
+                </componentInstanceProperties>
+                <componentName>console:relatedRecord</componentName>
+                <identifier>console_relatedRecord1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-9f97b622-ed0a-4531-9f28-91b5e63026ea</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
                 <componentName>forceChatter:recordFeedContainer</componentName>
                 <identifier>forceChatter_recordFeedContainer</identifier>
             </componentInstance>
@@ -205,356 +237,50 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_icp_theme__c</fieldItem>
-                <identifier>Recordalignicp_icp_theme_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_icp__c</fieldItem>
-                <identifier>Recordalignicp_icp_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-1144390c-7751-4d14-aa2d-f13974842464</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_icp_priority__c</fieldItem>
-                <identifier>Recordalignicp_icp_priority_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-a9dcce0b-6b97-4eff-9c6d-fee4968b1434</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-1144390c-7751-4d14-aa2d-f13974842464</value>
+                    <name>cacheAge</name>
+                    <value>1440</value>
                 </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column</identifier>
+                <componentInstanceProperties>
+                    <name>reportFilter</name>
+                    <value>Account.Id</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>reportName</name>
+                    <value>00O3m000009Ni3u</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>showRefreshButton</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:reportChart</componentName>
+                <identifier>flexipage_reportChart</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-a9dcce0b-6b97-4eff-9c6d-fee4968b1434</value>
+                    <name>cacheAge</name>
+                    <value>1440</value>
                 </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column2</identifier>
+                <componentInstanceProperties>
+                    <name>reportFilter</name>
+                    <value>ACCOUNT_ID</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>reportName</name>
+                    <value>Support_Cases_Trend_7SP</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>showRefreshButton</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:reportChart</componentName>
+                <identifier>flexipage_reportChart2</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-e694576a-fabd-4f71-9c35-87a1bca27f31</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_icp_acq_nonoem_buyerphase__c</fieldItem>
-                <identifier>Recordalignicp_icp_acq_nonoem_buyerphase_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_icp_acq_nonoem_topic1__c</fieldItem>
-                <identifier>Recordalignicp_icp_acq_nonoem_topic1_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-ec3e2660-d9b9-4920-bc79-832fb4ac431c</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_icp_acq_nonoem_topic2__c</fieldItem>
-                <identifier>Recordalignicp_icp_acq_nonoem_topic2_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_icp_acq_nonoem_topic3__c</fieldItem>
-                <identifier>Recordalignicp_icp_acq_nonoem_topic3_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-de772101-144f-49f1-9202-aae6c306ef04</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-ec3e2660-d9b9-4920-bc79-832fb4ac431c</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column7</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-de772101-144f-49f1-9202-aae6c306ef04</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column8</identifier>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-379143ec-07e0-4415-ad15-2fcb3424b9fb</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_icp_expan_nonoem_buyerphase__c</fieldItem>
-                <identifier>Recordalignicp_icp_expan_nonoem_buyerphase_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_icp_expan_nonoem_topic1__c</fieldItem>
-                <identifier>Recordalignicp_icp_expan_nonoem_topic1_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-9wcldnka9e</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_icp_expan_nonoem_topic2__c</fieldItem>
-                <identifier>Recordalignicp_icp_expan_nonoem_topic2_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_icp_expan_nonoem_topic3__c</fieldItem>
-                <identifier>Recordalignicp_icp_expan_nonoem_topic3_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-pv6pzm51si</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-9wcldnka9e</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column5</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-pv6pzm51si</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column6</identifier>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-5hbzr1cwanq</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_all_comp_nonoem_buyerphase__c</fieldItem>
-                <identifier>Recordalignicp_all_comp_nonoem_buyerphase_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_all_comp_nonoem_topic1__c</fieldItem>
-                <identifier>Recordalignicp_all_comp_nonoem_topic1_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-6b62a3d0-9c1b-4961-be74-0ba93ea6e3bc</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_all_comp_nonoem_topic2__c</fieldItem>
-                <identifier>Recordalignicp_all_comp_nonoem_topic2_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.alignicp_all_comp_nonoem_topic3__c</fieldItem>
-                <identifier>Recordalignicp_all_comp_nonoem_topic3_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-62cbc9a4-14de-4b6e-9ae8-3152a7dd149d</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-6b62a3d0-9c1b-4961-be74-0ba93ea6e3bc</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column3</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>body</name>
-                    <value>Facet-62cbc9a4-14de-4b6e-9ae8-3152a7dd149d</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:column</componentName>
-                <identifier>flexipage_column4</identifier>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-df5d1da0-2a06-41ad-a022-6bc34d8e9d1b</name>
-        <type>Facet</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>columns</name>
-                    <value>Facet-e694576a-fabd-4f71-9c35-87a1bca27f31</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>label</name>
-                    <value>AlignICP ICP</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>columns</name>
-                    <value>Facet-379143ec-07e0-4415-ad15-2fcb3424b9fb</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>label</name>
-                    <value>Acquisition</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection4</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>columns</name>
-                    <value>Facet-5hbzr1cwanq</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>label</name>
-                    <value>Expansion</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection3</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>columns</name>
-                    <value>Facet-df5d1da0-2a06-41ad-a022-6bc34d8e9d1b</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>horizontalAlignment</name>
-                    <value>false</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>label</name>
-                    <value>Competitive Conquest</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:fieldSection</componentName>
-                <identifier>flexipage_fieldSection2</identifier>
-            </componentInstance>
-        </itemInstances>
-        <name>Facet-42dbb66b-ea2c-496a-abff-efbe209f7b14</name>
+        <name>Facet-ed91d41a-01ef-486d-bf41-14918ecba025</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -594,6 +320,20 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
+                    <value>Facet-9f97b622-ed0a-4531-9f28-91b5e63026ea</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Hierarchy</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab1</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
                     <value>feedTabContent</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
@@ -608,41 +348,20 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-42dbb66b-ea2c-496a-abff-efbe209f7b14</value>
+                    <value>Facet-ed91d41a-01ef-486d-bf41-14918ecba025</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>title</name>
-                    <value>AlignICP</value>
+                    <value>Standard.Tab.report</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
-                <identifier>flexipage_tab4</identifier>
+                <identifier>reportTab</identifier>
             </componentInstance>
         </itemInstances>
         <name>tabs</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>decorate</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>richTextValue</name>
-                    <value>&lt;p style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-size: 36px; color: rgb(68, 68, 68);&quot;&gt;🛑&lt;/span&gt;&lt;strong style=&quot;font-size: 26px; color: rgb(231, 34, 34);&quot;&gt;WARNING&lt;/strong&gt;&lt;span style=&quot;font-size: 26px; color: rgb(68, 68, 68);&quot;&gt;: This is a BDR Exempt Account.&lt;/span&gt;&lt;span style=&quot;font-size: 36px; color: rgb(68, 68, 68);&quot;&gt;🛑&lt;/span&gt;&lt;/p&gt;</value>
-                </componentInstanceProperties>
-                <componentName>flexipage:richText</componentName>
-                <identifier>flexipage_richText</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!Record.BDM_List_Exemptions__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>true</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </componentInstance>
-        </itemInstances>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>

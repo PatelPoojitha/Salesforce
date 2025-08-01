@@ -206,6 +206,86 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.celigo_sfnsio__Skip_Export_To_NetSuite__c</fieldItem>
+                <identifier>Recordceligo_sfnsio_Skip_Export_To_NetSuite_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Account_Lead_Source__c</fieldItem>
+                <identifier>RecordAccount_Lead_Source_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Account_Lead_Sub_source__c</fieldItem>
+                <identifier>RecordAccount_Lead_Sub_source_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Account_of_Rooftops__c</fieldItem>
+                <identifier>RecordAccount_of_Rooftops_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Account_Owner__c</fieldItem>
+                <identifier>RecordAccount_Owner_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.celigo_sfnsio__Ship_To_Tier__c</fieldItem>
+                <identifier>Recordceligo_sfnsio_Ship_To_Tier_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.celigo_sfnsio__Reseller__c</fieldItem>
+                <identifier>Recordceligo_sfnsio_Reseller_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.celigo_sfnsio__Distributor__c</fieldItem>
+                <identifier>Recordceligo_sfnsio_Distributor_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Opportunity_Lead_Channel__c</fieldItem>
                 <identifier>RecordOpportunity_Lead_Channel_cField</identifier>
             </fieldInstance>
@@ -228,6 +308,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Opportunity_Lead_Sub_Source__c</fieldItem>
                 <identifier>RecordOpportunity_Lead_Sub_Source_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.CallRevu_Lead__c</fieldItem>
+                <identifier>RecordCallRevu_Lead_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -342,8 +432,52 @@
         </itemInstances>
         <itemInstances>
             <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Sales_Type__c</fieldItem>
+                <identifier>RecordSales_Type__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.X30_Day_Bill_Date__c</fieldItem>
+                <identifier>RecordX30_Day_Bill_Date__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.X30_Day_Bill_Month__c</fieldItem>
                 <identifier>RecordX30_Day_Bill_Month__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Sync_to_GM_API__c</fieldItem>
+                <identifier>RecordSync_to_GM_API__cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.GM_API_Sync_Date__c</fieldItem>
+                <identifier>RecordGM_API_Sync_Date__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-f40abb46-6c63-4d89-a023-21aede4048f6</name>
@@ -354,10 +488,10 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
-                    <value>readonly</value>
+                    <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.OwnerId</fieldItem>
-                <identifier>RecordOwnerIdField</identifier>
+                <fieldItem>Record.Loss_Reason_Notes__c</fieldItem>
+                <identifier>RecordLoss_Reason_Notes_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -366,8 +500,38 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Business_Development_Team_Member__c</fieldItem>
-                <identifier>RecordBusiness_Development_Team_Member__cField</identifier>
+                <fieldItem>Record.Group_Opportunity__c</fieldItem>
+                <identifier>RecordGroup_Opportunity_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Group_MRR__c</fieldItem>
+                <identifier>RecordGroup_MRR_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>required</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.ForecastCategoryName</fieldItem>
+                <identifier>RecordForecastCategoryNameField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>readonly</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.OwnerId</fieldItem>
+                <identifier>RecordOwnerIdField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -398,23 +562,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Tier_2_Type__c</fieldItem>
                 <identifier>RecordTier_2_Type_cField2</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Custom_Forecast_Category__c</fieldItem>
-                <identifier>RecordCustom_Forecast_Category_cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!$User.LastName}</leftValue>
-                        <operator>CONTAINS</operator>
-                        <rightValue>Desmond</rightValue>
-                    </criteria>
-                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -1321,8 +1468,28 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.Sales_Qualified_Date__c</fieldItem>
+                <identifier>RecordSales_Qualified_Date_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.SQO_to_Demo_Days__c</fieldItem>
                 <identifier>RecordSQO_to_Demo_Days_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Demo_Date__c</fieldItem>
+                <identifier>RecordDemo_Date_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -1361,6 +1528,16 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
+                <fieldItem>Record.Agreement_Pending_Date__c</fieldItem>
+                <identifier>RecordAgreement_Pending_Date_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
                 <fieldItem>Record.Create_Contact_Role__c</fieldItem>
                 <identifier>RecordCreate_Contact_Role_cField</identifier>
             </fieldInstance>
@@ -1383,16 +1560,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Pricebook2Id</fieldItem>
                 <identifier>RecordPricebook2IdField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.X30_Day_Bill_Date__c</fieldItem>
-                <identifier>RecordX30_Day_Bill_Date__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-9265cc0f-58c8-43ad-be40-51541560d5b3</name>
@@ -1656,6 +1823,110 @@
             <fieldInstance>
                 <fieldInstanceProperties>
                     <name>uiBehavior</name>
+                    <value>required</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Name</fieldItem>
+                <identifier>RecordNameField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Account.Account_Name__c</fieldItem>
+                <identifier>RecordAccountAccount_Name_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>readonly</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.RecordTypeId</fieldItem>
+                <identifier>RecordRecordTypeIdField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>required</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.CloseDate</fieldItem>
+                <identifier>RecordCloseDateField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <name>Facet-dda8e064-ed47-44da-a656-bb460ecdf49f</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldItem>Record.Account.Account_Name__c</fieldItem>
+                <identifier>RecordAccountAccount_Name_cField2</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.of_Rooftops_for_Opportunity__c</fieldItem>
+                <identifier>Recordof_Rooftops_for_Opportunity_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Sales_Type__c</fieldItem>
+                <identifier>RecordSales_Type_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Opportunity_Product__c</fieldItem>
+                <identifier>RecordOpportunity_Product_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <name>Facet-4ad85b32-c99f-4b63-b820-02ed583d5d8b</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-dda8e064-ed47-44da-a656-bb460ecdf49f</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column17</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-4ad85b32-c99f-4b63-b820-02ed583d5d8b</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:column</componentName>
+                <identifier>flexipage_column18</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-d3a15710-ff92-4f35-bdca-ad7a8fe0051b</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
                 <fieldItem>Record.DocGen_Created_Date__c</fieldItem>
@@ -1875,18 +2146,30 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
-                <componentName>dsfs:DocuSignLightningSendingLocked</componentName>
-                <identifier>dsfs_DocuSignLightningSendingLocked</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
                 <componentInstanceProperties>
                     <name>hideHeader</name>
                     <value>false</value>
                 </componentInstanceProperties>
                 <componentName>force:relatedListQuickLinksContainer</componentName>
                 <identifier>force_relatedListQuickLinksContainer</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>columns</name>
+                    <value>Facet-d3a15710-ff92-4f35-bdca-ad7a8fe0051b</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>label</name>
+                    <value>New Opp Name - Test Fields</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:fieldSection</componentName>
+                <identifier>flexipage_fieldSection10</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>

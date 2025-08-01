@@ -179,18 +179,6 @@
                 <behavior>Edit</behavior>
                 <field>Contact_Opt_Out_NPS_Surveys__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Auto_Response_Opt_Out__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Is_Decision_Maker__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>BriteVerify_Status__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -236,10 +224,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>DoNotCall</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>tdc_tsw__SMS_Opt_out__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

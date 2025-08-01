@@ -29,13 +29,6 @@
                 <elementReference>checkMRRAlignment.MRR__c</elementReference>
             </value>
         </assignmentItems>
-        <assignmentItems>
-            <assignToReference>checkMRRAlignment.Automation_Running__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>toggleAutomationRunning</elementReference>
-            </value>
-        </assignmentItems>
         <connector>
             <targetReference>addToUpdateList</targetReference>
         </connector>
@@ -71,11 +64,6 @@
         <name>recentlyModified</name>
         <dataType>DateTime</dataType>
         <expression>NOW() - 2</expression>
-    </formulas>
-    <formulas>
-        <name>toggleAutomationRunning</name>
-        <dataType>Boolean</dataType>
-        <expression>IF({!checkMRRAlignment.Automation_Running__c}=TRUE, FALSE, TRUE)</expression>
     </formulas>
     <interviewLabel>oppCleanUpProcess-MRR2 {!$Flow.CurrentDateTime}</interviewLabel>
     <label>oppCleanUpProcess-MRR2</label>
@@ -141,13 +129,6 @@
             <operator>GreaterThanOrEqualTo</operator>
             <value>
                 <elementReference>recentlyModified</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>CreatedDate</field>
-            <operator>GreaterThan</operator>
-            <value>
-                <dateTimeValue>2025-01-01T05:00:00.000Z</dateTimeValue>
             </value>
         </filters>
         <getFirstRecordOnly>false</getFirstRecordOnly>

@@ -25,4 +25,6 @@
     <tabs>Cadence_Task__c</tabs>
     <tabs>Service_Agreement_Products__c</tabs>
     <tabs>standard-WaveHome</tabs>
+    <tabs>Unsupported_Email__c</tabs>
+    <tabs>Bot_Customer_Rating__c</tabs>
 </CustomApplication>

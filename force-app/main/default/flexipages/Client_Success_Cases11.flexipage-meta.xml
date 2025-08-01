@@ -85,7 +85,7 @@
                 <identifier>RecordAll_Opportunity_Products_cField</identifier>
             </fieldInstance>
         </itemInstances>
-        <name>Facet-28e9cb0c-9259-406c-8ed3-1508c4d4e587</name>
+        <name>Facet-53c50ed9-ca94-4320-b178-f1824746db5e</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -185,16 +185,6 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Strategic_Account_Manager__c</fieldItem>
-                <identifier>RecordStrategic_Account_Manager_cField2</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
                 <fieldItem>Record.Assigned_Trainer__c</fieldItem>
                 <identifier>RecordAssigned_Trainer_cField</identifier>
             </fieldInstance>
@@ -215,8 +205,8 @@
                     <name>uiBehavior</name>
                     <value>none</value>
                 </fieldInstanceProperties>
-                <fieldItem>Record.Dealer_Delayed_Reason_Launch__c</fieldItem>
-                <identifier>RecordDealer_Delayed_Reason_Launch_cField</identifier>
+                <fieldItem>Record.Dealer_Delayed_Reason__c</fieldItem>
+                <identifier>RecordDealer_Delayed_Reason_cField2</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -229,17 +219,7 @@
                 <identifier>RecordIs_Tracking_Only_cField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Strategic_Account_Manager__c</fieldItem>
-                <identifier>RecordStrategic_Account_Manager_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <name>Facet-11f1c328-8fc2-48da-9e7f-2e1e8bd1d2ac</name>
+        <name>Facet-4ef04a17-6fda-4b1d-a572-0ddbede2afd6</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -247,7 +227,7 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-28e9cb0c-9259-406c-8ed3-1508c4d4e587</value>
+                    <value>Facet-53c50ed9-ca94-4320-b178-f1824746db5e</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
                 <identifier>flexipage_column11</identifier>
@@ -257,13 +237,13 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>body</name>
-                    <value>Facet-11f1c328-8fc2-48da-9e7f-2e1e8bd1d2ac</value>
+                    <value>Facet-4ef04a17-6fda-4b1d-a572-0ddbede2afd6</value>
                 </componentInstanceProperties>
                 <componentName>flexipage:column</componentName>
                 <identifier>flexipage_column12</identifier>
             </componentInstance>
         </itemInstances>
-        <name>Facet-8a5a7e79-0199-4c6c-bfad-9f4750869a1e</name>
+        <name>Facet-d2b60a04-7a9e-454e-b499-a6daac381a46</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -436,7 +416,7 @@
             <componentInstance>
                 <componentInstanceProperties>
                     <name>columns</name>
-                    <value>Facet-8a5a7e79-0199-4c6c-bfad-9f4750869a1e</value>
+                    <value>Facet-d2b60a04-7a9e-454e-b499-a6daac381a46</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>horizontalAlignment</name>
@@ -463,38 +443,11 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>parentFieldApiName</name>
-                    <value>Case.Id</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>relatedListApiName</name>
-                    <value>GuideCX_Projects__r</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>relatedListComponentOverride</name>
-                    <value>NONE</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>rowsToDisplay</name>
-                    <value>10</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>showActionBar</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentName>force:relatedListSingleContainer</componentName>
-                <identifier>force_relatedListSingleContainer</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>createQuickActionName</name>
-                    <value>tdc_tsw__NewContact</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
                     <name>lookupFieldName</name>
                     <value>ContactId</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>titleFieldName</name>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>updateQuickActionName</name>
@@ -542,9 +495,6 @@
                         </valueListItems>
                         <valueListItems>
                             <value>CRM__c</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>Delayed_Implementation__c</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
@@ -666,16 +616,6 @@
             <fieldInstance>
                 <fieldItem>Record.Opportunity__r.Delayed_Implementation__c</fieldItem>
                 <identifier>RecordOpportunity_rDelayed_Implementation_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.GuideCX_Project__c</fieldItem>
-                <identifier>RecordGuideCX_Project__cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-b1d0bbe8-bea7-4e5c-904d-7bca273c688c</name>
@@ -900,12 +840,6 @@
                 <identifier>RecordContactPhoneField</identifier>
             </fieldInstance>
         </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.Contact.BriteVerify_Status__c</fieldItem>
-                <identifier>RecordContactBriteVerify_Status_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
         <name>Facet-a5120979-b9f2-4d54-bdca-405e2c068b87</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -982,6 +916,26 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Level_of_Service_Dept__c</fieldItem>
                 <identifier>RecordLevel_of_Service_Dept_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Add_to_Inbound_Queue__c</fieldItem>
+                <identifier>RecordAdd_to_Inbound_Queue_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Add_to_Outbound_Queue__c</fieldItem>
+                <identifier>RecordAdd_to_Outbound_Queue_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <itemInstances>
@@ -1377,35 +1331,6 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Addendum_Type__c</fieldItem>
                 <identifier>RecordAddendum_Type_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.Account.Dealer_Code__c</fieldItem>
-                <identifier>RecordAccountDealer_Code_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldInstanceProperties>
-                    <name>uiBehavior</name>
-                    <value>none</value>
-                </fieldInstanceProperties>
-                <fieldItem>Record.Billing_Case_Name__c</fieldItem>
-                <identifier>RecordBilling_Case_Name_cField</identifier>
-            </fieldInstance>
-        </itemInstances>
-        <itemInstances>
-            <fieldInstance>
-                <fieldItem>Record.Opportunity__r.Agreement_Workflow__c</fieldItem>
-                <identifier>RecordOpportunity_rAgreement_Workflow_cField</identifier>
-                <visibilityRule>
-                    <criteria>
-                        <leftValue>{!$User.Profile.Name}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>System Administrator</rightValue>
-                    </criteria>
-                </visibilityRule>
             </fieldInstance>
         </itemInstances>
         <name>Facet-0de69c70-f27a-4e2f-8978-9b9d036c7eef</name>

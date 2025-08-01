@@ -241,11 +241,6 @@
         <label>Porsche</label>
     </customValue>
     <customValue>
-        <fullName>Pre-owned</fullName>
-        <default>false</default>
-        <label>Pre-owned</label>
-    </customValue>
-    <customValue>
         <fullName>Rolls Royce</fullName>
         <default>false</default>
         <label>Rolls Royce</label>
@@ -259,11 +254,6 @@
         <fullName>Saab</fullName>
         <default>false</default>
         <label>Saab</label>
-    </customValue>
-    <customValue>
-        <fullName>Service Center</fullName>
-        <default>false</default>
-        <label>Service Center</label>
     </customValue>
     <customValue>
         <fullName>Smart</fullName>
@@ -296,5 +286,5 @@
         <label>Volvo</label>
     </customValue>
     <masterLabel>Manufacturer</masterLabel>
-    <sorted>true</sorted>
+    <sorted>false</sorted>
 </GlobalValueSet>

@@ -3,7 +3,7 @@
     <actionCalls>
         <name>AM2023Survey</name>
         <label>AM 2023 Survey</label>
-        <locationX>314</locationX>
+        <locationX>578</locationX>
         <locationY>731</locationY>
         <actionName>Case.AM_2023_Survey</actionName>
         <actionType>emailAlert</actionType>
@@ -20,9 +20,66 @@
         <nameSegment>Case.AM_2023_Survey</nameSegment>
     </actionCalls>
     <actionCalls>
+        <name>Enrollment_2023_Survey</name>
+        <label>Enrollment 2023 Survey</label>
+        <locationX>842</locationX>
+        <locationY>731</locationY>
+        <actionName>Case.Enrollment_2023_Survey</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Copy_3_of_Update_Survey_Date</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Enrollment_2023_Survey</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Failure_to_Launch_2023_Survey</name>
+        <label>Failure to Launch 2023 Survey</label>
+        <locationX>1106</locationX>
+        <locationY>731</locationY>
+        <actionName>Case.Failure_to_Launch_2023_Survey</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Copy_4_of_Update_Survey_Date</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Failure_to_Launch_2023_Survey</nameSegment>
+    </actionCalls>
+    <actionCalls>
+        <name>Launch_2023_Survey</name>
+        <label>Launch 2023 Survey</label>
+        <locationX>50</locationX>
+        <locationY>731</locationY>
+        <actionName>Case.Launch_2023_Survey</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Update_Survey_Date</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Case.Launch_2023_Survey</nameSegment>
+    </actionCalls>
+    <actionCalls>
         <name>Support_2023_Survey</name>
         <label>Support 2023 Survey</label>
-        <locationX>50</locationX>
+        <locationX>314</locationX>
         <locationY>731</locationY>
         <actionName>Case.Support_2023_Survey</actionName>
         <actionType>emailAlert</actionType>
@@ -42,12 +99,76 @@
     <decisions>
         <name>Survey_Decision</name>
         <label>Survey Decision</label>
-        <locationX>314</locationX>
+        <locationX>710</locationX>
         <locationY>623</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
+            <name>Launch_Survey</name>
+            <conditionLogic>1 AND 2 AND 3 AND (4 OR 8) AND (5 OR 6) AND 7</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Send_Resolution_Survey__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Launch</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Survey_Sent_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>5.1 - PM Assigned</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Spam Account</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Test Dealer Account</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ClosedDate</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <dateTimeValue>2023-06-24T00:00:00.000Z</dateTimeValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>5 - Launch Complete</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Launch_2023_Survey</targetReference>
+            </connector>
+            <label>Launch Survey</label>
+        </rules>
+        <rules>
             <name>Support_Survey</name>
-            <conditionLogic>and</conditionLogic>
+            <conditionLogic>1 AND 2 AND 3 AND 4 AND (5 OR 6) AND 7 AND 8 AND 9</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Send_Resolution_Survey__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -111,27 +232,6 @@
                     <stringValue>0033m00002t2O9gAAE</stringValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>$Record.Contact.Contact_Opt_Out_CSAT_Surveys__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.ContactId</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Contact.Email</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>Support_2023_Survey</targetReference>
             </connector>
@@ -139,7 +239,7 @@
         </rules>
         <rules>
             <name>AM_Survey</name>
-            <conditionLogic>1 AND (2 OR 3) AND 4 AND (5 OR 6) AND (7 OR 13 OR 8 OR 10 OR 11 OR 12) AND 9 AND 14 AND 15 AND 16</conditionLogic>
+            <conditionLogic>1 AND (2 OR 3) AND 4 AND (5 OR 6) AND (7 OR 13 OR 8 OR 10 OR 11 OR 12) AND 9</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.Send_Resolution_Survey__c</leftValueReference>
                 <operator>EqualTo</operator>
@@ -231,37 +331,137 @@
                     <stringValue>Responsive - Meeting held</stringValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>$Record.Contact.Contact_Opt_Out_CSAT_Surveys__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.ContactId</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Contact.Email</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>AM2023Survey</targetReference>
             </connector>
             <label>AM Survey</label>
         </rules>
+        <rules>
+            <name>Enrollment_Survey</name>
+            <conditionLogic>1 AND 2 AND 3 AND 4 AND (5 OR 6) AND 7</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Send_Resolution_Survey__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Enrollment</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Survey_Sent_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>5 - Moved to Launch</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Spam Account</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Test Dealer Account</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ClosedDate</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <dateTimeValue>2023-06-24T00:00:00.000Z</dateTimeValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Enrollment_2023_Survey</targetReference>
+            </connector>
+            <label>Enrollment Survey</label>
+        </rules>
+        <rules>
+            <name>Failure_to_Launch_Survey</name>
+            <conditionLogic>3 AND 4 AND (1 OR 2) AND 5 AND (6 OR 7) AND 8</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0121N000001HyN1QAK</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.RecordTypeId</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>0121N000001HyN6QAK</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>5.2 Failure to Launch</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Send_Resolution_Survey__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Survey_Sent_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Spam Account</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Account.Name</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue>Test Dealer Account</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.ClosedDate</leftValueReference>
+                <operator>GreaterThanOrEqualTo</operator>
+                <rightValue>
+                    <dateTimeValue>2023-06-24T00:00:00.000Z</dateTimeValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Failure_to_Launch_2023_Survey</targetReference>
+            </connector>
+            <label>Failure to Launch Survey</label>
+        </rules>
     </decisions>
     <decisions>
         <name>Update_Survey_Value_Send_Survey</name>
         <label>Update Survey Value - Send Survey</label>
-        <locationX>314</locationX>
+        <locationX>710</locationX>
         <locationY>323</locationY>
         <defaultConnector>
             <targetReference>Survey_Decision</targetReference>
@@ -312,21 +512,72 @@
                     <stringValue>SPAM</stringValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>$Record.Contact.Contact_Opt_Out_CSAT_Surveys__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>Update_Send_Resolution_to_True</targetReference>
             </connector>
             <label>Support Team</label>
         </rules>
         <rules>
+            <name>Launch_Team</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Launch</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Send_Resolution_Survey__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Send_Resolution_to_True2</targetReference>
+            </connector>
+            <label>Launch Team</label>
+        </rules>
+        <rules>
+            <name>Enrollment_Team</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Enrollment</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.IsClosed</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Send_Resolution_Survey__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Send_Resolution_to_True3</targetReference>
+            </connector>
+            <label>Enrollment Team</label>
+        </rules>
+        <rules>
             <name>AM_Team</name>
-            <conditionLogic>1 AND 2 AND 3 AND 10 AND (4 OR 5 OR 6 OR 7 OR 8 OR 9)</conditionLogic>
+            <conditionLogic>1 AND 2 AND 3 AND (4 OR 5 OR 6 OR 7 OR 8 OR 9)</conditionLogic>
             <conditions>
                 <leftValueReference>$Record.RecordType.Name</leftValueReference>
                 <operator>EqualTo</operator>
@@ -390,25 +641,16 @@
                     <stringValue>Responsive - No meeting held</stringValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>$Record.Contact.Contact_Opt_Out_CSAT_Surveys__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>Update_Send_Resolution_to_True4</targetReference>
             </connector>
             <label>AM Team</label>
         </rules>
     </decisions>
-    <description>8/1/24 - added opt outs
-10/6/23 - Update by Becky for AM Case Survey closing outcomes
+    <description>10/6/23 - Update by Becky for AM Case Survey closing outcomes
 Includes all Send Resolutions Survey Triggers - added additional logic to AM
 11/17/23 - Updated Launch Survey triggers for final status
-2/14/24 - fixed closing outcomes for AM case types
-Updated logic for support 2023 error (no recipients)</description>
+2/14/24 - fixed closing outcomes for AM case types</description>
     <environments>Default</environments>
     <formulas>
         <name>forToday</name>
@@ -439,7 +681,7 @@ Updated logic for support 2023 error (no recipients)</description>
     <recordUpdates>
         <name>Copy_1_of_Update_Survey_Date</name>
         <label>Copy 1 of Update Survey Date</label>
-        <locationX>50</locationX>
+        <locationX>314</locationX>
         <locationY>839</locationY>
         <inputAssignments>
             <field>Survey_Sent_Date__c</field>
@@ -452,7 +694,33 @@ Updated logic for support 2023 error (no recipients)</description>
     <recordUpdates>
         <name>Copy_2_of_Update_Survey_Date</name>
         <label>Copy 2 of Update Survey Date</label>
-        <locationX>314</locationX>
+        <locationX>578</locationX>
+        <locationY>839</locationY>
+        <inputAssignments>
+            <field>Survey_Sent_Date__c</field>
+            <value>
+                <elementReference>forToday</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_3_of_Update_Survey_Date</name>
+        <label>Copy 3 of Update Survey Date</label>
+        <locationX>842</locationX>
+        <locationY>839</locationY>
+        <inputAssignments>
+            <field>Survey_Sent_Date__c</field>
+            <value>
+                <elementReference>forToday</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Copy_4_of_Update_Survey_Date</name>
+        <label>Copy 4 of Update Survey Date</label>
+        <locationX>1106</locationX>
         <locationY>839</locationY>
         <inputAssignments>
             <field>Survey_Sent_Date__c</field>
@@ -465,7 +733,39 @@ Updated logic for support 2023 error (no recipients)</description>
     <recordUpdates>
         <name>Update_Send_Resolution_to_True</name>
         <label>Update Send Resolution to True</label>
-        <locationX>50</locationX>
+        <locationX>182</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Survey_Decision</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Send_Resolution_Survey__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Send_Resolution_to_True2</name>
+        <label>Update Send Resolution to True</label>
+        <locationX>446</locationX>
+        <locationY>431</locationY>
+        <connector>
+            <targetReference>Survey_Decision</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Send_Resolution_Survey__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Send_Resolution_to_True3</name>
+        <label>Update Send Resolution to True</label>
+        <locationX>710</locationX>
         <locationY>431</locationY>
         <connector>
             <targetReference>Survey_Decision</targetReference>
@@ -481,7 +781,7 @@ Updated logic for support 2023 error (no recipients)</description>
     <recordUpdates>
         <name>Update_Send_Resolution_to_True4</name>
         <label>Update Send Resolution to True</label>
-        <locationX>314</locationX>
+        <locationX>974</locationX>
         <locationY>431</locationY>
         <connector>
             <targetReference>Survey_Decision</targetReference>
@@ -494,8 +794,21 @@ Updated logic for support 2023 error (no recipients)</description>
         </inputAssignments>
         <inputReference>$Record</inputReference>
     </recordUpdates>
+    <recordUpdates>
+        <name>Update_Survey_Date</name>
+        <label>Update Survey Date</label>
+        <locationX>50</locationX>
+        <locationY>839</locationY>
+        <inputAssignments>
+            <field>Survey_Sent_Date__c</field>
+            <value>
+                <elementReference>forToday</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
     <start>
-        <locationX>188</locationX>
+        <locationX>584</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Update_Survey_Value_Send_Survey</targetReference>

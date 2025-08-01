@@ -15,10 +15,6 @@
         <value xsi:type="xsd:string">00G3m000003BeG5</value>
     </values>
     <values>
-        <field>Case_Cancellation_RT_Id__c</field>
-        <value xsi:nil="true"/>
-    </values>
-    <values>
         <field>Case_DNI_Setup_RT_Id__c</field>
         <value xsi:type="xsd:string">0123m000001I11fAAC</value>
     </values>
@@ -43,10 +39,6 @@
         <value xsi:type="xsd:string">Dealer - Active</value>
     </values>
     <values>
-        <field>Default_Lead_OwnerId__c</field>
-        <value xsi:type="xsd:string">005Um000003EbdtIAC</value>
-    </values>
-    <values>
         <field>DevOps_OwnerId__c</field>
         <value xsi:type="xsd:string">0051N000006DekXQAS</value>
     </values>
@@ -60,20 +52,19 @@
     </values>
     <values>
         <field>Hosted_Phones_Support_Queue_Id__c</field>
-        <value xsi:type="xsd:string">00G8V000005NJX6</value>
+        <value xsi:type="xsd:string">00G3J000002TORO</value>
     </values>
     <values>
         <field>Opportunity_Default_Record_Type__c</field>
-        <value xsi:type="xsd:string">Vision Packages</value>
+        <value xsi:type="xsd:string">Non Trial or Pilot</value>
     </values>
     <values>
         <field>Recipient_Address_List__c</field>
-        <value xsi:type="xsd:string">kristiejaecklein@callrevu.com, poojithap@coreflexsolutions.com,
-shanthiwilson@callrevu.com</value>
+        <value xsi:type="xsd:string">jamalwarren@callrevu.com</value>
     </values>
     <values>
         <field>Sender_Email_Address__c</field>
-        <value xsi:type="xsd:string">kristiejaecklein@callrevu.com</value>
+        <value xsi:type="xsd:string">poojithap@coreflexsolutions.com</value>
     </values>
     <values>
         <field>Support_Owner_Id__c</field>
@@ -85,14 +76,14 @@ shanthiwilson@callrevu.com</value>
     </values>
     <values>
         <field>Task_Activity_Type__c</field>
-        <value xsi:nil="true"/>
+        <value xsi:type="xsd:string">af6aba71-048b-42e3-9221-efc3015bc867</value>
     </values>
     <values>
         <field>TotalCX_Queue_Id__c</field>
-        <value xsi:type="xsd:string">00G8V000005NFLUUA4</value>
+        <value xsi:type="xsd:string">00GVC000001jLu92AE</value>
     </values>
     <values>
         <field>TotalTrack_Support_Queue_Id__c</field>
-        <value xsi:type="xsd:string">00G8V000005NJX1</value>
+        <value xsi:type="xsd:string">00G3J000002TORJ</value>
     </values>
 </CustomMetadata>

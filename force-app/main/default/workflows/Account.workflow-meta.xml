@@ -106,7 +106,7 @@
         <fields>Name</fields>
         <fields>Phone</fields>
         <includeSessionId>false</includeSessionId>
-        <integrationUser>rebeccahughes@callrevu.com</integrationUser>
+        <integrationUser>beckyhughes@callrevu.com</integrationUser>
         <name>ConnectAccountTrigger</name>
         <protected>false</protected>
         <useDeadLetterQueue>false</useDeadLetterQueue>

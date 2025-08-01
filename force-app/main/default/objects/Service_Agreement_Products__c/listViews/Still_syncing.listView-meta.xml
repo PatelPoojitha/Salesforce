@@ -15,7 +15,6 @@
     <columns>Effective_Date__c</columns>
     <columns>End_Date__c</columns>
     <columns>LAST_UPDATE</columns>
-    <columns>Quantity__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>Sync_With_CallRevu_360__c</field>

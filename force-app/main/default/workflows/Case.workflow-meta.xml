@@ -142,7 +142,7 @@
         <description>Alert of eLead Cancellation</description>
         <protected>false</protected>
         <recipients>
-            <recipient>kristiejaecklein@callrevu.com</recipient>
+            <recipient>robertmanuel@callrevu.com</recipient>
             <type>user</type>
         </recipients>
         <senderType>CurrentUser</senderType>
@@ -153,7 +153,6 @@
         <ccEmails>ericafleck@callrevu.com</ccEmails>
         <ccEmails>Jimmenard@Callrevu.com</ccEmails>
         <ccEmails>NicoleDavis@callrevu.com</ccEmails>
-        <ccEmails>amyshaffer@callrevu.com</ccEmails>
         <description>CSM Cancellation Working Notification</description>
         <protected>false</protected>
         <recipients>
@@ -337,6 +336,10 @@
         <recipients>
             <type>owner</type>
         </recipients>
+        <recipients>
+            <recipient>mattheher@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
         <senderAddress>support@callrevu.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
         <template>Operations/Customer_Responded</template>
@@ -367,6 +370,7 @@
     </alerts>
     <alerts>
         <fullName>DevOps_Auto_Response</fullName>
+        <ccEmails>jamalwarren@callrevu.com</ccEmails>
         <description>DevOps Auto-Response</description>
         <protected>false</protected>
         <recipients>
@@ -381,9 +385,8 @@
             <field>SuppliedEmail</field>
             <type>email</type>
         </recipients>
-        <senderAddress>datarequest@callrevu.com</senderAddress>
-        <senderType>OrgWideEmailAddress</senderType>
-        <template>Operations/Data_and_Reporting_Team_Reply</template>
+        <senderType>CurrentUser</senderType>
+        <template>Operations/Salesforce_Help_Desk_New_Case_Reply</template>
     </alerts>
     <alerts>
         <fullName>Enrollment_2023_Survey</fullName>
@@ -435,14 +438,6 @@
         <senderAddress>success@callrevu.com</senderAddress>
         <senderType>OrgWideEmailAddress</senderType>
         <template>Operations/FTL_2023_Survey</template>
-    </alerts>
-    <alerts>
-        <fullName>Internal_Case_Creation_Alert</fullName>
-        <ccEmails>salariqbal@callrevu.com</ccEmails>
-        <description>Internal Case Creation Alert</description>
-        <protected>false</protected>
-        <senderType>CurrentUser</senderType>
-        <template>unfiled$public/Case_Creation_Alert</template>
     </alerts>
     <alerts>
         <fullName>Launch_2023_Survey</fullName>
@@ -666,6 +661,10 @@
         <protected>false</protected>
         <recipients>
             <recipient>kristiejaecklein@callrevu.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>robertmanuel@callrevu.com</recipient>
             <type>user</type>
         </recipients>
         <senderType>CurrentUser</senderType>

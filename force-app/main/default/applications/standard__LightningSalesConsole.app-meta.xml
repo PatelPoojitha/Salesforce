@@ -38,18 +38,9 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <comment>Action override updated by Lightning App Builder during activation.</comment>
-        <content>Lead_Record_Page2</content>
-        <formFactor>Large</formFactor>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Flexipage</type>
-        <pageOrSobjectType>Lead</pageOrSobjectType>
-    </actionOverrides>
-    <actionOverrides>
-        <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
-        <content>Lead_Record_Page2</content>
-        <formFactor>Small</formFactor>
+        <content>Lead_Record_Page1</content>
+        <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
         <type>Flexipage</type>
         <pageOrSobjectType>Lead</pageOrSobjectType>
@@ -65,6 +56,7 @@
     </actionOverrides>
     <brand>
         <headerColor>#0070D2</headerColor>
+        <logo>CallRevu_Logo_Wordmark_Standard_RGB</logo>
         <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
@@ -618,7 +610,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Support_Cases_Dynamic</content>
+        <content>Client_Success_Cases11</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Support</recordType>
@@ -699,7 +691,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Condensed_Admin_Agreement_Layout</content>
+        <content>Service_Agreement_2021_Default</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Service_Agreement__c</pageOrSobjectType>
         <type>Flexipage</type>
@@ -723,7 +715,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Condensed_Admin_Agreement_Layout</content>
+        <content>Service_Agreement_2021_Default</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Service_Agreement__c</pageOrSobjectType>
         <type>Flexipage</type>
@@ -747,7 +739,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
+        <content>Account_Record_AllUsers_Master</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Partner</recordType>
@@ -810,7 +802,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Test_Account_Non_Dealer_Dynamic_2024_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Partner</recordType>
@@ -828,7 +820,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
+        <content>Account_Record_Page1</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Partner</recordType>
@@ -837,7 +829,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
+        <content>Account_Record_AllUsers_Master</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.OEM</recordType>
@@ -900,7 +892,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Test_Account_Non_Dealer_Dynamic_2024_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.OEM</recordType>
@@ -918,7 +910,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
+        <content>Account_Record_Page1</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.OEM</recordType>
@@ -927,7 +919,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Dealer</recordType>
@@ -936,7 +928,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Dealer</recordType>
@@ -945,7 +937,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Dealer</recordType>
@@ -954,7 +946,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Dealer</recordType>
@@ -963,7 +955,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Dealer</recordType>
@@ -972,7 +964,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Dealer</recordType>
@@ -981,7 +973,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Dealer</recordType>
@@ -990,7 +982,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Dealer</recordType>
@@ -1008,7 +1000,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Dealer</recordType>
@@ -1032,6 +1024,150 @@
         <recordType>Account.Partner</recordType>
         <type>Flexipage</type>
         <profile>Data Collection Profile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Admins</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu API User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Admins</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu API User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Celigo_Opp</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Partnership</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Celigo_Opp</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Partnership</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Celigo_Opp</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.OEM_Enterprise</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Celigo_Opp</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.OEM_Enterprise</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Celigo_Opp</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Dealer_Opportunity</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Celigo_Opp</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Dealer_Opportunity</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Celigo_Opp</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.OEM_Region_Zone</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Celigo_Opp</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.OEM_Region_Zone</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Celigo_Opp</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Trial_Pilot</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Celigo_Opp</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Trial_Pilot</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Celigo_Opp</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Vision_Packages</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Celigo_Opp</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+        <recordType>Opportunity.Vision_Packages</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Client_Success_Cases11</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Accounting</recordType>
+        <type>Flexipage</type>
+        <profile>Client Support Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Client_Success_Cases11</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Launch</recordType>
+        <type>Flexipage</type>
+        <profile>Client Support Admin</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
@@ -1467,7 +1603,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Group_Dealer_Account</recordType>
@@ -1476,7 +1612,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Group_Dealer_Account</recordType>
@@ -1485,7 +1621,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Condensed_Admin_Agreement_Layout</content>
+        <content>Service_Agreement_2021_Default</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Service_Agreement__c</pageOrSobjectType>
         <type>Flexipage</type>
@@ -1501,7 +1637,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Condensed_Admin_Agreement_Layout</content>
+        <content>Service_Agreement_2021_Default</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Service_Agreement__c</pageOrSobjectType>
         <type>Flexipage</type>
@@ -2106,7 +2242,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>DNI_WebCase</content>
+        <content>Client_Success_Cases11</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.DNI_Setup</recordType>
@@ -2115,7 +2251,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>DNI_WebCase</content>
+        <content>Client_Success_Cases11</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.DNI_Setup</recordType>
@@ -4021,7 +4157,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
+        <content>Account_Record_AllUsers_Master</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Call_Center</recordType>
@@ -4111,7 +4247,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Test_Account_Non_Dealer_Dynamic_2024_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Call_Center</recordType>
@@ -4210,7 +4346,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
+        <content>Account_Record_Page11</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Call_Center</recordType>
@@ -4425,7 +4561,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Launch_2024_Dynamic_Layout_2</content>
+        <content>Launch_2024_Dynamic_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Launch</recordType>
@@ -4434,7 +4570,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Launch_2024_Dynamic_Layout_2</content>
+        <content>Launch_2024_Dynamic_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Launch</recordType>
@@ -4443,7 +4579,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Launch_2024_Dynamic_Layout_2</content>
+        <content>Launch_2024_Dynamic_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Launch</recordType>
@@ -4452,7 +4588,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Launch_2024_Dynamic_Layout_2</content>
+        <content>Launch_2024_Dynamic_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Launch</recordType>
@@ -4461,7 +4597,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Launch_2024_Dynamic_Layout_2</content>
+        <content>Launch_2024_Dynamic_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Launch</recordType>
@@ -4470,7 +4606,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Launch_2024_Dynamic_Layout_2</content>
+        <content>Launch_2024_Dynamic_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Launch</recordType>
@@ -4479,7 +4615,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Launch_2024_Dynamic_Layout_2</content>
+        <content>Launch_2024_Dynamic_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Launch</recordType>
@@ -4515,7 +4651,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Launch_2024_Dynamic_Layout_2</content>
+        <content>Client_Success_Cases11</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Launch</recordType>
@@ -4569,7 +4705,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Launch_2024_Dynamic_Layout_2</content>
+        <content>Launch_2024_Dynamic_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Launch</recordType>
@@ -4578,7 +4714,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Launch_2024_Dynamic_Layout_2</content>
+        <content>Launch_2024_Dynamic_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Launch</recordType>
@@ -4614,7 +4750,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Launch_2024_Dynamic_Layout_2</content>
+        <content>Launch_2024_Dynamic_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Launch</recordType>
@@ -4873,7 +5009,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>AccountingBilling2024DynamicLayout</content>
+        <content>Client_Success_Cases11</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Accounting</recordType>
@@ -5422,7 +5558,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>AccountManagement2024DynamicLayout</content>
+        <content>Client_Success_Cases11</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Account_Management</recordType>
@@ -5431,7 +5567,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>AccountManagement2024DynamicLayout</content>
+        <content>Client_Success_Cases11</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Account_Management</recordType>
@@ -6617,7 +6753,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Support_Cases_Dynamic</content>
+        <content>Client_Success_Cases11</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Support</recordType>
@@ -7259,7 +7395,16 @@
         <content>Account_Record_AllUsers_Master</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Dealer</recordType>
+        <recordType>Account.Dealer_Associated</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Accounting Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer_Associated</recordType>
         <type>Flexipage</type>
         <profile>CallRevu Accounting Admin</profile>
     </profileActionOverrides>
@@ -7268,7 +7413,16 @@
         <content>Account_Record_AllUsers_Master</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Dealer</recordType>
+        <recordType>Account.Dealer_Associated</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Enrollment</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer_Associated</recordType>
         <type>Flexipage</type>
         <profile>CallRevu Enrollment</profile>
     </profileActionOverrides>
@@ -7277,7 +7431,16 @@
         <content>Account_Record_AllUsers_Master</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Dealer</recordType>
+        <recordType>Account.Dealer_Associated</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Marketing User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer_Associated</recordType>
         <type>Flexipage</type>
         <profile>CallRevu Marketing User</profile>
     </profileActionOverrides>
@@ -7286,7 +7449,16 @@
         <content>Account_Record_AllUsers_Master</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Dealer</recordType>
+        <recordType>Account.Dealer_Associated</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer_Associated</recordType>
         <type>Flexipage</type>
         <profile>CallRevu Sales</profile>
     </profileActionOverrides>
@@ -7295,7 +7467,16 @@
         <content>Account_Record_AllUsers_Master</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Dealer</recordType>
+        <recordType>Account.Dealer_Associated</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer_Associated</recordType>
         <type>Flexipage</type>
         <profile>CallRevu Sales Admin</profile>
     </profileActionOverrides>
@@ -7304,7 +7485,16 @@
         <content>Account_Record_AllUsers_Master</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Dealer</recordType>
+        <recordType>Account.Dealer_Associated</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Standard User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer_Associated</recordType>
         <type>Flexipage</type>
         <profile>CallRevu Standard User</profile>
     </profileActionOverrides>
@@ -7313,13 +7503,139 @@
         <content>Account_Record_AllUsers_Master</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Dealer</recordType>
+        <recordType>Account.Dealer_Associated</recordType>
         <type>Flexipage</type>
         <profile>Callrevu Supervisor</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
         <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer_Associated</recordType>
+        <type>Flexipage</type>
+        <profile>Callrevu Supervisor</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer_Associated</recordType>
+        <type>Flexipage</type>
+        <profile>Client Support Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer_Associated</recordType>
+        <type>Flexipage</type>
+        <profile>Client Support Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer_Associated</recordType>
+        <type>Flexipage</type>
+        <profile>MarketingProfile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer_Associated</recordType>
+        <type>Flexipage</type>
+        <profile>MarketingProfile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer_Associated</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer_Associated</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Admins</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Accounting Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Admins</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Enrollment</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Admins</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Marketing User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Admins</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Admins</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Admins</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Standard User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Admins</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>Callrevu Supervisor</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_Admins</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Dealer</recordType>
@@ -7364,7 +7680,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
+        <content>Account_Record_AllUsers_Master</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Call_Center</recordType>
@@ -7427,7 +7743,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Test_Account_Non_Dealer_Dynamic_2024_Layout</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Call_Center</recordType>
@@ -7454,7 +7770,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7462,7 +7778,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7470,7 +7786,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7478,7 +7794,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7486,7 +7802,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7494,7 +7810,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7502,7 +7818,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7510,7 +7826,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7518,7 +7834,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7526,7 +7842,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7534,7 +7850,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7542,7 +7858,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7550,7 +7866,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7558,7 +7874,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7566,7 +7882,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <type>Flexipage</type>
@@ -7574,113 +7890,9 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Client Support Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>MarketingProfile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>MarketingProfile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Standard</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Standard</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.OEM</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Accounting Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.OEM</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Enrollment</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.OEM</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Marketing User</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.OEM</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Sales</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.OEM</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Sales Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.OEM</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Standard User</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.OEM</recordType>
-        <type>Flexipage</type>
-        <profile>Callrevu Supervisor</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.OEM</recordType>
         <type>Flexipage</type>
         <profile>Client Support Admin</profile>
     </profileActionOverrides>
@@ -7689,6 +7901,290 @@
         <content>Account_Record_AllUsers_Master</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>MarketingProfile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>MarketingProfile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Accounting Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Accounting Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Enrollment</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Enrollment</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Marketing User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Marketing User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Standard User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Standard User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>Callrevu Supervisor</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>Callrevu Supervisor</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>Client Support Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>Client Support Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>MarketingProfile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>MarketingProfile</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.Closed_Dealer</recordType>
+        <type>Flexipage</type>
+        <profile>Standard</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OEM</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Accounting Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OEM</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Enrollment</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OEM</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Marketing User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OEM</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OEM</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OEM</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Standard User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OEM</recordType>
+        <type>Flexipage</type>
+        <profile>Callrevu Supervisor</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Test_Account_Non_Dealer_Dynamic_2024_Layout</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
+        <recordType>Account.OEM</recordType>
+        <type>Flexipage</type>
+        <profile>Client Support Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>Account_Record_AllUsers_Master</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.OEM</recordType>
         <type>Flexipage</type>
         <profile>MarketingProfile</profile>
@@ -7722,7 +8218,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
+        <content>Account_Record_AllUsers_Master</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Partner</recordType>
@@ -7785,7 +8281,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Test_Account_Non_Dealer_Dynamic_2024_Layout</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Partner</recordType>
@@ -7830,7 +8326,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Launch_2024_Dynamic_Layout_2</content>
+        <content>Launch_2024_Dynamic_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Launch</recordType>
@@ -7839,7 +8335,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Launch_2024_Dynamic_Layout_2</content>
+        <content>Launch_2024_Dynamic_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Launch</recordType>
@@ -7848,7 +8344,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Launch_2024_Dynamic_Layout_2</content>
+        <content>Launch_2024_Dynamic_Layout</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Launch</recordType>
@@ -8089,7 +8585,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
         <recordType>Account.Dealer</recordType>
@@ -8753,7 +9249,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>MLData2024DynamicLayoutUpdate1</content>
+        <content>UpdatedMLData2024DynamicLayoutOct1</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Quality_Control</recordType>
@@ -8762,7 +9258,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>MLData2024DynamicLayoutUpdate1</content>
+        <content>UpdatedMLData2024DynamicLayoutOct1</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Quality_Control</recordType>
@@ -8771,7 +9267,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>MLData2024DynamicLayoutUpdate1</content>
+        <content>UpdatedMLData2024DynamicLayoutOct1</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Quality_Control</recordType>
@@ -8780,34 +9276,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>MLData2024DynamicLayoutUpdate1</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Case</pageOrSobjectType>
-        <recordType>Case.Quality_Control</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Sales</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>MLData2024DynamicLayoutUpdate1</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Case</pageOrSobjectType>
-        <recordType>Case.Quality_Control</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Sales Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>MLData2024DynamicLayoutUpdate1</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Case</pageOrSobjectType>
-        <recordType>Case.Quality_Control</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Standard User</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>MLData2024DynamicLayoutUpdate1</content>
+        <content>UpdatedMLData2024DynamicLayoutOct1</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Quality_Control</recordType>
@@ -8816,16 +9285,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>MLData2024DynamicLayoutUpdate1</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Case</pageOrSobjectType>
-        <recordType>Case.Quality_Control</recordType>
-        <type>Flexipage</type>
-        <profile>Callrevu Supervisor</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>MLData2024DynamicLayoutUpdate</content>
+        <content>UpdatedMLData2024DynamicLayoutOct1</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Quality_Control</recordType>
@@ -8834,7 +9294,7 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>MLData2024DynamicLayoutUpdate1</content>
+        <content>UpdatedMLData2024DynamicLayoutOct1</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Quality_Control</recordType>
@@ -8853,7 +9313,25 @@
     <profileActionOverrides>
         <actionName>View</actionName>
         <content>QCScorecard2024DynamicLayout</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.QC_ScoreCard</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Accounting Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>QCScorecard2024DynamicLayout</content>
         <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.QC_ScoreCard</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu API User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>QCScorecard2024DynamicLayout</content>
+        <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.QC_ScoreCard</recordType>
         <type>Flexipage</type>
@@ -8871,7 +9349,25 @@
     <profileActionOverrides>
         <actionName>View</actionName>
         <content>QCScorecard2024DynamicLayout</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.QC_ScoreCard</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Enrollment</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>QCScorecard2024DynamicLayout</content>
         <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.QC_ScoreCard</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Marketing User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>QCScorecard2024DynamicLayout</content>
+        <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.QC_ScoreCard</recordType>
         <type>Flexipage</type>
@@ -8889,7 +9385,25 @@
     <profileActionOverrides>
         <actionName>View</actionName>
         <content>QCScorecard2024DynamicLayout</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.QC_ScoreCard</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Sales</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>QCScorecard2024DynamicLayout</content>
         <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.QC_ScoreCard</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Sales Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>QCScorecard2024DynamicLayout</content>
+        <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.QC_ScoreCard</recordType>
         <type>Flexipage</type>
@@ -8907,7 +9421,25 @@
     <profileActionOverrides>
         <actionName>View</actionName>
         <content>QCScorecard2024DynamicLayout</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.QC_ScoreCard</recordType>
+        <type>Flexipage</type>
+        <profile>CallRevu Standard User</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>QCScorecard2024DynamicLayout</content>
         <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.QC_ScoreCard</recordType>
+        <type>Flexipage</type>
+        <profile>Callrevu Supervisor</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>QCScorecard2024DynamicLayout</content>
+        <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.QC_ScoreCard</recordType>
         <type>Flexipage</type>
@@ -8935,6 +9467,15 @@
         <actionName>View</actionName>
         <content>QCScorecard2024DynamicLayout</content>
         <formFactor>Small</formFactor>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.QC_ScoreCard</recordType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>QCScorecard2024DynamicLayout</content>
+        <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.QC_ScoreCard</recordType>
         <type>Flexipage</type>
@@ -9041,470 +9582,113 @@
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>Read Only</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>Read Only</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Accounting Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Accounting Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
         <type>Flexipage</type>
         <profile>CallRevu API User</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
         <type>Flexipage</type>
         <profile>CallRevu API User</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Small</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Enrollment</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Enrollment</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Marketing User</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Marketing User</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Sales</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Sales</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Sales Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Sales Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Standard User</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>CallRevu Standard User</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>Callrevu Supervisor</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>Callrevu Supervisor</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>Client Support Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>Client Support Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>MarketingProfile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>MarketingProfile</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>Read Only</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
-        <type>Flexipage</type>
-        <profile>Read Only</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
         <type>Flexipage</type>
         <profile>Admin</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
+        <content>Account_Record_Admins</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Non_Dealer</recordType>
         <type>Flexipage</type>
         <profile>Admin</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>CallRevu Accounting Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Product_Record_Page</content>
+        <content>UpdatedMLData2024DynamicLayoutOct1</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>CallRevu Accounting Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>CallRevu Enrollment</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>CallRevu Enrollment</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>CallRevu Marketing User</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>CallRevu Marketing User</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Quality_Control</recordType>
         <type>Flexipage</type>
         <profile>CallRevu Sales</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Product_Record_Page</content>
+        <content>UpdatedMLData2024DynamicLayoutOct1</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>CallRevu Sales</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Quality_Control</recordType>
         <type>Flexipage</type>
         <profile>CallRevu Sales Admin</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Product_Record_Page</content>
+        <content>UpdatedMLData2024DynamicLayoutOct1</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>CallRevu Sales Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Quality_Control</recordType>
         <type>Flexipage</type>
         <profile>CallRevu Standard User</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Product_Record_Page</content>
+        <content>UpdatedMLData2024DynamicLayoutOct1</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>CallRevu Standard User</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Quality_Control</recordType>
         <type>Flexipage</type>
         <profile>Callrevu Supervisor</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Product_Record_Page</content>
+        <content>UpdatedMLData2024DynamicLayoutOct1</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Quality_Control</recordType>
         <type>Flexipage</type>
-        <profile>Callrevu Supervisor</profile>
+        <profile>Chatter External User</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Read Only</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Product_Record_Page</content>
+        <content>UpdatedMLData2024DynamicLayoutOct1</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Quality_Control</recordType>
         <type>Flexipage</type>
-        <profile>Read Only</profile>
+        <profile>Chatter Free User</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Product_Record_Page</content>
+        <content>UpdatedMLData2024DynamicLayoutOct1</content>
         <formFactor>Large</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+        <recordType>Case.Quality_Control</recordType>
         <type>Flexipage</type>
-        <profile>Admin</profile>
+        <profile>Chatter Moderator User</profile>
     </profileActionOverrides>
     <profileActionOverrides>
         <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Client Support Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Client Support Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>CallRevu API User</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Product_Record_Page</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Product2</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>CallRevu API User</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>MLData2024DynamicLayoutUpdate1</content>
+        <content>UpdatedMLData2024DynamicLayoutOct1</content>
         <formFactor>Large</formFactor>
         <pageOrSobjectType>Case</pageOrSobjectType>
         <recordType>Case.Quality_Control</recordType>
         <type>Flexipage</type>
         <profile>Standard</profile>
     </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Partner</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.OEM</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Non_Dealer_2024_Dynamic_Layout</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <recordType>Account.Call_Center</recordType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>Account_Record_AllUsers_Master</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Account</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
     <tabs>standard-home</tabs>
     <tabs>standard-Account</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>CallRevu_Lead__c</tabs>
+    <tabs>standard-Lead</tabs>
     <tabs>standard-Opportunity</tabs>
     <tabs>standard-Forecasting3</tabs>
     <tabs>standard-report</tabs>
@@ -9525,11 +9709,16 @@
     <tabs>Service_Agreement_Products__c</tabs>
     <tabs>standard-MessagingSession</tabs>
     <tabs>standard-MessagingEndUser</tabs>
+    <tabs>Unsupported_Email__c</tabs>
+    <tabs>Bot_Customer_Rating__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>LightningSalesConsole_UtilityBar</utilityBar>
     <workspaceConfig>
         <mappings>
             <tab>Active_Employees__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Bot_Customer_Rating__c</tab>
         </mappings>
         <mappings>
             <tab>Cadence_Task__c</tab>
@@ -9551,6 +9740,9 @@
         </mappings>
         <mappings>
             <tab>Service_Agreement__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Unsupported_Email__c</tab>
         </mappings>
         <mappings>
             <tab>standard-Account</tab>
@@ -9578,6 +9770,9 @@
         </mappings>
         <mappings>
             <tab>standard-Forecasting3</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Lead</tab>
         </mappings>
         <mappings>
             <tab>standard-MessagingEndUser</tab>
