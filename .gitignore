@@ -43,3 +43,9 @@ $RECYCLE.BIN/
 **/__pycache__/
 **/.venv/
 **/venv/
+
+# IDE-specific project files
+.project
+.settings
+salesforce.schema
+Referenced Packages
